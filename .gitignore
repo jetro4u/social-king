@@ -1,0 +1,7 @@
+node_modules
+documentation
+.next
+.env
+npm-debug.log
+.prettierrc
+package-lock.json
