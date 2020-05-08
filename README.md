@@ -27,7 +27,7 @@ Paste the same HTTPS forwarding URL into the Whitelisted redirection URL(s) fiel
 
 It will look like this:
 
-<img src="documentation/ngrok_urls.JPG"/>
+<img src="./documentation/ngrok_urls.JPG"/>
 
 
 That app from the Partners Dashboard is connected with a Test Dev Store, <a href="https://jungle-navigator.myshopify.com/admin/apps">Jungle Navigator</a>
