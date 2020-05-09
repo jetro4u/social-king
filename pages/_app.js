@@ -14,11 +14,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import ApolloClient from 'apollo-client'
 
 const client = new ApolloClient({
-	// fetchOptions: {
- //    credentials: 'include',
- //  },
   link: createHttpLink({
-    uri: '/admin/api/2020-04/graphql.json',
+    uri: '/admin/api/2020-04/products.json',
   fetch: fetch,
   }),
   cache: new InMemoryCache(),
