@@ -19,7 +19,7 @@ The terminal will log the https:// address that exposes the app running on your 
 Copy that ngrok https address into the .env file.
 
 
-Within the <a href"https://partners.shopify.com">Partners Dashboard</a>, go into the app that you want to test.
+Within the <a href="https://partners.shopify.com">Partners Dashboard</a>, go into the app that you want to test.
 
 This is the page on the Partners Dashboard that allows you to <a href="https://partners.shopify.com/780470/apps/3766401/edit">add new App URL's</a> to the Community Builder App.
 
