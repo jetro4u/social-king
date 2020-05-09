@@ -14,7 +14,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
-import fetch from 'node-fetch'
+import 'cross-fetch/polyfill';
 
 // Create ApolloClient Instance and point to your Shopify store's GraphQl server.
 const httpLink = new HttpLink({ uri: `https://${Cookies.get("shopOrigin")}.myshopify.com/api/graphql` });
@@ -33,7 +33,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 
   const client = new ApolloClient({
   link: concat(authMiddleware, httpLink),
-    cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
+    cache: new InMemoryCache(),
 });
 
 
