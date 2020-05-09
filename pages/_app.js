@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 import { ApolloProvider } from 'react-apollo';
 
 import ApolloClient from 'apollo-boost';
-import { fetch } from 'node-fetch'
+import fetch from 'cross-fetch';
 
 const client = new ApolloClient({
     fetch: fetch,
