@@ -7,20 +7,42 @@ import translations from '@shopify/polaris/locales/en.json';
 import Cookies from 'js-cookie';
 import { ApolloProvider } from 'react-apollo';
 
-import ApolloClient from 'apollo-boost';
-import fetch from 'cross-fetch';
+import ApolloClient from 'apollo-client';
+import { HttpLink } from 'apollo-link-http';
+import { ApolloLink, concat } from 'apollo-link';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
-const client = new ApolloClient({
-    fetch: fetch,
-    fetchOptions: {
-        credentials: 'include'
-    },
-    uri: `https://${Cookies.get("shopOrigin")}/admin/api/2020-04/graphql.json`
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
+
+
+// Create ApolloClient Instance and point to your Shopify store's GraphQl server.
+
+const httpLink = new HttpLink({ uri: `https://${Cookies.get("shopOrigin")}.myshopify.com/api/graphql` });
+
+
+// Add authentication headers
+const authMiddleware = new ApolloLink((operation, forward) => {
+  // add the authorization to the headers
+    operation.setContext({
+      headers: {
+        'X-Shopify-Storefront-Access-Token': `${Cookies.get("accessToken")}`
+      } 
+    });
+
+    return forward(operation);
+  })
+
+  const client = new ApolloClient({
+  link: concat(authMiddleware, httpLink),
+    cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
 });
+
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
+    console.log('API_KEY: ',API_KEY)
     const config = { apiKey: API_KEY, shopOrigin: Cookies.get("shopOrigin"), forceRedirect: true };
 
     return (
