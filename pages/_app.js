@@ -7,20 +7,16 @@ import translations from '@shopify/polaris/locales/en.json';
 import Cookies from 'js-cookie';
 import { ApolloProvider } from 'react-apollo';
 
-import fetch from 'node-fetch'
-import { createHttpLink } from 'apollo-link-http'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-
-import ApolloClient from 'apollo-client'
+import ApolloClient from 'apollo-boost';
+import { fetch } from 'node-fetch'
 
 const client = new ApolloClient({
-  link: createHttpLink({
-    uri: '/admin/api/2020-04/products.json',
-  fetch: fetch,
-  }),
-  cache: new InMemoryCache(),
-})
-
+    fetch: fetch,
+    fetchOptions: {
+        credentials: 'include'
+    },
+    uri: `https://${Cookies.get("shopOrigin")}/admin/api/2020-04/graphql.json`
+});
 
 class MyApp extends App {
   render() {
