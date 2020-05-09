@@ -17,8 +17,8 @@ import gql from 'graphql-tag';
 import 'cross-fetch/polyfill';
 
 // Create ApolloClient Instance and point to your Shopify store's GraphQl server.
-// const httpLink = new HttpLink({ uri: `https://${Cookies.get("shopOrigin")}.myshopify.com/api/graphql` });
-const httpLink = new HttpLink({ uri: `https://shopify-graphiql-app.shopifycloud.com/admin/api/2020-04/graphql` });
+const httpLink = new HttpLink({ uri: `https://${Cookies.get("shopOrigin")}.myshopify.com/admin/api/2020-04/graphql` });
+// const httpLink = new HttpLink({ uri: `https://shopify-graphiql-app.shopifycloud.com/admin/api/2020-04/graphql` });
 
 
 // Add authentication headers
