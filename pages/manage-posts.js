@@ -1,88 +1,131 @@
-import {
-  Button,
-  Card,
-  Form,
-  FormLayout,
-  Layout,
-  Page,
-  Stack,
-  TextField,
-  SettingToggle,
-  TextStyle,
-} from '@shopify/polaris';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import Router from 'next/router';
+import { getCookie, isAuth } from '../actions/auth';
+import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
+import moment from 'moment';
+import ToggleButton from 'react-toggle-button';
 
-class AnnotatedLayout extends React.Component {
-  state = {
-    discount: '10%',
-    enabled: false,
-  };
+const BlogRead = ({ username }) => {
+    const [blogs, setBlogs] = useState([]);
+    const [loaded, setLoaded] = useState({value: false});
+    const [message, setMessage] = useState('');
+    const [toggleValue, setToggleValue] = useState(true);
+    const token = getCookie('token');
 
-  render() {
-    const { discount, enabled } = this.state;
-    const contentStatus = enabled ? 'Disable' : 'Enable';
-    const textStatus = enabled ? 'enabled' : 'disabled';
+    useEffect(() => {
+        loadBlogs();
+    }, []);
+
+    const hideShowBlog = slug => {
+        toggleBlogVisibility(slug, token).then(data => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                setMessage(data.message);
+                console.log('data',data);
+                loadBlogs();
+            }
+        });
+    };
+
+    const deleteBlog = slug => {
+        removeBlog(slug, token).then(data => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                setMessage(data.message);
+                loadBlogs();
+            }
+        });
+    };
+
+
+    const loadBlogs = () => {
+        list(username).then(data => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                console.log('blog array after updating: ',data);
+                setBlogs(data);
+                setLoaded(true);
+            }
+        });
+    };
+
+    
+    const deleteConfirm = slug => {
+        let answer = window.confirm('Are you sure you want to delete your blog?');
+        if (answer) {
+            deleteBlog(slug);
+        }
+    };
+
+    const showUpdateButton = blog => {
+        if (isAuth() && isAuth().role === 0) {
+            return (
+                <Link href={`/user/crud/${blog.slug}`}>
+                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
+                </Link>
+            );
+        } else if (isAuth() && isAuth().role === 1) {
+            return (
+                <Link href={`/admin/crud/${blog.slug}`}>
+                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
+                </Link>
+            );
+        }
+    };
+
+    const showAllBlogs = () => {
+        return blogs.map((blog, i) => {
+            return (
+                <div key={i} className="pb-5">
+                    <ToggleButton
+                      value={ !blog.hidden }
+                      activeLabel=' Public '
+                      inactiveLabel=' Hidden '
+                       onToggle={() => {
+                        hideShowBlog(blog.slug)
+                      }} />
+                    <h3>{blog.title}</h3>
+
+                    <p className="mark">
+                        Written by {blog.postedBy.name} | Published on {moment(blog.updatedAt).fromNow()}
+                    </p>
+                    <button className="btn btn-sm btn-danger" onClick={() => deleteConfirm(blog.slug)}>
+                        Delete
+                    </button>
+                    {showUpdateButton(blog)}
+                    
+                </div>
+            );
+        });
+    };
 
     return (
-      <Page>
-        <Layout>
-          <Layout.AnnotatedSection
-            title="Default discount"
-            description="Add a product to Sample App, it will automatically be discounted."
-          >
-            <Card sectioned>
-              <Form onSubmit={this.handleSubmit}>
-                <FormLayout>
-                  <TextField
-                    value={discount}
-                    onChange={this.handleChange('discount')}
-                    label="Discount percentage"
-                    type="discount"
-                  />
-                  <Stack distribution="trailing">
-                    <Button primary submit>
-                      Save
-                    </Button>
-                  </Stack>
-                </FormLayout>
-              </Form>
-            </Card>
-          </Layout.AnnotatedSection>
-          <Layout.AnnotatedSection
-            title="Price updates"
-            description="Temporarily disable all Sample App price updates"
-          >
-            <SettingToggle
-              action={{
-                content: contentStatus,
-                onAction: this.handleToggle,
-              }}
-              enabled={enabled}
-            >
-              This setting is{' '}
-              <TextStyle variation="strong">{textStatus}</TextStyle>.
-            </SettingToggle>
-          </Layout.AnnotatedSection>
-        </Layout>
-      </Page>
+        <React.Fragment>
+            <div className="row">
+                <div className="col-md-12">
+                    {message && <div className="alert alert-warning">{message}</div>}
+
+                    {loaded && blogs.length == 0
+                        ? <p>Loading</p>
+                        : <div className="row">
+                                <div className="col-md-12 pt-5 pb-5">
+                                    <h2>Manage Product Pages</h2>
+                                </div>
+                                <div className="col-md-12">
+                                    {showAllBlogs()}
+                                </div>
+                          </div>
+                  }
+
+                </div>
+            </div>
+        </React.Fragment>
     );
-  }
+};
 
-  handleSubmit = () => {
-    this.setState({
-      discount: this.state.discount,
-    });
-    console.log('submission', this.state);
-  };
+export default BlogRead;
 
-  handleChange = (field) => {
-    return (value) => this.setState({ [field]: value });
-  };
-
-  handleToggle = () => {
-    this.setState(({ enabled }) => {
-      return { enabled: !enabled };
-    });
-  };
-}
-
-export default AnnotatedLayout;
