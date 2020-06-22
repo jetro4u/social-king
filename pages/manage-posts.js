@@ -128,4 +128,3 @@ const BlogRead = ({ username }) => {
 };
 
 export default BlogRead;
-
