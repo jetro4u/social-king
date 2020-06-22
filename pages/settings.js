@@ -1,3 +1,4 @@
+import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
 import {
   Button,
   Card,
@@ -12,10 +13,52 @@ import {
 } from '@shopify/polaris';
 
 class AnnotatedLayout extends React.Component {
-  state = {
-    discount: '10%',
-    enabled: false,
+  constructor() {
+    super();
+    this.state = {
+      discount: '10%',
+      enabled: false,
+      blogs: []
+    };
+    this.loadBlogs = this.loadBlogs.bind(this);
+  }
+ 
+
+  loadBlogs(){
+      list().then(data => {
+          if (data.error) {
+              console.log(data.error);
+          } else {
+              console.log('blog array after updating: ',data);
+              // setBlogs(data);
+              // setLoaded(true);
+              this.setState({
+                blogs: data
+              });
+          }
+      });
   };
+
+  componentDidMount(){
+    this.loadBlogs();
+  }  
+
+  showAllBlogs(){
+    return blogs.map((blog, i) => {
+        return (  
+          <SettingToggle
+            action={{
+              content: contentStatus,
+              onAction: this.handleToggle,
+            }}
+            enabled={enabled}
+          >
+            This setting is{' '}
+            <TextStyle variation="strong">{textStatus}</TextStyle>.
+          </SettingToggle>
+        )
+      })
+  }
 
   render() {
     const { discount, enabled } = this.state;
@@ -51,16 +94,7 @@ class AnnotatedLayout extends React.Component {
             title="Price updates"
             description="Temporarily disable all Sample App price updates"
           >
-            <SettingToggle
-              action={{
-                content: contentStatus,
-                onAction: this.handleToggle,
-              }}
-              enabled={enabled}
-            >
-              This setting is{' '}
-              <TextStyle variation="strong">{textStatus}</TextStyle>.
-            </SettingToggle>
+            {}
           </Layout.AnnotatedSection>
         </Layout>
       </Page>
