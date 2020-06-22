@@ -1,6 +1,8 @@
 import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
+import Link from 'next/link';
 import {
   Button,
+  ButtonGroup,
   Card,
   Form,
   FormLayout,
@@ -55,13 +57,15 @@ class AnnotatedLayout extends React.Component {
         console.log('blog in showAllBlogs function',blog);
         return (  
           <SettingToggle
+            key={i}
             action={{
               content: contentStatus,
               onAction: this.handleToggle,
             }}
-            enabled={enabled}
+            hidden={blog.hidden}
           >
-            This setting is{' '}
+          <p>{blog.title}</p>
+            This post is{' '}
             <TextStyle variation="strong">{textStatus}</TextStyle>.
           </SettingToggle>
         )
@@ -77,30 +81,23 @@ class AnnotatedLayout extends React.Component {
       <Page>
         <Layout>
           <Layout.AnnotatedSection
-            title="Default discount"
-            description="Add a product to Sample App, it will automatically be discounted."
-          >
+            title="Filter by Post Status"
+            >
             <Card sectioned>
               <Form onSubmit={this.handleSubmit}>
                 <FormLayout>
-                  <TextField
-                    value={discount}
-                    onChange={this.handleChange('discount')}
-                    label="Discount percentage"
-                    type="discount"
-                  />
-                  <Stack distribution="trailing">
-                    <Button primary submit>
-                      Save
-                    </Button>
-                  </Stack>
+                    <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
+                      <Button>Published</Button>
+                      <Button primary>Drafts</Button>
+                      <Button danger>Removed</Button>
+                    </ButtonGroup>
                 </FormLayout>
               </Form>
             </Card>
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
-            title="Price updates"
-            description="Temporarily disable all Sample App price updates"
+            title="Manage Posts"
+            description="Review new posts and set them approved content live."
           >
             {this.state.blogs ? this.showAllBlogs() : ''}
           </Layout.AnnotatedSection>
