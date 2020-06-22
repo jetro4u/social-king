@@ -18,13 +18,15 @@ class AnnotatedLayout extends React.Component {
     this.state = {
       discount: '10%',
       enabled: false,
-      blogs: []
+      blogs: ['this is a blog']
     };
     this.loadBlogs = this.loadBlogs.bind(this);
+    this.showAllBlogs = this.showAllBlogs.bind(this);
   }
  
 
   loadBlogs(){
+      console.log('ran loadBlogs function');
       list().then(data => {
           if (data.error) {
               console.log(data.error);
@@ -44,7 +46,13 @@ class AnnotatedLayout extends React.Component {
   }  
 
   showAllBlogs(){
+    const { enabled } = this.state;
+    const contentStatus = enabled ? 'Disable' : 'Enable';
+    const textStatus = enabled ? 'enabled' : 'disabled';
+
+    let {blogs} = this.state
     return blogs.map((blog, i) => {
+        console.log('blog in showAllBlogs function',blog);
         return (  
           <SettingToggle
             action={{
@@ -61,7 +69,7 @@ class AnnotatedLayout extends React.Component {
   }
 
   render() {
-    const { discount, enabled } = this.state;
+    const { discount,enabled } = this.state;
     const contentStatus = enabled ? 'Disable' : 'Enable';
     const textStatus = enabled ? 'enabled' : 'disabled';
 
@@ -94,7 +102,7 @@ class AnnotatedLayout extends React.Component {
             title="Price updates"
             description="Temporarily disable all Sample App price updates"
           >
-            {}
+            {this.state.blogs ? this.showAllBlogs() : ''}
           </Layout.AnnotatedSection>
         </Layout>
       </Page>
