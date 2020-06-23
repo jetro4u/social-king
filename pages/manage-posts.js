@@ -101,7 +101,9 @@ const BlogRead = ({ username }) => {
                     key={i}
                     action={{
                       content: blog.hidden ? 'Show': 'Hide',
-                      onAction: hideShowBlog(blog.slug),
+                      onAction: hideShowBlog
+                      // onAction: hideShowBlog(blog.slug)
+
                     }}
                     hidden={blog.hidden}
                   >

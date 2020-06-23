@@ -9,10 +9,10 @@ module.exports = withCSS(withSass({
   publicRuntimeConfig: {
 		APP_NAME: 'Tribe Squared',
 		API_DEVELOPMENT: 'http://localhost:8000/api',
-		API_PRODUCTION: 'https://mysidehussle.com/api',
+		API_PRODUCTION: 'https://tribesquared.io/api',
 		PRODUCTION: false,
 		DOMAIN_DEVELOPMENT: 'http://localhost:3000',
-		DOMAIN_PRODUCTION: 'https://mysidehussle.com',
+		DOMAIN_PRODUCTION: 'https://tribesquared.io',
 		FB_APP_ID: '305241670454834',
 		DISQUS_SHORTNAME: 'ampitup-io',
 		GOOGLE_CLIENT_ID:'299145764723-o5k1tr51r339gua3cja4o02r0l2g4lkb.apps.googleusercontent.com'
