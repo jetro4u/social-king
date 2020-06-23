@@ -5,6 +5,19 @@ import { getCookie, isAuth } from '../actions/auth';
 import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
 import moment from 'moment';
 import ToggleButton from 'react-toggle-button';
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  Form,
+  FormLayout,
+  Layout,
+  Page,
+  Stack,
+  TextField,
+  SettingToggle,
+  TextStyle,
+} from '@shopify/polaris';
 
 const BlogRead = ({ username }) => {
     const [blogs, setBlogs] = useState([]);
@@ -18,6 +31,7 @@ const BlogRead = ({ username }) => {
     }, []);
 
     const hideShowBlog = slug => {
+        console.log('ran hideShowBlog with this slug:', slug);
         toggleBlogVisibility(slug, token).then(data => {
             if (data.error) {
                 console.log(data.error);
@@ -78,16 +92,19 @@ const BlogRead = ({ username }) => {
     };
 
     const showAllBlogs = () => {
+        // const contentStatus = enabled ? 'Disable' : 'Enable';
+        // const textStatus = enabled ? 'enabled' : 'disabled';
+
         return blogs.map((blog, i) => {
             return (
-                <div key={i} className="pb-5">
-                    <ToggleButton
-                      value={ !blog.hidden }
-                      activeLabel=' Public '
-                      inactiveLabel=' Hidden '
-                       onToggle={() => {
-                        hideShowBlog(blog.slug)
-                      }} />
+                <SettingToggle
+                    key={i}
+                    action={{
+                      content: blog.hidden ? 'Show': 'Hide',
+                      onAction: hideShowBlog(blog.slug),
+                    }}
+                    hidden={blog.hidden}
+                  >
                     <h3>{blog.title}</h3>
 
                     <p className="mark">
@@ -97,14 +114,16 @@ const BlogRead = ({ username }) => {
                         Delete
                     </button>
                     {showUpdateButton(blog)}
-                    
-                </div>
+                    This post is{' '}
+                    <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
+                </SettingToggle>
             );
         });
     };
 
     return (
-        <React.Fragment>
+     <Page>
+        <Layout>
             <div className="row">
                 <div className="col-md-12">
                     {message && <div className="alert alert-warning">{message}</div>}
@@ -112,18 +131,19 @@ const BlogRead = ({ username }) => {
                     {loaded && blogs.length == 0
                         ? <p>Loading</p>
                         : <div className="row">
-                                <div className="col-md-12 pt-5 pb-5">
-                                    <h2>Manage Product Pages</h2>
-                                </div>
-                                <div className="col-md-12">
+                                <Layout.AnnotatedSection
+                                    title="Manage Posts"
+                                    description="Review new posts and set approved content live."
+                                  >
                                     {showAllBlogs()}
-                                </div>
+                                </Layout.AnnotatedSection>
                           </div>
                   }
 
                 </div>
             </div>
-        </React.Fragment>
+        </Layout>
+      </Page>
     );
 };
 
