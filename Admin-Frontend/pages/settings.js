@@ -1,5 +1,8 @@
+import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
+import Link from 'next/link';
 import {
   Button,
+  ButtonGroup,
   Card,
   Form,
   FormLayout,
@@ -12,13 +15,65 @@ import {
 } from '@shopify/polaris';
 
 class AnnotatedLayout extends React.Component {
-  state = {
-    discount: '10%',
-    enabled: false,
+  constructor() {
+    super();
+    this.state = {
+      discount: '10%',
+      enabled: false,
+      blogs: ['this is a blog']
+    };
+    this.loadBlogs = this.loadBlogs.bind(this);
+    this.showAllBlogs = this.showAllBlogs.bind(this);
+  }
+ 
+
+  loadBlogs(){
+      console.log('ran loadBlogs function');
+      list().then(data => {
+          if (data.error) {
+              console.log(data.error);
+          } else {
+              console.log('blog array after updating: ',data);
+              // setBlogs(data);
+              // setLoaded(true);
+              this.setState({
+                blogs: data
+              });
+          }
+      });
   };
 
+  componentDidMount(){
+    this.loadBlogs();
+  }  
+
+  showAllBlogs(){
+    const { enabled } = this.state;
+    const contentStatus = enabled ? 'Disable' : 'Enable';
+    const textStatus = enabled ? 'enabled' : 'disabled';
+
+    let {blogs} = this.state
+    return blogs.map((blog, i) => {
+        console.log('blog in showAllBlogs function',blog);
+        return (  
+          <SettingToggle
+            key={i}
+            action={{
+              content: contentStatus,
+              onAction: this.handleToggle,
+            }}
+            hidden={blog.hidden}
+          >
+          <p>{blog.title}</p>
+            This post is{' '}
+            <TextStyle variation="strong">{textStatus}</TextStyle>.
+          </SettingToggle>
+        )
+      })
+  }
+
   render() {
-    const { discount, enabled } = this.state;
+    const { discount,enabled } = this.state;
     const contentStatus = enabled ? 'Disable' : 'Enable';
     const textStatus = enabled ? 'enabled' : 'disabled';
 
@@ -26,41 +81,25 @@ class AnnotatedLayout extends React.Component {
       <Page>
         <Layout>
           <Layout.AnnotatedSection
-            title="Default discount"
-            description="Add a product to Sample App, it will automatically be discounted."
-          >
+            title="Filter by Post Status"
+            >
             <Card sectioned>
               <Form onSubmit={this.handleSubmit}>
                 <FormLayout>
-                  <TextField
-                    value={discount}
-                    onChange={this.handleChange('discount')}
-                    label="Discount percentage"
-                    type="discount"
-                  />
-                  <Stack distribution="trailing">
-                    <Button primary submit>
-                      Save
-                    </Button>
-                  </Stack>
+                    <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
+                      <Button>Published</Button>
+                      <Button primary>Drafts</Button>
+                      <Button danger>Removed</Button>
+                    </ButtonGroup>
                 </FormLayout>
               </Form>
             </Card>
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
-            title="Price updates"
-            description="Temporarily disable all Sample App price updates"
+            title="Manage Posts"
+            description="Review new posts and set them approved content live."
           >
-            <SettingToggle
-              action={{
-                content: contentStatus,
-                onAction: this.handleToggle,
-              }}
-              enabled={enabled}
-            >
-              This setting is{' '}
-              <TextStyle variation="strong">{textStatus}</TextStyle>.
-            </SettingToggle>
+            {this.state.blogs ? this.showAllBlogs() : ''}
           </Layout.AnnotatedSection>
         </Layout>
       </Page>
