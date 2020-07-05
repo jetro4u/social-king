@@ -19,11 +19,9 @@ import {
   Link
 } from '@shopify/polaris';
 
-import withAppLayout from '../../components/with/app-layout'
-
 const ManagePosts = (props) => {
-    props = JSON.parse(JSON.stringify(props))
-    // console.log('props in ManagePosts function: ',props);
+    // props = JSON.parse(JSON.stringify(props))
+    console.log('props in ManagePosts function: ',props);
 
     const [blogs, setBlogs] = useState([]);
     const [loaded, setLoaded] = useState({value: false});
@@ -158,6 +156,4 @@ const ManagePosts = (props) => {
     );
 };
 
-export default
-    withAppLayout(
-      ManagePosts);
+export default ManagePosts;

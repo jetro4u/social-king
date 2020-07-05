@@ -3,7 +3,6 @@ import cookie from 'js-cookie';
 import { API } from '../config';
 import Router from 'next/router';
 
-import { parseCookies } from 'nookies'
 import { tryParse } from '../utils/error'
 
 export const verifiedShop = () => {
