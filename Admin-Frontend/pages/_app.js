@@ -19,6 +19,8 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     const config = { apiKey: API_KEY, shopOrigin: Cookies.get("shopOrigin"), forceRedirect: true };
 
+    console.log('config in _app.js', config);
+
     return (
       <React.Fragment>
         <Head>
@@ -28,7 +30,7 @@ class MyApp extends App {
         <Provider config={config}>
           <AppProvider>
             <ApolloProvider client={client}>
-              <Component {...pageProps} />
+              <Component {...pageProps} app={config} />
           </ApolloProvider>
           </AppProvider>
         </Provider>

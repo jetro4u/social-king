@@ -3,6 +3,28 @@ import { API } from '../config';
 import queryString from 'query-string';
 import { isAuth, handleResponse } from './auth';
 
+// const stringifyAuthData = (query) => {
+//     query = queryString.stringify(query);
+//     return query;
+// }
+
+export const list = (props) => {
+
+    let listBlogsEndpoint;
+    console.log('props in list function', props);
+    let username = props ? props.app.shopOrigin : '';
+
+    listBlogsEndpoint = `${API}/${username}/blogs`;
+
+    return fetch(`${listBlogsEndpoint}`, {
+        method: 'GET'
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
 export const createBlog = (blog, token) => {
     let createBlogEndpoint;
 
@@ -48,6 +70,7 @@ export const listBlogsWithCategoriesAndTags = (skip, limit) => {
 };
 
 export const singleBlog = (slug = undefined) => {
+    
     return fetch(`${API}/blog/${slug}`, {
         method: 'GET'
     })
@@ -72,32 +95,12 @@ export const listRelated = blog => {
         .catch(err => console.log(err));
 };
 
-export const list = username => {
-    let listBlogsEndpoint;
-
-    if (username) {
-        listBlogsEndpoint = `${API}/${username}/blogs`;
-    } else {
-        listBlogsEndpoint = `${API}/blogs`;
-    }
-
-    return fetch(`${listBlogsEndpoint}`, {
-        method: 'GET'
-    })
-        .then(response => {
-            return response.json();
-        })
-        .catch(err => console.log(err));
-};
-
 export const removeBlog = (slug, token) => {
     let deleteBlogEndpoint;
 
-    if (isAuth() && isAuth().role === 1) {
-        deleteBlogEndpoint = `${API}/blog/${slug}`;
-    } else if (isAuth() && isAuth().role === 0) {
-        deleteBlogEndpoint = `${API}/user/blog/${slug}`;
-    }
+    deleteBlogEndpoint = `${API}/blog/${slug}`;
+
+    // deleteBlogEndpoint = `${API}/user/blog/${slug}`;
 
     return fetch(`${deleteBlogEndpoint}`, {
         method: 'DELETE',
@@ -117,11 +120,9 @@ export const removeBlog = (slug, token) => {
 export const toggleBlogVisibility = (slug, token) => {
     let toggleBlogEndpoint;
 
-    if (isAuth() && isAuth().role === 1) {
-        toggleBlogEndpoint = `${API}/blog/toggle/${slug}`;
-    } else if (isAuth() && isAuth().role === 0) {
-        toggleBlogEndpoint = `${API}/user/blog/toggle/${slug}`;
-    }
+    toggleBlogEndpoint = `${API}/blog/toggle/${slug}`;
+
+        // toggleBlogEndpoint = `${API}/user/blog/toggle/${slug}`;
 
     return fetch(`${toggleBlogEndpoint}`, {
         method: 'PUT',
