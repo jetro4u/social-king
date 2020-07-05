@@ -12,22 +12,17 @@ export const list = (props) => {
 
     let listBlogsEndpoint;
     console.log('props in list function', props);
-    // const hmac = props.url.query.hmac;
-    // delete props.url.query.hmac;
-    
-    // let authString = stringifyAuthData(props.url.query);
-    // let authString = props.url.asPath.split('?')[1];
-    // let username = queryString.parse(authString).shop;
+    let username = props ? props.app.shopOrigin : '';
 
-    // listBlogsEndpoint = `${API}/${username}/blogs?${authString}`;
+    listBlogsEndpoint = `${API}/${username}/blogs`;
 
-    // return fetch(`${listBlogsEndpoint}`, {
-    //     method: 'GET'
-    // })
-    //     .then(response => {
-    //         return response.json();
-    //     })
-    //     .catch(err => console.log(err));
+    return fetch(`${listBlogsEndpoint}`, {
+        method: 'GET'
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
 };
 
 export const createBlog = (blog, token) => {
