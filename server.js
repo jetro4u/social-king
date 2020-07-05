@@ -19,6 +19,19 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+const mongoose = require('mongoose');
+const Shop = require('./models/Shop');
+
+mongoose
+  .connect(process.env.DATABASE_LOCAL, {useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false, useUnifiedTopology: true})
+  .then(()=> {
+    console.log('DB Connected')
+
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+
 const { 
     SHOPIFY_API_SECRET_KEY, 
     SHOPIFY_API_KEY,  
@@ -44,6 +57,16 @@ app.prepare().then(() => {
           secure: true,
           sameSite: 'none'
         });
+
+        shopifyScope = 'read_products, write_products, read_content, write_content' 
+        let new_shop = new Shop({ shopify_domain: shop, accessToken, shopifyScope})
+          new_shop.save((err, shopReturned) => {
+              if (err) {
+                  console.log('error: ', err)
+              } else {
+                  console.log('shop created and returned: ', shopReturned);
+              }
+          });
 
         const registration = await registerWebhook({
          address: `${HOST}/webhooks/products/create`,
