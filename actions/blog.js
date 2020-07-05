@@ -16,18 +16,18 @@ export const list = (props) => {
     // delete props.url.query.hmac;
     
     // let authString = stringifyAuthData(props.url.query);
-    let authString = props.url.asPath.split('?')[1];
-    let username = queryString.parse(authString).shop;
+    // let authString = props.url.asPath.split('?')[1];
+    // let username = queryString.parse(authString).shop;
 
-    listBlogsEndpoint = `${API}/${username}/blogs?${authString}`;
+    // listBlogsEndpoint = `${API}/${username}/blogs?${authString}`;
 
-    return fetch(`${listBlogsEndpoint}`, {
-        method: 'GET'
-    })
-        .then(response => {
-            return response.json();
-        })
-        .catch(err => console.log(err));
+    // return fetch(`${listBlogsEndpoint}`, {
+    //     method: 'GET'
+    // })
+    //     .then(response => {
+    //         return response.json();
+    //     })
+    //     .catch(err => console.log(err));
 };
 
 export const createBlog = (blog, token) => {
