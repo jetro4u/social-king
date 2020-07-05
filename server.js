@@ -19,6 +19,19 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+const mongoose = require('mongoose');
+const Shop = require('./models/Shop');
+
+mongoose
+  .connect(process.env.DATABASE_LOCAL, {useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false, useUnifiedTopology: true})
+  .then(()=> {
+    console.log('DB Connected')
+
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+
 const { 
     SHOPIFY_API_SECRET_KEY, 
     SHOPIFY_API_KEY,  
@@ -39,27 +52,42 @@ app.prepare().then(() => {
       scopes: ['read_products', 'write_products', 'read_content', 'write_content'],
       async afterAuth(ctx) {
         const { shop, accessToken } = ctx.session;
+
+        console.log('shop: ', shop)
+        console.log('accessToken: ', accessToken)
         ctx.cookies.set('shopOrigin', shop, {
           httpOnly: false,
           secure: true,
           sameSite: 'none'
         });
 
-        const registration = await registerWebhook({
-         address: `${HOST}/webhooks/products/create`,
-         topic: 'PRODUCTS_CREATE',
-         accessToken,
-         shop,
-         apiVersion: ApiVersion.October19
-       });
+        let new_shop = new Shop({ shopify_domain: shop, shopifyToken: accessToken, shopifyScope: 'read_products, write_products, read_content, write_content' })
+          new_shop.save((err, shopReturned) => {
+              if (err) {
+                  // return res.status(401).json({
+                  //     error: errorHandler(err)
+                  // });
+                  console.log('error: ', err)
+                  const registration = registerWebhook({
+                     address: `${HOST}/webhooks/products/create`,
+                     topic: 'PRODUCTS_CREATE',
+                     accessToken,
+                     shop,
+                     apiVersion: ApiVersion.October19
+                   });
 
-       if (registration.success) {
-         console.log('Successfully registered webhook!');
-       } else {
-         console.log('Failed to register webhook', registration.result);
-       }
+                   if (registration.success) {
+                     console.log('Successfully registered webhook!');
+                   } else {
+                     console.log('Failed to register webhook', registration.result);
+                   }
 
-        await getSubscriptionUrl(ctx, accessToken, shop);
+                   getSubscriptionUrl(ctx, accessToken, shop);    
+                
+              } else {
+                  console.log('shop created and returned: ', shopReturned);
+              }
+        });
       },
     }),
   );

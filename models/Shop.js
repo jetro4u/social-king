@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const Counter = require('./Counter');
-
 
 const Shop = mongoose.Schema({
   shopId: Number,
