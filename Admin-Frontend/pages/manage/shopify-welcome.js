@@ -1,6 +1,3 @@
-import withAppAuth from '../../components/with/app-auth'
-import withAppLayout from '../../components/with/app-layout'
-
 const ShopifyWelcome = (props) => {
   return (
     <div className="hero">
@@ -58,7 +55,4 @@ const ShopifyWelcome = (props) => {
   );
 }
 
-export default
-  withAppAuth(
-    withAppLayout(
-      ShopifyWelcome));
+export default ShopifyWelcome;

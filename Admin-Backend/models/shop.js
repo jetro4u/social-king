@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 
 const Shop = mongoose.Schema({
 	  shopId: Number,
-	  shopify_domain: String,
+	  shopify_domain: { type: String, 
+	  	  unique: true,
+          index: true },
 	  name: String,
 	  domain: String,
 	  supportEmail: String,
