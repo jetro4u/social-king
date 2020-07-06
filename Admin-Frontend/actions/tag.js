@@ -21,7 +21,7 @@ export const create = (tag, props, token) => {
 
 export const getTags = (props) => {
     console.log('props in getTags function', props);
-    let username = props ? props.app.shopOrigin : '';
+    let username = props.app ? props.app.shopOrigin : '';
 
     return fetch(`${API}/tags?shop=${username}`, {
         method: 'GET'
