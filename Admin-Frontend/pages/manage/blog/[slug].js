@@ -1,6 +1,4 @@
 import Link from 'next/link';
-
-import withAppLayout from '../../../components/with/app-layout'
 import dynamic from 'next/dynamic'
 
 const BlogUpdate = dynamic(
@@ -17,6 +15,4 @@ const Blog = (props) => {
     );
 };
 
-export default
-    withAppLayout(
-      Blog);
+export default Blog;

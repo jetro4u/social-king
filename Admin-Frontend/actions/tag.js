@@ -19,9 +19,11 @@ export const create = (tag, props, token) => {
         .catch(err => console.log(err));
 };
 
-export const getTags = (shop) => {
-    let authString = shop.url.asPath.split('?')[1];
-    return fetch(`${API}/tags?${authString}`, {
+export const getTags = (props) => {
+    console.log('props in getTags function', props);
+    let username = props ? props.app.shopOrigin : '';
+
+    return fetch(`${API}/tags?shop=${username}`, {
         method: 'GET'
     })
         .then(response => {
