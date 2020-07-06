@@ -40,8 +40,10 @@ const GET_PRODUCTS_BY_ID = gql`
 
 class ResourceListWithProducts extends React.Component {
   static contextType = Context;
+  
   render() {
     const app = this.context;
+    console.log('app', app);
     const redirectToProduct = () => {
       const redirect = Redirect.create(app);
       redirect.dispatch(
