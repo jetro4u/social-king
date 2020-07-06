@@ -144,18 +144,11 @@ export const toggleBlogVisibility = (slug, token) => {
 export const updateBlog = (blog, token, slug) => {
     let updateBlogEndpoint;
 
-    if (isAuth() && isAuth().role === 1) {
-        updateBlogEndpoint = `${API}/blog/${slug}`;
-    } else if (isAuth() && isAuth().role === 0) {
-        updateBlogEndpoint = `${API}/user/blog/${slug}`;
-    }
+    console.log('blog in updateBlog func', blog);
+    updateBlogEndpoint = `${API}/blog/${slug}`;
 
     return fetch(`${updateBlogEndpoint}`, {
         method: 'PUT',
-        headers: {
-            Accept: 'application/json',
-            Authorization: `Bearer ${token}`
-        },
         body: blog
     })
         .then(response => {
