@@ -24,18 +24,16 @@ const BlogUpdate = ({ shop, router }) => {
 
     const [body, setBody] = useState('');
     const [tags, setTags] = useState([]);
+    const [title, setTitle] = useState('');
+   
     const [modalState, setModalState] = useState(false);
 
     const [selectedProducts, setSelectedProducts] = useState([]);
-
-    const [checkedTag, setCheckedTag] = useState([]); // tags
     const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state 
 
     //polaris input component
-    const [title, setTitle] = useState('');
     const handleTitleChange = useCallback((newValue) => setTitle(newValue), []);
                         
-
     const [values, setValues] = useState({
         error: '',
         success: '',
@@ -45,7 +43,6 @@ const BlogUpdate = ({ shop, router }) => {
 
     const { error, success, formData } = values;
     console.log('selectedTags in BlogUpdate function', selectedTags);
-
 
     const token = getCookie('token');
 
@@ -64,13 +61,13 @@ const BlogUpdate = ({ shop, router }) => {
                 } else {
                     setTitle(data.title);
                     setBody(data.body);
-                    setTagsArray(data.tags);
+                    setBlogTags(data.tags);
                 }
             });
         }
     };
 
-    const setTagsArray = blogTags => {
+    const setBlogTags = blogTags => {
         let ta = [];
         blogTags ? blogTags.map((t, i) => {
             ta.push(t._id);
@@ -106,11 +103,6 @@ const BlogUpdate = ({ shop, router }) => {
             </Card>
         )
     };
-
-    // const handleChange = name => e => {
-    //     // console.log(e.target.value);
-    //     setValues({ ...values, [name]: value, error: '' });
-    // };
 
     const handleBody = e => {
         setBody(e);
