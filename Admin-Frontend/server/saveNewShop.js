@@ -26,8 +26,11 @@ const saveNewShop = async (ctx, accessToken, shopify_domain) => {
               console.log('shop found: ', shop)   
           }
       });
-
-    return message;
+    if(message='shop found'){
+      return ctx.redirect(`https://${shopReturned.shopify_domain}/admin/apps/community-2/manage/manage-posts`)
+    } else{
+       return message;      
+    }
 };
 
 module.exports = saveNewShop;
