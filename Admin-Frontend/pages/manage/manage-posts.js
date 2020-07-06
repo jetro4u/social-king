@@ -20,8 +20,6 @@ import {
 } from '@shopify/polaris';
 
 const ManagePosts = (props) => {
-    // props = JSON.parse(JSON.stringify(props))
-    console.log('props in ManagePosts function: ',props);
 
     const [blogs, setBlogs] = useState([]);
     const [loaded, setLoaded] = useState({value: false});
@@ -34,7 +32,6 @@ const ManagePosts = (props) => {
     }, []);
 
     const hideShowBlog = slug => {
-        console.log('ran hideShowBlog with this slug:', slug);
         toggleBlogVisibility(slug).then(data => {
             if (data.error) {
                 console.log(data.error);

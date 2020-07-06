@@ -80,7 +80,6 @@ export const authenticate = (data, next) => {
 
 export const isAuth = () => {
     if (process.browser) {
-       console.log('ran isAuth function')
        return cookie.get('user');
     }
 }
