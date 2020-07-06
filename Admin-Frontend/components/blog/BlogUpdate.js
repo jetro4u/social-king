@@ -9,20 +9,25 @@ import { singleBlog, updateBlog } from '../../actions/blog';
 
 import EditorJs from "react-editor-js";
 import { EDITOR_JS_TOOLS } from "./editorjs-constants";
-import ModalExample from './ModalExample'
+// import ModalExample from './ModalExample'
+
 
 import { API } from '../../config';
 import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText, SkeletonPage, TextContainer} from '@shopify/polaris';
-
+import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
+import ResourceListWithProducts from '../ResourceList';
+import store from 'store-js';
 
 const BlogUpdate = ({ shop, router }) => {
     console.log('shop in BlogUpdate function', shop);
 
     const [body, setBody] = useState('');
     const [tags, setTags] = useState([]);
+    const [modalState, setModalState] = useState(false);
 
     const [checkedTag, setCheckedTag] = useState([]); // tags
-    const [selected, setSelected] = useState([]); //polaris tags selected state    
+    const [selected, setSelected] = useState([]); //polaris tags selected state 
+
 
     const [values, setValues] = useState({
         title: '',
@@ -62,14 +67,6 @@ const BlogUpdate = ({ shop, router }) => {
         return body;
     };
 
-    const setCategoriesArray = blogCategories => {
-        let ca = [];
-        blogCategories.map((c, i) => {
-            ca.push(c._id);
-        });
-        setChecked(ca);
-    };
-
     const setTagsArray = blogTags => {
         let ta = [];
         blogTags ? blogTags.map((t, i) => {
@@ -86,22 +83,6 @@ const BlogUpdate = ({ shop, router }) => {
                 setTags(data);
             }
         });
-    };
-
-    const handleToggle = c => () => {
-        setValues({ ...values, error: '' });
-        // return the first index or -1
-        const clickedCategory = checked.indexOf(c);
-        const all = [...checked];
-
-        if (clickedCategory === -1) {
-            all.push(c);
-        } else {
-            all.splice(clickedCategory, 1);
-        }
-        console.log(all);
-        setChecked(all);
-        formData.set('categories', all);
     };
 
     const handleTagsToggle = t => () => {
@@ -127,23 +108,6 @@ const BlogUpdate = ({ shop, router }) => {
         } else {
             return false;
         }
-    };
-
-    const showCategories = () => {
-        return (
-            categories &&
-            categories.map((c, i) => (
-                <li key={i} className="list-unstyled">
-                    <input
-                        onChange={handleToggle(c._id)}
-                        checked={findOutCategory(c._id)}
-                        type="checkbox"
-                        className="mr-2"
-                    />
-                    <label className="form-check-label">{c.name}</label>
-                </li>
-            ))
-        );
     };
 
     const showTags = () => {
@@ -207,10 +171,26 @@ const BlogUpdate = ({ shop, router }) => {
         </div>
     );
 
+    const handleSelection = (resources) => {
+        const idsFromResources = resources.selection.map((product) => product.id);
+        setModalState(false)
+        console.log(resources)
+        console.log(idsFromResources)
+        store.set('ids', idsFromResources);
+    };
+
     return (
        <SkeletonPage title={title} type="input" primaryAction secondaryActions={2}>
            {showSuccess()}
            {showError()}
+           <ResourcePicker
+              resourceType="Product"
+              showVariants={false}
+              open={modalState}
+              onSelection={(resources) => handleSelection(resources)}
+              onCancel={() => setModalState(false)}
+            />
+           <ResourceListWithProducts />
            <Button primary onClick={editBlog}>Publish</Button>
               <Layout>
                 <Layout.Section>
@@ -240,7 +220,12 @@ const BlogUpdate = ({ shop, router }) => {
                   </Card>
                   <Card title="Promoted Products" subdued>
                     <Card.Section>
-                        <ModalExample blog={body}/>
+                        <TitleBar
+                          primaryAction={{
+                            content: 'Select Related Products',
+                            onAction: () => setModalState(true),
+                          }}
+                        />
                     </Card.Section>
                     <Card.Section>
                       <SkeletonBodyText lines={2} />
