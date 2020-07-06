@@ -19,8 +19,7 @@ import {
 
 
 const Tag = (props) => {
-    props = JSON.parse(JSON.stringify(props))
-    // console.log('props in ManagePosts function: ',props);
+    console.log('props in Tag.js component: ',props);
 
     const [values, setValues] = useState({
         name: '',
@@ -39,7 +38,7 @@ const Tag = (props) => {
     }, [reload]);
 
     const loadTags = () => {
-        getTags().then(data => {
+        getTags(props).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
