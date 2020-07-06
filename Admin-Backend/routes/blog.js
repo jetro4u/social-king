@@ -19,22 +19,6 @@ const { isValidShopifyRequest, requireSignin, adminMiddleware, authMiddleware, c
 
 router.get('/urls-for-sitemap', listForSitemap);
 
-router.post('/blog', requireSignin, adminMiddleware, create);
-router.get('/blogs', list);
-router.post('/blogs-categories-tags', listAllBlogsCategoriesTags);
-
-
-router.get('/blog/photo/:slug', photo);
-router.post('/blogs/related', listRelated);
-router.get('/blogs/search', listSearch);
-router.put('/blog/:slug', requireSignin, adminMiddleware, update);
-
-// auth user blog crud
-router.post('/user/blog', requireSignin, authMiddleware, create);
-router.delete('/user/blog/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, remove);
-router.put('/user/blog/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, update);
-router.put('/user/blog/toggle/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, toggle);
-
 //
 //Actually Being Used in Shopify Admin App
 //
