@@ -60,7 +60,7 @@ app.prepare().then(() => {
         let message = await saveNewShop(ctx, accessToken, shop);
         console.log("message in afterAuth: ", message);
         console.log('shop in afterAuth function', shop)
-        if(message!='shop found'){
+        if(!shop.includes('.')){
           const registration = await registerWebhook({
             address: `${HOST}/webhooks/products/create`,
             topic: 'PRODUCTS_CREATE',

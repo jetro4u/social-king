@@ -13,36 +13,34 @@ import { EDITOR_JS_TOOLS } from "./editorjs-constants";
 
 
 import { API } from '../../config';
-import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText, 
+import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText,
     SkeletonPage, TextContainer, EmptyState, OptionList, TextField } from '@shopify/polaris';
 import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
 import ResourceListWithProducts from '../ResourceList';
 import store from 'store-js';
 
 const BlogUpdate = ({ shop, router }) => {
-    console.log('shop in BlogUpdate function', shop);
 
+    const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [tags, setTags] = useState([]);
-    const [title, setTitle] = useState('');
-   
-    const [modalState, setModalState] = useState(false);
-
+    const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state
     const [selectedProducts, setSelectedProducts] = useState([]);
-    const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state 
 
-    //polaris input component
+    const [modalState, setModalState] = useState(false);
+   
     const handleTitleChange = useCallback((newValue) => setTitle(newValue), []);
-                        
+    const handleBodyChange = useCallback((newValue) => setBody(newValue), []);
+
     const [values, setValues] = useState({
         error: '',
         success: '',
-        formData: '',
         body: ''
     });
 
     const { error, success, formData } = values;
     console.log('selectedTags in BlogUpdate function', selectedTags);
+
 
     const token = getCookie('token');
 
@@ -50,6 +48,7 @@ const BlogUpdate = ({ shop, router }) => {
         setValues({ ...values });
         initBlog();
         initTags();
+        initSelectedProducts();
     }, [router]);
 
     const initBlog = () => {
@@ -61,13 +60,18 @@ const BlogUpdate = ({ shop, router }) => {
                 } else {
                     setTitle(data.title);
                     setBody(data.body);
-                    setBlogTags(data.tags);
+                    setTagsArray(data.tags);
                 }
             });
         }
     };
 
-    const setBlogTags = blogTags => {
+    const initSelectedProducts = () => {
+      return setSelectedProducts(store.get('ids'));
+    }
+
+    const setTagsArray = blogTags => {
+        console.log('ran setTagsArray func with :', blogTags)
         let ta = [];
         blogTags ? blogTags.map((t, i) => {
             ta.push(t._id);
@@ -86,7 +90,7 @@ const BlogUpdate = ({ shop, router }) => {
     };
 
     const showPolarisTags = () => {
-        console.log('tags in showTags func', tags);
+
         let tagsArray = tags.map((t, i) => (
             {value: t._id, label: t.name}
         ));
@@ -104,26 +108,34 @@ const BlogUpdate = ({ shop, router }) => {
         )
     };
 
-    const handleBody = e => {
-        setBody(e);
-        console.log('In handleBody function, e is ',e);
+    const showSelectedProducts = () => {
+        return (
+            <Card>
+              {selectedProducts.map((product, i) => (
+                  <p key={i}>{product}</p>
+              ))}
+            </Card>
+        )
     };
 
     const editBlog = e => {
         e.preventDefault();
-        updateBlog(formData, token, router.query.slug).then(data => {
-            if (data.error) {
-                setValues({ ...values, error: data.error });
-            } else {
-                setValues({ ...values, title: '', success: `Blog titled "${data.title}" is successfully updated` });
-                if (isAuth() && isAuth().role === 1) {
-                    // Router.replace(`/admin/crud/${router.query.slug}`);
-                    Router.replace(`/admin`);
-                } else if (isAuth() && isAuth().role === 0) {
-                    // Router.replace(`/user/crud/${router.query.slug}`);
-                    Router.replace(`/user`);
+        updateBlog({title, body, selectedTags, selectedProducts}, token, router.query.slug).then(data => {
+            if(data){
+                if (data.error) {
+                    setValues({ ...values, error: data.error });
+                } else {
+                    setValues({ ...values, title: '', success: `Blog titled "${data.title}" is successfully updated` });
+                    if (isAuth() && isAuth().role === 1) {
+                        // Router.replace(`/admin/crud/${router.query.slug}`);
+                        Router.replace(`/admin`);
+                    } else if (isAuth() && isAuth().role === 0) {
+                        // Router.replace(`/user/crud/${router.query.slug}`);
+                        Router.replace(`/user`);
+                    }
                 }
             }
+           
         });
     };
 
@@ -165,10 +177,11 @@ const BlogUpdate = ({ shop, router }) => {
               <Layout>
                 <Layout.Section>
                   <Card sectioned title="Title">
-                    <TextField label="Post Title" value={title} onChange={handleTitleChange} /> 
+                    <TextField label="Post Title" value={title} onChange={handleTitleChange} />
                   </Card>
                   <Card sectioned title="Content">
                     <EditorJs
+                        onChange={handleBodyChange}
                         tools={EDITOR_JS_TOOLS}
                         data={body ? body[0] : {}}
                         enableReInitialize={true}
@@ -195,23 +208,7 @@ const BlogUpdate = ({ shop, router }) => {
                             onAction: () => setModalState(true),
                           }}
                         />
-                        {emptyState ? (
-                           <Layout>
-                                <p>Sample app using React and Next.js</p>
-                                <EmptyState
-                                    heading="Discount your products temporarily"
-                                    action={{
-                                      content: 'Select products',
-                                      onAction: () => setModalState(true),
-                                    }}
-                                    image={img}
-                                  >
-                                  <p>Select products to change their price temporarily.</p>
-                              </EmptyState>
-                            </Layout>
-                         ) : (
-                        <ResourceListWithProducts />
-                         )}
+                    {showSelectedProducts()}
                     </Card.Section>
                     <Card.Section>
                       <SkeletonBodyText lines={2} />
@@ -224,3 +221,4 @@ const BlogUpdate = ({ shop, router }) => {
 };
 
 export default withRouter(BlogUpdate);
+
