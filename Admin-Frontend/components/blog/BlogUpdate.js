@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Router from 'next/router';
 import dynamic from 'next/dynamic';
 import { withRouter } from 'next/router';
@@ -14,7 +14,7 @@ import { EDITOR_JS_TOOLS } from "./editorjs-constants";
 
 import { API } from '../../config';
 import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText, 
-    SkeletonPage, TextContainer, EmptyState, OptionList } from '@shopify/polaris';
+    SkeletonPage, TextContainer, EmptyState, OptionList, TextField } from '@shopify/polaris';
 import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
 import ResourceListWithProducts from '../ResourceList';
 import store from 'store-js';
@@ -31,24 +31,26 @@ const BlogUpdate = ({ shop, router }) => {
     const [checkedTag, setCheckedTag] = useState([]); // tags
     const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state 
 
+    //polaris input component
+    const [title, setTitle] = useState('');
+    const handleTitleChange = useCallback((newValue) => setTitle(newValue), []);
+                        
 
     const [values, setValues] = useState({
-        title: '',
         error: '',
         success: '',
         formData: '',
-        title: '',
         body: ''
     });
 
-    const { error, success, formData, title } = values;
+    const { error, success, formData } = values;
     console.log('selectedTags in BlogUpdate function', selectedTags);
 
 
     const token = getCookie('token');
 
     useEffect(() => {
-        setValues({ ...values, formData: new FormData() });
+        setValues({ ...values });
         initBlog();
         initTags();
     }, [router]);
@@ -60,17 +62,12 @@ const BlogUpdate = ({ shop, router }) => {
                 if (data.error) {
                     console.log(data.error);
                 } else {
-                    setValues({ ...values, title: data.title });
+                    setTitle(data.title);
                     setBody(data.body);
-                    getEditorBody(data.body);
                     setTagsArray(data.tags);
                 }
             });
         }
-    };
-
-    const getEditorBody = body => {
-        return body;
     };
 
     const setTagsArray = blogTags => {
@@ -110,16 +107,14 @@ const BlogUpdate = ({ shop, router }) => {
         )
     };
 
-    const handleChange = name => e => {
-        // console.log(e.target.value);
-        const value = name === 'photo' ? e.target.files[0] : e.target.value;
-        formData.set(name, value);
-        setValues({ ...values, [name]: value, formData, error: '' });
-    };
+    // const handleChange = name => e => {
+    //     // console.log(e.target.value);
+    //     setValues({ ...values, [name]: value, error: '' });
+    // };
 
     const handleBody = e => {
         setBody(e);
-        formData.set('body', e);
+        console.log('In handleBody function, e is ',e);
     };
 
     const editBlog = e => {
@@ -178,8 +173,7 @@ const BlogUpdate = ({ shop, router }) => {
               <Layout>
                 <Layout.Section>
                   <Card sectioned title="Title">
-                    <label className="text-muted">Title</label>
-                    <input type="text" className="form-control" value={title} onChange={handleChange('title')} />
+                    <TextField label="Post Title" value={title} onChange={handleTitleChange} /> 
                   </Card>
                   <Card sectioned title="Content">
                     <EditorJs
