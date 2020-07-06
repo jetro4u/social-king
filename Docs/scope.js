@@ -1,1 +1,0 @@
-'read_products, write_products, read_content, write_content'
