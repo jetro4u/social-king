@@ -13,7 +13,8 @@ import { EDITOR_JS_TOOLS } from "./editorjs-constants";
 
 
 import { API } from '../../config';
-import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText, SkeletonPage, TextContainer} from '@shopify/polaris';
+import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText, 
+    SkeletonPage, TextContainer, EmptyState, OptionList } from '@shopify/polaris';
 import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
 import ResourceListWithProducts from '../ResourceList';
 import store from 'store-js';
@@ -25,8 +26,10 @@ const BlogUpdate = ({ shop, router }) => {
     const [tags, setTags] = useState([]);
     const [modalState, setModalState] = useState(false);
 
+    const [selectedProducts, setSelectedProducts] = useState([]);
+
     const [checkedTag, setCheckedTag] = useState([]); // tags
-    const [selected, setSelected] = useState([]); //polaris tags selected state 
+    const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state 
 
 
     const [values, setValues] = useState({
@@ -39,6 +42,9 @@ const BlogUpdate = ({ shop, router }) => {
     });
 
     const { error, success, formData, title } = values;
+    console.log('selectedTags in BlogUpdate function', selectedTags);
+
+
     const token = getCookie('token');
 
     useEffect(() => {
@@ -98,7 +104,7 @@ const BlogUpdate = ({ shop, router }) => {
         }
         console.log(all);
         setCheckedTag(all);
-        formData.set('tags', all);
+        console.log('checkedTag: ', checkedTag);
     };
 
     const findOutTag = t => {
@@ -127,6 +133,25 @@ const BlogUpdate = ({ shop, router }) => {
                 </li>
             ))
         );
+    };
+
+    const showPolarisTags = () => {
+        console.log('tags in showTags func', tags);
+        let tagsArray = tags.map((t, i) => (
+            {value: t._id, label: t.name}
+        ));
+
+        return (
+            <Card>
+              <OptionList
+                title="Manage sales channels availability"
+                onChange={setSelectedTags}
+                options={tagsArray}
+                selected={selectedTags}
+                allowMultiple
+              />
+            </Card>
+        )
     };
 
     const handleChange = name => e => {
@@ -179,6 +204,9 @@ const BlogUpdate = ({ shop, router }) => {
         store.set('ids', idsFromResources);
     };
 
+    const emptyState = !store.get('ids');
+    const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
+
     return (
        <SkeletonPage title={title} type="input" primaryAction secondaryActions={2}>
            {showSuccess()}
@@ -190,7 +218,6 @@ const BlogUpdate = ({ shop, router }) => {
               onSelection={(resources) => handleSelection(resources)}
               onCancel={() => setModalState(false)}
             />
-           <ResourceListWithProducts />
            <Button primary onClick={editBlog}>Publish</Button>
               <Layout>
                 <Layout.Section>
@@ -215,6 +242,9 @@ const BlogUpdate = ({ shop, router }) => {
                       <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showTags()}</ul>
                     </Card.Section>
                     <Card.Section>
+                      {showPolarisTags()}
+                    </Card.Section>
+                    <Card.Section>
                       <SkeletonBodyText lines={1} />
                     </Card.Section>
                   </Card>
@@ -226,6 +256,23 @@ const BlogUpdate = ({ shop, router }) => {
                             onAction: () => setModalState(true),
                           }}
                         />
+                        {emptyState ? (
+                           <Layout>
+                                <p>Sample app using React and Next.js</p>
+                                <EmptyState
+                                    heading="Discount your products temporarily"
+                                    action={{
+                                      content: 'Select products',
+                                      onAction: () => setModalState(true),
+                                    }}
+                                    image={img}
+                                  >
+                                  <p>Select products to change their price temporarily.</p>
+                              </EmptyState>
+                            </Layout>
+                         ) : (
+                        <ResourceListWithProducts />
+                         )}
                     </Card.Section>
                     <Card.Section>
                       <SkeletonBodyText lines={2} />
