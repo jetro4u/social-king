@@ -1,6 +1,5 @@
 import Tag from '../../components/blog/Tag';
 import Link from 'next/link';
-import withAppLayout from '../../components/with/app-layout'
 
 import {
   Layout,
@@ -14,7 +13,7 @@ const ManageTags = (props) => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-6">
-                        <Tag props={props}/>
+                        <Tag {...props}/>
                     </div>
                 </div>
             </div>
@@ -24,6 +23,4 @@ const ManageTags = (props) => {
 };
 
 
-export default
-    withAppLayout(
-      ManageTags);
+export default ManageTags;

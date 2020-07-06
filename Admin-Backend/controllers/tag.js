@@ -6,10 +6,10 @@ const { errorHandler } = require('../helpers/dbErrorHandler');
 exports.create = (req, res) => {
     console.log('req.body', req.body);
 
-    const { tag:{name}, props:{props:{url: {query: {shop}}}} } = req.body;
+    const { tag:{name}, props:{app: {shopOrigin}}} = req.body;
     let slug = slugify(name).toLowerCase();
 
-    let tag = new Tag({ name, slug, shop });
+    let tag = new Tag({ name, slug, shop: shopOrigin });
 
     tag.save((err, data) => {
         if (err) {
