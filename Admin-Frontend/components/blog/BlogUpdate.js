@@ -78,7 +78,7 @@ const BlogUpdate = ({ shop, router }) => {
         blogTags ? blogTags.map((t, i) => {
             ta.push(t._id);
         }) : [];
-        setCheckedTag(ta);
+        setSelectedTags(ta);
     };
 
     const initTags = () => {
@@ -91,50 +91,6 @@ const BlogUpdate = ({ shop, router }) => {
         });
     };
 
-    const handleTagsToggle = t => () => {
-        setValues({ ...values, error: '' });
-        // return the first index or -1
-        const clickedTag = checkedTag.indexOf(t);
-        const all = [...checkedTag];
-
-        if (clickedTag === -1) {
-            all.push(t);
-        } else {
-            all.splice(clickedTag, 1);
-        }
-        console.log(all);
-        setCheckedTag(all);
-        console.log('checkedTag: ', checkedTag);
-    };
-
-    const findOutTag = t => {
-        const result = checkedTag.indexOf(t);
-        if (result !== -1) {
-            return true;
-        } else {
-            return false;
-        }
-    };
-
-    const showTags = () => {
-        console.log('tags in showTags func', tags);
-
-        return (
-            tags &&
-            tags.map((t, i) => (
-                <li key={i} className="list-unstyled">
-                    <input
-                        onChange={handleTagsToggle(t._id)}
-                        checked={findOutTag(t._id)}
-                        type="checkbox"
-                        className="mr-2"
-                    />
-                    <label className="form-check-label">{t.name}</label>
-                </li>
-            ))
-        );
-    };
-
     const showPolarisTags = () => {
         console.log('tags in showTags func', tags);
         let tagsArray = tags.map((t, i) => (
@@ -144,7 +100,7 @@ const BlogUpdate = ({ shop, router }) => {
         return (
             <Card>
               <OptionList
-                title="Manage sales channels availability"
+                title="Categorize and Increase Visibility with Tags"
                 onChange={setSelectedTags}
                 options={tagsArray}
                 selected={selectedTags}
@@ -238,9 +194,6 @@ const BlogUpdate = ({ shop, router }) => {
                 </Layout.Section>
                 <Layout.Section secondary>
                   <Card title="Tags">
-                    <Card.Section>
-                      <ul style={{ maxHeight: '200px', overflowY: 'scroll' }}>{showTags()}</ul>
-                    </Card.Section>
                     <Card.Section>
                       {showPolarisTags()}
                     </Card.Section>
