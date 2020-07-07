@@ -280,28 +280,12 @@ exports.update = (req, res) => {
 
     const { body, desc, categories, tags } = req.body;
 
-
-    if (body) {
-        oldBlog.excerpt = smartTrim(body, 320, ' ', ' ...');
-        oldBlog.desc = stripHtml(body.substring(0, 160));
-    }
-
     if (categories) {
         oldBlog.categories = categories.split(',');
     }
 
     if (tags) {
         oldBlog.tags = tags.split(',');
-    }
-
-    if (files.photo) {
-        if (files.photo.size > 1000000) {
-            return res.status(400).json({
-                error: 'Image should be less then 1mb in size'
-            });
-        }
-        oldBlog.photo.data = fs.readFileSync(files.photo.path);
-        oldBlog.photo.contentType = files.photo.type;
     }
 
         oldBlog.save((err, result) => {
