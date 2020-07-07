@@ -45,10 +45,12 @@ const blogSchema = new mongoose.Schema(
             type: ObjectId, 
             ref: 'Comment'
         }],
-        relatedProducts: [{ 
-            type: ObjectId, 
-            ref: 'Product'
-        }],
+        selectedProducts: {
+            type: Array,
+            required: true,
+            min: 200,
+            max: 2000000
+        },
         categories: [{ 
             type: ObjectId, 
             ref: 'Category'

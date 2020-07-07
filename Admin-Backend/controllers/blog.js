@@ -285,7 +285,7 @@ exports.update = (req, res) => {
     }
 
     if (tags) {
-        oldBlog.tags = tags.split(',');
+        oldBlog.tags = tags;
     }
 
         oldBlog.save((err, result) => {
