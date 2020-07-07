@@ -44,7 +44,8 @@ class AnnotatedLayout extends React.Component {
   };
 
   componentDidMount(){
-    this.loadBlogs();
+    // this.loadBlogs();
+    console.log('loaded settings page');
   }  
 
   showAllBlogs(){

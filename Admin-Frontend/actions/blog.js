@@ -146,9 +146,15 @@ export const updateBlog = (blog, token, slug) => {
 
     console.log('blog in updateBlog func', blog);
     updateBlogEndpoint = `${API}/blog/${slug}`;
+    blog = JSON.stringify(blog);
 
     return fetch(`${updateBlogEndpoint}`, {
         method: 'PUT',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
         body: blog
     })
         .then(response => {
