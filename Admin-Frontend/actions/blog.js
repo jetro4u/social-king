@@ -143,6 +143,7 @@ export const toggleBlogVisibility = (slug, token) => {
 
 export const updateBlog = (blog, token, slug) => {
     let updateBlogEndpoint;
+    blog.tags = blog.selectedTags;
 
     console.log('blog in updateBlog func', blog);
     updateBlogEndpoint = `${API}/blog/${slug}`;
