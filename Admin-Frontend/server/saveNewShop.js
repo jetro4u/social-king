@@ -1,11 +1,12 @@
 const Shop = require('../models/shop');
 let message = '';
+let shopDomain = '';
 
 const saveNewShop = async (ctx, accessToken, shopify_domain) => {
 
     console.log('shopify_domain in saveNewShop func', shopify_domain);
 
-      Shop.findOne({ shopify_domain }).exec((err, shop) => {
+     await Shop.findOne({ shopify_domain }).exec((err, shop) => {
           if (err){
               message = 'ran error logic';
               console.log('ran error logic. err:', err);          
@@ -19,15 +20,18 @@ const saveNewShop = async (ctx, accessToken, shopify_domain) => {
                 if (err) {
                   console.log('err trying to save shop: ', err)
                 } else {
-                  console.log('shop successfully created');
+                  console.log('shop successfully created: ',shopReturned);
+                  shopDomain = shop.shopify_domain;
                 }});
           } else {
               message = 'shop found';
-              console.log('shop found: ', shop)   
+              console.log('shop found: ', shop) 
+              shopDomain = shop.shopify_domain;  
           }
       });
-    if(message='shop found'){
-      return ctx.redirect(`https://${shopReturned.shopify_domain}/admin/apps/community-2/manage/manage-posts`)
+    console.log('message', message)
+    if(message=='shop found'){
+      return ctx.redirect(`https://${shopDomain}/admin/apps/community-2/manage/manage-posts`)
     } else{
        return message;      
     }
