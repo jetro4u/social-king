@@ -18,30 +18,21 @@ class Index extends React.Component {
 	        onAction: () => this.setState({ open: true }),
 	      }}
 	    />
-	   <ResourcePicker
-          resourceType="Product"
-          showVariants={false}
-          open={this.state.open}
-          onSelection={(resources) => this.handleSelection(resources)}
-          onCancel={() => this.setState({ open: false })}
-        />
-       {emptyState ? (
-		   <Layout>
-			    <p>Sample app using React and Next.js</p>
+	   <Layout>
 			    <EmptyState
-			        heading="Discount your products temporarily"
+			        heading="Expower Shoppers to Share Their Voices"
 			        action={{
-			          content: 'Select products',
+			          content: 'View New Posts',
 			          onAction: () => this.setState({ open: true }),
 			        }}
 			        image={img}
 			      >
-			      <p>Select products to change their price temporarily.</p>
+			   	   <p>Create a Social Network around your Brand, 
+			      		And Promote Related Products
+			      		Alongside User-Generated Content.</p>
+
 		      </EmptyState>
 		    </Layout>
-		 ) : (
-	    <ResourceListWithProducts />
-	     )}
 	  </Page>
 	);
   }
