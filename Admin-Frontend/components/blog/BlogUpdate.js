@@ -22,7 +22,7 @@ import store from 'store-js';
 const BlogUpdate = ({ shop, router }) => {
 
     const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
+    const [body, setBody] = useState({});
     const [tags, setTags] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state
     const [selectedProducts, setSelectedProducts] = useState([]);
@@ -30,12 +30,18 @@ const BlogUpdate = ({ shop, router }) => {
     const [modalState, setModalState] = useState(false);
    
     const handleTitleChange = useCallback((newValue) => setTitle(newValue), []);
-    const handleBodyChange = useCallback((newValue) => setBody(newValue), []);
+    const handleBodyChange = useCallback((newValue) => {
+        newValue.blocks.count = getBlocksCount();
+        newValue.blocks.firstItem = newValue.blocks.getBlockByIndex(0);
+
+        console.log('newValue in handleBodyChange', newValue)
+        setBody(newValue)
+    });
 
     const [values, setValues] = useState({
         error: '',
         success: '',
-        body: ''
+        body: {}
     });
 
     const { error, success, formData } = values;
@@ -134,6 +140,7 @@ const BlogUpdate = ({ shop, router }) => {
 
     const editBlog = e => {
         e.preventDefault();
+        console.log('body in editBlog function: ',body);
         updateBlog({title, body, selectedTags, selectedProducts}, token, router.query.slug).then(data => {
             if(data){
                 if (data.error) {
@@ -195,7 +202,6 @@ const BlogUpdate = ({ shop, router }) => {
                   </Card>
                   <Card sectioned title="Content">
                     <EditorJs
-                        onChange={handleBodyChange}
                         tools={EDITOR_JS_TOOLS}
                         data={body ? body[0] : {}}
                         enableReInitialize={true}
