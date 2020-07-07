@@ -91,9 +91,9 @@ const BlogUpdate = ({ shop, router }) => {
 
     const showPolarisTags = () => {
 
-        let tagsArray = tags.map((t, i) => (
+        let tagsArray = tags ? tags.map((t, i) => (
             {value: t._id, label: t.name}
-        ));
+        )) : [];
 
         return (
             <Card>
@@ -109,13 +109,27 @@ const BlogUpdate = ({ shop, router }) => {
     };
 
     const showSelectedProducts = () => {
-        return (
-            <Card>
-              {selectedProducts.map((product, i) => (
-                  <p key={i}>{product}</p>
-              ))}
-            </Card>
-        )
+        return selectedProducts ?  
+             (
+                <Card>
+                  {selectedProducts.map((product, i) => (
+                      <p key={i}>{product}</p>
+                  ))}
+                </Card>
+            ) : (   <Card>
+                        <EmptyState
+                            heading="Promote Related Products"
+                            action={{
+                              content: 'Select products',
+                              onAction: () => setModalState(true),
+                            }}
+                            image={img}
+                          >
+                          <p>If no Products are selected, Tribet's AI will automatically
+                           optimize for the bests Products to show alongside the post.</p>
+                      </EmptyState>
+                    </Card>
+                 )   
     };
 
     const editBlog = e => {
