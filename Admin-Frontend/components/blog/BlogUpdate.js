@@ -108,6 +108,9 @@ const BlogUpdate = ({ shop, router }) => {
         return selectedProducts.length>0 ?  
              (
                 <Card>
+                <Button
+                    onClick={() => setModalState(true)}
+                  >Edit Promoted Products</Button>
                   {selectedProducts.map((product, i) => (
                       <div key={i}>
                       <h1>{product[0].title}</h1>
