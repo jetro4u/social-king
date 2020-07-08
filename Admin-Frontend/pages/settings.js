@@ -82,18 +82,13 @@ class AnnotatedLayout extends React.Component {
       <Page>
         <Layout>
           <Layout.AnnotatedSection
-            title="Filter by Post Status"
+            title="Set Your Social Network's Settings"
             >
             <Card sectioned>
-              <Form onSubmit={this.handleSubmit}>
-                <FormLayout>
-                    <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
-                      <Button>Published</Button>
-                      <Button primary>Drafts</Button>
-                      <Button danger>Removed</Button>
-                    </ButtonGroup>
-                </FormLayout>
-              </Form>
+              <FormLayout>
+                <TextField label="Community Name" onChange={() => {}} />
+                <TextField type="email" label="Account email" onChange={() => {}} />
+              </FormLayout>
             </Card>
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
