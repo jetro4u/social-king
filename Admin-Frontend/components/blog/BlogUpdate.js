@@ -22,21 +22,15 @@ import store from 'store-js';
 const BlogUpdate = ({ shop, router }) => {
 
     const [title, setTitle] = useState('');
-    const [body, setBody] = useState({});
+    const [body, setBody] = useState(false);
     const [tags, setTags] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state
     const [selectedProducts, setSelectedProducts] = useState([]);
+    const [editorInstance, setEditorInstance] = useState();
 
     const [modalState, setModalState] = useState(false);
    
     const handleTitleChange = useCallback((newValue) => setTitle(newValue), []);
-    const handleBodyChange = useCallback((newValue) => {
-        newValue.blocks.count = getBlocksCount();
-        newValue.blocks.firstItem = newValue.blocks.getBlockByIndex(0);
-
-        console.log('newValue in handleBodyChange', newValue)
-        setBody(newValue)
-    });
 
     const [values, setValues] = useState({
         error: '',
@@ -96,7 +90,6 @@ const BlogUpdate = ({ shop, router }) => {
     };
 
     const showPolarisTags = () => {
-
         let tagsArray = tags ? tags.map((t, i) => (
             {value: t._id, label: t.name}
         )) : [];
@@ -138,9 +131,12 @@ const BlogUpdate = ({ shop, router }) => {
                  )   
     };
 
-    const editBlog = e => {
+    const editBlog = async e => {
         e.preventDefault();
         console.log('body in editBlog function: ',body);
+        const savedData = await editorInstance.save();
+        console.log('savedData in editBlog function: ',savedData);
+        
         updateBlog({title, body, selectedTags, selectedProducts}, token, router.query.slug).then(data => {
             if(data){
                 if (data.error) {
@@ -201,11 +197,18 @@ const BlogUpdate = ({ shop, router }) => {
                     <TextField label="Post Title" value={title} onChange={handleTitleChange} />
                   </Card>
                   <Card sectioned title="Content">
-                    <EditorJs
+                    {body ? (
+                      <EditorJs
+                        instanceRef={instance => setEditorInstance(instance)}
                         tools={EDITOR_JS_TOOLS}
-                        data={body ? body[0] : {}}
-                        enableReInitialize={true}
+                        data={body[0]}
+                        onCompareBlocks={(newData, oldData) => {
+                         console.log('newData === oldData :',newData === oldData)
+                         console.log('oldData :',oldData)
+                         console.log('newData:',newData) 
+                        }}
                       />
+                    ) : (<p>Loading</p>)}
                   </Card>
                   <Card sectioned title="Variants">
                     <SkeletonBodyText />
