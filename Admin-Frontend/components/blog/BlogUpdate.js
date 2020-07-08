@@ -130,8 +130,8 @@ const BlogUpdate = ({ shop, router }) => {
                             }}
                             image={img}
                           >
-                          <p>If no Products are selected, Tribet's AI will automatically
-                           optimize for the bests Products to show alongside the post.</p>
+                          <TextContainer>If no Products are selected, Tribet's AI will automatically
+                           optimize for the bests Products to show alongside the post.</TextContainer>
                       </EmptyState>
                     </Card>
                  )   
