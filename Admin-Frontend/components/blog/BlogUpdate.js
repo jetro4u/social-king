@@ -108,6 +108,9 @@ const BlogUpdate = ({ shop, router }) => {
         return selectedProducts.length>0 ?  
              (
                 <Card>
+                <Button
+                    onClick={() => setModalState(true)}
+                  >Edit Promoted Products</Button>
                   {selectedProducts.map((product, i) => (
                       <div key={i}>
                       <h1>{product[0].title}</h1>
@@ -134,12 +137,9 @@ const BlogUpdate = ({ shop, router }) => {
                  )   
     };
 
-    const editBlog = async e => {
-        e.preventDefault();
+    const publishBlog = async () => {
         const savedData = await editorInstance.save();
-        console.log('savedData in editBlog function: ',savedData);
         setBody([savedData]);
-        console.log('body in editBlog function: ',body);
         let newlySelectedProducts = [];
 
         selectedProducts.forEach((p, i) => {
@@ -163,7 +163,7 @@ const BlogUpdate = ({ shop, router }) => {
             }
            
         });
-    };
+    }
 
     const showError = () => (
         <div className="alert alert-danger" style={{ display: error ? '' : 'none' }}>
@@ -203,7 +203,6 @@ const BlogUpdate = ({ shop, router }) => {
               onSelection={(resources) => handleSelection(resources)}
               onCancel={() => setModalState(false)}
             />
-           <Button primary onClick={editBlog}>Publish</Button>
               <Layout>
                 <Layout.Section>
                   <Card sectioned title="Title">
@@ -228,24 +227,24 @@ const BlogUpdate = ({ shop, router }) => {
                   </Card>
                 </Layout.Section>
                 <Layout.Section secondary>
-                  <Card title="Tags">
-                    <Card.Section>
-                      {showPolarisTags()}
-                    </Card.Section>
-                    <Card.Section>
-                      <SkeletonBodyText lines={1} />
-                    </Card.Section>
-                  </Card>
                   <Card title="Promoted Products" subdued>
                     <Card.Section>
                         <TitleBar
                           primaryAction={{
-                            content: 'Select Related Products',
-                            onAction: () => setModalState(true),
+                            content: 'Publish',
+                            onAction: ()=>publishBlog(),
                           }}
                         />
                     {showSelectedProducts()}
                     </Card.Section>
+                    <Card title="Tags">
+                      <Card.Section>
+                        {showPolarisTags()}
+                      </Card.Section>
+                      <Card.Section>
+                        <SkeletonBodyText lines={1} />
+                      </Card.Section>
+                    </Card>
                     <Card.Section>
                       <SkeletonBodyText lines={2} />
                     </Card.Section>
