@@ -278,14 +278,18 @@ exports.update = (req, res) => {
     oldBlog = _.merge(oldBlog, req.body);
     oldBlog.slug = slugBeforeMerge;
 
-    const { body, desc, categories, tags } = req.body;
-
-    if (categories) {
-        oldBlog.categories = categories.split(',');
-    }
+    const { body, desc, categories, tags, savedData, selectedProducts, selectedTags } = req.body;
 
     if (tags) {
         oldBlog.tags = tags;
+    }
+
+    if(selectedProducts){
+        oldBlog.selectedProducts = selectedProducts;
+    }
+
+    if(savedData){
+        oldBlog.body = [savedData];
     }
 
         oldBlog.save((err, result) => {
