@@ -1,5 +1,6 @@
 
 <h1>Tribe Social</h1>
+<img src="Docs/BlogUpdatePage.png"
 
 Table of Contents for this Repo:
 
