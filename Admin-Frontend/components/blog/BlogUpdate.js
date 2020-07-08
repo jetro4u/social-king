@@ -14,7 +14,7 @@ import { EDITOR_JS_TOOLS } from "./editorjs-constants";
 
 import { API } from '../../config';
 import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText,
-    SkeletonPage, TextContainer, EmptyState, OptionList, TextField } from '@shopify/polaris';
+    SkeletonPage, TextContainer, EmptyState, OptionList, TextField, MediaCard, Thumbnail } from '@shopify/polaris';
 import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
 import ResourceListWithProducts from '../ResourceList';
 import store from 'store-js';
@@ -67,7 +67,7 @@ const BlogUpdate = ({ shop, router }) => {
     };
 
     const initSelectedProducts = () => {
-      return setSelectedProducts(store.get('ids'));
+      return setSelectedProducts(store.get('selectedProducts'));
     }
 
     const setTagsArray = blogTags => {
@@ -112,7 +112,13 @@ const BlogUpdate = ({ shop, router }) => {
              (
                 <Card>
                   {selectedProducts.map((product, i) => (
-                      <p key={i}>{product}</p>
+                      <div key={i}>
+                      <h1>{product.title}</h1>
+                      <Thumbnail
+                        source={product.images ? product.images[0].originalSrc : ''}
+                        alt={product.descriptionHtml}
+                      />
+                      </div>
                   ))}
                 </Card>
             ) : (   <Card>
@@ -171,12 +177,14 @@ const BlogUpdate = ({ shop, router }) => {
     const handleSelection = (resources) => {
         const idsFromResources = resources.selection.map((product) => product.id);
         setModalState(false)
-        console.log(resources)
+        console.log('selectedProducts added: ', resources)
+        setSelectedProducts(resources.selection);
         console.log(idsFromResources)
         store.set('ids', idsFromResources);
+        store.set('selectedProducts', resources.selection);
     };
 
-    const emptyState = !store.get('ids');
+    const emptyState = !store.get('selectedProducts');
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
     return (
