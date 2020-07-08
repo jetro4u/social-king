@@ -14,7 +14,7 @@ import { EDITOR_JS_TOOLS } from "./editorjs-constants";
 
 import { API } from '../../config';
 import {Button, Card, Layout, SkeletonBodyText, SkeletonDisplayText,
-    SkeletonPage, TextContainer, EmptyState, OptionList, TextField } from '@shopify/polaris';
+    SkeletonPage, TextContainer, EmptyState, OptionList, TextField, MediaCard, Thumbnail } from '@shopify/polaris';
 import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
 import ResourceListWithProducts from '../ResourceList';
 import store from 'store-js';
@@ -22,21 +22,15 @@ import store from 'store-js';
 const BlogUpdate = ({ shop, router }) => {
 
     const [title, setTitle] = useState('');
-    const [body, setBody] = useState({});
+    const [body, setBody] = useState(false);
     const [tags, setTags] = useState([]);
     const [selectedTags, setSelectedTags] = useState([]); //polaris tags selected state
     const [selectedProducts, setSelectedProducts] = useState([]);
+    const [editorInstance, setEditorInstance] = useState();
 
     const [modalState, setModalState] = useState(false);
    
     const handleTitleChange = useCallback((newValue) => setTitle(newValue), []);
-    const handleBodyChange = useCallback((newValue) => {
-        newValue.blocks.count = getBlocksCount();
-        newValue.blocks.firstItem = newValue.blocks.getBlockByIndex(0);
-
-        console.log('newValue in handleBodyChange', newValue)
-        setBody(newValue)
-    });
 
     const [values, setValues] = useState({
         error: '',
@@ -54,7 +48,6 @@ const BlogUpdate = ({ shop, router }) => {
         setValues({ ...values });
         initBlog();
         initTags();
-        initSelectedProducts();
     }, [router]);
 
     const initBlog = () => {
@@ -67,14 +60,11 @@ const BlogUpdate = ({ shop, router }) => {
                     setTitle(data.title);
                     setBody(data.body);
                     setTagsArray(data.tags);
+                    setSelectedProducts(data.selectedProducts)
                 }
             });
         }
     };
-
-    const initSelectedProducts = () => {
-      return setSelectedProducts(store.get('ids'));
-    }
 
     const setTagsArray = blogTags => {
         console.log('ran setTagsArray func with :', blogTags)
@@ -96,7 +86,6 @@ const BlogUpdate = ({ shop, router }) => {
     };
 
     const showPolarisTags = () => {
-
         let tagsArray = tags ? tags.map((t, i) => (
             {value: t._id, label: t.name}
         )) : [];
@@ -115,11 +104,18 @@ const BlogUpdate = ({ shop, router }) => {
     };
 
     const showSelectedProducts = () => {
-        return selectedProducts ?  
+        console.log('selectedProducts in showSelectedProducts func',selectedProducts)
+        return selectedProducts.length>0 ?  
              (
                 <Card>
                   {selectedProducts.map((product, i) => (
-                      <p key={i}>{product}</p>
+                      <div key={i}>
+                      <h1>{product[0].title}</h1>
+                      <Thumbnail
+                        source={product[0].images[0] ? product[0].images[0].originalSrc : ''}
+                        alt={product[0].descriptionHtml}
+                      />
+                      </div>
                   ))}
                 </Card>
             ) : (   <Card>
@@ -138,10 +134,19 @@ const BlogUpdate = ({ shop, router }) => {
                  )   
     };
 
-    const editBlog = e => {
+    const editBlog = async e => {
         e.preventDefault();
+        const savedData = await editorInstance.save();
+        console.log('savedData in editBlog function: ',savedData);
+        setBody([savedData]);
         console.log('body in editBlog function: ',body);
-        updateBlog({title, body, selectedTags, selectedProducts}, token, router.query.slug).then(data => {
+        let newlySelectedProducts = [];
+
+        selectedProducts.forEach((p, i) => {
+            newlySelectedProducts.push(p[0]);
+        }); 
+        
+        updateBlog({title, savedData, body, selectedTags, selectedProducts: newlySelectedProducts}, token, router.query.slug).then(data => {
             if(data){
                 if (data.error) {
                     setValues({ ...values, error: data.error });
@@ -175,12 +180,16 @@ const BlogUpdate = ({ shop, router }) => {
     const handleSelection = (resources) => {
         const idsFromResources = resources.selection.map((product) => product.id);
         setModalState(false)
-        console.log(resources)
-        console.log(idsFromResources)
-        store.set('ids', idsFromResources);
+        console.log('selectedProducts added: ', resources);
+
+        let newlySelectedProducts = [];
+        resources.selection ? resources.selection.map((p, i) => {
+            newlySelectedProducts.push([p]);
+        }) : [];
+
+        setSelectedProducts(newlySelectedProducts);
     };
 
-    const emptyState = !store.get('ids');
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
     return (
@@ -201,11 +210,18 @@ const BlogUpdate = ({ shop, router }) => {
                     <TextField label="Post Title" value={title} onChange={handleTitleChange} />
                   </Card>
                   <Card sectioned title="Content">
-                    <EditorJs
+                    {body ? (
+                      <EditorJs
+                        instanceRef={instance => setEditorInstance(instance)}
                         tools={EDITOR_JS_TOOLS}
-                        data={body ? body[0] : {}}
-                        enableReInitialize={true}
+                        data={body[0]}
+                        onCompareBlocks={(newData, oldData) => {
+                         console.log('newData === oldData :',newData === oldData)
+                         console.log('oldData :',oldData)
+                         console.log('newData:',newData) 
+                        }}
                       />
+                    ) : (<p>Loading</p>)}
                   </Card>
                   <Card sectioned title="Variants">
                     <SkeletonBodyText />
