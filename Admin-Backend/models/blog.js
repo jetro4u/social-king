@@ -46,10 +46,7 @@ const blogSchema = new mongoose.Schema(
             ref: 'Comment'
         }],
         selectedProducts: {
-            type: Array,
-            required: true,
-            min: 200,
-            max: 2000000
+            type: [Array]
         },
         categories: [{ 
             type: ObjectId, 
