@@ -18,7 +18,7 @@ We empower shopify store owners to promote whatever products they like alongside
 
 But, what if a store owner is too lazy to go through every single piece of new shopper content and set the right products to promote alongside it? After all, this app could help you generate thousands of new pages on your site. 
 
-No time? No problem. Let our AI-powered Recommendation Algorithm to help you show the right products to the right shoppers.
+No time? No problem. Let our AI-powered Recommendation Algorithm help you show the right products to the right shoppers.
 
 
 
