@@ -139,11 +139,12 @@ const BlogUpdate = ({ shop, router }) => {
 
     const editBlog = async e => {
         e.preventDefault();
-        console.log('body in editBlog function: ',body);
         const savedData = await editorInstance.save();
         console.log('savedData in editBlog function: ',savedData);
+        setBody([savedData]);
+        console.log('body in editBlog function: ',body);
         
-        updateBlog({title, body, selectedTags, selectedProducts}, token, router.query.slug).then(data => {
+        updateBlog({title, savedData, body, selectedTags, selectedProducts}, token, router.query.slug).then(data => {
             if(data){
                 if (data.error) {
                     setValues({ ...values, error: data.error });
