@@ -48,7 +48,6 @@ const BlogUpdate = ({ shop, router }) => {
         setValues({ ...values });
         initBlog();
         initTags();
-        initSelectedProducts();
     }, [router]);
 
     const initBlog = () => {
@@ -61,14 +60,11 @@ const BlogUpdate = ({ shop, router }) => {
                     setTitle(data.title);
                     setBody(data.body);
                     setTagsArray(data.tags);
+                    setSelectedProducts(data.selectedProducts)
                 }
             });
         }
     };
-
-    const initSelectedProducts = () => {
-      return setSelectedProducts(store.get('selectedProducts'));
-    }
 
     const setTagsArray = blogTags => {
         console.log('ran setTagsArray func with :', blogTags)
@@ -108,15 +104,16 @@ const BlogUpdate = ({ shop, router }) => {
     };
 
     const showSelectedProducts = () => {
-        return selectedProducts ?  
+        console.log('selectedProducts in showSelectedProducts func',selectedProducts)
+        return selectedProducts.length>0 ?  
              (
                 <Card>
                   {selectedProducts.map((product, i) => (
                       <div key={i}>
-                      <h1>{product.title}</h1>
+                      <h1>{product[0].title}</h1>
                       <Thumbnail
-                        source={product.images ? product.images[0].originalSrc : ''}
-                        alt={product.descriptionHtml}
+                        source={product[0].images[0] ? product[0].images[0].originalSrc : ''}
+                        alt={product[0].descriptionHtml}
                       />
                       </div>
                   ))}
@@ -143,8 +140,13 @@ const BlogUpdate = ({ shop, router }) => {
         console.log('savedData in editBlog function: ',savedData);
         setBody([savedData]);
         console.log('body in editBlog function: ',body);
+        let newlySelectedProducts = [];
+
+        selectedProducts.forEach((p, i) => {
+            newlySelectedProducts.push(p[0]);
+        }); 
         
-        updateBlog({title, savedData, body, selectedTags, selectedProducts}, token, router.query.slug).then(data => {
+        updateBlog({title, savedData, body, selectedTags, selectedProducts: newlySelectedProducts}, token, router.query.slug).then(data => {
             if(data){
                 if (data.error) {
                     setValues({ ...values, error: data.error });
@@ -178,14 +180,16 @@ const BlogUpdate = ({ shop, router }) => {
     const handleSelection = (resources) => {
         const idsFromResources = resources.selection.map((product) => product.id);
         setModalState(false)
-        console.log('selectedProducts added: ', resources)
-        setSelectedProducts(resources.selection);
-        console.log(idsFromResources)
-        store.set('ids', idsFromResources);
-        store.set('selectedProducts', resources.selection);
+        console.log('selectedProducts added: ', resources);
+
+        let newlySelectedProducts = [];
+        resources.selection ? resources.selection.map((p, i) => {
+            newlySelectedProducts.push([p]);
+        }) : [];
+
+        setSelectedProducts(newlySelectedProducts);
     };
 
-    const emptyState = !store.get('selectedProducts');
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
     return (
