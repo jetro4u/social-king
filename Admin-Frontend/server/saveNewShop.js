@@ -24,9 +24,9 @@ const saveNewShop = async (ctx, accessToken, shopify_domain) => {
                   shopDomain = shop.shopify_domain;
                 }});
           } else {
-              message = 'shop found';
               console.log('shop found: ', shop)
-              return ctx.redirect(`https://${shop.shopify_domain}/admin/apps/community-2/manage/manage-posts`); 
+              return 'shop found';
+              // return ctx.redirect(`https://${shop.shopify_domain}/admin/apps/community-2/manage/manage-posts`); 
           }
       });
     console.log('message', message)
