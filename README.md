@@ -1,15 +1,26 @@
 
 <h1>Tribe Social</h1>
-<img src="Docs/BlogUpdatePage.png"
+<img src="Docs/BlogUpdatePage.png"/>
 
 Table of Contents for this Repo:
 
+- [About](#about)
 - [Technologies Overview](#technologies)
 - [Getting Started](#getting-started)
 
+<br>
 
-<br>
-<br>
+
+About
+--------
+
+We empower shopify store owners to promote whatever products they like alongside user-generated content.
+
+But, what if a store owner is too lazy to go through every single piece of new shopper content and set the right products to promote alongside it? After all, this app could help you generate thousands of new pages on your site. 
+
+No time? No problem. Let our AI-powered Recommendation Algorithm to help you show the right products to the right shoppers.
+
+
 
 Technologies
 --------
