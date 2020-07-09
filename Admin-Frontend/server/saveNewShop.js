@@ -25,11 +25,10 @@ const saveNewShop = async (ctx, accessToken, shopify_domain) => {
                 }});
           } else {
               console.log('shop found: ', shop)
-              return 'shop found';
-              // return ctx.redirect(`https://${shop.shopify_domain}/admin/apps/community-2/manage/manage-posts`); 
+              return ctx.redirect(`https://${shop.shopify_domain}/admin/apps/community-2/manage/manage-posts`); 
           }
       });
-    console.log('message', message)
+    console.log('message at end of saveNewShop', message)
 };
 
 module.exports = saveNewShop;
