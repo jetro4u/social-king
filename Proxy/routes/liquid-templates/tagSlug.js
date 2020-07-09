@@ -1,4 +1,7 @@
-exports.tagSlug = ({ tag, blogs, size }) => {
+const { navbar } = require('./navbar');
+const { newsFeedCSS } = require('./css/newsFeedCSS');
+
+exports.tagSlug = ({ shop, tags, tag, blogs, size}) => {
     const proxyRoute = process.env.PROXY_ROUTE;
 
     const showLoadedBlogs = () => {
@@ -27,8 +30,12 @@ exports.tagSlug = ({ tag, blogs, size }) => {
             </div>
             <div class="row">${showLoadedBlogs()}</div>
         </main>
-
+        ${navbar({shop, tags})}
         <script>
             console.log('injected script from server ran');
-        </script>`
+        </script>
+        <style type="text/css">
+            ${newsFeedCSS(shop)}
+        </style>
+        `
 };
