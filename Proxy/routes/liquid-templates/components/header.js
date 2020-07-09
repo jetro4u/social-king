@@ -1,3 +1,5 @@
+const proxyRoute = process.env.PROXY_ROUTE;
+
 exports.header = ({shop, tag, user, blog}) => {
 	const showTitle = ()=>{
 		if(tag){
@@ -17,7 +19,9 @@ exports.header = ({shop, tag, user, blog}) => {
 		<header class="community-header">
             <div class="community-header-title">
                 <div class="page-width community-header-title-box">
-                    <img src="${user && user.cover_photo ? user.cover_photo : shopIcon}" class="community-icon" />
+                    <a href="${proxyRoute}">
+                        <img src="${shopIcon}" class="community-icon" />
+                    </a>
                     <div class="community-h2">${showTitle()}</div>
                 </div>
             </div>
