@@ -1,5 +1,8 @@
+const { header } = require('./components/header');
+const { newsFeedCSS } = require('./css/newsFeedCSS');
+const proxyRoute = process.env.PROXY_ROUTE;
+
 exports.userSlug = ({user, blogs}) => {
-    const proxyRoute = process.env.PROXY_ROUTE;
 
     const showUserBlogs = () => {
         return blogs.map((blog, i) => `           
@@ -14,6 +17,10 @@ exports.userSlug = ({user, blogs}) => {
     return `
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <style type="text/css">
+            ${newsFeedCSS({})}
+        </style>
+        ${header({user})}
         <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -21,7 +28,6 @@ exports.userSlug = ({user, blogs}) => {
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                              <h5>${user.name}</h5>
                                               <img src='${user.cover_photo ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
                                                    alt="Profile Picture" class="img-responsive img-rounded">
                                         </div>
