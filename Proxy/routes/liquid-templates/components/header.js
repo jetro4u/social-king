@@ -13,7 +13,7 @@ exports.header = ({shop, tag, user, blog}) => {
     	}
 	}
 
-	const shopIcon = "https://styles.redditmedia.com/t5_2qiuc/styles/communityIcon_s6mblzvh8t051.png?width=256&s=851a80f05e1194ee216a999370fe45bdfd2b5010";
+	const shopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
 
     return `
 		<header class="community-header">
