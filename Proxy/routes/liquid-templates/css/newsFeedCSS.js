@@ -11,7 +11,7 @@ exports.newsFeedCSS = ({shop}) => {
               background-color: lightgreen;
             }
             .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
-            .community-header { background-image: url("https://previews.123rf.com/images/donatas1205/donatas12051202/donatas1205120200008/12455190-carpentry-construction-tools-home-improvement-background-.jpg");padding-top:120px;margin-top:-55px }
+            .community-header { background-image: url("https://www.dorothylane.com/wp-content/uploads/2017/09/cheese.jpg");padding-top:120px;margin-top:-55px }
             .community-header-title { background:#fff; }
             .community-header-title-box { display:flex }
             .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding-top:10px; }
