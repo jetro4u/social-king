@@ -3,7 +3,7 @@
 
 Admin App Homepage:
 
-<img src="Docs/BlogUpdatePage.png"/>
+<img src="Docs/homepage.JPG"/>
 
 Table of Contents for this Repo:
 
