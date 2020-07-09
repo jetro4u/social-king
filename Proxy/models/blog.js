@@ -45,6 +45,9 @@ const blogSchema = new mongoose.Schema(
             type: ObjectId, 
             ref: 'Comment'
         }],
+        selectedProducts: {
+            type: [Array]
+        },
         relatedProducts: [{ 
             type: ObjectId, 
             ref: 'Product'
