@@ -1,4 +1,4 @@
-exports.blogsList = ({ blogs, categories, tags, size }) => {
+exports.blogsList = ({ shop, blogs, categories, tags, size }) => {
     const proxyRoute = process.env.PROXY_ROUTE;
     
     const showLoadedBlogs = () => {
@@ -13,14 +13,6 @@ exports.blogsList = ({ blogs, categories, tags, size }) => {
                      </div>
                 </div>
             `).join('');
-    };
-
-    const showAllCategories = () => {
-        return categories.map((c, i) => `
-            <a href="${proxyRoute}/categories/${c.slug}"} key=${i}>
-                <button class="pure-button pure-button-primary">${c.name}</a>
-            </a>
-        `).join('');
     };
 
      const showAllTags = () => {
@@ -48,7 +40,10 @@ exports.blogsList = ({ blogs, categories, tags, size }) => {
                         <div class="community-pad-20">
                             <div class="community-card">
                                 <div class="community-card-body">
-                                    <input type="text" class="community-instant-post" placeholder="Create Post" />
+                                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'>
+                                        <input type="text" class="community-instant-post" placeholder="Create Post" />
+                                    </a>
+                                
                                 </div>
                             </div>
                             <div class="pure-g">${showLoadedBlogs()}</div>
@@ -60,7 +55,7 @@ exports.blogsList = ({ blogs, categories, tags, size }) => {
                                 <div class="community-card-header">About Community</div>
                                 <div class="community-card-body">Welcome to the home improvement community page! Share your creations with fellow builders, and get inspired for new projects.
                                 <hr class="community-hr" />
-                                <button class="pure-button pure-button-primary community-full-width">CREATE POST</button>
+                                <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
                                 </div>
                             </div>
                             <div class="community-card">
