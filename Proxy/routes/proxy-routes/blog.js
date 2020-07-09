@@ -17,10 +17,13 @@ const {
 
 const { requireSignin, adminMiddleware, authMiddleware, canUpdateDeleteBlog } = require('../proxy-controllers/auth');
 
-router.get('/urls-for-sitemap', listForSitemap);
-
-router.post('/blog', requireSignin, adminMiddleware, create);
+//initializing Blogs Index View
+router.get('/', listAllBlogsCategoriesTags);
 router.get('/blogs', listAllBlogsCategoriesTags);
+
+
+router.get('/urls-for-sitemap', listForSitemap);
+router.post('/blog', requireSignin, adminMiddleware, create);
 router.post('/blogs-categories-tags', listAllBlogsCategoriesTags);
 router.get('/blog/:slug', read);
 router.delete('/blog/:slug', requireSignin, adminMiddleware, remove);

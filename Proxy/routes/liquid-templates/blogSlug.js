@@ -29,11 +29,11 @@ exports.blogSlug = (blog) => {
                             return `<br/><br/><h2>${block.data.text}</h2>`
                             break;
                         case 'list':
-                            return `<br/><ol>
+                            return `<br/><ul class='list-group'>
                                         ${block.data.items.map((item, i) => {
-                                            return '<li>'+item+'</li>'
+                                            return '<li class="list-group-item">'+item+'</li>'
                                         }).join('')}
-                                    </ol>`
+                                    </ul>`
                             break;
                         case 'embed':
                             return `<iframe width='100%' 
