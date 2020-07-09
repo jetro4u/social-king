@@ -27,11 +27,4 @@ router.use(userRoutes);
 router.use(tagRoutes);
 router.use(imageRoutes);
 
-router.get('/', (req, res, next) => {
-    console.log(req.body);
-  	return res.send(testTemplate(req.query));
-  // res.sendStatus(200);
-  next();
-});
-
 module.exports = router;
