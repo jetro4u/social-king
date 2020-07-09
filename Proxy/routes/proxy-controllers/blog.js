@@ -159,25 +159,6 @@ exports.listForSitemap = (req, res) => {
         });
 };
 
-exports.list = (req, res) => {
-    console.log('ran list function on server with req.query', req.query);
-    Blog.find({})
-        .limit(10)
-        // .populate('categories', '_id name slug')
-        // .populate('tags', '_id name slug')
-        // .populate('postedBy', '_id name username')
-        // .select('_id title slug excerpt categories tags postedBy hidden createdAt updatedAt')
-
-        .exec((err, data) => {
-            if (err) {
-                return res.json({
-                    error: errorHandler(err)
-                });
-            }
-            // console.log('mongo results', data);
-            // res.send(blogsList(data));
-        });
-};
 
 exports.listAllBlogsCategoriesTags = (req, res) => {
     console.log('ran listAllBlogsCategoriesTags function on server with req.query', req.query);
@@ -232,7 +213,7 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
                     }
                     tags = t;
                     // return all blogs categories tags
-                    res.send(blogsList({ blogs, categories, tags, size: blogs.length }));
+                    res.send(blogsList({ shop, blogs, categories, tags, size: blogs.length }));
                 });
             });
         });

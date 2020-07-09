@@ -1,4 +1,7 @@
-exports.blogsList = ({ blogs, categories, tags, size }) => {
+const { navbar } = require('./navbar');
+const { newsFeedCSS } = require('./css/newsFeedCSS');
+
+exports.blogsList = ({ shop, blogs, categories, tags, size }) => {
     const proxyRoute = process.env.PROXY_ROUTE;
     
     const showLoadedBlogs = () => {
@@ -15,24 +18,11 @@ exports.blogsList = ({ blogs, categories, tags, size }) => {
             `).join('');
     };
 
-    const showAllCategories = () => {
-        return categories.map((c, i) => `
-            <a href="${proxyRoute}/categories/${c.slug}"} key=${i}>
-                <button class="pure-button pure-button-primary">${c.name}</a>
-            </a>
-        `).join('');
-    };
-
-     const showAllTags = () => {
-        return tags.map((t, i) => `
-            <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
-                <button class="tag-btn pure-button pure-button-primary">${t.name}</a>
-            </a>
-        `).join('');
-    };
-
     return `
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <style type="text/css">
+            ${newsFeedCSS(shop)}
+        </style>
         <header class="community-header">
             <div class="community-header-title">
                 <div class="page-width community-header-title-box">
@@ -48,76 +38,21 @@ exports.blogsList = ({ blogs, categories, tags, size }) => {
                         <div class="community-pad-20">
                             <div class="community-card">
                                 <div class="community-card-body">
-                                    <input type="text" class="community-instant-post" placeholder="Create Post" />
+                                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'>
+                                        <input type="text" class="community-instant-post" placeholder="Create Post" />
+                                    </a>
+                                
                                 </div>
                             </div>
                             <div class="pure-g">${showLoadedBlogs()}</div>
                         </div>
                     </div>
-                    <div class="pure-u-1-3">
-                        <div class="community-pad-20">
-                            <div class="community-card">
-                                <div class="community-card-header">About Community</div>
-                                <div class="community-card-body">Welcome to the home improvement community page! Share your creations with fellow builders, and get inspired for new projects.
-                                <hr class="community-hr" />
-                                <button class="pure-button pure-button-primary community-full-width">CREATE POST</button>
-                                </div>
-                            </div>
-                            <div class="community-card">
-                                <div class="community-card-header">Choose a Channel</div>
-                                <div class="community-card-body">
-                                    ${showAllTags()}
-                                </div>
-                            </div>
-                            <div class="community-card">
-                                <div class="community-card-header">Community Rules</div>
-                                <div class="community-card-body">
-                                    <ol>
-                                        <li><strong>Be respectful</strong><br />Treat others how you'd like to be treated!</li>
-                                        <hr class="community-hr-minimal" />
-                                        <li><strong>No ads</strong><br />This is an ad-free zone</li>
-                                        <hr class="community-hr-minimal" />
-                                        <li><strong>Keepin it clean</strong><br />Use nice words only :)</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    ${navbar({shop, tags})}
                 </div>
             </main>
         </div>
         <script>
             console.log('injected script from server ran');
         </script>
-        <style type="text/css">
-            .community-background { background-color: #edeff1;padding-top:20px; }
-            .l-box { padding:1em; }
-            .tag-btn { margin-top: 1em;
-                      margin-bottom: 1em;
-                      margin-right: 1em;
-                      margin-left: 1em;
-                      background-color: lightblue; }
-            .tag-btn:hover {
-              background-color: lightgreen;
-            }
-            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
-            .community-header { background-image: url("https://previews.123rf.com/images/donatas1205/donatas12051202/donatas1205120200008/12455190-carpentry-construction-tools-home-improvement-background-.jpg");padding-top:120px;margin-top:-55px }
-            .community-header-title { background:#fff; }
-            .community-header-title-box { display:flex }
-            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding-top:10px; }
-            .community-card { border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }
-            .community-card-header { background:darkblue;color:white;padding:10px;font-weight:bold; }
-            .community-card-body { padding:10px }
-            .community-pad-20 { padding:10px 20px 20px 20px }
-            .community-hr { margin:20px 0 }
-            .community-hr-minimal { margin:8px 0 }
-            .community-full-width { width: 100% }
-            .community-instant-post { width:100%;border:1px solid #edeff1; background: #f6f7f8;padding:10px }
-            .community-instant-post:hover, .community-instant-post:focus { background:#fff }
-            .community-author { color:#969696;font-size:12px;margin-bottom:5px }
-            .community-card h3 { font-size:20px;margin-bottom:8px }
-            .community-card p { margin-bottom:8px }
-            .community-card-comments { font-size:12px;font-weight:bold; }
-        </style>
         `
 };

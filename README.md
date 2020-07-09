@@ -1,5 +1,8 @@
 
 <h1>Tribe Social</h1>
+
+Admin App Homepage:
+
 <img src="Docs/BlogUpdatePage.png"/>
 
 Table of Contents for this Repo:
@@ -18,8 +21,15 @@ We empower shopify store owners to promote whatever products they like alongside
 
 But, what if a store owner is too lazy to go through every single piece of new shopper content and set the right products to promote alongside it? After all, this app could help you generate thousands of new pages on your site. 
 
-No time? No problem. Let our AI-powered Recommendation Algorithm to help you show the right products to the right shoppers.
+No time? No problem. Let our AI-powered Recommendation Algorithm help you show the right products to the right shoppers.
 
+<em>Admin App Blog Update Page:</em>
+<br>
+<img src="Docs/BlogUpdatePage.png"/>
+<br>
+<em>Proxy App NewsFeed:</em>
+<br>
+<img src="Docs/newsfeed.JPG"/>
 
 
 Technologies
