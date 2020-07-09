@@ -1,6 +1,9 @@
+const { header } = require('./components/header');
+const { newsFeedCSS } = require('./css/newsFeedCSS');
+const proxyRoute = process.env.PROXY_ROUTE;
+const { ngApp } = require('./angular/app.js');
+
 exports.userAdmin = (user, tags) => {
-    const proxyRoute = process.env.PROXY_ROUTE;
-    const { ngApp } = require('./angular/app.js');
  
     return `
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4-build.3588/angular.min.js"></script>
@@ -18,6 +21,10 @@ exports.userAdmin = (user, tags) => {
 
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' />
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <style type="text/css">
+        ${newsFeedCSS({})}
+    </style>
+    ${header({})}
     <div class="container-fluid" ng-app="tribe" ng-controller='settingsController'>
         <div class="page-width">
             <div class="col-md-12 pt-5 pb-5">
