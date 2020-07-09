@@ -1,7 +1,10 @@
+const { header } = require('./components/header');
+const { newsFeedCSS } = require('./css/newsFeedCSS');
+const proxyRoute = process.env.PROXY_ROUTE;
+
 exports.blogSlug = (blog) => {
     console.log('blog object in blog slug:',blog)
-    const proxyRoute = process.env.PROXY_ROUTE;
-    
+
     const showAllTags = () => {
         return blog.tags.map((t, i) => `
             <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
@@ -57,7 +60,10 @@ exports.blogSlug = (blog) => {
     return `
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-               
+        <style type="text/css">
+            ${newsFeedCSS({})}
+        </style>
+        ${header({blog})}    
         <div class="row">
             <div class="text-center details col-md-1">
             </div>
@@ -65,8 +71,6 @@ exports.blogSlug = (blog) => {
                 <div class="pb-5">
                     ${showAllTags()}
                 </div>
-                <h3 class="product-title">${blog.title}</h3>
-                
                 <p>Posted By</p>
                 ${blog.postedBy.cover_photo ? "<img src='"+blog.postedBy.cover_photo+"'/>" : ''}
 

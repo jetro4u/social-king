@@ -1,41 +1,27 @@
-const { navbar } = require('./navbar');
+const { header } = require('./components/header');
+const { navbar } = require('./components/navbar');
+const { newsFeed } = require('./components/newsFeed');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
+const proxyRoute = process.env.PROXY_ROUTE;
 
-exports.tagSlug = ({ shop, tags, tag, blogs, size}) => {
-    const proxyRoute = process.env.PROXY_ROUTE;
-
-    const showLoadedBlogs = () => {
-        return blogs.map((blog, i) => `
-                <div class="col-md-4 pt-3">
-                    <h3><a href="${proxyRoute}/blog/${blog.slug}">${blog.title}</a></h3>
-                    Image Goes Here
-                    <p>${blog.mdesc}</p>
-                </div>
-            `).join('');
-    };
-
+exports.tagSlug = ({ shop, blogs, tags, size, tag }) => {
+    
     return `
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-        <main>
-            <div class="container-fluid">
-                <header>
-                    <div class="col-md-12 pt-3">
-                        <h1 class="display-4 font-weight-bold text-center">
-                            ${tag.name}
-                        </h1>
-                    </div>
-                    
-                </header>
-            </div>
-            <div class="row">${showLoadedBlogs()}</div>
-        </main>
-        ${navbar({shop, tags})}
+        <style type="text/css">
+            ${newsFeedCSS({shop})}
+        </style>
+        ${header({shop, tag})}
+        <div class="community-background">
+            <main class="page-width">
+                <div class="pure-g">
+                    ${newsFeed({shop, blogs})}
+                    ${navbar({shop, tags})}
+                </div>
+            </main>
+        </div>
         <script>
             console.log('injected script from server ran');
-        </script>
-        <style type="text/css">
-            ${newsFeedCSS(shop)}
-        </style>
+        </script>    
         `
 };
