@@ -32,7 +32,8 @@ exports.userSlug = ({user, blogs}) => {
                                                    alt="Profile Picture" class="img-responsive img-rounded">
                                         </div>
                                         <div class="col-md-4">
-                                         
+                                         <p>About: ${user.about}</p>
+                                         <p>Store Favorites: ${user.storeFavorites}</p>
                                         </div>
                                     </div>
                                 </div>
