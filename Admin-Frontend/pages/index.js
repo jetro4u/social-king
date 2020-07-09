@@ -1,5 +1,5 @@
 import { EmptyState, Layout, Page } from '@shopify/polaris';
-import { ResourcePicker, TitleBar } from '@shopify/app-bridge-react';
+import { ResourcePicker } from '@shopify/app-bridge-react';
 import store from 'store-js';
 import ResourceListWithProducts from '../components/ResourceList';
 import Router from 'next/router'
@@ -13,12 +13,6 @@ class Index extends React.Component {
   	console.log('store.get(ids): ',store.get('ids'))
     return (
 	  <Page>
-	   <TitleBar
-	      primaryAction={{
-	        content: 'Settings',
-	        onAction: () => Router.push('/settings'),
-	      }}
-	    />
 	   <Layout>
 			    <EmptyState
 			        heading="Expower Shoppers to Share Their Voices"
