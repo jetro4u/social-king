@@ -2,14 +2,25 @@ const { header } = require('./components/header');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 
-exports.blogSlug = (blog) => {
-    console.log('blog object in blog slug:',blog)
+exports.blogSlug = ({blog, shop}) => {
+    console.log('shop in bloslug func: ', shop);
 
     const showAllTags = () => {
         return blog.tags.map((t, i) => `
             <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
                 <button class="btn btn-outline-primary mr-1 ml-1 mt-3">${t.name}</a>
             </a>
+        `).join('');
+    };
+
+    const showSelectedProducts = () => {
+        return blog.selectedProducts.map((p, i) => `
+            <div class="container">
+                <a href="https://${shop.shopify_domain}/products/${p[0].handle}" key=${i}>
+                    <img src="${p[0].images[0].originalSrc}"/>
+                    <button class="btn btn-outline-primary mr-1 ml-1 mt-3">View Product</a>
+                </a>
+            </div>
         `).join('');
     };
 
@@ -69,6 +80,9 @@ exports.blogSlug = (blog) => {
             </div>
             <div class="text-center details col-md-3">
                 <div class="pb-5">
+                ${showSelectedProducts()}
+                </div>
+                <div class="pb-5">
                     ${showAllTags()}
                 </div>
                 <p>Posted By</p>
@@ -85,6 +99,6 @@ exports.blogSlug = (blog) => {
         </div>
 
         <script>
-            console.log('injected script from server ran');
+            console.log('blog object: ', ${JSON.stringify(blog)});
         </script>`
 };
