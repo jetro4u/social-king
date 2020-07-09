@@ -1,5 +1,8 @@
 
 <h1>Tribe Social</h1>
+
+Admin App Homepage:
+
 <img src="Docs/BlogUpdatePage.png"/>
 
 Table of Contents for this Repo:
@@ -20,6 +23,13 @@ But, what if a store owner is too lazy to go through every single piece of new s
 
 No time? No problem. Let our AI-powered Recommendation Algorithm help you show the right products to the right shoppers.
 
+<em>Admin App Blog Update Page:</em>
+<br>
+<img src="Docs/BlogUpdatePage.png"/>
+<br>
+<em>Proxy App NewsFeed:</em>
+<br>
+<img src="Docs/newsfeed.JPG"/>
 
 
 Technologies
