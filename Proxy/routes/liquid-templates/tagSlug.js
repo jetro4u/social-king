@@ -1,4 +1,5 @@
-const { navbar } = require('./navbar');
+const { header } = require('./components/header');
+const { navbar } = require('./components/navbar');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 
 exports.tagSlug = ({ shop, tags, tag, blogs, size}) => {
@@ -15,8 +16,11 @@ exports.tagSlug = ({ shop, tags, tag, blogs, size}) => {
     };
 
     return `
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <style type="text/css">
+            ${newsFeedCSS(shop)}
+        </style>
+        ${header({shop})}
         <main>
             <div class="container-fluid">
                 <header>
@@ -34,8 +38,6 @@ exports.tagSlug = ({ shop, tags, tag, blogs, size}) => {
         <script>
             console.log('injected script from server ran');
         </script>
-        <style type="text/css">
-            ${newsFeedCSS(shop)}
-        </style>
+        
         `
 };

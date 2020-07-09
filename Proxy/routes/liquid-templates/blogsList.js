@@ -1,4 +1,5 @@
-const { navbar } = require('./navbar');
+const { header } = require('./components/header');
+const { navbar } = require('./components/navbar');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 
 exports.blogsList = ({ shop, blogs, categories, tags, size }) => {
@@ -23,14 +24,7 @@ exports.blogsList = ({ shop, blogs, categories, tags, size }) => {
         <style type="text/css">
             ${newsFeedCSS(shop)}
         </style>
-        <header class="community-header">
-            <div class="community-header-title">
-                <div class="page-width community-header-title-box">
-                    <img src="https://styles.redditmedia.com/t5_2qiuc/styles/communityIcon_s6mblzvh8t051.png?width=256&s=851a80f05e1194ee216a999370fe45bdfd2b5010" class="community-icon" />
-                    <div class="community-h2">Home Improvement Community</div>
-                </div>
-            </div>
-        </header>
+        ${header({shop})}
         <div class="community-background">
             <main class="page-width">
                 <div class="pure-g">
