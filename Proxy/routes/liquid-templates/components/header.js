@@ -9,7 +9,7 @@ exports.header = ({shop, tag, user, blog}) => {
     	} else if (blog) {
     		return blog.title
     	} else {
-    		return 'Home Improvement Community'
+    		return "The Chef's Kitchen"
     	}
 	}
 

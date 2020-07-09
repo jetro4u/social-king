@@ -280,6 +280,8 @@ exports.update = (req, res) => {
 
     const { body, desc, categories, tags, savedData, selectedProducts, selectedTags } = req.body;
 
+    oldBlog.hidden = false;
+
     if (tags) {
         oldBlog.tags = tags;
     }
