@@ -25,7 +25,7 @@ exports.create = (req, res) => {
 
 exports.getTags = async (req, res, next) => {
     console.log('ran getTags function in tags controller')
-    Tag.find({shopify_domain: req.query.shop}).exec((err, data) => {
+    Tag.find({shop: req.query.shop}).exec((err, data) => {
         if (err) {
             console.log('errer getting tags',err)
         }
