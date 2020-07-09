@@ -5,6 +5,12 @@ const proxyRoute = process.env.PROXY_ROUTE;
 exports.blogSlug = ({blog, shop}) => {
     console.log('shop in bloslug func: ', shop);
 
+    if(blog.hidden){
+        console.log('this blog is hidden')
+    } else{
+        console.log('this blog is public')
+    }
+
     const showAllTags = () => {
         return blog.tags.map((t, i) => `
             <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
