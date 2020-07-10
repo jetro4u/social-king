@@ -63,7 +63,6 @@ class AnnotatedLayout extends React.Component {
           >
            <TextField type="text" label="Background color" onChange={() => {}} />
            <TextField type="text" label="Primary color" onChange={() => {}} />
-           
           </Layout.AnnotatedSection>
         </Layout>
       </Page>
