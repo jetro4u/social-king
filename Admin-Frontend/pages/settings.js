@@ -42,7 +42,6 @@ class AnnotatedLayout extends React.Component {
             <Card sectioned>
               <FormLayout>
                 <TextField label="Community Name" onChange={() => {}} />
-                <TextField type="email" label="Account email" onChange={() => {}} />
               </FormLayout>
             </Card>
           </Layout.AnnotatedSection>
@@ -57,6 +56,14 @@ class AnnotatedLayout extends React.Component {
             description="This Header Image will appear within your Site's Community Pages."
           >
           <IconDropZone />
+          </Layout.AnnotatedSection>
+          <Layout.AnnotatedSection
+            title="CSS Customization"
+            description="Add Your Brand Colors to your Site's Community Pages."
+          >
+           <TextField type="text" label="Background color" onChange={() => {}} />
+           <TextField type="text" label="Primary color" onChange={() => {}} />
+           
           </Layout.AnnotatedSection>
         </Layout>
       </Page>
