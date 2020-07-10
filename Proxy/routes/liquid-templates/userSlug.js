@@ -28,7 +28,7 @@ exports.userSlug = ({user, blogs}) => {
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                              <img src='${user.cover_photo ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
+                                              <img src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
                                                    alt="Profile Picture" class="img-responsive img-rounded">
                                         </div>
                                         <div class="col-md-4">
