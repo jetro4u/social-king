@@ -135,9 +135,6 @@ const Tag = (props) => {
 
     return (
         <React.Fragment>
-            {showSuccess()}
-            {showError()}
-            {showRemoved()}
             <Layout.AnnotatedSection
                 title="Manage Tags"
                 description="Create new tags which will be featured in your Social Network."

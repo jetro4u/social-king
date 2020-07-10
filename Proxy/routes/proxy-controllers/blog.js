@@ -181,7 +181,8 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
         }
         console.log('shop in mongo response', shop);
         let shopId = shop._id;
-        Blog.find({ shopPostedAt: shopId })
+        Blog.find({ hidden: false, shopPostedAt: shopId })
+        .sort({createdAt: -1})
         .populate('categories', '_id name slug')
         .populate('tags', '_id name slug')
         .populate('postedBy', '_id name username profile')
@@ -431,6 +432,7 @@ exports.listByUser = (req, res) => {
         }
         let userId = user._id;
         Blog.find({ postedBy: userId })
+            .sort({createdAt: -1})
             .populate('categories', '_id name slug')
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')

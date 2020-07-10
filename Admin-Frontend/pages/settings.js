@@ -1,3 +1,4 @@
+import IconDropZone from '../components/settings/IconDropZone';
 import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
 import Link from 'next/link';
 import {
@@ -17,67 +18,21 @@ import {
 class AnnotatedLayout extends React.Component {
   constructor() {
     super();
-    this.state = {
-      discount: '10%',
-      enabled: false,
-      blogs: ['this is a blog']
-    };
-    this.loadBlogs = this.loadBlogs.bind(this);
-    this.showAllBlogs = this.showAllBlogs.bind(this);
+    // this.state = {
+    //   discount: '10%',
+    //   enabled: false,
+    //   blogs: ['this is a blog']
+    // };
+    // this.loadBlogs = this.loadBlogs.bind(this);
+    // this.showAllBlogs = this.showAllBlogs.bind(this);
   }
- 
-
-  loadBlogs(){
-      console.log('ran loadBlogs function');
-      list().then(data => {
-          if (data.error) {
-              console.log(data.error);
-          } else {
-              console.log('blog array after updating: ',data);
-              // setBlogs(data);
-              // setLoaded(true);
-              this.setState({
-                blogs: data
-              });
-          }
-      });
-  };
 
   componentDidMount(){
     // this.loadBlogs();
     console.log('loaded settings page');
   }  
 
-  showAllBlogs(){
-    const { enabled } = this.state;
-    const contentStatus = enabled ? 'Disable' : 'Enable';
-    const textStatus = enabled ? 'enabled' : 'disabled';
-
-    let {blogs} = this.state
-    return blogs.map((blog, i) => {
-        console.log('blog in showAllBlogs function',blog);
-        return (  
-          <SettingToggle
-            key={i}
-            action={{
-              content: contentStatus,
-              onAction: this.handleToggle,
-            }}
-            hidden={blog.hidden}
-          >
-          <p>{blog.title}</p>
-            This post is{' '}
-            <TextStyle variation="strong">{textStatus}</TextStyle>.
-          </SettingToggle>
-        )
-      })
-  }
-
   render() {
-    const { discount,enabled } = this.state;
-    const contentStatus = enabled ? 'Disable' : 'Enable';
-    const textStatus = enabled ? 'enabled' : 'disabled';
-
     return (
       <Page>
         <Layout>
@@ -87,15 +42,27 @@ class AnnotatedLayout extends React.Component {
             <Card sectioned>
               <FormLayout>
                 <TextField label="Community Name" onChange={() => {}} />
-                <TextField type="email" label="Account email" onChange={() => {}} />
               </FormLayout>
             </Card>
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
-            title="Manage Posts"
-            description="Review new posts and set them approved content live."
+            title="Set Featured Icon Image"
+            description="This icon will appear within your Site's Community Pages."
           >
-            {this.state.blogs ? this.showAllBlogs() : ''}
+          <IconDropZone />
+          </Layout.AnnotatedSection>
+          <Layout.AnnotatedSection
+            title="Set Featured Header Image"
+            description="This Header Image will appear within your Site's Community Pages."
+          >
+          <IconDropZone />
+          </Layout.AnnotatedSection>
+          <Layout.AnnotatedSection
+            title="CSS Customization"
+            description="Add Your Brand Colors to your Site's Community Pages."
+          >
+           <TextField type="text" label="Background color" onChange={() => {}} />
+           <TextField type="text" label="Primary color" onChange={() => {}} />
           </Layout.AnnotatedSection>
         </Layout>
       </Page>

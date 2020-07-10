@@ -117,10 +117,10 @@ const ManagePosts = (props) => {
                         This post is{' '}
                         <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
                         <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
-                          <Button primary url={`/manage/blog/${blog.slug}`}>
+                          <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
                                    Review   
                           </Button>
-                          <Button onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
+                          <Button key={1} onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
                         </ButtonGroup>
                     </SettingToggle>
                 </React.Fragment>
