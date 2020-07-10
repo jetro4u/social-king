@@ -18,10 +18,15 @@ const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
+let shopFound = false;
+let Shop;
 
 mongoose
   .connect(process.env.DATABASE_LOCAL, {useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false, useUnifiedTopology: true})
-  .then(()=> console.log('DB Connected'))
+  .then(()=> {
+    console.log('DB Connected')
+    Shop = require('./models/shop');
+  })
   .catch(err=>{
     console.log(err);
   })
@@ -57,10 +62,28 @@ app.prepare().then(() => {
           sameSite: 'none'
         });
 
-        let message = await saveNewShop(ctx, accessToken, shop);
-        console.log("message in afterAuth: ", message);
-        console.log('shop in afterAuth function', shop)
-        if(!shop.includes('.')){
+        await Shop.findOne({ shopify_domain: shop }).exec((err, shopReturned) => {
+          if (err){
+              message = 'ran error logic';
+              console.log('ran error logic. err:', err);          
+          } else if (!shopReturned){
+              message = 'ran no shop found logic';
+              console.log('message: ', message);  
+              shopifyScope = 'read_products, write_products, read_content, write_content'; 
+              let new_shop = new Shop({ shopify_domain: shop, accessToken, shopifyScope})
+              new_shop.save((err, shopReturned) => {
+                if (err) {
+                  console.log('err trying to save shop: ', err)
+                } else {
+                  console.log('shop successfully created: ',shopReturned);
+                }});
+          } else {
+              console.log('shop found: ', shopReturned)
+              shopFound = true;
+            }});
+
+        console.log('shopFound :', shopFound)
+        if(!shopFound){
           const registration = await registerWebhook({
             address: `${HOST}/webhooks/products/create`,
             topic: 'PRODUCTS_CREATE',
@@ -75,8 +98,9 @@ app.prepare().then(() => {
             console.log('Failed to register webhook', registration.result);
           }
           await getSubscriptionUrl(ctx, accessToken, shop);  
+        } else {
+          return ctx.redirect(`https://${shop}/admin/apps/community-2/manage/manage-posts`); 
         }
-        
       }
     })
   );
