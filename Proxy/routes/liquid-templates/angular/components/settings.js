@@ -29,7 +29,7 @@ module.exports.settings = (user) => {
             </div>
 
             <div class='form-group'>
-              <div id='profile-photo'>${user.cover_photo ? "<img id='the-profile-img' src='"+user.cover_photo+"' ng-model='formData.cover_photo'/>" : ''}</div>
+              <div id='profile-photo'>${user.cover_photo && user.cover_photo!='undefined' ? "<img id='the-profile-img' src='"+user.cover_photo+"' ng-model='formData.cover_photo'/>" : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}</div>
             </div>
 
             <div class='form-group'>
