@@ -14,18 +14,24 @@ exports.blogSlug = ({blog, shop}) => {
     const showAllTags = () => {
         return blog.tags.map((t, i) => `
             <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
-                <button class="btn btn-outline-primary mr-1 ml-1 mt-3">${t.name}</a>
-            </a>
+                <button class="tag-btn pure-button">${t.name}</button>
+            </a><br />
         `).join('');
     };
 
     const showSelectedProducts = () => {
         return blog.selectedProducts.map((p, i) => `
-            <div class="container">
-                <a href="https://${shop.shopify_domain}/products/${p[0].handle}" key=${i}>
-                    <img src="${p[0].images[0].originalSrc}"/>
-                    <button class="btn btn-outline-primary mr-1 ml-1 mt-3">View Product</a>
+            <div class="pure-u-1-4">
+                <div class="community-pad-20">
+                <a href="https://${shop.shopify_domain}/products/${p[0].handle}" key=${i} style="height:200px;display:block;text-align:center">
+                    <img src="${p[0].images[0].originalSrc}" style="object-fit: cover;height:100%;" />
                 </a>
+                <div style="text-align:center;margin-top:15px;">
+                    <a href="https://${shop.shopify_domain}/products/${p[0].handle}" key=${i} style="height:200px;display:block">
+                        ${p[0].title}
+                    </a>
+                </div>
+                </div>
             </div>
         `).join('');
     };
@@ -75,35 +81,55 @@ exports.blogSlug = ({blog, shop}) => {
     }
 
     return `
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
         <style type="text/css">
             ${newsFeedCSS({})}
         </style>
         ${header({blog})}    
-        <div class="row">
-            <div class="text-center details col-md-1">
-            </div>
-            <div class="text-center details col-md-3">
-                <div class="pb-5">
-                ${showSelectedProducts()}
-                </div>
-                <div class="pb-5">
-                    ${showAllTags()}
-                </div>
-                <p>Posted By</p>
-                ${blog.postedBy.cover_photo ? "<img src='"+blog.postedBy.cover_photo+"'/>" : ''}
+        <div class="community-background">
+        <main class="page-width">
+        <div class="pure-g">
 
-                <div class="action">
-                    <a href="${proxyRoute}/user/${blog.postedBy.username}" class="btn btn-default">${blog.postedBy.name}</a>
-                </div>
+            <div class="pure-u-3-4">
+                <div class="community-pad-20 community-card">
+                    ${showBlogContent(blog)}
+               </div>
             </div>
 
-            <div class="col-md-6">
-                ${showBlogContent(blog)}      
+            <div class="details pure-u-1-4">
+                <div class="community-pad-20">
+                    <div class="pb-5">
+                        <h2>Contributed by</h2>
+                    </div>
+                    <div class="pure-g">
+                    ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
+                    <div class="pure-u-3-4">
+                        <div class="community-pad-left-10">
+                            <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
+                            ${blog.postedBy.about}
+                        </div>
+                    </div>
+                    </div>
+                    <div class="pb-5">
+                        <h2 style='margin-top:30px'>Related Tags</h2>
+                        ${showAllTags()}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-5-5">
+                <div class="community-pad-20">
+                    <h2>Related products</h2>
+                    <div class="pure-g">
+                        ${showSelectedProducts()}
+                    </div>
+                </div>
             </div>
         </div>
-
+        </main>
+        </div>
         <script>
             console.log('blog object: ', ${JSON.stringify(blog)});
         </script>`
