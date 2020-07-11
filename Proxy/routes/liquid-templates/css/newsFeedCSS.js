@@ -14,7 +14,7 @@ exports.newsFeedCSS = ({shop}) => {
             .community-header { background-image: url("https://www.dorothylane.com/wp-content/uploads/2017/09/cheese.jpg");padding-top:120px;margin-top:-55px }
             .community-header-title { background:#fff; }
             .community-header-title-box { display:flex }
-            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding-top:10px; }
+            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }
             .community-card { border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }
             .community-card-header { background:darkblue;color:white;padding:10px;font-weight:bold; }
             .community-card-body { padding:10px }
@@ -28,5 +28,7 @@ exports.newsFeedCSS = ({shop}) => {
             .community-card h3 { font-size:20px;margin-bottom:8px }
             .community-card p { margin-bottom:8px }
             .community-card-comments { font-size:12px;font-weight:bold; }
+            .community-pad-left-10 { padding-left:10px }
+            .community-bold { font-weight:bold }
         `
 };
