@@ -37,6 +37,31 @@ mongoose.connection.on('error', (err) => {
   console.error(`🚫 Database Error 🚫  → ${err}`);
 });
 
+onNewRegistration = async ({ctx, accessToken, shop})=>{
+  console.log('onNewRegistration func ran');
+  console.log('shopFound :', shopFound)
+  const registration = await registerWebhook({
+        address: `${HOST}/webhooks/products/create`,
+        topic: 'PRODUCTS_CREATE',
+        accessToken,
+        shop,
+        apiVersion: ApiVersion.October19
+      });
+
+      if (registration.success) {
+        console.log('Successfully registered webhook!');
+      } else {
+        console.log('Failed to register webhook', registration.result);
+      }
+      await getSubscriptionUrl(ctx, accessToken, shop);
+
+      const webhook = receiveWebhook({ secret: SHOPIFY_API_SECRET_KEY });
+      
+      router.post('/webhooks/products/create', webhook, (ctx) => {
+        console.log('received webhook: ', ctx.state.webhook);
+      }); 
+}  
+
 const {
   SHOPIFY_API_SECRET_KEY,
   SHOPIFY_API_KEY,
@@ -62,7 +87,7 @@ app.prepare().then(() => {
           sameSite: 'none'
         });
 
-        await Shop.findOne({ shopify_domain: shop }).exec((err, shopReturned) => {
+      await Shop.findOne({ shopify_domain: shop }).exec((err, shopReturned) => {
           if (err){
               message = 'ran error logic';
               console.log('ran error logic. err:', err);          
@@ -76,40 +101,14 @@ app.prepare().then(() => {
                   console.log('err trying to save shop: ', err)
                 } else {
                   console.log('shop successfully created: ',shopReturned);
+                  onNewRegistration({ctx, accessToken, shop});
                 }});
           } else {
               console.log('shop found: ', shopReturned)
               shopFound = true;
             }});
-
-        console.log('shopFound :', shopFound)
-        if(!shopFound){
-          const registration = await registerWebhook({
-            address: `${HOST}/webhooks/products/create`,
-            topic: 'PRODUCTS_CREATE',
-            accessToken,
-            shop,
-            apiVersion: ApiVersion.October19
-          });
-
-          if (registration.success) {
-            console.log('Successfully registered webhook!');
-          } else {
-            console.log('Failed to register webhook', registration.result);
-          }
-          await getSubscriptionUrl(ctx, accessToken, shop);  
-        } else {
-          return ctx.redirect(`https://${shop}/admin/apps/community-2/manage/manage-posts`); 
-        }
-      }
-    })
-  );
-
-  const webhook = receiveWebhook({ secret: SHOPIFY_API_SECRET_KEY });
-
-  router.post('/webhooks/products/create', webhook, (ctx) => {
-    console.log('received webhook: ', ctx.state.webhook);
-  });
+    }
+  }));
 
   server.use(graphQLProxy({ version: ApiVersion.April19 }));
 
