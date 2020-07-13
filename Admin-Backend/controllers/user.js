@@ -6,11 +6,19 @@ const fs = require('fs');
 const { errorHandler } = require('../helpers/dbErrorHandler');
 
 exports.read = (req, res) => {
+    console.log('req.body', req.body);
+    let shopName = req.params.username ? req.params.username.toLowerCase() : '';
+    console.log('shopName',shopName);
+   
     req.profile.hashed_password = undefined;
     return res.json(req.profile);
 };
 
 exports.publicProfile = (req, res) => {
+    console.log('ran publicProfile func in controller with req.body', req.body);
+    let shopName = req.params.username ? req.params.username.toLowerCase() : '';
+    console.log('shopName',shopName);
+
     let username = req.params.username;
     let user;
     let blogs;
