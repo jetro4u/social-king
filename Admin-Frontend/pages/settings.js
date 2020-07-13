@@ -1,3 +1,5 @@
+import { useState, useCallback, useEffect } from 'react';
+import { getProfile, update } from '../actions/user';
 import IconDropZone from '../components/settings/IconDropZone';
 import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
 import Link from 'next/link';
@@ -15,25 +17,19 @@ import {
   TextStyle,
 } from '@shopify/polaris';
 
-class AnnotatedLayout extends React.Component {
-  constructor() {
-    super();
-    // this.state = {
-    //   discount: '10%',
-    //   enabled: false,
-    //   blogs: ['this is a blog']
-    // };
-    // this.loadBlogs = this.loadBlogs.bind(this);
-    // this.showAllBlogs = this.showAllBlogs.bind(this);
-  }
+const Settings = ({ shop, router }) => {
 
-  componentDidMount(){
-    // this.loadBlogs();
-    console.log('loaded settings page');
-  }  
+  const [communityName, setCommunityName] = useState('');
+  const [backgroundColor, setBackgroundColor] = useState('');
+  const [primaryColor, setPrimaryColor] = useState('');
 
-  render() {
-    return (
+  const handleCommunityNameChange = useCallback((newValue) => setCommunityName(newValue), []);
+  const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
+  const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
+
+
+
+  return (
       <Page>
         <Layout>
           <Layout.AnnotatedSection
@@ -41,7 +37,7 @@ class AnnotatedLayout extends React.Component {
             >
             <Card sectioned>
               <FormLayout>
-                <TextField label="Community Name" onChange={() => {}} />
+                <TextField label="Community Name" value={communityName} onChange={handleCommunityNameChange} />;
               </FormLayout>
             </Card>
           </Layout.AnnotatedSection>
@@ -61,30 +57,12 @@ class AnnotatedLayout extends React.Component {
             title="CSS Customization"
             description="Add Your Brand Colors to your Site's Community Pages."
           >
-           <TextField type="text" label="Background color" onChange={() => {}} />
-           <TextField type="text" label="Primary color" onChange={() => {}} />
+           <TextField label="Background Color" value={backgroundColor} onChange={handleBackgroundColorChange} type="text"/>
+           <TextField label="Primary Color" value={primaryColor} onChange={handlePrimaryColorChange} type="text" />
           </Layout.AnnotatedSection>
         </Layout>
       </Page>
     );
-  }
-
-  handleSubmit = () => {
-    this.setState({
-      discount: this.state.discount,
-    });
-    console.log('submission', this.state);
-  };
-
-  handleChange = (field) => {
-    return (value) => this.setState({ [field]: value });
-  };
-
-  handleToggle = () => {
-    this.setState(({ enabled }) => {
-      return { enabled: !enabled };
-    });
-  };
 }
 
-export default AnnotatedLayout;
+export default Settings;
