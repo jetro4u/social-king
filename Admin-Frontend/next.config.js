@@ -9,7 +9,7 @@ module.exports = withCSS({
     APP_NAME: 'Shopify Tribe',
     API_DEVELOPMENT: 'http://localhost:8000/api',
     API_PRODUCTION: 'https://amazonfashion.app/api',
-    PRODUCTION: true,
+    PRODUCTION: process.env.NODE_ENV == 'production',
     DOMAIN_DEVELOPMENT: 'http://localhost:3000',
     DOMAIN_PRODUCTION: 'https://amazonfashion.app',
     FB_APP_ID: '305241670454834',
