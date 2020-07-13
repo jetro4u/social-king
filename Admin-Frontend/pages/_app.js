@@ -6,13 +6,38 @@ import Cookies from "js-cookie";
 import '@shopify/polaris/styles.css';
 import translations from '@shopify/polaris/locales/en.json';
 import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloProvider } from 'react-apollo'
+
+import { createHttpLink } from 'apollo-link-http';
+
+const authLink = setContext((_, { headers }) => {
+	  return {
+		        headers: {
+				          ...headers,
+				          authorization: Cookies.get('accessToken') ? `Bearer ${Cookies.get('accessToken')}` : "",
+				      }
+		    }
+})
+
+const httpLink = new createHttpLink({
+	    credentials: 'same-origin',
+	    headers: {
+		          accept: '*/*', 
+		          'Content-Type': 'application/graphql',
+		          'Access-Control-Allow-Origin': '*',
+		          "X-Shopify-Access-Token": Cookies.get('accessToken')
+		        },
+	    fetch,
+	    ssrMode: !process.browser,
+	    uri: `https://${Cookies.get('shopOrigin')}/admin/api/2019-04/graphql.json`,
+})
 
 const client = new ApolloClient({
-  fetchOptions: {
-    credentials: 'include',
-  },
+	    link: authLink.concat(httpLink),
+	    cache: new InMemoryCache(),
 });
+
+
 
 class MyApp extends App {
   render() {
