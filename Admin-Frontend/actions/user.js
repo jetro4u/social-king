@@ -15,13 +15,15 @@ export const userPublicProfile = username => {
         .catch(err => console.log(err));
 };
 
-export const getProfile = token => {
-    return fetch(`${API}/user/profile`, {
-        method: 'GET',
-        headers: {
-            Accept: 'application/json',
-            Authorization: `Bearer ${token}`
-        }
+export const getProfile = (props) => {
+    let listBlogsEndpoint;
+    console.log('props in list function', props);
+    let username = props ? props.app.shopOrigin : '';
+
+    listBlogsEndpoint = `${API}/user/${username}`;
+
+    return fetch(`${listBlogsEndpoint}`, {
+        method: 'GET'
     })
         .then(response => {
             return response.json();
