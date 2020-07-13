@@ -9,6 +9,8 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo'
 
 import { createHttpLink } from 'apollo-link-http';
+import { setContext } from "apollo-link-context";
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const authLink = setContext((_, { headers }) => {
 	  return {
