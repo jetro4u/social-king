@@ -2,7 +2,7 @@ const Shop = require('../models/shop');
 const User = require('../models/user');
 const Blog = require('../models/blog');
 const _ = require('lodash');
-const formidable = require('formidable');
+
 const fs = require('fs');
 const { errorHandler } = require('../helpers/dbErrorHandler');
 
