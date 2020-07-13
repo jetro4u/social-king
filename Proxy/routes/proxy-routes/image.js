@@ -5,7 +5,6 @@ const { uploadProfileImage, uploadPostImage, afterUpload, uploadImageURL, getIma
 const { requireSignin, authMiddleware } = require('../proxy-controllers/auth');
 
 router.post('/upload-profile-photo', requireSignin, authMiddleware, uploadProfileImage, afterUpload);
-
 router.get('/get-profile-photo', requireSignin, authMiddleware, getProfilePhoto);
 
 router.post('/upload', requireSignin, authMiddleware, uploadPostImage, afterUpload);

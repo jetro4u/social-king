@@ -7,7 +7,7 @@ const apiKey =  JSON.stringify(process.env.SHOPIFY_API_KEY);
 module.exports = withCSS({
   publicRuntimeConfig: {
     APP_NAME: 'Shopify Tribe',
-    API_DEVELOPMENT: 'https://amazonfashion.app/api',
+    API_DEVELOPMENT: 'http://localhost:8000/api',
     API_PRODUCTION: 'https://amazonfashion.app/api',
     PRODUCTION: true,
     DOMAIN_DEVELOPMENT: 'http://localhost:3000',
