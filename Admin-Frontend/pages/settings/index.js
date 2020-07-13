@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
-import { getProfile, update } from '../actions/user';
-import IconDropZone from '../components/settings/IconDropZone';
-import { list, removeBlog, toggleBlogVisibility } from '../actions/blog';
+import { getProfile, update } from '../../actions/user';
+import IconDropZone from '../../components/settings/IconDropZone';
+import { list, removeBlog, toggleBlogVisibility } from '../../actions/blog';
 import Link from 'next/link';
 import {
   Button,
@@ -17,7 +17,8 @@ import {
   TextStyle,
 } from '@shopify/polaris';
 
-const Settings = ({ shop, router }) => {
+const Settings = (props) => {
+  console.log('props in Settings Component', props)
 
   const [communityName, setCommunityName] = useState('');
   const [backgroundColor, setBackgroundColor] = useState('');
@@ -27,7 +28,26 @@ const Settings = ({ shop, router }) => {
   const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
   const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
 
+  const init = () => {
+        getProfile(props).then(data => {
+            if (data.error) {
+                setValues({ ...values, error: data.error });
+            } else {
+                setValues({
+                    ...values,
+                    username: data.username,
+                    name: data.name,
+                    email: data.email,
+                    about: data.about,
+                    trackingID: data.trackingID
+                });
+            }
+        });
+    };
 
+    useEffect(() => {
+        init();
+    }, []);
 
   return (
       <Page>
