@@ -31,14 +31,16 @@ export const getProfile = (props) => {
         .catch(err => console.log(err));
 };
 
-export const update = (token, user) => {
-    return fetch(`${API}/user/update`, {
+export const update = ({props, newSettings}) => {
+    let username = props ? props.app.shopOrigin : '';
+
+    return fetch(`${API}/user/${username}/update`, {
         method: 'PUT',
         headers: {
             Accept: 'application/json',
-            Authorization: `Bearer ${token}`
+            'Content-Type': 'application/json',
         },
-        body: user
+        body: JSON.stringify(newSettings)
     })
         .then(response => {
             handleResponse(response);
