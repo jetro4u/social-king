@@ -11,7 +11,7 @@ const { ApiVersion } = require('@shopify/koa-shopify-graphql-proxy');
 const Router = require('koa-router');
 const { receiveWebhook, registerWebhook } = require('@shopify/koa-shopify-webhooks');
 const getSubscriptionUrl = require('./server/getSubscriptionUrl');
-const saveNewShop = require('./server/saveNewShop');
+const shopSearchInDB = require('./server/shopSearchInDB');
 const mongoose = require('mongoose')
 
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -68,6 +68,7 @@ const {
   HOST,
 } = process.env;
 
+
 app.prepare().then(() => {
   const server = new Koa();
   const router = new Router();
@@ -86,31 +87,39 @@ app.prepare().then(() => {
           secure: true,
           sameSite: 'none'
         });
+        let message = await shopSearchInDB({ctx, accessToken, shopify_domain: shop}).then((response)=>{
+          console.log('response to shopSearchInDB', response);
+          return response;
+        });
+        console.log('message in afterAuth function: ', message);
 
-      await Shop.findOne({ shopify_domain: shop }).exec((err, shopReturned) => {
-          if (err){
-              message = 'ran error logic';
-              console.log('ran error logic. err:', err);          
-          } else if (!shopReturned){
-              message = 'ran no shop found logic';
-              console.log('message: ', message);  
-              shopifyScope = 'read_products, write_products, read_content, write_content'; 
-              let new_shop = new Shop({ shopify_domain: shop, accessToken, shopifyScope})
-              new_shop.save((err, shopReturned) => {
-                if (err) {
-                  console.log('err trying to save shop: ', err)
-                } else {
-                  console.log('shop successfully created: ',shopReturned);
-                  onNewRegistration({ctx, accessToken, shop});
-                }});
-          } else {
-              console.log('shop found: ', shopReturned)
-              shopFound = true;
-            }});
-    }
-  }));
+        if(message=='shop successfully created'){
+            const registration = await registerWebhook({
+              address: `${HOST}/webhooks/products/create`,
+              topic: 'PRODUCTS_CREATE',
+              accessToken,
+              shop,
+              apiVersion: ApiVersion.July20
+            });
 
-  server.use(graphQLProxy({ version: ApiVersion.April19 }));
+            if (registration.success) {
+              console.log('Successfully registered webhook!');
+            } else {
+              console.log('Failed to register webhook', registration.result);
+            }
+            await getSubscriptionUrl(ctx, accessToken, shop);
+        } 
+      }
+    })
+  );
+
+  const webhook = receiveWebhook({ secret: SHOPIFY_API_SECRET_KEY });
+
+  router.post('/webhooks/products/create', webhook, (ctx) => {
+    console.log('received webhook: ', ctx.state.webhook);
+  });
+
+  server.use(graphQLProxy({ version: ApiVersion.July20 }));
 
   router.get('*', verifyRequest(), async (ctx) => {
     await handle(ctx.req, ctx.res);
