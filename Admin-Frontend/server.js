@@ -35,32 +35,7 @@ mongoose.Promise = require('bluebird');
 
 mongoose.connection.on('error', (err) => {
   console.error(`🚫 Database Error 🚫  → ${err}`);
-});
-
-onNewRegistration = async ({ctx, accessToken, shop})=>{
-  console.log('onNewRegistration func ran');
-  console.log('shopFound :', shopFound)
-  const registration = await registerWebhook({
-        address: `${HOST}/webhooks/products/create`,
-        topic: 'PRODUCTS_CREATE',
-        accessToken,
-        shop,
-        apiVersion: ApiVersion.October19
-      });
-
-      if (registration.success) {
-        console.log('Successfully registered webhook!');
-      } else {
-        console.log('Failed to register webhook', registration.result);
-      }
-      await getSubscriptionUrl(ctx, accessToken, shop);
-
-      const webhook = receiveWebhook({ secret: SHOPIFY_API_SECRET_KEY });
-      
-      router.post('/webhooks/products/create', webhook, (ctx) => {
-        console.log('received webhook: ', ctx.state.webhook);
-      }); 
-}  
+});  
 
 const {
   SHOPIFY_API_SECRET_KEY,
@@ -94,21 +69,25 @@ app.prepare().then(() => {
         console.log('message in afterAuth function: ', message);
 
         if(message=='shop successfully created'){
+            console.log('ran newshop logic in afterAuth func')
             const registration = await registerWebhook({
-              address: `${HOST}/webhooks/products/create`,
-              topic: 'PRODUCTS_CREATE',
-              accessToken,
-              shop,
-              apiVersion: ApiVersion.July20
-            });
+                address: `${HOST}/webhooks/products/create`,
+                topic: 'PRODUCTS_CREATE',
+                accessToken,
+                shop,
+                apiVersion: ApiVersion.July20
+              });
 
-            if (registration.success) {
-              console.log('Successfully registered webhook!');
-            } else {
-              console.log('Failed to register webhook', registration.result);
-            }
-            await getSubscriptionUrl(ctx, accessToken, shop);
-        } 
+              if (registration.success) {
+                console.log('Successfully registered webhook!');
+              } else {
+                console.log('Failed to register webhook', registration.result);
+              }
+              await getSubscriptionUrl(ctx, accessToken, shop);
+        } else {
+            console.log('ran shop exists in db logic');
+            ctx.redirect(`https://${shop}/admin/apps/community-2?shop=${shop}`); 
+        }
       }
     })
   );
