@@ -222,9 +222,6 @@ const BlogUpdate = ({ shop, router }) => {
                       />
                     ) : (<p>Loading</p>)}
                   </Card>
-                  <Card sectioned title="Variants">
-                    <SkeletonBodyText />
-                  </Card>
                 </Layout.Section>
                 <Layout.Section secondary>
                   <Card title="Promoted Products" subdued>
@@ -245,9 +242,6 @@ const BlogUpdate = ({ shop, router }) => {
                         <SkeletonBodyText lines={1} />
                       </Card.Section>
                     </Card>
-                    <Card.Section>
-                      <SkeletonBodyText lines={2} />
-                    </Card.Section>
                   </Card>
                 </Layout.Section>
               </Layout>
