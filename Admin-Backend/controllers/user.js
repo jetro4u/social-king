@@ -48,6 +48,11 @@ exports.update = (req, res) => {
                 console.log('error', err);
             } else {
                 console.log('file saved successfully: ', result);
+                Shop.update({ shopify_domain: shopName }, {
+                    iconImageURL: `https://${shopName}/community/connect/images/uploads/${iconImageName}`
+                }, function(err, affected, resp) {
+                   console.log('response to saving iconImg:',resp);
+                })
             }
         })
     }
@@ -63,6 +68,11 @@ exports.update = (req, res) => {
                 console.log('error', err);
             } else {
                 console.log('file saved successfully: ', result);
+                Shop.update({ shopify_domain: shopName }, {
+                    headerImageURL: `https://${shopName}/community/connect/images/uploads/${headerImageName}`
+                }, function(err, affected, resp) {
+                   console.log('response to saving iconImg:',resp);
+                })
             }
         })
     }
