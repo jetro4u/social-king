@@ -1,9 +1,11 @@
 import { useState, useCallback, useEffect } from 'react';
 import { getProfile, update } from '../../actions/user';
-import IconDropZone from '../../components/settings/IconDropZone';
 import Link from 'next/link';
 import {
   Button,
+  Caption,
+  DropZone,
+  Thumbnail,
   ButtonGroup,
   Card,
   Form,
@@ -29,6 +31,16 @@ const Settings = (props) => {
   const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
   const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
 
+  //dropzone
+  const [files, setFiles] = useState([]);
+  console.log('rendered Settings component with files', files)
+
+  const handleDropZoneDrop = useCallback(
+    (_dropFiles, acceptedFiles, _rejectedFiles) =>
+      setFiles((files) => [...files, ...acceptedFiles]),
+    [],
+  );
+
   const init = () => {
         getProfile(props).then(data => {
             if (data.error) {
@@ -47,17 +59,61 @@ const Settings = (props) => {
     }, []);
 
     const updateSettings = ()=>{
-      let newSettings = {communityName, backgroundColor, primaryColor}
-     console.log('ran updateSettings func with this data: ', ) 
-      update({props, newSettings}).then(data => {
-            if (data.error) {
-                console.log('err data: ', data)
-            } else {
-                setSuccessMessage('Settings successfully saved.')
-            }
-        });
+      // const fd = new FormData();
+      //Take the first selected file
+      // fd.append('file', getBase64(files[0]));
+      getBase64(files[0], (iconImg) => {
+          let newSettings = {files, iconImg, communityName, backgroundColor, primaryColor}
+          console.log('ran updateSettings func with this data: ',newSettings ) 
+          update({props, newSettings}).then(data => {
+                if (data.error) {
+                    console.log('err data: ', data)
+                } else {
+                    setSuccessMessage('Settings successfully saved.')
+                }
+            });
+      });
+
+      
     }
 
+    const getBase64 = (file, cb) => {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+            cb(reader.result)
+        };
+        reader.onerror = function (error) {
+            console.log('Error: ', error);
+        };
+    }
+
+    const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+
+    const fileUpload = !files.length && <DropZone.FileUpload
+                                            actionTitle="Add file"
+                                            actionHint="or drop files to upload" />;
+
+    const uploadedFiles = files.length > 0 && (
+      <Stack vertical>
+        {files.map((file, index) => (
+          <Stack alignment="center" key={index}>
+            <Thumbnail
+              size="small"
+              alt={file.name}
+              source={
+                validImageTypes.indexOf(file.type) > 0
+                  ? window.URL.createObjectURL(file)
+                  : 'https://cdn.shopify.com/s/files/1/0757/9955/files/New_Post.png?12678548500147524304'
+              }
+            />
+            <div>
+              {file.name} <Caption>{file.size} bytes</Caption>
+            </div>
+          </Stack>
+        ))}
+      </Stack>
+    );
     
 
   return (
@@ -83,13 +139,25 @@ const Settings = (props) => {
             title="Set Featured Icon Image"
             description="This icon will appear within your Site's Community Pages."
           >
-          <IconDropZone />
+          <DropZone 
+            allowMultiple={false}
+            onDrop={handleDropZoneDrop}>
+            {uploadedFiles}
+            {fileUpload}
+          </DropZone>
+
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
             title="Set Featured Header Image"
             description="This Header Image will appear within your Site's Community Pages."
           >
-          <IconDropZone />
+          <DropZone 
+            allowMultiple={false}
+            onDrop={handleDropZoneDrop}>
+            {uploadedFiles}
+            {fileUpload}
+          </DropZone>
+
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
             title="CSS Customization"
