@@ -89,8 +89,6 @@ exports.getProfilePhoto = (req, res) => {
 }
 
 
-
-
 const imageHeaders = {
   apng: 'image/apng',
   bmp:  'image/bmp',

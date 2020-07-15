@@ -70,16 +70,18 @@ const Settings = (props) => {
       // const fd = new FormData();
       //Take the first selected file
       // fd.append('file', getBase64(files[0]));
-      getBase64(files.slice(-1)[0], (iconImg) => {
-          let newSettings = {files, iconImg, communityName, backgroundColor, primaryColor}
-          console.log('ran updateSettings func with this data: ',newSettings ) 
-          update({props, newSettings}).then(data => {
-                if (data.error) {
-                    console.log('err data: ', data)
-                } else {
-                    setSuccessMessage('Settings successfully saved.')
-                }
-            });
+      getBase64(iconFiles.slice(-1)[0], (iconImg) => {
+          getBase64(headerFiles.slice(-1)[0], (headerImg) => {
+            let newSettings = {iconImg, headerImg, communityName, backgroundColor, primaryColor}
+            console.log('ran updateSettings func with this data: ',newSettings ) 
+            update({props, newSettings}).then(data => {
+                  if (data.error) {
+                      console.log('err data: ', data)
+                  } else {
+                      setSuccessMessage('Settings successfully saved.')
+                  }
+              });
+          });
       });
 
       
