@@ -62,7 +62,7 @@ const Settings = (props) => {
       // const fd = new FormData();
       //Take the first selected file
       // fd.append('file', getBase64(files[0]));
-      getBase64(files[0], (iconImg) => {
+      getBase64(files.slice(-1)[0], (iconImg) => {
           let newSettings = {files, iconImg, communityName, backgroundColor, primaryColor}
           console.log('ran updateSettings func with this data: ',newSettings ) 
           update({props, newSettings}).then(data => {
@@ -96,7 +96,7 @@ const Settings = (props) => {
 
     const uploadedFiles = files.length > 0 && (
       <Stack vertical>
-        {files.map((file, index) => (
+        {files.slice(-1).map((file, index) => (
           <Stack alignment="center" key={index}>
             <Thumbnail
               size="small"
