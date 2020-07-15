@@ -17,7 +17,9 @@ const Shop = mongoose.Schema({
 	  // tribe-squared fields
 	  shopUrl: String,
 	  shopifyToken: String,
-	  shopifyScope: String
+	  shopifyScope: String,
+	  iconImageURL: String,
+	  headerImageURL: String,
   },
   { timestamps: true }
 );
