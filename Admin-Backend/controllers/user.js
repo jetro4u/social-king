@@ -32,7 +32,7 @@ exports.settingsPage = (req, res) => {
 }
 
 exports.update = (req, res) => {
-    console.log('ran update func in user controller with req.body', req.body);
+    // console.log('ran update func in user controller with req.body', req.body);
     let shopName = req.params.username ? req.params.username.toLowerCase() : '';
     console.log('shopName',shopName);
     let {newSettings} = req.body;
@@ -56,8 +56,11 @@ exports.update = (req, res) => {
 
     var imageBuffer = decodeBase64Image(data);
     
+    let fileExtension = req.body.iconImg.split('data:image/')[1].split(';')[0];
     // let image = Buffer.from(req.body.iconImg, 'base64');
-    fs.writeFile(path.join(__dirname,'/l-file.jpg'), imageBuffer.data, function(err, result) {
+    let imageName = shopName + `-${Date.now()}` + `.${fileExtension}`;
+
+    fs.writeFile(path.join(__dirname,`../../proxy/public/uploads/${imageName}`), imageBuffer.data, function(err, result) {
      if(err) {
         console.log('error', err);
     } else {
