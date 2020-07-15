@@ -35,6 +35,7 @@ exports.update = (req, res) => {
     let shopName = req.params.username ? req.params.username.toLowerCase() : '';
     console.log('shopName',shopName);
     let {newSettings} = req.body;
+    console.log('req.body.files', req.body.files[0]);
 
     Shop.findOne({ shopify_domain: shopName }).exec((err, oldShop) => {
         if (err) {
