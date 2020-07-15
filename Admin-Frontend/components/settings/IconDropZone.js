@@ -1,15 +1,8 @@
 import React, {useCallback, useState} from 'react';
 import {Button, Caption, DropZone, Stack, Thumbnail} from '@shopify/polaris';
 
-export default function IconDropZone() {
-  const [files, setFiles] = useState([]);
-
-  const handleDropZoneDrop = useCallback(
-    (_dropFiles, acceptedFiles, _rejectedFiles) =>
-      setFiles((files) => [...files, ...acceptedFiles]),
-    [],
-  );
-
+export default function IconDropZone(handleDropZoneDrop) {
+  
   const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
 
   const fileUpload = !files.length && <DropZone.FileUpload
@@ -38,11 +31,6 @@ export default function IconDropZone() {
   );
 
   return (
-    <DropZone 
-      allowMultiple={false}
-      onDrop={handleDropZoneDrop}>
-      {uploadedFiles}
-      {fileUpload}
-    </DropZone>
+    
   );
 }
