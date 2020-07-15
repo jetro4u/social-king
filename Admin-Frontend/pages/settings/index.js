@@ -26,6 +26,8 @@ const Settings = (props) => {
   const [communityName, setCommunityName] = useState('');
   const [backgroundColor, setBackgroundColor] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
+  const [iconImageURL, setIconImageURL] = useState('');
+  const [headerImageURL, setHeaderImageURL] = useState('');
 
   const handleCommunityNameChange = useCallback((newValue) => setCommunityName(newValue), []);
   const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
@@ -57,7 +59,8 @@ const Settings = (props) => {
                 setCommunityName(data.communityName);
                 setBackgroundColor(data.backgroundColor)
                 setPrimaryColor(data.primaryColor)
-                
+                setIconImageURL(data.iconImageURL)
+                setHeaderImageURL(data.headerImageURL)      
             }
         });
     };
@@ -67,9 +70,6 @@ const Settings = (props) => {
     }, []);
 
     const updateSettings = ()=>{
-      // const fd = new FormData();
-      //Take the first selected file
-      // fd.append('file', getBase64(files[0]));
       getBase64(iconFiles.slice(-1)[0], (iconImg) => {
           getBase64(headerFiles.slice(-1)[0], (headerImg) => {
             let newSettings = {iconImg, headerImg, communityName, backgroundColor, primaryColor}
@@ -83,11 +83,14 @@ const Settings = (props) => {
               });
           });
       });
-
-      
     }
 
     const getBase64 = (file, cb) => {
+      console.log('file', file)
+        if(file==undefined){
+          console.log('ran file undefined logic', file)
+          return cb(file);
+        }
         let reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
@@ -100,15 +103,15 @@ const Settings = (props) => {
 
     const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
 
-    const iconFileUpload = !iconFiles.length && <DropZone.FileUpload
+    const iconFileUpload = !iconImageURL && !iconFiles.length && <DropZone.FileUpload
                                             actionTitle="Add file"
                                             actionHint="or drop files to upload" />;
 
-    const headerFileUpload = !headerFiles.length && <DropZone.FileUpload
+    const headerFileUpload = !headerImageURL && !headerFiles.length && <DropZone.FileUpload
                                             actionTitle="Add file"
                                             actionHint="or drop files to upload" />;
 
-    const uploadedIconFiles = iconFiles.length > 0 && (
+    const uploadedIconFiles = iconFiles.length > 0 ? (
       <Stack vertical>
         {iconFiles.slice(-1).map((file, index) => (
           <Stack alignment="center" key={index}>
@@ -127,9 +130,24 @@ const Settings = (props) => {
           </Stack>
         ))}
       </Stack>
+    ) : (
+      <Stack alignment="center">
+        <Thumbnail
+          size="large"
+          alt={'Icon Image'}
+          source={
+            iconImageURL
+              ? iconImageURL
+              : 'https://cdn.shopify.com/s/files/1/0757/9955/files/New_Post.png?12678548500147524304'
+          }
+        />
+        <div>
+          Icon Image
+        </div>
+      </Stack>
     );
 
-    const uploadedHeaderFiles = headerFiles.length > 0 && (
+    const uploadedHeaderFiles = headerFiles.length > 0 ? (
       <Stack vertical>
         {headerFiles.slice(-1).map((file, index) => (
           <Stack alignment="center" key={index}>
@@ -147,6 +165,21 @@ const Settings = (props) => {
             </div>
           </Stack>
         ))}
+      </Stack>
+    ): (
+      <Stack alignment="center">
+        <Thumbnail
+          size="large"
+          alt={'Header Image'}
+          source={
+            headerImageURL
+              ? headerImageURL
+              : 'https://cdn.shopify.com/s/files/1/0757/9955/files/New_Post.png?12678548500147524304'
+          }
+        />
+        <div>
+          Header Image
+        </div>
       </Stack>
     );
     
