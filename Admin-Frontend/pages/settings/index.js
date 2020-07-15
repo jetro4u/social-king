@@ -32,12 +32,20 @@ const Settings = (props) => {
   const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
 
   //dropzone
-  const [files, setFiles] = useState([]);
-  console.log('rendered Settings component with files', files)
+  const [iconFiles, setIconFiles] = useState([]);
+  const [headerFiles, setHeaderFiles] = useState([]);
+  
+  console.log('rendered Settings component with files', iconFiles)
 
-  const handleDropZoneDrop = useCallback(
+  const handleIconDropZoneDrop = useCallback(
     (_dropFiles, acceptedFiles, _rejectedFiles) =>
-      setFiles((files) => [...files, ...acceptedFiles]),
+      setIconFiles((iconFiles) => [...iconFiles, ...acceptedFiles]),
+    [],
+  );
+
+  const handleHeaderDropZoneDrop = useCallback(
+    (_dropFiles, acceptedFiles, _rejectedFiles) =>
+      setHeaderFiles((headerFiles) => [...headerFiles, ...acceptedFiles]),
     [],
   );
 
@@ -90,16 +98,41 @@ const Settings = (props) => {
 
     const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
 
-    const fileUpload = !files.length && <DropZone.FileUpload
+    const iconFileUpload = !iconFiles.length && <DropZone.FileUpload
                                             actionTitle="Add file"
                                             actionHint="or drop files to upload" />;
 
-    const uploadedFiles = files.length > 0 && (
+    const headerFileUpload = !headerFiles.length && <DropZone.FileUpload
+                                            actionTitle="Add file"
+                                            actionHint="or drop files to upload" />;
+
+    const uploadedIconFiles = iconFiles.length > 0 && (
       <Stack vertical>
-        {files.slice(-1).map((file, index) => (
+        {iconFiles.slice(-1).map((file, index) => (
           <Stack alignment="center" key={index}>
             <Thumbnail
-              size="small"
+              size="large"
+              alt={file.name}
+              source={
+                validImageTypes.indexOf(file.type) > 0
+                  ? window.URL.createObjectURL(file)
+                  : 'https://cdn.shopify.com/s/files/1/0757/9955/files/New_Post.png?12678548500147524304'
+              }
+            />
+            <div>
+              {file.name} <Caption>{file.size} bytes</Caption>
+            </div>
+          </Stack>
+        ))}
+      </Stack>
+    );
+
+    const uploadedHeaderFiles = headerFiles.length > 0 && (
+      <Stack vertical>
+        {headerFiles.slice(-1).map((file, index) => (
+          <Stack alignment="center" key={index}>
+            <Thumbnail
+              size="large"
               alt={file.name}
               source={
                 validImageTypes.indexOf(file.type) > 0
@@ -141,9 +174,9 @@ const Settings = (props) => {
           >
           <DropZone 
             allowMultiple={false}
-            onDrop={handleDropZoneDrop}>
-            {uploadedFiles}
-            {fileUpload}
+            onDrop={handleIconDropZoneDrop}>
+            {uploadedIconFiles}
+            {iconFileUpload}
           </DropZone>
 
           </Layout.AnnotatedSection>
@@ -153,9 +186,9 @@ const Settings = (props) => {
           >
           <DropZone 
             allowMultiple={false}
-            onDrop={handleDropZoneDrop}>
-            {uploadedFiles}
-            {fileUpload}
+            onDrop={handleHeaderDropZoneDrop}>
+            {uploadedHeaderFiles}
+            {headerFileUpload}
           </DropZone>
 
           </Layout.AnnotatedSection>
