@@ -43,7 +43,7 @@ exports.update = (req, res) => {
         // let image = Buffer.from(req.body.iconImg, 'base64');
         let iconImageName = shopName + `-${Date.now()}` + `.${iconFileExtension}`;
 
-        fs.writeFile(path.join(__dirname,`../../proxy/public/uploads/${iconImageName}`), iconImageBuffer.data, function(err, result) {
+        fs.writeFile(path.join(__dirname,`../../Proxy/public/uploads/${iconImageName}`), iconImageBuffer.data, function(err, result) {
              if(err) {
                 console.log('error', err);
             } else {
@@ -63,7 +63,7 @@ exports.update = (req, res) => {
         // let image = Buffer.from(req.body.iconImg, 'base64');
         let headerImageName = shopName + `-${Date.now()}` + `.${headerFileExtension}`;
 
-        fs.writeFile(path.join(__dirname,`../../proxy/public/uploads/${headerImageName}`), headerImageBuffer.data, function(err, result) {
+        fs.writeFile(path.join(__dirname,`../../Proxy/public/uploads/${headerImageName}`), headerImageBuffer.data, function(err, result) {
              if(err) {
                 console.log('error', err);
             } else {
