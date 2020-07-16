@@ -13,14 +13,14 @@ exports.header = ({shop, tag, user, blog}) => {
     	}
 	}
 
-	const shopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
+	const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
 
     return `
 		<header class="community-header">
             <div class="community-header-title">
                 <div class="page-width community-header-title-box">
                     <a href="${proxyRoute}">
-                        <img src="${shopIcon}" class="community-icon" />
+                        <img src="${shop && shop.iconImageURL ? shop.iconImageURL : backupShopIcon}" class="community-icon" />
                     </a>
                     <div class="community-h2">${showTitle()}</div>
                 </div>
