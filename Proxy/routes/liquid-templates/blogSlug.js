@@ -167,6 +167,8 @@ exports.blogSlug = ({blog, shop, user}) => {
                         <div class="community-pad-left-10">
                             <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
                             ${user.about}
+                            <br/>
+                            <b>Store Favorites: </b>${user.storeFavorites}
                         </div>
                     </div>
                     </div>
@@ -178,16 +180,16 @@ exports.blogSlug = ({blog, shop, user}) => {
             </div>
 
         </div>
-        <div class="pure-g">
-            <div class="pure-u-5-5">
-                <div class="community-pad-20">
-                    <h2>Related products</h2>
-                    <div class="pure-g">
-                        ${showSelectedProducts()}
+        ${blog.selectedProducts.length>0 ? `<div class="pure-g">
+                <div class="pure-u-5-5">
+                    <div class="community-pad-20">
+                        <h2>Related products</h2>
+                        <div class="pure-g">
+                            ${showSelectedProducts()}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>` : ''}
         </main>
         </div>
         <script>
