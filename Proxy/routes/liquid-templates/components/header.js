@@ -1,7 +1,6 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 
 exports.header = ({shop, tag, user, blog}) => {
-    console.log('shop in header', shop);
 
 	const showTitle = (shop)=>{
         console.log('shop.communityName in showTitle function', shop._doc.communityName);
