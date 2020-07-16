@@ -6,16 +6,6 @@ const proxyRoute = process.env.PROXY_ROUTE;
 
 exports.userSlug = ({user, blogs, shop}) => {
 
-    const showUserBlogs = () => {
-        return blogs.map((blog, i) => `           
-            <div class="mt-4 mb-4" key={i}>
-                <a href="${proxyRoute}/blog/${blog.slug}">
-                    <span class="lead">${blog.title}</a>
-                </a>
-            </div>
-        `).join('');
-    };
-
     return `
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
         <style type="text/css">
