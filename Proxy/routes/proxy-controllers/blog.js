@@ -180,7 +180,7 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
                 error: errorHandler(err)
             });
         }
-        console.log('shop in mongo response', shop);
+        
         let shopId = shop._id;
         Blog.find({ hidden: false, shopPostedAt: shopId })
         .sort({createdAt: -1})

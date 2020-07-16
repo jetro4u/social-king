@@ -3,7 +3,6 @@ const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 
 exports.blogSlug = ({blog, shop, user}) => {
-    console.log('shop in blogslug func: ', shop);
 
     if(blog.hidden){
         console.log('this blog is hidden')
