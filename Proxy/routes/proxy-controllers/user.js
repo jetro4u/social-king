@@ -72,7 +72,7 @@ exports.publicProfile = (req, res) => {
             user = userFromDB;
 
             let userId = user._id;  
-            Blog.find({ postedBy: userId, shopPostedAt: Shop._id })
+            Blog.find({ postedBy: userId, shopifyDomain: req.query.shop })
                 .populate('categories', '_id name slug')
                 .populate('tags', '_id name slug')
                 .populate('postedBy', '_id name popUser')
