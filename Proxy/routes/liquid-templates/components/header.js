@@ -13,7 +13,7 @@ exports.header = ({shop, tag, user, blog}) => {
     	} else if (blog) {
     		return blog.title
     	} else {
-    		return shop._doc.communityName ? shop._doc.communityName : 'Community';
+    		return shop && shop._doc.communityName ? shop._doc.communityName : 'Community';
     	}
 	}
 
