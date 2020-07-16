@@ -1,4 +1,6 @@
 const { header } = require('./components/header');
+const { newsFeed } = require('./components/newsFeed');
+const { navbar } = require('./components/navbar');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 
@@ -21,43 +23,15 @@ exports.userSlug = ({user, blogs, shop}) => {
             ${newsFeedCSS({shop})}
         </style>
         ${header({user, shop})}
-        <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                              <img src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
-                                                   alt="Profile Picture" class="img-responsive img-rounded">
-                                        </div>
-                                        <div class="col-md-4">
-                                         <p>About: ${user.about}</p>
-                                         <p>Store Favorites: ${user.storeFavorites}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="community-background">
+            <main class="page-width">
+                <div class="pure-g">
+                    ${newsFeed({shop, blogs})}
+                    ${navbar({shop, user})}
                 </div>
-                <br />
-                <div class="container pb-5">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title bg-primary pt-4 pb-4 pl-4 pr-4 text-white">
-                                        Recent blogs by ${user.name}
-                                    </h5>
-
-                                    ${showUserBlogs()}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            </main>
+        </div>
+    
         <script>
             console.log('injected script from server ran');
         </script>`
