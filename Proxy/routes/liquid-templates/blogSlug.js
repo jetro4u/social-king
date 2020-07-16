@@ -2,7 +2,7 @@ const { header } = require('./components/header');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 
-exports.blogSlug = ({blog, shop}) => {
+exports.blogSlug = ({blog, shop, user}) => {
     console.log('shop in blogslug func: ', shop);
 
     if(blog.hidden){
@@ -166,7 +166,7 @@ exports.blogSlug = ({blog, shop}) => {
                     <div class="pure-u-3-4">
                         <div class="community-pad-left-10">
                             <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
-                            ${blog.postedBy.about}
+                            ${user.about}
                         </div>
                     </div>
                     </div>
