@@ -22,11 +22,23 @@ exports.read = (req, res) => {
                 error: errorHandler(err)
             });
         }
-        req.profile.hashed_password = undefined;
-        return res.send(userAdmin({user: req.profile, tags: req.tags, shop}));
-    })
 
-    
+        Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop })
+            .sort({createdAt: -1})
+            .populate('categories', '_id name slug')
+            .populate('tags', '_id name slug')
+            .populate('postedBy', '_id name username')
+            .select('_id title slug postedBy hidden createdAt updatedAt')
+            .exec((err, blogs) => {
+                if (err) {
+                    return res.status(400).json({
+                        error: errorHandler(err)
+                    });
+                }
+                req.profile.hashed_password = undefined;
+                return res.send(userAdmin({blogs, user: req.profile, tags: req.tags, shop}));
+            });
+    })
 };
 
 exports.userSettings = (req, res) => {
@@ -60,7 +72,7 @@ exports.publicProfile = (req, res) => {
             user = userFromDB;
 
             let userId = user._id;  
-            Blog.find({ reviewedBy: userId })
+            Blog.find({ postedBy: userId, shopifyDomain: req.query.shop })
                 .populate('categories', '_id name slug')
                 .populate('tags', '_id name slug')
                 .populate('postedBy', '_id name popUser')

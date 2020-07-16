@@ -3,7 +3,7 @@ const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 const { ngApp } = require('./angular/app.js');
 
-exports.userAdmin = ({user, tags, shop}) => {
+exports.userAdmin = ({user, tags, shop, blogs}) => {
  
     return `
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4-build.3588/angular.min.js"></script>
@@ -17,7 +17,7 @@ exports.userAdmin = ({user, tags, shop}) => {
     <script src='https://cdn.jsdelivr.net/npm/@editorjs/embed@2.2.1'></script>
     <script src='https://cdn.jsdelivr.net/g/filesaver.js'></script>
 
-    <script>${ngApp(user, tags)}</script>
+    <script>${ngApp({user, tags, blogs})}</script>
 
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' />
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">

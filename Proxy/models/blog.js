@@ -67,6 +67,9 @@ const blogSchema = new mongoose.Schema(
         shopPostedAt: { 
             type: ObjectId, 
             ref: 'Shop'
+        },
+        shopifyDomain: { 
+            type: String
         }
     },
     { timestamps: true }
