@@ -2,7 +2,7 @@ const { header } = require('./components/header');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 
-exports.userSlug = ({user, blogs}) => {
+exports.userSlug = ({user, blogs, shop}) => {
 
     const showUserBlogs = () => {
         return blogs.map((blog, i) => `           
@@ -18,9 +18,9 @@ exports.userSlug = ({user, blogs}) => {
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
         <style type="text/css">
-            ${newsFeedCSS({})}
+            ${newsFeedCSS({shop})}
         </style>
-        ${header({user})}
+        ${header({user, shop})}
         <div class="container">
                     <div class="row">
                         <div class="col-md-12">
