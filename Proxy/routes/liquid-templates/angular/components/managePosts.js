@@ -1,23 +1,14 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const moment = require('moment');
+const {formatQuotes} = require('../../../helpers/formatQuotes');
 
-function formatQuotes(str){
-   var reg = /"/g;
-   var newstr = `\\"`;
-   str = str.replace(reg,newstr);
-
-   var reg2 = /'/g;
-   newstr = "\\'"
-   return  str.replace(reg2,newstr);
-}
-
-module.exports.managePosts = ({user, posts}) => {
+module.exports.managePosts = ({user, blogs}) => {
   console.log('user in managePosts function:', user); 
-  console.log('posts in managePosts function:', posts); 
+  console.log('posts in managePosts function:', blogs); 
   
-  const displayPosts = (data) => posts.map((blog, i) => {
+  const displayPosts = (data) => blogs.map((blog, i) => {
       return `<div key=${i} class='pb-5'>
-                  <a href='${proxyRoute}/blog/${blog.slug}'><h3>${blog.title}</h3></a>
+                  <a href='${proxyRoute}/blog/${blog.slug}'><h3>${formatQuotes(blog.title)}</h3></a>
                   <p class='mark'>
                       Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
                   </p>
@@ -33,7 +24,7 @@ module.exports.managePosts = ({user, posts}) => {
           <div id='error-message' class='text-center'>
             <h3 >Manage Posts</h3><span ng-click='reloadPage()' class='reload'>&#x21bb;</span>
           </div>
-          ${displayPosts(posts)}
+          ${displayPosts(blogs)}
       </div>`
 };
 

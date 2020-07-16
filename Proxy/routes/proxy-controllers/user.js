@@ -23,7 +23,7 @@ exports.read = (req, res) => {
             });
         }
 
-        Blog.find({ postedBy: req.profile._id })
+        Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop })
             .sort({createdAt: -1})
             .populate('categories', '_id name slug')
             .populate('tags', '_id name slug')
@@ -36,7 +36,7 @@ exports.read = (req, res) => {
                     });
                 }
                 req.profile.hashed_password = undefined;
-                return res.send(userAdmin({posts: blogs, user: req.profile, tags: req.tags, shop}));
+                return res.send(userAdmin({blogs, user: req.profile, tags: req.tags, shop}));
             });
     })
 };
@@ -72,7 +72,7 @@ exports.publicProfile = (req, res) => {
             user = userFromDB;
 
             let userId = user._id;  
-            Blog.find({ reviewedBy: userId })
+            Blog.find({ postedBy: userId, shopPostedAt: Shop._id })
                 .populate('categories', '_id name slug')
                 .populate('tags', '_id name slug')
                 .populate('postedBy', '_id name popUser')
