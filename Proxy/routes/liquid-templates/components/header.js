@@ -1,7 +1,11 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 
 exports.header = ({shop, tag, user, blog}) => {
-	const showTitle = ()=>{
+    console.log('shop in header', shop);
+
+	const showTitle = (shop)=>{
+        console.log('shop.communityName in showTitle function', shop._doc.communityName);
+
 		if(tag){
     		return "Posts Tagged '"+ tag.name+"'"
     	} else if (user) {
@@ -9,7 +13,7 @@ exports.header = ({shop, tag, user, blog}) => {
     	} else if (blog) {
     		return blog.title
     	} else {
-    		return "The Chef's Kitchen"
+    		return shop && shop._doc.communityName ? shop._doc.communityName : 'Community';
     	}
 	}
 
@@ -22,7 +26,7 @@ exports.header = ({shop, tag, user, blog}) => {
                     <a href="${proxyRoute}">
                         <img src="${shop && shop.iconImageURL ? shop.iconImageURL : backupShopIcon}" class="community-icon" />
                     </a>
-                    <div class="community-h2">${showTitle()}</div>
+                    <div class="community-h2">${showTitle(shop)}</div>
                 </div>
             </div>
         </header>

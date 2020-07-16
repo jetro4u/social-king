@@ -1,49 +1,45 @@
-module.exports.managePosts = (user) => {
-  console.log('user in managePosts function:', user);
-  // const { listByUser } = require('../../../proxy-controllers/blog'); 
-  
-  return `
-      <div id='new-post' ng-controller='managePostsController'>
-          <div id='error-message' class='text-center'>
-            <h3 >Manage Posts</h3>
-          </div>
-          <div id='user-posts'></div>
-      </div>`
-};
+const proxyRoute = process.env.PROXY_ROUTE;
+const moment = require('moment');
+const {formatQuotes} = require('../../../helpers/formatQuotes');
 
-module.exports.managePostsJS = (user) => {
-  let proxyRoute = process.env.PROXY_ROUTE;
-  console.log('ran managePostsJS function');
-  const displayPosts = (data, proxy) => data.map((blog, i) => {
-      return `<div key=${i} class="pb-5">
-                  <a href='${proxy}/blog/${blog.slug}'><h3>${blog.title}</h3></a>
-                  <p class="mark">
-                      Written by ${blog.postedBy.name} | Published on ${blog.updatedAt.split('T')[0]}
+module.exports.managePosts = ({user, blogs}) => {
+  console.log('user in managePosts function:', user); 
+  console.log('posts in managePosts function:', blogs); 
+  
+  const displayPosts = (data) => blogs.map((blog, i) => {
+      return `<div key=${i} class='pb-5'>
+                  <a href='${proxyRoute}/blog/${blog.slug}'><h3>${formatQuotes(blog.title)}</h3></a>
+                  <p class='mark'>
+                      Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
                   </p>
-                  <button class="btn btn-sm btn-danger"}>
+                  <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog._id))})' class='btn btn-sm btn-danger'>
                       Delete
                   </button>
               </div>
       `;
   }).join(' ')
-  
+
+  return `
+      <div id='new-post' ng-controller='managePostsController'>
+          <div id='error-message' class='text-center'>
+            <h3 >Manage Posts</h3><span ng-click='reloadPage()' class='reload'>&#x21bb;</span>
+          </div>
+          ${displayPosts(blogs)}
+      </div>`
+};
+
+module.exports.managePostsJS = (user) => {  
   return `
     tribeApp.controller('managePostsController', function($scope, $http) {
       console.log('managePosts function ran');
       $scope.proxyRoute = '${proxyRoute}';
-      $scope.displayPosts = ${displayPosts};
-
-      $http.get('${proxyRoute}/${user.username}/blogs?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}')
-             .success(function(data) {
-              console.log('user post data: ', data);
-              document.getElementById("user-posts").innerHTML = $scope.displayPosts(data, $scope.proxyRoute);
-        })
-      .error(function(data) {
-        console.log('Error: ' + data);
-        document.getElementById("error-message").innerHTML =
-         '<h3>'+data.error+'</h3>';
-       });
-
+      $scope.deletePost = function(post){
+        console.log('post to delete:',post);
+      }
+      $scope.reloadPage = function(post){
+        console.log('ran reloadPage func')
+        location.reload();
+      }
     });
   `
 }
