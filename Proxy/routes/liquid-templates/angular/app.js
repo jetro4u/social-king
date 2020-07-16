@@ -1,4 +1,4 @@
-module.exports.ngApp = (user, tags) => {
+module.exports.ngApp = ({user, tags, blogs}) => {
   const proxyRoute = process.env.PROXY_ROUTE;
   const { createNewPost, createNewPostJS } = require('./components/createNewPost.js');
   const { managePosts, managePostsJS } = require('./components/managePosts.js');
@@ -22,7 +22,7 @@ module.exports.ngApp = (user, tags) => {
       let managePostsState = {
         name: 'manage-posts',
         url: '/manage-posts',
-        template: "${managePosts().replace(/(\r\n|\n|\r|\t)/gm,"").trim()}"
+        template: "${managePosts({user, blogs}).replace(/(\r\n|\n|\r|\t)/gm,"").trim()}"
       }
 
       let settingsState = {

@@ -53,6 +53,7 @@ exports.create = (req, res) => {
     }
 
     let blog = new Blog();
+    blog.shopifyDomain=req.query.shop;
     blog.title = title;
     blog.body = body;
 
