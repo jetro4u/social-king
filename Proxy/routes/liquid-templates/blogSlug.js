@@ -3,7 +3,7 @@ const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 
 exports.blogSlug = ({blog, shop}) => {
-    console.log('shop in bloslug func: ', shop);
+    console.log('shop in blogslug func: ', shop);
 
     if(blog.hidden){
         console.log('this blog is hidden')
@@ -143,9 +143,9 @@ exports.blogSlug = ({blog, shop}) => {
     return `
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
         <style type="text/css">
-            ${newsFeedCSS({})}
+            ${newsFeedCSS({shop})}
         </style>
-        ${header({blog})}    
+        ${header({blog, shop})}    
         <div class="community-background">
         <main class="page-width">
         <div class="pure-g">
