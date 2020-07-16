@@ -21,7 +21,7 @@ exports.blogsList = ({ shop, blogs, tags, size }) => {
             </main>
         </div>
         <script>
-            console.log('injected script from server ran');
+            console.log('shop in blogsList', ${JSON.stringify(shop)});
         </script>
         `
 };
