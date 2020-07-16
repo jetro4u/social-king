@@ -1,17 +1,8 @@
 const proxyRoute = process.env.PROXY_ROUTE;
+const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.settings = (user) => {
   console.log('user in settings view', user);
-
-  function formatQuotes(str){
-   var reg = /"/g;
-   var newstr = `\\"`;
-   str = str.replace(reg,newstr);
-
-   var reg2 = /'/g;
-   newstr = "\\'"
-   return  str.replace(reg2,newstr);
-  }
 
   return `
       <div>
@@ -37,7 +28,7 @@ module.exports.settings = (user) => {
                 <input type='text' value='${formatQuotes(user.name)}' class='form-control' ng-model='formData.name'/>
             </div>
             <div class='form-group'>
-                <label class='text-muted'>Favorite Things About ${user.profile}</label>
+                <label class='text-muted'>Favorite Things About {{shop.name}}</label>
                 <input type='text' value='${formatQuotes(user.storeFavorites)}' class='form-control' ng-model='formData.storeFavorites'/>
             </div>
             <div class='form-group'>
