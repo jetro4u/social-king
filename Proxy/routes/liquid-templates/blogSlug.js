@@ -118,16 +118,20 @@ exports.blogSlug = ({blog, shop, user}) => {
                             return `\n<p>**************** This is a delimiter to separate between sections*************</p>\n`;
                             break;
                         case 'embed':
-                            return `<iframe width='100%' 
+                            return `<iframe
+                                        width='100%' 
+                                        modestbranding=1
                                         height='540' 
-                                        src='${block.data.embed}' 
+                                        src='${block.data.embed}?modestbranding=1&showinfo=0&rel=0start=1' 
                                         frameborder="0" 
+                                        controls="0"
                                         allow="accelerometer; 
                                         autoplay; 
                                         encrypted-media; 
                                         gyroscope; 
                                         picture-in-picture" 
-                                        allowfullscreen>
+                                        allowfullscreen
+                                        >
                                     </iframe>
                                     <h6>${block.data.caption}</h6>`
                         default:
@@ -190,8 +194,5 @@ exports.blogSlug = ({blog, shop, user}) => {
                 </div>
             </div>` : ''}
         </main>
-        </div>
-        <script>
-            console.log('blog object: ', ${JSON.stringify(blog)});
-        </script>`
+        </div>`
 };

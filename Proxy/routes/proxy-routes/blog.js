@@ -36,7 +36,7 @@ router.put('/blog/toggle/:slug', requireSignin, adminMiddleware, toggle);
 // auth user blog crud
 router.post('/user/blog', requireSignin, authMiddleware, create);
 router.get('/:username/blogs', listByUser);
-router.delete('/user/blog/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, remove);
+router.delete('/user/blog/:slug', requireSignin, authMiddleware, remove);
 router.put('/user/blog/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, update);
 router.put('/user/blog/toggle/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, toggle);
 
