@@ -5,9 +5,9 @@ exports.newsFeed = ({shop, blogs}) => {
         return blogs.map((blog, i) => `
                 <div class="pure-u-1">
                     <div class="l-box community-card">
-                        <div class="community-author">Posted by ${blog.postedBy.username}</div>
+                        <div class="community-author">Posted by ${blog.postedBy.name}</div>
                         <h3><a href="${proxyRoute}/blog/${blog.slug}">${blog.title}</a></h3>
-                        Image Goes Here
+                        ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
                         <p>${blog.mdesc}</p>
                         <div class="community-card-comments">3 comments</div>
                      </div>
