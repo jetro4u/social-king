@@ -256,17 +256,20 @@ exports.read = (req, res) => {
 };
 
 exports.remove = (req, res) => {
+    res.setHeader('content-type', 'text/javascript');
     const slug = req.params.slug.toLowerCase();
-    Blog.findOneAndRemove({ slug }).exec((err, data) => {
-        if (err) {
+    Blog.update({slug}, {
+        archivedByUser: true
+    }, function(err, affected, resp) {
+       if (err) {
             return res.json({
                 error: errorHandler(err)
             });
         }
-        res.json({
-            message: 'Blog deleted successfully'
+       res.json({
+            message: 'Post deleted successfully'
         });
-    });
+    })
 };
 
 
