@@ -70,6 +70,9 @@ const blogSchema = new mongoose.Schema(
         },
         shopifyDomain: { 
             type: String
+        },
+        archivedByUser: {
+            type: Boolean
         }
     },
     { timestamps: true }

@@ -8,23 +8,27 @@ module.exports.managePosts = ({user, blogs}) => {
   
   const displayPosts = (data) => blogs.map((blog, i) => {
       return `<div key=${i} class='pb-5'>
-                  <a href='${proxyRoute}/blog/${blog.slug}'><h3>${formatQuotes(blog.title)}</h3></a>
-                  <p class='mark'>
-                      Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
-                  </p>
-                  <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog._id))})' class='btn btn-sm btn-danger'>
-                      Delete
-                  </button>
+                <div id='${blog.slug}'> 
+                    <a href='${proxyRoute}/blog/${blog.slug}'><h3>${formatQuotes(blog.title)}</h3></a>
+                    <p class='mark'>
+                        Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
+                    </p>
+                    <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog.slug))})' class='btn btn-sm btn-danger'>
+                        Delete
+                    </button>
+                </div>
               </div>
       `;
   }).join(' ')
 
   return `
-      <div id='new-post' ng-controller='managePostsController'>
+      <div ng-controller='managePostsController'>
           <div id='error-message' class='text-center'>
             <h3 >Manage Posts</h3><span ng-click='reloadPage()' class='reload'>&#x21bb;</span>
           </div>
-          ${displayPosts(blogs)}
+          <div>
+            ${displayPosts(blogs)}
+          </div>
       </div>`
 };
 
@@ -33,8 +37,18 @@ module.exports.managePostsJS = (user) => {
     tribeApp.controller('managePostsController', function($scope, $http) {
       console.log('managePosts function ran');
       $scope.proxyRoute = '${proxyRoute}';
-      $scope.deletePost = function(post){
-        console.log('post to delete:',post);
+      $scope.deletePost = function(slug){
+        console.log('post to delete:',slug);
+        $http.delete('${proxyRoute}/user/blog/'+slug+'?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}')
+                 .success(function(data) {
+                  document.getElementById(slug).innerHTML =
+                    '<h3>'+data.message+'</h3>';
+            })
+          .error(function(data) {
+            console.log('Error: ' + data);
+            document.getElementById('error-message').innerHTML =
+             '<h3 style="color:red;">'+data.error+'</h3>';
+           });
       }
       $scope.reloadPage = function(post){
         console.log('ran reloadPage func')
