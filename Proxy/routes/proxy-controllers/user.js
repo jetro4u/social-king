@@ -77,7 +77,7 @@ exports.publicProfile = (req, res) => {
                 .populate('tags', '_id name slug')
                 .populate('postedBy', '_id name popUser')
                 .limit(1000)
-                .select('_id popUser title slug excerpt categories tags postedBy createdAt updatedAt')
+                .select('_id coverMedia title slug excerpt categories tags postedBy createdAt updatedAt')
                 .exec((err, data) => {
                     if (err) {
                         return res.status(400).json({
