@@ -29,10 +29,6 @@ exports.newsFeed = ({shop, blogs}) => {
                 <div class="pure-g">${showLoadedBlogs()}</div>
             </div>
         </div>
-
-        <script>
-            console.log('blogs in newsFeed component',${JSON.stringify(blogs)})
-        </script>
         `
 };
 
