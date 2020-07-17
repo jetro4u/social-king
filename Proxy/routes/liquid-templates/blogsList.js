@@ -20,8 +20,5 @@ exports.blogsList = ({ shop, blogs, tags, size }) => {
                 </div>
             </main>
         </div>
-        <script>
-            console.log('shop in blogsList', ${JSON.stringify(shop)});
-        </script>
         `
 };

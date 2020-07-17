@@ -51,7 +51,7 @@ exports.create = (req, res) => {
     blog.title = title;
     blog.body = body;
     let mediaBlock = body.blocks.find(function (block) {
-        return block.type=='image' || block.type=='embed'
+        return block.type=='image'
     });
     blog.coverMedia = mediaBlock ? mediaBlock.data.file.url : ''; 
 
