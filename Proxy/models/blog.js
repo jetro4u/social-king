@@ -34,7 +34,7 @@ const blogSchema = new mongoose.Schema(
         mdesc: {
             type: String
         },
-        cover_photo: {
+        coverMedia: {
             type: String
         },
         hidden: { 
