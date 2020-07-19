@@ -10,6 +10,9 @@ exports.newsFeed = ({shop, blogs}) => {
                         ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
                         <p>${blog.mdesc}</p>
                         <div class="community-card-comments">3 comments</div>
+                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
+                            <input type="text" class="community-instant-post" placeholder="Add Comment" />
+                        </a>
                      </div>
                 </div>
             `).join('');

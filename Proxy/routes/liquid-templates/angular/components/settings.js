@@ -2,8 +2,6 @@ const proxyRoute = process.env.PROXY_ROUTE;
 const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.settings = (user) => {
-  console.log('user in settings view', user);
-
   return `
       <div>
           <div id='error-message' class='text-center'>
