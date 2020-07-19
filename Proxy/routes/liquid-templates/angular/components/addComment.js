@@ -1,126 +1,105 @@
 const proxyRoute = process.env.PROXY_ROUTE;
-const {formatQuotes} = require('../../../helpers/formatQuotes');
 
-module.exports.addComment = ({user, post}) => {
-  console.log('user in settings view', user);
+module.exports.addComment = ({shop}) => {
 
   return `
-      <div>
+      <div id='new-post' ng-controller='newPostController'>
           <div id='error-message' class='text-center'>
             <h3>Add Comment</h3>
           </div>
-          <div id='message'></div>
-            <div class='form-group'>
-                <form action='/upload' method='POST' enctype='multipart/form-data'>
-                  <label class='btn btn-outline-info'>
-                      Profile photo
-                      <input type='file' name='image' accept='image/*' hidden onchange='angular.element(this).scope().uploadFile(this.files)'/>
-                  </label>
-                </form>
-            </div>
+          <div class='form-group'>
+            <label for='titleip'>Title:</label>
+            <input
+              ng-model='title'
+              type='text'
+              class='form-control'
+              id='titleip'
+              name='titleip'
+              placeholder='Enter your awesome blog title'
+              required
+            />
+          </div>
+          <small>Write your awesome post below: (to embed videos, simply copy-paste any YouTube URL)</small>
+          <div id='editorjs'></div>
+            
+          <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
 
-            <div class='form-group'>
-              <div id='profile-photo'>${user.cover_photo && user.cover_photo!='undefined' ? "<img id='the-profile-img' src='"+user.cover_photo+"' ng-model='formData.cover_photo'/>" : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}</div>
-            </div>
-
-            <div class='form-group'>
-                <label class='text-muted'>Name</label>
-                <input type='text' value='${formatQuotes(user.name)}' class='form-control' ng-model='formData.name'/>
-            </div>
-            <div class='form-group'>
-                <label class='text-muted'>Favorite Things About {{shop.name}}</label>
-                <input type='text' value='${formatQuotes(user.storeFavorites)}' class='form-control' ng-model='formData.storeFavorites'/>
-            </div>
-            <div class='form-group'>
-                <label class='text-muted'>About</label>
-                <textarea type='text' value='${formatQuotes(user.about)}' class='form-control' ng-model='formData.about'/></textarea>
-            </div>
-            <div>
-              <button ng-click='updateProfileDetails(formData)' class='btn btn-primary'>
-                  Update
-              </button>
-            </div>
+           <div class='modal-footer'>
+              <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
+                ng-click='submitBlogPost({title: title})'>Post Comment</button>
+            </div> 
+          <p id='json'></p>
       </div>`
 };
 
-module.exports.addCommentJS = (user) => {
-  function formatQuotes(str){
-   var reg = /"/g;
-   var newstr = `\\"`;
-   str = str.replace(reg,newstr);
-
-   var reg2 = /'/g;
-   newstr = "\\'"
-   return  str.replace(reg2,newstr);
-  }
+module.exports.addCommentJS = (tags) => {
+  var tagsModel = {};
+  tags.forEach( function(item){ 
+     tagsModel[item.id] = false; 
+  });
+  console.log('tags obj: ', tagsModel);
 
   return `
-    tribeApp.controller('settingsController', function($scope, $http) {
-        console.log('settingsController function ran');
-        
-        $scope.getProfileURL = function(){        
-          $http.get('${proxyRoute}/get-profile-photo?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}')
-          .success(function(data) {
-                   let currentImg = document.getElementById('the-profile-img').src;
-                  if(currentImg!=data.src){
-                      document.getElementById('profile-photo').innerHTML =
-                      '<img src='+data.src+'/>';
-                    }
-                  })
-                .error(function(data) {
-                  console.log('Error: ' + data);
-                    document.getElementById('error-message').innerHTML =
-                   '<h3 style="color:red;">'+data.error+'</h3>';  
-                 })
-        }
+    tribeApp.controller('addCommentController', function($scope, $http) {
+      console.log('addCommentController function ran');
+      
+      // Checkbox logic 
+       $scope.tags = {};
 
-       $scope.clickedSettingsTab = function(){
-         console.log('clickedSettingsTab');
-         $scope.getProfileURL();
-       }
+      //Loading Editor.js with all its configuration
+      const editor = new EditorJS({
+        autofocus: true,
+        tools: {
+          header: Header,
+          image: {
+              class: ImageTool,
+              config: {
+                endpoints: {
+                  byFile: '${proxyRoute}/upload?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', // Your backend file uploader endpoint
+                  byUrl: '${proxyRoute}/upload-image-url', // Your endpoint that provides uploading by Url
+                }
+              }
+            },
+          embed: Embed,
+          list: {
+            class: List,
+            inlineToolbar: true,
+          },
+        },
+      });
 
+      $scope.submitBlogPost = function(title){
+        editor
+            .save()
+            .then((body) => {
+              
+              console.log('save button clicked');
+              console.log('Tags data:', $scope.tags);
+              let tagIDs = [];
+              for (var prop in $scope.tags) {
+                  if (Object.prototype.hasOwnProperty.call($scope.tags, prop)) {
+                      tagIDs.push(prop)
+                  }
+              }
+              
+              const data = { title, body, tags: tagIDs };
 
-        $scope.formData = {
-          cover_photo: '${user.cover_photo}',
-          name: '${formatQuotes(user.name)}',
-          storeFavorites: '${formatQuotes(user.storeFavorites)}',
-          about: '${formatQuotes(user.about)}'
-        }
-        $scope.uploadFile = function(files) {
-            console.log('ran upload file function with files:',files)
-            var fd = new FormData();
-            //Take the first selected file
-            fd.append('file', files[0]);
-
-            $http.post('${proxyRoute}/upload-profile-photo?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', fd, {
-                headers: {'Content-Type': undefined },
-                transformRequest: angular.identity
-            }).success(function(data) {
-                       $scope.formData.cover_photo = data.file.url;
-                      document.getElementById('profile-photo').innerHTML =
-                        '<img src='+data.file.url+'/>';   
+              $http.post('${proxyRoute}/user/blog?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', data)
+                     .success(function(data) {
+                      document.getElementById('new-post').innerHTML =
+                        '<h3>'+data.message+'</h3>';
+                      delete $scope.title;    
                 })
               .error(function(data) {
                 console.log('Error: ' + data);
+                document.getElementById('error-message').innerHTML =
+                 '<h3 style="color:red;">'+data.error+'</h3>';
                });
-        };
-
-        $scope.updateProfileDetails = function(formData){
-          console.log('formData: ', formData);
-
-          $http.put(
-            '${proxyRoute}/user/update?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', 
-            formData).success(function(data) {
-                document.getElementById('message').innerHTML =
-                  '<p>Profile Updated Successfully</p>'   
-          })
-            .error(function(data) {
-              console.log('Error: ' + data);
-              document.getElementById('error-message').innerHTML =
-               '<h3 style="color:red;">'+data.error+'</h3>';
-             });
-        }
-      
-      });
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+      }
+    });
   `
 }

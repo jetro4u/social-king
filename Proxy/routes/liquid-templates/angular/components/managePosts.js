@@ -3,8 +3,6 @@ const moment = require('moment');
 const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.managePosts = ({user, blogs}) => {
-  console.log('user in managePosts function:', user); 
-  console.log('posts in managePosts function:', blogs); 
   
   const displayPosts = (data) => blogs.map((blog, i) => {
       return `<div key=${i} class='pb-5'>
