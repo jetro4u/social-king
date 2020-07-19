@@ -12,7 +12,7 @@ module.exports.ngApp = ({user, tags, blogs, blog}) => {
     ${createNewPostJS(tags)}
     ${settingsJS(user)}
     ${managePostsJS(user)}
-    ${addCommentJS(tags)}
+    ${addCommentJS({tags, blog})}
 
     tribeApp.config(function($stateProvider, $urlRouterProvider) {
       

@@ -2,6 +2,7 @@ const edjsHTML = require('editorjs-html');
 const edjsParser = edjsHTML();
 
 const Blog = require('../../models/blog');
+const Comment = require('../../models/comment');
 const Category = require('../../models/category');
 const Tag = require('../../models/tag');
 const User = require('../../models/user');
@@ -111,6 +112,65 @@ exports.create = (req, res) => {
                         );
                     })
                     res.send({message: 'Thank you for submitting your new post. A moderator will review your content, and publish it if approved.'});
+                }
+            );        
+        });
+    });
+};
+
+
+exports.createComment = (req, res) => {
+    res.setHeader('content-type', 'text/javascript')
+    let { body } = req.body;
+    console.log('req.body in comment create function: ',req.body);
+    console.log('req.profile in comment create function: ',req.profile);
+    console.log('req.query in comment create function: ',req.query);
+
+    if (body.blocks === undefined || body.blocks.length == 0) {
+        return res.status(400).json({
+            error: 'Content is required'
+        });
+    }
+
+    let comment = new Comment();
+    comment.shopifyDomain=req.query.shop;
+    comment.body = body;
+    let mediaBlock = body.blocks.find(function (block) {
+        return block.type=='image'
+    });
+    comment.coverMedia = mediaBlock ? mediaBlock.data.file.url : ''; 
+
+    comment.postSlug = req.query.slug;
+    comment.postedBy = req.user._id;
+    
+    const html = edjsParser.parse(body);
+    console.log('html: ',html);
+    comment.html = html.join('');
+    // categories and tags
+    // let arrayOfCategories = categories && categories.split(',');
+    // let arrayOfTags = tags[0];
+
+    comment.save((err, result) => {
+        if (err) {
+            console.log('error saving comment',err)
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        }
+        console.log('comment saved successfully',result);
+        //add shop to blog record
+        Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
+           console.log('shop in function to add Shop reference', shop)
+           Comment.findByIdAndUpdate(result._id, { $set: { shopPostedAt: [shop._id] } }, { new: true }).exec(
+                (err, result) => {
+                    if (err) {
+                        console.log('ran error in block when trying to save comment reference to shop')
+                        return res.status(400).json({
+                            error: errorHandler(err)
+                        })
+                    }
+                    console.log('Shop added to comment record');
+                    res.send({message: 'Thank you for submitting your comment. A moderator will review your content, and publish it if approved.'});
                 }
             );        
         });
