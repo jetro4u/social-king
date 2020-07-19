@@ -36,7 +36,15 @@ exports.read = (req, res) => {
                     });
                 }
                 req.profile.hashed_password = undefined;
-                return res.send(userAdmin({blogs, user: req.profile, tags: req.tags, shop}));
+                Blog.find({ slug: req.query.slug })
+                    .exec((err, blog) => {
+                        if (err) {
+                            return res.status(400).json({
+                                error: errorHandler(err)
+                            });
+                        }
+                    return res.send(userAdmin({blog, blogs, user: req.profile, tags: req.tags, shop}));
+                });
             });
     })
 };

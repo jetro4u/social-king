@@ -1,4 +1,4 @@
-module.exports.ngApp = ({user, tags, blogs}) => {
+module.exports.ngApp = ({user, tags, blogs, blog}) => {
   const trimHTML = (str)=>{return str.replace(/(\r\n|\n|\r|\t)/gm,"").trim()}
   const proxyRoute = process.env.PROXY_ROUTE;
   const { createNewPost, createNewPostJS } = require('./components/createNewPost.js');
@@ -36,7 +36,7 @@ module.exports.ngApp = ({user, tags, blogs}) => {
       let addCommentState = {
         name: 'add-comment',
         url: '/add-comment',
-        template: "${trimHTML(addComment({user}))}"
+        template: "${trimHTML(addComment({user, blog}))}"
       }
 
       $stateProvider.state(createNewPostState);
