@@ -81,9 +81,8 @@ exports.publicProfile = (req, res) => {
 
             let userId = user._id;  
             Blog.find({ postedBy: userId, shopPostedAt: shop._id })
-                .populate('categories', '_id name slug')
                 .populate('tags', '_id name slug')
-                .populate('postedBy', '_id name popUser')
+                .populate('postedBy', '_id name cover_photo username popUser')
                 .limit(1000)
                 .select('_id coverMedia title slug excerpt categories tags postedBy createdAt updatedAt')
                 .exec((err, data) => {
