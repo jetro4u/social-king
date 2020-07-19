@@ -3,8 +3,6 @@ const moment = require('moment');
 const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.managePosts = ({user, blogs}) => {
-  console.log('user in managePosts function:', user); 
-  console.log('posts in managePosts function:', blogs); 
   
   const displayPosts = (data) => blogs.map((blog, i) => {
       return `<div key=${i} class='pb-5'>
@@ -33,10 +31,25 @@ module.exports.managePosts = ({user, blogs}) => {
 };
 
 module.exports.managePostsJS = (user) => {  
+  const displayPosts = (data, proxy) => data.map((blog, i) => {
+      return `<div key=${i} class="pb-5">
+                  <a href='${proxy}/blog/${blog.slug}'><h3>${blog.title}</h3></a>
+                  <p class="mark">
+                      Written by ${blog.postedBy.name} | Published on ${blog.updatedAt.split('T')[0]}
+                  </p>
+                  <button class="btn btn-sm btn-danger"}>
+                      Delete
+                  </button>
+              </div>
+      `;
+  }).join(' ')
+
   return `
     tribeApp.controller('managePostsController', function($scope, $http) {
       console.log('managePosts function ran');
       $scope.proxyRoute = '${proxyRoute}';
+      $scope.displayPosts = ${displayPosts};
+
       $scope.deletePost = function(slug){
         console.log('post to delete:',slug);
         $http.delete('${proxyRoute}/user/blog/'+slug+'?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}')
@@ -46,7 +59,7 @@ module.exports.managePostsJS = (user) => {
             })
           .error(function(data) {
             console.log('Error: ' + data);
-            document.getElementById('error-message').innerHTML =
+            document.getElementById(slug).innerHTML =
              '<h3 style="color:red;">'+data.error+'</h3>';
            });
       }
