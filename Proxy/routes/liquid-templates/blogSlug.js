@@ -3,7 +3,7 @@ const { newsFeedCSS } = require('./css/newsFeedCSS');
 const {renderBlocks} = require('./components/blog/renderBlocks');
 const proxyRoute = process.env.PROXY_ROUTE;
 
-exports.blogSlug = ({blog, shop, user}) => {
+exports.blogSlug = ({blog, shop, user, comments}) => {
 
     if(blog.hidden){
         console.log('this blog is hidden')
@@ -16,6 +16,14 @@ exports.blogSlug = ({blog, shop, user}) => {
             <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
                 <button class="tag-btn pure-button">${t.name}</button>
             </a><br />
+        `).join('');
+    };
+
+    const showComments = () => {
+        return comments.map((comment, i) => `
+            <div class="community-pad-20 community-card">
+                ${renderBlocks(comment)}
+            </div>
         `).join('');
     };
 
@@ -50,6 +58,7 @@ exports.blogSlug = ({blog, shop, user}) => {
                 <div class="community-pad-20 community-card">
                     ${renderBlocks(blog)}
                </div>
+                ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
             </div>
 
             <div class="details pure-u-1-4">
