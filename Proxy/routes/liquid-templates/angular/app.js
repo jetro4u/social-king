@@ -1,7 +1,9 @@
 module.exports.ngApp = ({user, tags, blogs}) => {
+  const trimHTML = (str)=>{return str.replace(/(\r\n|\n|\r|\t)/gm,"").trim()}
   const proxyRoute = process.env.PROXY_ROUTE;
   const { createNewPost, createNewPostJS } = require('./components/createNewPost.js');
   const { managePosts, managePostsJS } = require('./components/managePosts.js');
+  const { addComment, addCommentJS } = require('./components/addComment.js');
   const { settings, settingsJS } = require('./components/settings.js');
   
   return ` 
@@ -16,23 +18,30 @@ module.exports.ngApp = ({user, tags, blogs}) => {
       let createNewPostState = {
         name: 'create-new-post',
         url: '/create-new-post',
-        template: "${createNewPost(tags).replace(/(\r\n|\n|\r|\t)/gm,"").trim()}"
+        template: "${trimHTML(createNewPost(tags))}"
       }
 
       let managePostsState = {
         name: 'manage-posts',
         url: '/manage-posts',
-        template: "${managePosts({user, blogs}).replace(/(\r\n|\n|\r|\t)/gm,"").trim()}"
+        template: "${trimHTML(managePosts({user, blogs}))}"
       }
 
       let settingsState = {
         name: 'settings',
         url: '/settings',
-        template: "${settings(user).replace(/(\r\n|\n|\r|\t)/gm,"").trim()}"
+        template: "${trimHTML(settings(user))}"
+      }
+
+      let addCommentState = {
+        name: 'add-comment',
+        url: '/add-comment',
+        template: "${trimHTML(addComment({user}))}"
       }
 
       $stateProvider.state(createNewPostState);
       $stateProvider.state(managePostsState);
+      $stateProvider.state(addCommentState);
       $stateProvider.state(settingsState);
 
       $urlRouterProvider.otherwise('create-new-post')
