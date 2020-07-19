@@ -5,7 +5,6 @@ const commentSchema = new mongoose.Schema(
     {
         postSlug: {
             type: String,
-            unique: true,
             index: true
         },
         body: {
@@ -13,6 +12,9 @@ const commentSchema = new mongoose.Schema(
             required: true,
             min: 200,
             max: 2000000
+        },
+        coverMedia: {
+            type: String
         },
         html: {
             type: String

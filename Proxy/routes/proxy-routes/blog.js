@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {
     create,
+    createComment,
     list,
     listForSitemap,
     listAllBlogsCategoriesTags,
@@ -39,5 +40,8 @@ router.get('/:username/blogs', listByUser);
 router.delete('/user/blog/:slug', requireSignin, authMiddleware, remove);
 router.put('/user/blog/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, update);
 router.put('/user/blog/toggle/:slug', requireSignin, authMiddleware, canUpdateDeleteBlog, toggle);
+
+// comments
+router.post('/user/blog/comment', requireSignin, authMiddleware, createComment);
 
 module.exports = router;

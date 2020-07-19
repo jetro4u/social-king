@@ -114,27 +114,29 @@ module.exports.addComment = ({shop, blog}) => {
 
   return `
       <div id='new-post' ng-controller='addCommentController'>
-          <div id='error-message' class='text-center'>
-            <h3>Add Comment</h3>
-          </div>
-          
-          ${formatQuotes(showBlogContent(blog))}
-          
-          <small>Write your awesome comment below: (to embed videos, simply copy-paste any YouTube URL)</small>
-          <div id='editorjs'></div>
-            
-          <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
+          <h2>${blog[0].title}</h2>
 
-           <div class='modal-footer'>
-              <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
-                ng-click='submitComment()'>Post Comment</button>
-            </div> 
-          <p id='json'></p>
+          ${formatQuotes(showBlogContent(blog))}
+          <br/>
+          <div id='new-comment'>
+            <h3>Add Comment</h3>
+            <div id='error-message' class='text-center'></div>
+            <small>Write your awesome comment below: (to embed videos, simply copy-paste any YouTube URL)</small>
+            <div id='editorjs'></div>
+              
+            <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
+
+             <div class='modal-footer'>
+                <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
+                  ng-click='submitComment()'>Post Comment</button>
+              </div> 
+            <p id='json'></p>
+          </div>
       </div>
       `
 };
 
-module.exports.addCommentJS = (tags) => {
+module.exports.addCommentJS = ({tags, blog}) => {
   var tagsModel = {};
   tags.forEach( function(item){ 
      tagsModel[item.id] = false; 
@@ -186,11 +188,10 @@ module.exports.addCommentJS = (tags) => {
               
               const data = { title, body, tags: tagIDs };
 
-              $http.post('${proxyRoute}/user/blog?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', data)
+              $http.post('${proxyRoute}/user/blog/comment?slug=${blog[0].slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', data)
                      .success(function(data) {
-                      document.getElementById('new-post').innerHTML =
+                      document.getElementById('new-comment').innerHTML =
                         '<h3>'+data.message+'</h3>';
-                      delete $scope.title;    
                 })
               .error(function(data) {
                 console.log('Error: ' + data);
