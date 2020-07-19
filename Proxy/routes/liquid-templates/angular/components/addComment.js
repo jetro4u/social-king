@@ -1,15 +1,17 @@
 const proxyRoute = process.env.PROXY_ROUTE;
+const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.addComment = ({shop, blog}) => {
-  console.log('blog in addComment view', blog)
+  console.log('blog in addComment view', blog);
+
+  
 
   return `
-      <div id='new-post' ng-controller='newPostController'>
+      <div id='new-post' ng-controller='addCommentController'>
           <div id='error-message' class='text-center'>
             <h3>Add Comment</h3>
           </div>
           
-
           <small>Write your awesome comment below: (to embed videos, simply copy-paste any YouTube URL)</small>
           <div id='editorjs'></div>
             
@@ -20,7 +22,8 @@ module.exports.addComment = ({shop, blog}) => {
                 ng-click='submitComment()'>Post Comment</button>
             </div> 
           <p id='json'></p>
-      </div>`
+      </div>
+      `
 };
 
 module.exports.addCommentJS = (tags) => {
