@@ -142,6 +142,8 @@ exports.signout = (req, res) => {
 };
 
 exports.requireSignin = (req, res, next) => {
+    console.log('req.url', req.url);
+    console.log('req.query.slug',req.query.slug)
     let expected_hash = md5(req.query.email+'somecrazyhash');
     console.log('expected_hash',expected_hash);
     console.log('actual_hash',req.query.hash);
