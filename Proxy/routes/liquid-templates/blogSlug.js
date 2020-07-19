@@ -22,6 +22,11 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
     const showComments = () => {
         return comments.map((comment, i) => `
             <div class="community-pad-20 community-card">
+                <a href="${proxyRoute}/user/${comment.postedBy.username}">
+                    <img src="${comment.postedBy && comment.postedBy.cover_photo ? comment.postedBy.cover_photo : backupShopIcon}" class="community-user-icon" />
+                    <div class="community-author">Posted by ${comment.postedBy.name}</div>
+                 </a>
+
                 ${renderBlocks(comment)}
             </div>
         `).join('');
@@ -59,6 +64,11 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                     ${renderBlocks(blog)}
                </div>
                 ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
+                <div class="community-pad-20 community-card">
+                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
+                        <input type="text" class="community-instant-post" placeholder="Add Comment" />
+                    </a>
+                </div>
             </div>
 
             <div class="details pure-u-1-4">
