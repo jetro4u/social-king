@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import { getCookie } from '../../actions/auth';
 import { create, getTags, removeTag } from '../../actions/tag';
+import EditTag from './EditTag'
 
 import {
   Button,
@@ -52,12 +53,7 @@ const Tag = (props) => {
 
         return tags.map((t, i) => {
             return (
-                <Button key={i}
-                    onDoubleClick={() => deleteConfirm(t.slug)}
-                    primary 
-                    external={true}>
-                       {t.name}  
-                </Button>
+                <EditTag {...t}/>
             );
         });
     };

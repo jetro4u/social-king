@@ -3,6 +3,7 @@ import {Button, Modal, TextContainer, Form, FormLayout, TextField} from '@shopif
 
 export default function ModalExample(props) {
   console.log('props in Modal Example: ',props);
+  let {name} = props;
 
   const [active, setActive] = useState(false);
   const handleChange = useCallback(() => setActive(!active), [active]);
@@ -19,14 +20,15 @@ export default function ModalExample(props) {
   const handleEmailChange = useCallback((value) => setEmail(value), []);
 
   return (
+
     <div>
-      <Button primary onClick={handleChange}>Add Promoted Products</Button>
+      <Button primary onClick={handleChange}>{name}</Button>
       <Modal
         open={active}
         onClose={handleChange}
-        title={`Choose Products`}
+        title={`Edit Tag`}
         primaryAction={{
-          content: 'Send Feedback',
+          content: 'Update',
           onAction: handleChange,
         }}
         secondaryActions={[
@@ -44,8 +46,7 @@ export default function ModalExample(props) {
              <Form onSubmit={handleSubmit}>
               <FormLayout>
                 <TextField
-                  multiline={5}
-                  value={email}
+                  value={name}
                   onChange={handleEmailChange}
                   label=""
                   type="text"
