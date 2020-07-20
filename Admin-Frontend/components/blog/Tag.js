@@ -27,16 +27,15 @@ const Tag = (props) => {
         error: false,
         success: false,
         tags: [],
-        removed: false,
-        reload: false
+        removed: false
     });
 
-    const { name, error, success, tags, removed, reload } = values;
+    const { name, error, success, tags, removed } = values;
     const token = getCookie('token');
 
     useEffect(() => {
         loadTags();
-    }, [reload]);
+    }, []);
 
     const loadTags = () => {
         getTags(props).then(data => {
@@ -71,7 +70,7 @@ const Tag = (props) => {
             if (data.error) {
                 console.log(data.error);
             } else {
-                setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
+                setValues({ ...values, error: false, success: false, name: '', removed: !removed });
             }
         });
     };
@@ -84,7 +83,7 @@ const Tag = (props) => {
             if (data.error) {
                 setValues({ ...values, error: data.error, success: false });
             } else {
-                setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
+                setValues({ ...values, error: false, success: false, name: '', removed: !removed });
             }
         });
     };
