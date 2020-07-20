@@ -16,11 +16,13 @@ import {
   TextField,
   SettingToggle,
   TextStyle,
-  Link
+  Link,
+  EmptyState,
+  List
 } from '@shopify/polaris';
 
 const ManagePosts = (props) => {
-
+    const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
     const [blogs, setBlogs] = useState([]);
     const [loaded, setLoaded] = useState({value: false});
     const [message, setMessage] = useState('');
@@ -95,59 +97,71 @@ const ManagePosts = (props) => {
         // const contentStatus = enabled ? 'Disable' : 'Enable';
         // const textStatus = enabled ? 'enabled' : 'disabled';
 
-        return blogs.map((blog, i) => {
-            return (
-                <React.Fragment>
-                    <SettingToggle
-                        key={i}
-                        action={{
-                          content: blog.hidden ? 'Make Public': 'Make Hidden',
-                          onAction: hideShowBlog.bind(null, blog.slug)
-                          // onAction: hideShowBlog(blog.slug)
+        return blogs.length> 0 ? (
+            <div className="row">
+                <Layout.AnnotatedSection
+                    title="Manage Posts"
+                    description="Review new posts and set approved content live."
+                  >
+                {blogs.map((blog, i) => {
+                    return (
+                    <React.Fragment>
+                        <SettingToggle
+                            key={i}
+                            action={{
+                              content: blog.hidden ? 'Make Public': 'Make Hidden',
+                              onAction: hideShowBlog.bind(null, blog.slug)
+                              // onAction: hideShowBlog(blog.slug)
 
-                        }}
-                        hidden={blog.hidden}
-                      >
-                        <h3>{blog.title}</h3>
+                            }}
+                            hidden={blog.hidden}
+                          >
+                            <h3>{blog.title}</h3>
 
-                        <p className="mark">
-                            Written by {blog.postedBy.name} | Published {moment(blog.updatedAt).fromNow()}
-                        </p>
-                        {showUpdateButton(blog)}
-                        This post is{' '}
-                        <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
-                        <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
-                          <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
-                                   Review   
-                          </Button>
-                          <Button key={1} onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
-                        </ButtonGroup>
-                    </SettingToggle>
-                </React.Fragment>
-            );
-        });
+                            <p className="mark">
+                                Written by {blog.postedBy.name} | Published {moment(blog.updatedAt).fromNow()}
+                            </p>
+                            {showUpdateButton(blog)}
+                            This post is{' '}
+                            <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
+                            <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
+                              <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
+                                       Review   
+                              </Button>
+                              <Button key={1} onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
+                            </ButtonGroup>
+                        </SettingToggle>
+                    </React.Fragment>) })};
+                 </Layout.AnnotatedSection>
+                </div>      
+           ) : ( <EmptyState
+                            heading="No New Posts Quite Yet"
+                            action={{
+                              content: 'Configure Settings',
+                              onAction:  () => Router.push('/settings'),
+                            }}
+                            image={img}
+                          >
+                           <p>We recommend the following checklist to help you get started:</p>
+                           <br/>
+                           <List type="number">
+                              <List.Item>Add Tags</List.Item>
+                              <List.Item>Configure Settings (ie Customize the Look & Feel of Your Network)</List.Item>
+                              <List.Item>Create Some Posts</List.Item>
+                              <List.Item>Invite Shoppers to create posts (via an email blast, or each time they make a purchase)</List.Item>
+                            </List>
+                      </EmptyState> )
     };
 
     return (
         <Page>
             <Layout>
-                <div className="row">
-                    <div className="col-md-12">
-                        {message && <div className="alert alert-warning">{message}</div>}
+                {message && <div className="alert alert-warning">{message}</div>}
 
-                        {loaded && blogs.length == 0
-                            ? <p>Loading</p>
-                            : <div className="row">
-                                    <Layout.AnnotatedSection
-                                        title="Manage Posts"
-                                        description="Review new posts and set approved content live."
-                                      >
-                                        {showAllBlogs()}
-                                    </Layout.AnnotatedSection>
-                              </div>
-                      }
-                    </div>
-                </div>
+                {!loaded
+                    ? <p>Loading...</p>
+                    : showAllBlogs()
+                }
             </Layout>
         </Page>
     );
