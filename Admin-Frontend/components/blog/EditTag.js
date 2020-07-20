@@ -1,23 +1,53 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useEffect} from 'react';
 import {Button, Modal, TextContainer, Form, FormLayout, TextField} from '@shopify/polaris';
+import { updateTag } from '../../actions/tag';
+import { getCookie } from '../../actions/auth';
 
-export default function ModalExample(props) {
-  console.log('props in Modal Example: ',props);
+export default function EditTag(props) {
   let {name} = props;
+  const token = getCookie('token');
 
   const [active, setActive] = useState(false);
-  const handleChange = useCallback(() => setActive(!active), [active]);
+  const [tag, setTag] = useState('');
+  const [values, setValues] = useState({
+      error: '',
+      success: '',
+      tagName: ''
+  });
 
-//input logic
-  const [newsletter, setNewsletter] = useState(false);
-  const [email, setEmail] = useState('');
+  console.log('props in EditTag Modal: ',props);
+  console.log('tag in EditTag component',tag)
+  console.log('values in EditTag component',values);
 
-  const handleSubmit = useCallback((_event) => {
-    setEmail('');
-    setNewsletter(false);
+  useEffect(() => {
+      setTag(props.name);
   }, []);
 
-  const handleEmailChange = useCallback((value) => setEmail(value), []);
+  const handleChange = useCallback(() => setActive(!active), [active]);
+
+  const handleTagChange = useCallback((value) => {
+      setTag(value)
+      setValues({ ...values, tagName: value });
+      console.log('ran handleTagChange func with value: ', value);
+  }, []);
+
+//input logic
+  const submitNewTag = () =>{
+    console.log('tag in handleSubmit func',tag)
+    console.log('values.tagName in handleSubmit func',values.tagName);
+
+    updateTag({newTagName: tag, props, token}).then(data => {
+        if(data){
+            if (data.error) {
+                setValues({ ...values, error: data.error });
+            } else {
+                setValues({ error: '', success: `Blog titled "${data.title}" is successfully updated` });
+            }
+        }
+       
+    });
+    setActive(false);
+  };
 
   return (
 
@@ -29,11 +59,11 @@ export default function ModalExample(props) {
         title={`Edit Tag`}
         primaryAction={{
           content: 'Update',
-          onAction: handleChange,
+          onAction: ()=>submitNewTag(),
         }}
         secondaryActions={[
           {
-            content: 'Learn more',
+            content: 'Cancel',
             onAction: handleChange,
           },
         ]}
@@ -41,25 +71,21 @@ export default function ModalExample(props) {
         <Modal.Section>
           <TextContainer>
             <p>
-                 Choose the Products which are related to the given post.
+                 Tag name
             </p>
-             <Form onSubmit={handleSubmit}>
               <FormLayout>
                 <TextField
-                  value={name}
-                  onChange={handleEmailChange}
+                  value={tag}
+                  onChange={handleTagChange}
                   label=""
                   type="text"
                   helpText={
                     <span>
-                       These products will be listed alongside the blog post in the public page.
+                       This is the tag name that will appear within your Social Network.
                     </span>
                   }
                 />
-
-                <Button submit>Submit</Button>
               </FormLayout>
-            </Form>
           </TextContainer>
         </Modal.Section>
       </Modal>

@@ -19,6 +19,31 @@ export const create = (tag, props, token) => {
         .catch(err => console.log(err));
 };
 
+export const updateTag = ({newTagName, props, token}) => {
+    let updateTagEndpoint;
+   
+    console.log('newTagName in updateTag func', newTagName);
+    console.log('props in updateTag func', props);
+
+    updateTagEndpoint = `${API}/tag/${props.slug}`;
+    let data = JSON.stringify({newTagName, props, token});
+
+    return fetch(`${updateTagEndpoint}`, {
+        method: 'PUT',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: data
+    })
+        .then(response => {
+            handleResponse(response);
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
+
 export const getTags = (props) => {
     console.log('props in getTags function', props);
     let username = props.app ? props.app.shopOrigin : '';

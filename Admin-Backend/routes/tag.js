@@ -3,7 +3,7 @@ const router = express.Router();
 
 // controllers
 const { requireSignin, adminMiddleware } = require('../controllers/auth');
-const { create, list, read, remove } = require('../controllers/tag');
+const { create, list, read, remove, update } = require('../controllers/tag');
 
 // validators
 const { runValidation } = require('../validators');
@@ -14,5 +14,6 @@ router.post('/tag', create);
 router.get('/tags', list);
 router.post('/blogs-of-given-tag', read);
 router.delete('/tag/:slug', requireSignin, adminMiddleware, remove);
+router.put('/tag/:slug', update);
 
 module.exports = router; 
