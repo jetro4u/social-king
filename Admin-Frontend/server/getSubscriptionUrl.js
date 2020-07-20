@@ -2,7 +2,7 @@ const getSubscriptionUrl = async (ctx, accessToken, shop) => {
   const query = JSON.stringify({
     query: `mutation {
       appSubscriptionCreate(
-          name: "Super Duper Plan",
+          name: "King Social: Community Engagement",
           trialDays: 30,
           returnUrl: "${process.env.HOST}"
           test: true
