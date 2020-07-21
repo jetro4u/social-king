@@ -25,9 +25,12 @@ function start() {
   app.set('port', process.env.PORT || 7777);
   const server = app.listen(app.get('port'), () => {
     console.log(`Express running → PORT ${server.address().port}`);
-    process.on('uncaughtException', function(err) {
-      console.log('Caught exception: ' + err);
-    });
+
+    if(process.NODE_ENV!='development'){
+        process.on('uncaughtException', function(err) {
+        console.log('Caught exception: ' + err);
+      });
+    }
   });
 }
 
