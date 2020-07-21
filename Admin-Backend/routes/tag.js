@@ -13,7 +13,7 @@ const { createTagValidator } = require('../validators/tag');
 router.post('/tag', create);
 router.get('/tags', list);
 router.post('/blogs-of-given-tag', read);
-router.delete('/tag/:slug', requireSignin, adminMiddleware, remove);
+router.delete('/tag/:slug', remove);
 router.put('/tag/:slug', update);
 
 module.exports = router; 

@@ -79,6 +79,8 @@ export const singleTag = (slug, skip, limit) => {
 };
 
 export const removeTag = (slug, token) => {
+    console.log('slug in removeTag action', slug)
+
     return fetch(`${API}/tag/${slug}`, {
         method: 'DELETE',
         headers: {

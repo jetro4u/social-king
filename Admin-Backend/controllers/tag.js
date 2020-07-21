@@ -90,7 +90,7 @@ exports.read = (req, res) => {
 
 exports.remove = (req, res) => {
     const slug = req.params.slug.toLowerCase();
-
+    console.log('slug in remove controller', slug)
     Tag.findOneAndRemove({ slug }).exec((err, data) => {
         if (err) {
             return res.status(400).json({

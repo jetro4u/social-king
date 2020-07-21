@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import { getCookie } from '../../actions/auth';
-import { create, getTags, removeTag } from '../../actions/tag';
+import { create, getTags } from '../../actions/tag';
 import EditTag from './EditTag'
 
 import {
@@ -56,24 +56,6 @@ const Tag = (props) => {
             return (
                 <EditTag {...t} loadTags={loadTags.bind(this)} />
             );
-        });
-    };
-
-    const deleteConfirm = slug => {
-        let answer = window.confirm('Are you sure you want to delete this tag?');
-        if (answer) {
-            deleteTag(slug);
-        }
-    };
-
-    const deleteTag = slug => {
-        // console.log('delete', slug);
-        removeTag(slug, token).then(data => {
-            if (data.error) {
-                console.log(data.error);
-            } else {
-                setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
-            }
         });
     };
 
