@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import { getCookie } from '../../actions/auth';
-import { create, getTags, removeTag } from '../../actions/tag';
-import EditTag from './EditTag'
+import { create, getTags, removeTag, updateTag } from '../../actions/tag';
 
 import {
   Button,
+  Modal,
+  TextContainer,
   ButtonGroup,
   Card,
   Form,
@@ -31,6 +32,36 @@ const Tag = (props) => {
         reload: false
     });
 
+    //tag modal
+    const [active, setActive] = useState(false);
+    const [tag, setTag] = useState('');
+
+    const handleModalChange = useCallback(() => setActive(!active), [active]);
+
+    const handleTagChange = useCallback((value) => {
+          setTag(value)
+          setValues({ ...values, tagName: value });
+          console.log('ran handleTagChange func with value: ', value);
+    }, []);
+
+    const submitNewTag = () =>{
+        console.log('tag in handleSubmit func',tag)
+        console.log('values.tagName in handleSubmit func',values.tagName);
+
+        updateTag({newTagName: tag, props, token}).then(data => {
+            if(data){
+                if (data.error) {
+                    setValues({ ...values, error: data.error });
+                } else {
+                    props.handleTagUpdate({ ...props.values, tags: props.values.tags.push(data)})
+                    setValues({ error: '', success: `Tag updated successfully` });
+                }
+            }
+           
+        });
+        setActive(false);
+      };
+
     const { name, error, success, tags, removed, reload } = values;
     const token = getCookie('token');
 
@@ -43,7 +74,6 @@ const Tag = (props) => {
             if (data.error) {
                 console.log(data.error);
             } else {
-                console.log('tags data in loadTags func', data);
                 setValues({ ...values, tags: data });
             }
         });
@@ -51,12 +81,59 @@ const Tag = (props) => {
 
     const showTags = (props) => {
         // console.log('props in ShowTags function', props);
-        console.log('tags in showTags func', tags)
+
+        // return tags.map((t, i) => {
+        //     return (
+        //         <Button key={i}
+        //             onDoubleClick={() => deleteConfirm(t.slug)}
+        //             primary 
+        //             external={true}>
+        //                {t.name}  
+        //         </Button>
+        //     );
+        // });
         return tags.map((t, i) => {
             return (
-                <EditTag {...t} loadTags={loadTags.bind(this)} />
-            );
-        });
+                <React.Fragment>
+                <Button primary onClick={handleModalChange}>{t.name}</Button>
+                  <Modal
+                    open={active}
+                    onClose={handleModalChange}
+                    title={`Edit Tag`}
+                    primaryAction={{
+                      content: 'Update',
+                      onAction: ()=>submitNewTag(),
+                    }}
+                    secondaryActions={[
+                      {
+                        content: 'Cancel',
+                        onAction: handleModalChange,
+                      },
+                    ]}
+                  >
+                    <Modal.Section>
+                      <TextContainer>
+                        <p>
+                             Tag name
+                        </p>
+                          <FormLayout>
+                            <TextField
+                              value={t.name}
+                              onChange={handleTagChange}
+                              label=""
+                              type="text"
+                              helpText={
+                                <span>
+                                   This is the tag name that will appear within your Social Network.
+                                </span>
+                              }
+                            />
+                          </FormLayout>
+                      </TextContainer>
+                    </Modal.Section>
+                  </Modal>
+                </React.Fragment>
+                )})
     };
 
     const deleteConfirm = slug => {
@@ -85,7 +162,6 @@ const Tag = (props) => {
             if (data.error) {
                 setValues({ ...values, error: data.error, success: false });
             } else {
-                console.log('data in createTag callback', data);
                 setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
             }
         });
