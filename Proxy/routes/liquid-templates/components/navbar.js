@@ -1,6 +1,6 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 
-exports.navbar = ({shop, tags, user}) => {
+exports.navbar = ({shop, tags, user, adminArea}) => {
 
     const showAllTags = () => {
         return tags.map((t, i) => `
@@ -71,7 +71,57 @@ exports.navbar = ({shop, tags, user}) => {
         </div>`
     }
 
-    return `
-        ${user ? showUserNav() : showBlogNav()}
-        `
+    const showUserAdminNav = () => {
+        return `<div class="pure-u-1-3">
+            <div class="community-pad-20">
+                <div class="community-card">
+                    <div class="community-card-header">${`Welcome ${user.name}`}</div>
+                    <div class="community-card-body">
+                   <ul class="list-group">
+                       <li class="list-group-item">
+                          <a class='tag-btn pure-button pure-button-primary' ui-sref="create-new-post">Create New Post</a>
+                       </li>
+
+                        <li class="list-group-item">
+                            <a class='tag-btn pure-button pure-button-primary' ui-sref="manage-posts">Manage Posts</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a class='tag-btn pure-button pure-button-primary' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a class='tag-btn pure-button pure-button-primary' href="${proxyRoute}/blogs">Browse Tribe Chatter</a>
+                        </li>
+                    </ul>
+                     <hr class="community-hr" />
+                    
+                    <b>General Bio: </b>${user.about}
+                    <hr class="community-hr" />
+                    <b>Store Favorites: </b>${user.storeFavorites}
+                    </div>
+                </div>
+                <div class="community-card">
+                    <div class="community-card-header">Community Rules</div>
+                    <div class="community-card-body">
+                        <ol>
+                            <li><strong>Be respectful</strong><br />Treat others how you'd like to be treated!</li>
+                            <hr class="community-hr-minimal" />
+                            <li><strong>No ads</strong><br />This is an ad-free zone</li>
+                            <hr class="community-hr-minimal" />
+                            <li><strong>Keepin it clean</strong><br />Use nice words only :)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    }
+
+    if(adminArea){
+        return showUserAdminNav();
+    } else if(user){
+        return showUserNav()
+    } else {
+        return showBlogNav()
+    }
 };
