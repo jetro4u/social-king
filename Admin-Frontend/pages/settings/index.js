@@ -24,12 +24,14 @@ const Settings = (props) => {
 
   const [successMessage, setSuccessMessage] = useState('');
   const [communityName, setCommunityName] = useState('');
+  const [aboutCommunity, setAboutCommunity] = useState('');
   const [backgroundColor, setBackgroundColor] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
   const [iconImageURL, setIconImageURL] = useState('');
   const [headerImageURL, setHeaderImageURL] = useState('');
 
   const handleCommunityNameChange = useCallback((newValue) => setCommunityName(newValue), []);
+  const handleAboutCommunityChange = useCallback((newValue) => setAboutCommunity(newValue), []);
   const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
   const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
 
@@ -56,6 +58,7 @@ const Settings = (props) => {
             if (data.error) {
                 console.log('err data: ', data)
             } else {
+                setAboutCommunity(data.aboutCommunity);
                 setCommunityName(data.communityName);
                 setBackgroundColor(data.backgroundColor)
                 setPrimaryColor(data.primaryColor)
@@ -72,7 +75,7 @@ const Settings = (props) => {
     const updateSettings = ()=>{
       getBase64(iconFiles.slice(-1)[0], (iconImg) => {
           getBase64(headerFiles.slice(-1)[0], (headerImg) => {
-            let newSettings = {iconImg, headerImg, communityName, backgroundColor, primaryColor}
+            let newSettings = {iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor}
             console.log('ran updateSettings func with this data: ',newSettings ) 
             update({props, newSettings}).then(data => {
                   if (data.error) {
@@ -199,7 +202,12 @@ const Settings = (props) => {
             >
             <Card sectioned>
               <FormLayout>
-                <TextField label="Community Name" value={communityName ? communityName : ''} onChange={handleCommunityNameChange} />;
+                <TextField label="Community Name" value={communityName ? communityName : ''} onChange={handleCommunityNameChange} />
+              </FormLayout>
+            </Card>
+            <Card sectioned>
+              <FormLayout>
+                <TextField multiline={3} label="About Your Community" value={aboutCommunity ? aboutCommunity : ''} onChange={handleAboutCommunityChange} />
               </FormLayout>
             </Card>
           </Layout.AnnotatedSection>

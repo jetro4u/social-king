@@ -15,7 +15,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-header">${`About ${shop._doc.communityName}`}</div>
-                    <div class="community-card-body">Welcome to the home improvement community page! Share your creations with fellow builders, and get inspired for new projects.
+                    <div class="community-card-body">${shop._doc.aboutCommunity}
                     <hr class="community-hr" />
                     <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
                     </div>
