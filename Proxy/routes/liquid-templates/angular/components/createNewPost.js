@@ -10,10 +10,8 @@ module.exports.createNewPost = (tags) => {
   }).join(' ')
 
   return `
-    <div class='pure-u-2-3'>
       <div class='community-pad-20'>
           <div class='community-card'>
-              <div class='community-card-body'>
                 <div id='new-post' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
                       <h3>Create New Post</h3>
@@ -45,10 +43,8 @@ module.exports.createNewPost = (tags) => {
                       </div> 
                     <p id='json'></p>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>`
+          </div>`
 };
 
 module.exports.createNewPostJS = (tags) => {
