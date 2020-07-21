@@ -86,7 +86,7 @@ app.prepare().then(() => {
               await getSubscriptionUrl(ctx, accessToken, shop);
         } else {
             console.log('ran shop exists in db logic');
-            console.log('ctx.request.url:',ctx.request.url}
+            console.log('ctx.request.url:',ctx.request.url);
             ctx.redirect(`https://${shop}/admin/apps/community-2?shop=${shop}`); 
         }
       }

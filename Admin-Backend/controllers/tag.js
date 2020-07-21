@@ -33,9 +33,9 @@ exports.update = (req, res) => {
                 error: errorHandler(err)
             });
         }
-       res.json({
-            message: 'Tag updated successfully'
-        });
+        console.log('tag update resp', resp)
+        console.log('tag update affected', affected)
+        res.json({newTagName: req.body.newTagName});
     })
 };
 
