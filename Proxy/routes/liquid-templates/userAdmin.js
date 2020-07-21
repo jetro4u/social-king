@@ -1,4 +1,6 @@
 const { header } = require('./components/header');
+const { navbar } = require('./components/navbar');
+const { newsFeed } = require('./components/newsFeed');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 const { ngApp } = require('./angular/app.js');
@@ -25,6 +27,13 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
         ${newsFeedCSS({shop})}
     </style>
     ${header({shop})}
+    <div class="community-background">
+        <main class="page-width">
+            <div class="pure-g">
+                ${newsFeed({shop, blogs})}
+            </div>
+        </main>
+    </div>
     <div class="container-fluid" ng-app="tribe" ng-controller='settingsController'>
         <div class="page-width">
             <div class="col-md-12 pt-5 pb-5">
@@ -33,24 +42,8 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
             <div class='row'>
               <div class="col-md-4">
                   <p>Welcome ${user.name}</p>   
-                  <ul class="list-group">
-                     <li class="list-group-item">
-                        <a class='tag-btn pure-button pure-button-primary' ui-sref="create-new-post">Create New Post</a>
-                     </li>
-
-                      <li class="list-group-item">
-                          <a class='tag-btn pure-button pure-button-primary' ui-sref="manage-posts">Manage Posts</a>
-                      </li>
-
-                      <li class="list-group-item">
-                          <a class='tag-btn pure-button pure-button-primary' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
-                      </li>
-
-                      <li class="list-group-item">
-                          <a class='tag-btn pure-button pure-button-primary' href="${proxyRoute}/blogs">Browse Tribe Chatter</a>
-                      </li>
-                  </ul>
               </div>
+                 ${navbar({shop, tags, user, adminArea:true})}
                   <ui-view class='col-md-8'></ui-view>
             </div>
         </div>
