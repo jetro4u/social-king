@@ -7,9 +7,9 @@ module.exports.addComment = ({shop, blog}) => {
 
   return `
       <div id='new-post' ng-controller='addCommentController'>
-          <h2>${blog[0].title}</h2>
+          <h2>${blog[0] ? blog[0].title : ''}</h2>
 
-          ${formatQuotes(renderBlocks(blog[0]))}
+          ${blog[0] ? formatQuotes(renderBlocks(blog[0])) : ''}
           <br/>
           <div id='new-comment'>
             <h3>Add Comment</h3>
@@ -81,7 +81,7 @@ module.exports.addCommentJS = ({tags, blog}) => {
               
               const data = { title, body, tags: tagIDs };
 
-              $http.post('${proxyRoute}/user/blog/comment?slug=${blog[0].slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', data)
+              $http.post('${proxyRoute}/user/blog/comment?slug=${blog[0] ? blog[0].slug : ''}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', data)
                      .success(function(data) {
                       document.getElementById('new-comment').innerHTML =
                         '<h3>'+data.message+'</h3>';
