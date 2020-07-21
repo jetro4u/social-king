@@ -27,21 +27,23 @@ const Tag = (props) => {
         error: false,
         success: false,
         tags: [],
-        removed: false
+        removed: false,
+        reload: false
     });
 
-    const { name, error, success, tags, removed } = values;
+    const { name, error, success, tags, removed, reload } = values;
     const token = getCookie('token');
 
     useEffect(() => {
         loadTags();
-    }, []);
+    }, [reload]);
 
     const loadTags = () => {
         getTags(props).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
+                console.log('tags data in loadTags func', data);
                 setValues({ ...values, tags: data });
             }
         });
@@ -49,10 +51,10 @@ const Tag = (props) => {
 
     const showTags = (props) => {
         // console.log('props in ShowTags function', props);
-
+        console.log('tags in showTags func', tags)
         return tags.map((t, i) => {
             return (
-                <EditTag {...t}/>
+                <EditTag {...t} loadTags={loadTags.bind(this)} />
             );
         });
     };
@@ -70,7 +72,7 @@ const Tag = (props) => {
             if (data.error) {
                 console.log(data.error);
             } else {
-                setValues({ ...values, error: false, success: false, name: '', removed: !removed });
+                setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
             }
         });
     };
@@ -83,7 +85,8 @@ const Tag = (props) => {
             if (data.error) {
                 setValues({ ...values, error: data.error, success: false });
             } else {
-                setValues({ ...values, error: false, success: false, name: '', removed: !removed });
+                console.log('data in createTag callback', data);
+                setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
             }
         });
     };

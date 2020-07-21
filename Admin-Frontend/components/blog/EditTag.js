@@ -23,7 +23,7 @@ export default function EditTag(props) {
       setTag(props.name);
   }, []);
 
-  const handleChange = useCallback(() => setActive(!active), [active]);
+  const handleModalChange = useCallback(() => setActive(!active), [active]);
 
   const handleTagChange = useCallback((value) => {
       setTag(value)
@@ -41,7 +41,7 @@ export default function EditTag(props) {
             if (data.error) {
                 setValues({ ...values, error: data.error });
             } else {
-                setValues({ error: '', success: `Blog titled "${data.title}" is successfully updated` });
+                props.loadTags();
             }
         }
        
@@ -50,12 +50,11 @@ export default function EditTag(props) {
   };
 
   return (
-
     <div>
-      <Button primary onClick={handleChange}>{name}</Button>
+      <Button primary onClick={handleModalChange}>{name}</Button>
       <Modal
         open={active}
-        onClose={handleChange}
+        onClose={handleModalChange}
         title={`Edit Tag`}
         primaryAction={{
           content: 'Update',
@@ -64,7 +63,7 @@ export default function EditTag(props) {
         secondaryActions={[
           {
             content: 'Cancel',
-            onAction: handleChange,
+            onAction: handleModalChange,
           },
         ]}
       >
