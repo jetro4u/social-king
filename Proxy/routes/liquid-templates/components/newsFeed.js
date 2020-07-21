@@ -10,10 +10,11 @@ exports.newsFeed = ({shop, blogs}) => {
                             <img src="${blog.postedBy && blog.postedBy.cover_photo ? blog.postedBy.cover_photo : backupShopIcon}" class="community-user-icon" />
                             <div class="community-author">Posted by ${blog.postedBy.name}</div>
                          </a>
-                        <h3><a href="${proxyRoute}/blog/${blog.slug}">${blog.title}</a></h3>
-                        ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
-                        <p>${blog.excerpt}</p>
-                        <div class="community-card-comments">3 comments</div>
+                        <a href="${proxyRoute}/blog/${blog.slug}">
+                            <h3>${blog.title}</h3>
+                            ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
+                            <p>${blog.excerpt}</p>
+                        </a>    
                         <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                             <input type="text" class="community-instant-post" placeholder="Add Comment" />
                         </a>
