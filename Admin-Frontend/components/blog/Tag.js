@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import { getCookie } from '../../actions/auth';
 import { create, getTags, removeTag } from '../../actions/tag';
+import EditTag from './EditTag'
 
 import {
   Button,
@@ -42,6 +43,7 @@ const Tag = (props) => {
             if (data.error) {
                 console.log(data.error);
             } else {
+                console.log('tags data in loadTags func', data);
                 setValues({ ...values, tags: data });
             }
         });
@@ -49,15 +51,10 @@ const Tag = (props) => {
 
     const showTags = (props) => {
         // console.log('props in ShowTags function', props);
-
+        console.log('tags in showTags func', tags)
         return tags.map((t, i) => {
             return (
-                <Button key={i}
-                    onDoubleClick={() => deleteConfirm(t.slug)}
-                    primary 
-                    external={true}>
-                       {t.name}  
-                </Button>
+                <EditTag {...t} loadTags={loadTags.bind(this)} />
             );
         });
     };
@@ -88,6 +85,7 @@ const Tag = (props) => {
             if (data.error) {
                 setValues({ ...values, error: data.error, success: false });
             } else {
+                console.log('data in createTag callback', data);
                 setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
             }
         });

@@ -22,6 +22,23 @@ exports.create = (req, res) => {
     });
 };
 
+exports.update = (req, res) => {
+    console.log('req.body in tag update controller', req.body);
+    const slug = req.params.slug.toLowerCase();
+    Tag.update({slug}, {
+        name: req.body.newTagName
+    }, function(err, affected, resp) {
+       if (err) {
+            return res.json({
+                error: errorHandler(err)
+            });
+        }
+        console.log('tag update resp', resp)
+        console.log('tag update affected', affected)
+        res.json({newTagName: req.body.newTagName});
+    })
+};
+
 exports.list = (req, res) => {
     console.log('req.headers.host',req.headers.host);
     console.log('req.query in tags list function',req.query);
