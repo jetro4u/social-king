@@ -76,9 +76,26 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-header">${`Welcome ${user.name}`}</div>
-                    <img src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
-                           alt="Profile Picture" class="img-responsive img-rounded">
                     <div class="community-card-body">
+                   <ul class="list-group">
+                       <li class="list-group-item">
+                          <a class='tag-btn pure-button pure-button-primary' ui-sref="create-new-post">Create New Post</a>
+                       </li>
+
+                        <li class="list-group-item">
+                            <a class='tag-btn pure-button pure-button-primary' ui-sref="manage-posts">Manage Posts</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a class='tag-btn pure-button pure-button-primary' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a class='tag-btn pure-button pure-button-primary' href="${proxyRoute}/blogs">Browse Tribe Chatter</a>
+                        </li>
+                    </ul>
+                     <hr class="community-hr" />
+                    
                     <b>General Bio: </b>${user.about}
                     <hr class="community-hr" />
                     <b>Store Favorites: </b>${user.storeFavorites}
