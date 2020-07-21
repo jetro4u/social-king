@@ -17,7 +17,17 @@ const Shop = mongoose.Schema({
 	  shopifyToken: String,
 	  shopifyScope: String,
 	  headerImageURL: String,
-	  iconImageURL: String
+	  iconImageURL: String,
+	  aboutCommunity: { 
+            type: String, 
+            default: 'Welcome to Our Community - a place for shoppers to share their voices.' 
+        },
+	  communityName: { 
+            type: String, 
+            default: 'Our Community' 
+        },
+	  primaryColor: String,
+	  backgroundColor: String,
   },
   { timestamps: true }
 );
