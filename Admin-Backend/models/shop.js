@@ -6,9 +6,6 @@ const Shop = mongoose.Schema({
 	  	  unique: true,
           index: true },
 	  name: String,
-	  communityName: String,
-	  primaryColor: String,
-	  backgroundColor: String,
 	  domain: String,
 	  supportEmail: String,
 	  nonce: String,
@@ -20,6 +17,10 @@ const Shop = mongoose.Schema({
 	  shopifyScope: String,
 	  iconImageURL: String,
 	  headerImageURL: String,
+	  aboutCommunity: String,
+	  communityName: String,
+	  primaryColor: String,
+	  backgroundColor: String,
   },
   { timestamps: true }
 );
