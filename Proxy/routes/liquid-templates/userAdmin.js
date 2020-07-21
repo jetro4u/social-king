@@ -25,13 +25,16 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
         ${newsFeedCSS({shop})}
     </style>
     ${header({shop})}
-    <main class="page-width" ng-app="tribe" ng-controller='settingsController'>
-        <div class="pure-g">           
-               ${navbar({shop, tags, user,adminArea:true})}
-              <ui-view class='col-md-8'></ui-view>
-        </div>
-    </main>
-
+    <div class="community-background"> 
+      <main class="page-width" ng-app="tribe" ng-controller='settingsController'>
+          <div class="pure-g">               
+              ${navbar({shop, tags, user,adminArea:true})}
+              <div class="pure-u-2-3">
+                  <ui-view></ui-view>
+              </div>
+          </div>
+      </main>
+    </div>
     <style>
         .tag-btn { margin-top: 1em;
                   margin-bottom: 1em;
