@@ -25,7 +25,6 @@ exports.read = (req, res) => {
 
         Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop })
             .sort({createdAt: -1})
-            .populate('categories', '_id name slug')
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
             .select('_id title slug postedBy hidden createdAt updatedAt')
