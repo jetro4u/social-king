@@ -10,37 +10,45 @@ module.exports.createNewPost = (tags) => {
   }).join(' ')
 
   return `
-      <div id='new-post' ng-controller='newPostController'>
-          <div id='error-message' class='text-center'>
-            <h3>Create New Post</h3>
-          </div>
-          <div class='form-group'>
-            <label for='titleip'>Title:</label>
-            <input
-              ng-model='title'
-              type='text'
-              class='form-control'
-              id='titleip'
-              name='titleip'
-              placeholder='Enter your awesome blog title'
-              required
-            />
-          </div>
-          <small>Write your awesome post below: (to embed videos, simply copy-paste any YouTube URL)</small>
-          <div id='editorjs'></div>
-          
-          <form class='form-inline' id='post-tags'>
-            ${displayTags(tags)}
-          </form>
-            
-          <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
+    <div class='pure-u-2-3'>
+      <div class='community-pad-20'>
+          <div class='community-card'>
+              <div class='community-card-body'>
+                <div id='new-post' ng-controller='newPostController'>
+                    <div id='error-message' class='text-center'>
+                      <h3>Create New Post</h3>
+                    </div>
+                    <div class='form-group'>
+                      <label for='titleip'>Title:</label>
+                      <input
+                        ng-model='title'
+                        type='text'
+                        class='form-control'
+                        id='titleip'
+                        name='titleip'
+                        placeholder='Enter your awesome blog title'
+                        required
+                      />
+                    </div>
+                    <small>Write your awesome post below: (to embed videos, simply copy-paste any YouTube URL)</small>
+                    <div id='editorjs'></div>
+                    
+                    <form class='form-inline' id='post-tags'>
+                      ${displayTags(tags)}
+                    </form>
+                      
+                    <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
 
-           <div class='modal-footer'>
-              <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
-                ng-click='submitBlogPost({title: title})'>Save Post</button>
-            </div> 
-          <p id='json'></p>
-      </div>`
+                     <div class='modal-footer'>
+                        <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
+                          ng-click='submitBlogPost({title: title})'>Save Post</button>
+                      </div> 
+                    <p id='json'></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`
 };
 
 module.exports.createNewPostJS = (tags) => {

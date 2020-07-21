@@ -1,4 +1,5 @@
 const { header } = require('./components/header');
+const { navbar } = require('./components/navbar');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 const proxyRoute = process.env.PROXY_ROUTE;
 const { ngApp } = require('./angular/app.js');
@@ -19,43 +20,21 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
 
     <script>${ngApp({user, tags, blogs, blog})}</script>
 
-    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <style type="text/css">
         ${newsFeedCSS({shop})}
     </style>
     ${header({shop})}
-    <div class="container-fluid" ng-app="tribe" ng-controller='settingsController'>
-        <div class="page-width">
-            <div class="col-md-12 pt-5 pb-5">
-                <h2>User Dashboard</h2>
-            </div>
-            <div class='row'>
-              <div class="col-md-4">
-                  <p>Welcome ${user.name}</p>   
-                  <ul class="list-group">
-                     <li class="list-group-item">
-                        <a class='tag-btn pure-button pure-button-primary' ui-sref="create-new-post">Create New Post</a>
-                     </li>
-
-                      <li class="list-group-item">
-                          <a class='tag-btn pure-button pure-button-primary' ui-sref="manage-posts">Manage Posts</a>
-                      </li>
-
-                      <li class="list-group-item">
-                          <a class='tag-btn pure-button pure-button-primary' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
-                      </li>
-
-                      <li class="list-group-item">
-                          <a class='tag-btn pure-button pure-button-primary' href="${proxyRoute}/blogs">Browse Tribe Chatter</a>
-                      </li>
-                  </ul>
+    <div class="community-background"> 
+      <main class="page-width" ng-app="tribe" ng-controller='settingsController'>
+          <div class="pure-g">               
+              ${navbar({shop, tags, user,adminArea:true})}
+              <div class="pure-u-2-3">
+                  <ui-view></ui-view>
               </div>
-                  <ui-view class='col-md-8'></ui-view>
-            </div>
-        </div>
-      </div>
-
+          </div>
+      </main>
+    </div>
     <style>
         .tag-btn { margin-top: 1em;
                   margin-bottom: 1em;
