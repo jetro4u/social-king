@@ -20,6 +20,8 @@ exports.header = ({shop, tag, user, blog}) => {
 
     return `
 		<header class="community-header">
+            <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <div class="community-header-title">
                 <div class="page-width community-header-title-box">
                     <a href="${proxyRoute}">
