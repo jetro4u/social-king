@@ -11,7 +11,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
     };
 
     const showBlogNav = () => {
-        return `<div class="pure-u-1-3">
+        return `<div class="pure-u-md-1-3 pure-u-sm-1"> 
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-header">${`About ${shop._doc.communityName}`}</div>
@@ -43,7 +43,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
     }
 
     const showUserNav = () => {
-        return `<div class="pure-u-1-3">
+        return `<div class="pure-u-md-1-3 pure-u-sm-1">
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-header">${`About ${user.name}`}</div>
