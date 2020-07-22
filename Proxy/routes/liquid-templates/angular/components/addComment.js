@@ -7,7 +7,6 @@ module.exports.addComment = ({shop, blog}) => {
 
   return `
       <div ng-controller='addCommentController'>
-        <div class='community-pad-20'>
           <div class='community-card community-admin-padding'>
             <h2>${blog[0] ? blog[0].title : ''}</h2>
 
@@ -22,11 +21,10 @@ module.exports.addComment = ({shop, blog}) => {
               <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
 
                <div class='modal-footer'>
-                  <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
+                  <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
                     ng-click='submitComment()'>Post Comment</button>
                 </div> 
               <p id='json'></p>
-              </div>
               </div>
           </div>
       </div>

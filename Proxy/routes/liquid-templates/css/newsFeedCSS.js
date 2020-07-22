@@ -36,6 +36,10 @@ exports.newsFeedCSS = ({shop}) => {
             .community-pad-left-10 { padding-left:10px }
             .community-bold { font-weight:bold }
             .community-admin-padding { padding:10px 20px 20px 20px }
-            .button-danger {  color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); background: rgb(202, 60, 60); }
+            .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}
+            .community-button-secondary { margin-top: 1em;
+                  margin-bottom: 1em;
+                  margin-right: 1em;
+                  margin-left: 1em; background: rgb(66, 184, 221); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
         `
 };
