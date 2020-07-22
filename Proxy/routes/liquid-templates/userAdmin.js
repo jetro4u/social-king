@@ -19,7 +19,6 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
     <script src='https://cdn.jsdelivr.net/g/filesaver.js'></script>
 
     <script>${ngApp({user, tags, blogs, blog})}</script>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <style type="text/css">
         ${newsFeedCSS({shop})}
