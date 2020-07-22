@@ -57,7 +57,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
         ${header({blog, shop})}    
         <div class="community-background">
             <main class="page-width">
-                <div class="pure-g">
+                <div class="community-pad-20 community-post-body pure-g">
 
                     <div class="pure-u-md-3-4 pure-u-sm-1"> 
                         <div class='community-admin-padding community-card'>
