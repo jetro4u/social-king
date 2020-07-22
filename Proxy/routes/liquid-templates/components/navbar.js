@@ -72,7 +72,8 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
     }
 
     const showUserAdminNav = () => {
-        return `<div class="pure-u-md-1-3 pure-u-sm-1">
+        return `
+        <div class="pure-u-md-1-3 pure-u-sm-1">
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-header">${`Welcome ${user.name}`}</div>
