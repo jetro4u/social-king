@@ -47,7 +47,8 @@ const userSchema = new mongoose.Schema(
             default: 0
         },
         cover_photo: {
-            type: String
+            type: String,
+            default: 'https://social-king-app.myshopify.com/community/connect/images/uploads/Samantha-Jones-1595435373516.gif'
         },
         resetPasswordLink: {
             data: String,
