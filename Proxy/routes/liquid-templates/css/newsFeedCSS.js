@@ -18,7 +18,7 @@ exports.newsFeedCSS = ({shop}) => {
             .community-header-title { background:#fff; }
             .community-header-title-box { display:flex }
             .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }
-            .community-card { border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }
+            .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }
             .community-card-header { letter-spacing: .5px; background:darkblue;color:white;padding:10px;font-weight:bold; }
             .community-card-body { letter-spacing: .4px; padding:10px }
             @media only screen 
@@ -35,5 +35,11 @@ exports.newsFeedCSS = ({shop}) => {
             .community-card-comments { font-size:12px;font-weight:bold; }
             .community-pad-left-10 { padding-left:10px }
             .community-bold { font-weight:bold }
+            .community-admin-padding { padding:10px 20px 20px 20px }
+            .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}
+            .community-button-secondary { margin-top: 1em;
+                  margin-bottom: 1em;
+                  margin-right: 1em;
+                  margin-left: 1em; background: rgb(66, 184, 221); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
         `
 };

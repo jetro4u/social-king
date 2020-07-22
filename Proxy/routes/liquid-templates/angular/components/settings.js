@@ -3,15 +3,15 @@ const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.settings = (user) => {
   return `
-      <div>
+        <div class='community-card community-admin-padding'>
           <div id='error-message' class='text-center'>
             <h3>Settings</h3>
           </div>
           <div id='message'></div>
             <div class='form-group'>
                 <form action='/upload' method='POST' enctype='multipart/form-data'>
-                  <label class='btn btn-outline-info'>
-                      Profile photo
+                  <label class='pure-button'>
+                      Update Photo
                       <input type='file' name='image' accept='image/*' hidden onchange='angular.element(this).scope().uploadFile(this.files)'/>
                   </label>
                 </form>
@@ -34,11 +34,11 @@ module.exports.settings = (user) => {
                 <textarea type='text' value='${formatQuotes(user.about)}' class='form-control' ng-model='formData.about'/></textarea>
             </div>
             <div>
-              <button ng-click='updateProfileDetails(formData)' class='btn btn-primary'>
+              <button ng-click='updateProfileDetails(formData)' class='community-button-secondary pure-button'>
                   Update
               </button>
             </div>
-      </div>`
+          </div>`
 };
 
 module.exports.settingsJS = (user) => {

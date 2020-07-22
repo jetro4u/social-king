@@ -3,16 +3,15 @@ const proxyRoute = process.env.PROXY_ROUTE;
 module.exports.createNewPost = (tags) => {
   
   const displayTags = (data) => data.map((tag, i) => {
-      return `<label class='checkbox px-2'>                
-                  <input type='checkbox' ng-model='tags.${tag.id}'><span class='px-1'>${tag.name}</span>
+      return `<label class='checkbox px-2 pure-checkbox' >                
+                  <input type='checkbox' ng-model='tags.${tag.id}'><span class='px-1'> ${tag.name}</span>
               </label>
       `;
   }).join(' ')
 
   return `
-      <div class='community-pad-20'>
           <div class='community-card'>
-                <div id='new-post' ng-controller='newPostController'>
+                <div class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
                       <h3>Create New Post</h3>
                     </div>
@@ -24,7 +23,7 @@ module.exports.createNewPost = (tags) => {
                         class='form-control'
                         id='titleip'
                         name='titleip'
-                        placeholder='Enter your awesome blog title'
+                        placeholder='Enter title here'
                         required
                       />
                     </div>
@@ -38,13 +37,12 @@ module.exports.createNewPost = (tags) => {
                     <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
 
                      <div class='modal-footer'>
-                        <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
+                        <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
                           ng-click='submitBlogPost({title: title})'>Save Post</button>
                       </div> 
                     <p id='json'></p>
                 </div>
-            </div>
-          </div>`
+            </div>`
 };
 
 module.exports.createNewPostJS = (tags) => {
