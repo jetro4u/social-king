@@ -19,7 +19,7 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
     <script src='https://cdn.jsdelivr.net/g/filesaver.js'></script>
 
     <script>${ngApp({user, tags, blogs, blog})}</script>
-
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <style type="text/css">
         ${newsFeedCSS({shop})}
@@ -28,10 +28,10 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
     <div class="community-background"> 
       <main class="page-width" ng-app="tribe" ng-controller='settingsController'>
           <div class="pure-g">               
-              ${navbar({shop, tags, user,adminArea:true})}
-              <div class="pure-u-2-3">
+              <div class="pure-u-md-2-3 pure-u-sm-1">
                   <ui-view></ui-view>
               </div>
+              ${navbar({shop, tags, user,adminArea:true})}
           </div>
       </main>
     </div>
