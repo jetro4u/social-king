@@ -24,7 +24,7 @@ exports.newsFeed = ({shop, blogs}) => {
     };
 
     return `
-        <div class="pure-u-2-3">
+        <div class="pure-u-md-2-3 pure-u-sm-1">
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-body">
