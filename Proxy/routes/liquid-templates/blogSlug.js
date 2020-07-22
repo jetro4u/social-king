@@ -21,7 +21,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
 
     const showComments = () => {
         return comments.map((comment, i) => `
-            <div class="community-pad-20 community-card">
+            <div class="community-admin-padding community-card">
                 <a href="${proxyRoute}/user/${comment.postedBy.username}">
                     <img src="${comment.postedBy && comment.postedBy.cover_photo ? comment.postedBy.cover_photo : backupShopIcon}" class="community-user-icon" />
                     <div class="community-author">Posted by ${comment.postedBy.name}</div>
@@ -60,7 +60,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                 <div class="pure-g">
 
                     <div class="pure-u-md-3-4 pure-u-sm-1"> 
-                        <div class="community-pad-20 community-card">
+                        <div class='community-admin-padding community-card'>
                             ${renderBlocks(blog)}
                        </div>
                         ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
