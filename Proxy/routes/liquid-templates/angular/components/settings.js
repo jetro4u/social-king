@@ -3,7 +3,7 @@ const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.settings = (user) => {
   return `
-      <div>
+        <div class='community-card community-admin-padding'>
           <div id='error-message' class='text-center'>
             <h3>Settings</h3>
           </div>
@@ -38,7 +38,7 @@ module.exports.settings = (user) => {
                   Update
               </button>
             </div>
-      </div>`
+          </div>`
 };
 
 module.exports.settingsJS = (user) => {
