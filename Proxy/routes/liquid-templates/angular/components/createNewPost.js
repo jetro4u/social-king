@@ -10,7 +10,7 @@ module.exports.createNewPost = (tags) => {
   }).join(' ')
 
   return `
-          <div class='community-card'>
+          <div id='new-post' class='community-card'>
                 <div class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
                       <h3>Create New Post</h3>
@@ -100,7 +100,7 @@ module.exports.createNewPostJS = (tags) => {
               $http.post('${proxyRoute}/user/blog?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', data)
                      .success(function(data) {
                       document.getElementById('new-post').innerHTML =
-                        '<h3>'+data.message+'</h3>';
+                        '<div class="community-admin-padding"><h3>'+data.message+'</h3></div>';
                       delete $scope.title;    
                 })
               .error(function(data) {
