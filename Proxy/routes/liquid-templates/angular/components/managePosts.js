@@ -11,21 +11,24 @@ module.exports.managePosts = ({user, blogs}) => {
                     <p class='mark'>
                         Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
                     </p>
-                    <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog.slug))})' class='btn btn-sm btn-danger'>
+                    <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog.slug))})' class='button-danger pure-button'>
                         Delete
                     </button>
                 </div>
               </div>
+              <br/>
       `;
   }).join(' ')
 
   return `
       <div ng-controller='managePostsController'>
-          <div id='error-message' class='text-center'>
-            <h3 >Manage Posts</h3><span ng-click='reloadPage()' class='reload'>&#x21bb;</span>
-          </div>
-          <div>
-            ${displayPosts(blogs)}
+          <div class='community-card community-admin-padding'>
+            <div id='error-message' class='text-center'>
+              <h3 >Manage Posts</h3><span ng-click='reloadPage()' class='reload'>&#x21bb;</span>
+            </div>
+            <div>
+              ${displayPosts(blogs)}
+            </div>
           </div>
       </div>`
 };

@@ -6,24 +6,28 @@ module.exports.addComment = ({shop, blog}) => {
   console.log('blog in addComment view', blog);
 
   return `
-      <div id='new-post' ng-controller='addCommentController'>
-          <h2>${blog[0] ? blog[0].title : ''}</h2>
+      <div ng-controller='addCommentController'>
+        <div class='community-pad-20'>
+          <div class='community-card community-admin-padding'>
+            <h2>${blog[0] ? blog[0].title : ''}</h2>
 
-          ${blog[0] ? formatQuotes(renderBlocks(blog[0])) : ''}
-          <br/>
-          <div id='new-comment'>
-            <h3>Add Comment</h3>
-            <div id='error-message' class='text-center'></div>
-            <small>Write your awesome comment below: (to embed videos, simply copy-paste any YouTube URL)</small>
-            <div id='editorjs'></div>
-              
-            <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
+            ${blog[0] ? formatQuotes(renderBlocks(blog[0])) : ''}
+            <br/>
+            <div id='new-comment'>
+              <h3>Add Comment</h3>
+              <div id='error-message' class='text-center'></div>
+              <small>Write your awesome comment below: (to embed videos, simply copy-paste any YouTube URL)</small>
+              <div id='editorjs'></div>
+                
+              <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
 
-             <div class='modal-footer'>
-                <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
-                  ng-click='submitComment()'>Post Comment</button>
-              </div> 
-            <p id='json'></p>
+               <div class='modal-footer'>
+                  <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
+                    ng-click='submitComment()'>Post Comment</button>
+                </div> 
+              <p id='json'></p>
+              </div>
+              </div>
           </div>
       </div>
       `

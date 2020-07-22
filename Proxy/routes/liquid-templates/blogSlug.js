@@ -56,55 +56,55 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
         </style>
         ${header({blog, shop})}    
         <div class="community-background">
-        <main class="page-width">
-        <div class="pure-g">
+            <main class="page-width">
+                <div class="pure-g">
 
-            <div class="pure-u-3-4">
-                <div class="community-pad-20 community-card">
-                    ${renderBlocks(blog)}
-               </div>
-                ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
-                <div class="community-pad-20 community-card">
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
-                        <input type="text" class="community-instant-post" placeholder="Add Comment" />
-                    </a>
-                </div>
-            </div>
-
-            <div class="details pure-u-1-4">
-                <div class="community-pad-20">
-                    <div class="pb-5">
-                        <h2>Contributed by</h2>
-                    </div>
-                    <div class="pure-g">
-                    ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
-                    <div class="pure-u-3-4">
-                        <div class="community-pad-left-10">
-                            <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
-                            ${user.about}
-                            <br/>
-                            <b>Store Favorites: </b>${user.storeFavorites}
+                    <div class="pure-u-md-3-4 pure-u-sm-1"> 
+                        <div class="community-pad-20 community-card">
+                            ${renderBlocks(blog)}
+                       </div>
+                        ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
+                        <div class="community-pad-20 community-card">
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
+                                <input type="text" class="community-instant-post" placeholder="Add Comment" />
+                            </a>
                         </div>
                     </div>
-                    </div>
-                    <div class="pb-5">
-                        <h2 style='margin-top:30px'>Related Tags</h2>
-                        ${showAllTags()}
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        ${blog.selectedProducts.length>0 ? `<div class="pure-g">
-                <div class="pure-u-5-5">
-                    <div class="community-pad-20">
-                        <h2>Related products</h2>
-                        <div class="pure-g">
-                            ${showSelectedProducts()}
+                    <div class="details pure-u-md-1-4 pure-u-sm-1"> 
+                        <div class="community-pad-20">
+                            <div class="pb-5">
+                                <h2>Contributed by</h2>
+                            </div>
+                            <div class="pure-g">
+                            ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
+                            <div class="pure-u-3-4">
+                                <div class="community-pad-left-10">
+                                    <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
+                                    ${user.about}
+                                    <br/>
+                                    <b>Store Favorites: </b>${user.storeFavorites}
+                                </div>
+                            </div>
+                            </div>
+                            <div class="pb-5">
+                                <h2 style='margin-top:30px'>Related Tags</h2>
+                                ${showAllTags()}
+                            </div>
                         </div>
                     </div>
+
                 </div>
-            </div>` : ''}
-        </main>
+                ${blog.selectedProducts.length>0 ? `<div class="pure-g">
+                        <div class="pure-u-md-5-5 pure-u-sm-1">
+                            <div class="community-pad-20">
+                                <h2>Related products</h2>
+                                <div class="pure-g">
+                                    ${showSelectedProducts()}
+                                </div>
+                            </div>
+                        </div>
+                    </div>` : ''}
+            </main>
         </div>`
 };
