@@ -37,7 +37,7 @@ module.exports.createNewPost = (tags) => {
                     <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
 
                      <div class='modal-footer'>
-                        <button type='submit' class='btn btn-primary btn-lg' data-dismiss='modal' aria-hidden='true' 
+                        <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
                           ng-click='submitBlogPost({title: title})'>Save Post</button>
                       </div> 
                     <p id='json'></p>

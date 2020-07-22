@@ -11,7 +11,7 @@ module.exports.managePosts = ({user, blogs}) => {
                     <p class='mark'>
                         Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
                     </p>
-                    <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog.slug))})' class='button-danger pure-button'>
+                    <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog.slug))})' class='community-button-danger pure-button'>
                         Delete
                     </button>
                 </div>
