@@ -14,7 +14,7 @@ exports.newsFeedCSS = ({shop}) => {
             }
             .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
             .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
-            .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:120px;margin-top:-55px }
+            .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }
             .community-header-title { background:#fff; }
             .community-header-title-box { display:flex }
             .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }
@@ -42,5 +42,6 @@ exports.newsFeedCSS = ({shop}) => {
                   margin-bottom: 1em;
                   margin-right: 1em;
                   margin-left: 1em; background: rgb(66, 184, 221); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+            .community-checkbox { float:left;margin-right:30px }
         `
 };
