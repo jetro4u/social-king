@@ -3,7 +3,7 @@ const proxyRoute = process.env.PROXY_ROUTE;
 module.exports.createNewPost = (tags) => {
   
   const displayTags = (data) => data.map((tag, i) => {
-      return `<label class='checkbox px-2 pure-checkbox' >                
+      return `<label class='checkbox px-2 pure-checkbox community-checkbox' >                
                   <input type='checkbox' ng-model='tags.${tag.id}'><span class='px-1'> ${tag.name}</span>
               </label>
       `;
