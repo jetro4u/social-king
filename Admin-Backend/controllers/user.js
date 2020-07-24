@@ -49,7 +49,7 @@ exports.update = (req, res) => {
             } else {
                 console.log('file saved successfully: ', result);
                 Shop.update({ shopify_domain: shopName }, {
-                    iconImageURL: `https://${shopName}/community/connect/images/uploads/${iconImageName}`
+                    iconImageURL: `https://socialking.app/proxy/images/uploads/${iconImageName}`
                 }, function(err, affected, resp) {
                    console.log('response to saving iconImg:',resp);
                 })
@@ -69,7 +69,7 @@ exports.update = (req, res) => {
             } else {
                 console.log('file saved successfully: ', result);
                 Shop.update({ shopify_domain: shopName }, {
-                    headerImageURL: `https://${shopName}/community/connect/images/uploads/${headerImageName}`
+                    headerImageURL: `https://socialking.app/proxy/images/uploads/${headerImageName}`
                 }, function(err, affected, resp) {
                    console.log('response to saving iconImg:',resp);
                 })
