@@ -31,7 +31,7 @@ exports.uploadProfileImage = (req, res, next) => {
         } else {
           console.log('uploaded succesfully');
           User.update({_id: req.profile._id}, {
-            cover_photo: `https://${req.query.shop + proxyRoute}/images/uploads/${req.imageURL}`
+            cover_photo: `https://socialking.app/proxy/images/uploads/${req.imageURL}`
           }, function(err, affected, resp) {
              console.log(resp);
           })
@@ -60,7 +60,7 @@ exports.uploadPostImage = (req, res, next) => {
 exports.afterUpload = (req, res) => {
     res.send({"success" : 1,
      "file": {
-        "url" : `https://${req.query.shop + proxyRoute}/images/uploads/${req.imageURL}`            
+        "url" : `https://socialking.app/proxy/images/uploads/${req.imageURL}`            
       }
     });
 }
