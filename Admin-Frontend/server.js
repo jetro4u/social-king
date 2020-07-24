@@ -87,7 +87,7 @@ app.prepare().then(() => {
         } else {
             console.log('ran shop exists in db logic');
             console.log('ctx.request.url:',ctx.request.url);
-            ctx.redirect(`https://${shop}/admin/apps/community-2?shop=${shop}`); 
+            ctx.redirect(`https://${shop}/admin/apps/${process.env.APP_SLUG}?shop=${shop}`); 
         }
       }
     })
