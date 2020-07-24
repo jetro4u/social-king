@@ -60,7 +60,7 @@ exports.uploadPostImage = (req, res, next) => {
 exports.afterUpload = (req, res) => {
     res.send({"success" : 1,
      "file": {
-        "url" : `https://socialking.app/proxy/images/uploads/${req.imageURL}`            
+        "url" : `${process.env.HOST}/proxy/images/uploads/${req.imageURL}`            
       }
     });
 }
