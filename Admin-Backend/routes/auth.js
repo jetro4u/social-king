@@ -20,6 +20,4 @@ const {
     resetPasswordValidator
 } = require('../validators/auth');
 
-
-
 module.exports = router;
