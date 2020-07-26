@@ -13,6 +13,7 @@ const imageRoutes = require('./routes/image');
 
 // app
 const app = express();
+app.use(express.static('public'))
 
 // db
 mongoose
