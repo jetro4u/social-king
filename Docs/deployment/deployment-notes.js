@@ -70,3 +70,15 @@ pm2 start npm -- start (starts the 'npm start' script)
 
 cd Proxy
 pm2 start start.js
+
+5) Restarting Servers
+
+cd Admin-Backend
+pm2 restart server.js 
+
+cd Admin-Frontend
+
+pm2 restart npm -- start (starts the 'npm start' script)
+
+cd Proxy
+pm2 restart start.js
