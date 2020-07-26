@@ -20,6 +20,10 @@ import ResourceListWithProducts from '../ResourceList';
 import store from 'store-js';
 
 const BlogUpdate = ({ shop, router }) => {
+    let imageUploadEndpoint = EDITOR_JS_TOOLS.image.config.endpoints;
+    imageUploadEndpoint.byFile = imageUploadEndpoint.byFile.includes('?shop=') ? 
+                                  imageUploadEndpoint.byFile :
+                                  imageUploadEndpoint.byFile + `?shop=${shop.app.shopOrigin}`;
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState(false);
