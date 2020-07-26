@@ -9,6 +9,7 @@ require('dotenv').config();
 const blogRoutes = require('./routes/blog');
 const tagRoutes = require('./routes/tag');
 const userRoutes = require('./routes/user');
+const imageRoutes = require('./routes/image');
 
 // app
 const app = express();
@@ -40,6 +41,7 @@ app.use(cors({ origin: "*" }));
 app.use('/api', blogRoutes);
 app.use('/api', tagRoutes);
 app.use('/api', userRoutes);
+app.use('/api', imageRoutes);
 
 // port
 const port = process.env.PORT || 8000;
