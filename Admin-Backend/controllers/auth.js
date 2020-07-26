@@ -17,7 +17,7 @@ const queryString = require('query-string');
 
 exports.adminMiddleware = (req, res, next) => {
    let message = '';
-    let shopName = req.params.username ? req.params.username.toLowerCase() : '';
+    let shopName = req.query.shop ? req.query.shop.toLowerCase() : '';
 
       Shop.findOne({ shopify_domain: shopName }).exec((err, shop) => {
           if (err){
@@ -34,13 +34,16 @@ exports.adminMiddleware = (req, res, next) => {
                   console.log('err trying to save shop: ', err)
                 } else {
                   console.log('shop successfully created');
+                  req.shop = shop;
+                  next();
                 }});
           } else {
               message = 'shop found';
-              console.log('shop found: ', shop)   
+              req.shop = shop;
+              console.log('shop found: ', shop);
+              next();   
           }
       });  
-    next();
 };
 
 
