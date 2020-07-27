@@ -79,7 +79,7 @@ exports.publicProfile = (req, res) => {
             user = userFromDB;
 
             let userId = user._id;  
-            Blog.find({ postedBy: userId, shopPostedAt: shop._id })
+            Blog.find({ postedBy: userId, shopPostedAt: shop._id, hidden: false })
                 .populate('tags', '_id name slug')
                 .populate('postedBy', '_id name cover_photo username popUser')
                 .limit(1000)
