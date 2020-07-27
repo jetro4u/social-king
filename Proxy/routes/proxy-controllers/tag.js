@@ -72,7 +72,7 @@ exports.read = (req, res) => {
                     });
                 }
                 // res.json(tag);
-                Blog.find({ tags: tag })
+                Blog.find({ tags: tag, hidden: false })
                     .populate('categories', '_id name slug')
                     .populate('tags', '_id name slug')
                     .populate('postedBy', '_id name username cover_photo')
