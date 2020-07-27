@@ -31,7 +31,7 @@ exports.uploadProfileImage = (req, res, next) => {
         } else {
           console.log('uploaded succesfully');
           User.update({_id: req.profile._id}, {
-            cover_photo: `https://socialking.app/proxy/images/uploads/${req.imageURL}`
+            cover_photo: `${process.env.HOST}/proxy/images/uploads/${req.imageURL}`
           }, function(err, affected, resp) {
              console.log(resp);
           })
