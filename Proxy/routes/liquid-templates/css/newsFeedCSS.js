@@ -2,7 +2,7 @@ exports.newsFeedCSS = ({shop}) => {
     const backupHeaderImg = "https://www.dorothylane.com/wp-content/uploads/2017/09/cheese.jpg";
 
     return `
-            .community-background { background-color: #edeff1;padding-top:20px; }
+            .community-background { background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : '#edeff1'};padding-top:20px; }
             .l-box { padding:1em; }
             .tag-btn { margin-top: 1em;
                       margin-bottom: 1em;
@@ -19,7 +19,7 @@ exports.newsFeedCSS = ({shop}) => {
             .community-header-title-box { display:flex }
             .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }
             .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }
-            .community-card-header { letter-spacing: .5px; background:darkblue;color:white;padding:10px;font-weight:bold; }
+            .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : 'darkblue'};color:white;padding:10px;font-weight:bold; }
             .community-card-body { letter-spacing: .4px; padding:10px }
             .community-post-body { letter-spacing: .35px;}
             @media only screen 
@@ -28,7 +28,7 @@ exports.newsFeedCSS = ({shop}) => {
             .community-hr { margin:20px 0 }
             .community-hr-minimal { margin:8px 0 }
             .community-full-width { width: 100% }
-            .community-instant-post { width:100%;border:1px solid #edeff1; background: #f6f7f8;padding:10px }
+            .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : '#edeff1'}; background: #f6f7f8;padding:10px }
             .community-instant-post:hover, .community-instant-post:focus { background:#fff }
             .community-author { color:#969696;font-size:12px;margin-bottom:5px }
             .community-card h3 { font-size:20px;margin-bottom:8px }
