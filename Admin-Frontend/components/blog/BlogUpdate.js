@@ -134,8 +134,7 @@ const BlogUpdate = ({ shop, router }) => {
                             }}
                             image={img}
                           >
-                          <TextContainer>If no Products are selected, Tribet's AI will automatically
-                           optimize for the bests Products to show alongside the post.</TextContainer>
+                          <TextContainer>Promoting related products alongside user-generated content is a great way to foster brand trust.</TextContainer>
                       </EmptyState>
                     </Card>
                  )   
