@@ -25,9 +25,15 @@ const Shop = mongoose.Schema({
 	  communityName: { 
             type: String, 
             default: 'Our Community' 
-        },
-	  primaryColor: String,
-	  backgroundColor: String,
+      },
+	  primaryColor: { 
+            type: String, 
+            default: 'darkblue' 
+      },
+	  backgroundColor: { 
+            type: String, 
+            default: '#edeff1' 
+      },
   },
   { timestamps: true }
 );
