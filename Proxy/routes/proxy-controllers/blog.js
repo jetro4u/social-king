@@ -63,7 +63,7 @@ exports.create = (req, res) => {
     let postTeaser = body.blocks.find(searchForText);
 
     postTeaser = postTeaser ?  postTeaser.data.text 
-        : `Check out this post made by a shopper at ${req.query.shop}, all about ${title}`
+        : `Check out this post made by a member of our community`
 
     blog.excerpt = smartTrim(postTeaser, 320, ' ', ' ...');
     blog.mdesc = stripHtml(postTeaser.substring(0, 160));
