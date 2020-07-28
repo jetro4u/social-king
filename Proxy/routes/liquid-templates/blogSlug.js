@@ -36,11 +36,11 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
         return blog.selectedProducts.map((p, i) => `
             <div class="pure-u-1-4">
                 <div class="community-pad-20">
-                <a href="https://${shop.shopify_domain}/products/${p[0].handle}" key=${i} style="height:200px;display:block;text-align:center">
+                <a href="https://${shop.shopify_domain}/products/${p[0].handle}?utm_source=social-king&utm_medium=${blog.slug}" key=${i} style="height:200px;display:block;text-align:center">
                     <img src="${p[0].images[0].originalSrc}" style="object-fit: cover;height:100%;" />
                 </a>
                 <div style="text-align:center;margin-top:15px;">
-                    <a href="https://${shop.shopify_domain}/products/${p[0].handle}" key=${i} style="height:200px;display:block">
+                    <a href="https://${shop.shopify_domain}/products/${p[0].handle}?utm_source=social-king&utm_medium=${blog.slug}" key=${i} style="height:200px;display:block">
                         ${p[0].title}
                     </a>
                 </div>
