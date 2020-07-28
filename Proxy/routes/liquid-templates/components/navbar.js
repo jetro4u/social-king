@@ -4,8 +4,8 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
 
     const showAllTags = () => {
         return tags.map((t, i) => `
-            <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
-                <button class="tag-btn pure-button pure-button-primary">${t.name}</a>
+            <a href="${proxyRoute}/tags/${t.slug}" key=${i}
+                class="pure-button tag-btn">${t.name}
             </a>
         `).join('');
     };
