@@ -50,7 +50,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <img src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
                            alt="Profile Picture" class="img-responsive img-rounded">
                     <div class="community-card-body">
-                    <b>General Bio: </b>${user.about}
+                    ${user.about ? '<b>General Bio: </b>'+ user.about : ''}
                     <hr class="community-hr" />
                     <b>Store Favorites: </b>${user.storeFavorites}
                     </div>
