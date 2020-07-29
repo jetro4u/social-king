@@ -62,6 +62,7 @@
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
     "react-editor-js": "^1.6.2",
+    "react-render-html": "^0.6.0",
     "react-toggle-button": "^2.2.0",
     "store-js": "^2.0.4"
   }
