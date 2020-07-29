@@ -286,7 +286,7 @@ exports.read = (req, res) => {
                     error: errorHandler(err)
                 });
             }
-            Comment.find({postSlug: slug})
+            Comment.find({postSlug: slug, hidden: false})
             .populate('postedBy', '_id about storeFavorites cover_photo name username trackingID')
             .exec((err, comments) => {
                 if (err) {
