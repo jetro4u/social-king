@@ -63,6 +63,13 @@ const blogSchema = new mongoose.Schema(
         shopPostedAt: { 
             type: ObjectId, 
             ref: 'Shop'
+        },
+        shopifyDomain: { 
+            type: String
+        },
+        userNotified: {
+            type: Boolean,
+            default: false
         }
     },
     { timestamps: true }
