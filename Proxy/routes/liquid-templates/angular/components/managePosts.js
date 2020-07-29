@@ -11,7 +11,7 @@ module.exports.managePosts = ({user, blogs}) => {
                     <p class='mark'>
                         Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
                     </p>
-                    <button ng-click='deletePost(${formatQuotes(JSON.stringify(blog.slug))})' class='community-button-danger pure-button'>
+                    <button ng-click='deleteConfirm(${formatQuotes(JSON.stringify(blog.slug))})' class='community-button-danger pure-button'>
                         Delete
                     </button>
                 </div>
@@ -52,6 +52,13 @@ module.exports.managePostsJS = (user) => {
       console.log('managePosts function ran');
       $scope.proxyRoute = '${proxyRoute}';
       $scope.displayPosts = ${displayPosts};
+
+      $scope.deleteConfirm = function(slug){
+          let answer = window.confirm('Are you sure you want to delete this Post?');
+          if (answer) {
+              $scope.deletePost(slug);
+          }
+      }
 
       $scope.deletePost = function(slug){
         console.log('post to delete:',slug);
