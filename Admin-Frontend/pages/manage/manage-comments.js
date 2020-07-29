@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import { getCookie, isAuth } from '../../actions/auth';
-import { list, removeBlog, toggleBlogVisibility } from '../../actions/blog';
+import { list, removeComment, toggleCommentVisibility } from '../../actions/comment';
 import moment from 'moment';
 import {
   Button,
@@ -23,57 +23,57 @@ import {
 
 const ManagePosts = (props) => {
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
-    const [blogs, setBlogs] = useState([]);
-    const [loaded, setLoaded] = useState(false);
+    const [comments, setComments] = useState([]);
+    const [loaded, setLoaded] = useState({value: false});
     const [message, setMessage] = useState('');
     const [toggleValue, setToggleValue] = useState(true);
     const token = getCookie('token');
 
     useEffect(() => {
-        loadBlogs();
+        loadComments();
     }, []);
 
-    const hideShowBlog = slug => {
-        toggleBlogVisibility(slug).then(data => {
+    const hideShowComment = id => {
+        toggleCommentVisibility(id).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
                 setMessage(data.message);
                 console.log('data',data);
-                loadBlogs();
+                loadComments();
             }
         });
     };
 
-    const deleteBlog = slug => {
-        removeBlog(slug, token).then(data => {
+    const deleteComment = id => {
+        removeComment(id, token).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
                 setMessage(data.message);
-                loadBlogs();
+                loadComments();
             }
         });
     };
 
 
-    const loadBlogs = () => {
+    const loadComments = () => {
         list(props).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
-                console.log('blog array after updating: ',data);
-                setBlogs(data);
+                console.log('comment array after updating: ',data);
+                setComments(data);
                 setLoaded(true);
             }
         });
     };
 
     
-    const deleteConfirm = slug => {
-        let answer = window.confirm('Are you sure you want to delete this post?');
+    const deleteConfirm = id => {
+        let answer = window.confirm('Are you sure you want to delete this comment?');
         if (answer) {
-            deleteBlog(slug);
+            deleteComment(id);
         }
     };
 
@@ -97,7 +97,7 @@ const ManagePosts = (props) => {
         // const contentStatus = enabled ? 'Disable' : 'Enable';
         // const textStatus = enabled ? 'enabled' : 'disabled';
 
-        return loaded ? (
+        return blogs.length> 0 ? (
             <div className="row">
                 <Layout.AnnotatedSection
                     title="Manage Posts"
@@ -134,17 +134,8 @@ const ManagePosts = (props) => {
                     </React.Fragment>) })};
                  </Layout.AnnotatedSection>
                 </div>      
-           ) : ( <p>Loading...</p> )
-    };
-
-    return (
-        <Page>
-            <Layout>
-                {message && <div className="alert alert-warning">{message}</div>}
-
-                {loaded && blogs.length==0
-                    ? <EmptyState
-                            heading="No New Posts Quite Yet"
+           ) : ( <EmptyState
+                            heading="No New Comments Quite Yet"
                             action={{
                               content: 'Configure Settings',
                               onAction:  () => Router.push('/settings'),
@@ -157,9 +148,18 @@ const ManagePosts = (props) => {
                               <List.Item>Add Tags</List.Item>
                               <List.Item>Configure Settings (ie Customize the Look & Feel of Your Network)</List.Item>
                               <List.Item>Create Some Posts</List.Item>
-                              <List.Item>Invite Shoppers to create posts (via an email blast, or each time they make a purchase)</List.Item>
+                              <List.Item>Invite Shoppers to your Community Section (via an email blast, or each time they make a purchase)</List.Item>
                             </List>
-                      </EmptyState>
+                      </EmptyState> )
+    };
+
+    return (
+        <Page>
+            <Layout>
+                {message && <div className="alert alert-warning">{message}</div>}
+
+                {!loaded
+                    ? <p>Loading...</p>
                     : showAllBlogs()
                 }
             </Layout>
@@ -167,4 +167,4 @@ const ManagePosts = (props) => {
     );
 };
 
-export default ManagePosts;
+export default ManageComments;
