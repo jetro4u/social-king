@@ -73,6 +73,10 @@ const blogSchema = new mongoose.Schema(
         },
         archivedByUser: {
             type: Boolean
+        },
+        userNotified: {
+            type: Boolean,
+            default: false
         }
     },
     { timestamps: true }
