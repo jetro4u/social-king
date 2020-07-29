@@ -155,7 +155,10 @@ exports.toggle = (req, res) => {
     console.log('req.user: ', req.user);
     const slug = req.params.slug.toLowerCase();
 
-    Blog.findOne({ slug: slug }, function(err, blog) {
+    Blog.findOne({ slug })
+        .populate('postedBy', '_id name username email')
+        .select('_id postedBy slug shopifyDomain postSlug hidden userNotified createdAt updatedAt')
+        .exec((err, blog) => {
         blog.hidden = !blog.hidden;
         blog.save(function(err, updatedBook) {
             if (err) {
@@ -163,6 +166,32 @@ exports.toggle = (req, res) => {
                     error: errorHandler(err)
                 });
             }
+            if(blog.userNotified!=true){
+                    let name = blog.postedBy.name ? blog.postedBy.name.split(' ')[0] : 'you';
+                    const emailData = {
+                        to: blog.postedBy.email,
+                        from: 'help@socialking.app',
+                        subject: `Your post has been approved`,
+                        text: `Hey ${name}, \n Congrats, your post has been approved`,
+                        html: `
+                            <h4>Hey ${name},</h4>
+                            <p>Congrats, your post has been approved and is <a href='https://${blog.shopifyDomain}/community/connect/blog/${blog.slug}'>available here</a></p>
+                            <hr />
+                        `
+                    };
+
+                    sgMail.send(emailData).then(sent => {
+                        console.log('email alert sent to ', oldBlog.postedBy.email)
+                        oldBlog.userNotified = true;
+                        oldBlog.save(function(err, userNotifiedComment) {
+                            if (err) {
+                                console.log('error updating db that the user has been notified via email');
+                            }
+                        })
+                    })
+                }
+
+
             res.json({
                 message: 'Blog toggled successfully'
             });
