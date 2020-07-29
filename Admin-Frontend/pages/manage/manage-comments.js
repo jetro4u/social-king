@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import { getCookie, isAuth } from '../../actions/auth';
 import { list, removeComment, toggleCommentVisibility } from '../../actions/comment';
+import { renderBlocks } from "../../components/blog/renderBlocks";
+import renderHTML from 'react-render-html';
 import moment from 'moment';
 import {
   Button,
@@ -93,7 +95,7 @@ const ManageComments = (props) => {
                           }}
                           hidden={comment.hidden}
                         >
-                          <p>{comment.body ? JSON.stringify(comment.body[0].blocks) : ''}</p>
+                          <p>{comment.body ? renderHTML(renderBlocks(comment)) : ''}</p>
 
                           <p className="mark">
                               Written by {comment.postedBy.name} | Published {moment(comment.updatedAt).fromNow()}
