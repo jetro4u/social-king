@@ -10,6 +10,7 @@ const blogRoutes = require('./routes/blog');
 const tagRoutes = require('./routes/tag');
 const userRoutes = require('./routes/user');
 const imageRoutes = require('./routes/image');
+const commentRoutes = require('./routes/comment');
 
 // app
 const app = express();
@@ -43,6 +44,7 @@ app.use('/api', blogRoutes);
 app.use('/api', tagRoutes);
 app.use('/api', userRoutes);
 app.use('/api', imageRoutes);
+app.use('/api', commentRoutes);
 
 // port
 const port = process.env.PORT || 8000;
