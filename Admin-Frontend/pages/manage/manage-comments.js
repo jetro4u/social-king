@@ -21,7 +21,7 @@ import {
   List
 } from '@shopify/polaris';
 
-const ManagePosts = (props) => {
+const ManageComments = (props) => {
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
     const [comments, setComments] = useState([]);
     const [loaded, setLoaded] = useState(false);
@@ -77,43 +77,34 @@ const ManagePosts = (props) => {
         }
     };
 
-    const showAllBlogs = () => {
+    const showAllComments = () => {
         return loaded ? (
-            <div className="row">
                 <Layout.AnnotatedSection
-                    title="Manage Posts"
-                    description="Review new posts and set approved content live."
+                    title="Manage Comments"
+                    description="Review new Comments and set approved content live."
                   >
-                {blogs.map((blog, i) => {
+                {comments.map((comment, i) => {
                     return (
-                    <React.Fragment>
-                        <SettingToggle
-                            key={i}
-                            action={{
-                              content: blog.hidden ? 'Make Public': 'Make Hidden',
-                              onAction: hideShowBlog.bind(null, blog.slug)
-                              // onAction: hideShowBlog(blog.slug)
+                      <SettingToggle
+                          key={i}
+                          action={{
+                            content: comment.hidden ? 'Make Public': 'Make Hidden',
+                            onAction: hideShowComment.bind(null, comment.id)
+                          }}
+                          hidden={comment.hidden}
+                        >
+                          <p>{comment.body ? JSON.stringify(comment.body[0].blocks) : ''}</p>
 
-                            }}
-                            hidden={blog.hidden}
-                          >
-                            <h3>{blog.title}</h3>
-
-                            <p className="mark">
-                                Written by {blog.postedBy.name} | Published {moment(blog.updatedAt).fromNow()}
-                            </p>
-                            This comment is{' '}
-                            <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
-                            <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
-                              <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
-                                       Review   
-                              </Button>
-                              <Button key={1} onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
-                            </ButtonGroup>
-                        </SettingToggle>
-                    </React.Fragment>) })};
+                          <p className="mark">
+                              Written by {comment.postedBy.name} | Published {moment(comment.updatedAt).fromNow()}
+                          </p>
+                          This comment is{' '}
+                          <TextStyle variation="strong">{comment.hidden ? 'hidden': 'public'}</TextStyle>.
+                          <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
+                            <Button key={1} onClick={() => deleteConfirm(comment._id)}>Delete</Button>
+                          </ButtonGroup>
+                      </SettingToggle>) })};
                  </Layout.AnnotatedSection>
-                </div>      
            ) : ( <p>Loading...</p> )
     };
 
@@ -122,12 +113,12 @@ const ManagePosts = (props) => {
             <Layout>
                 {message && <div className="alert alert-warning">{message}</div>}
 
-                {loaded && blogs.length==0
+                {loaded && comments.length==0
                     ? <EmptyState
-                            heading="No New Posts Quite Yet"
+                            heading="No New Comments Quite Yet"
                             action={{
-                              content: 'Configure Settings',
-                              onAction:  () => Router.push('/settings'),
+                              content: 'Add Tags',
+                              onAction:  () => Router.push('/manage/manage-tags'),
                             }}
                             image={img}
                           >
@@ -140,7 +131,7 @@ const ManagePosts = (props) => {
                               <List.Item>Invite Shoppers to create posts (via an email blast, or each time they make a purchase)</List.Item>
                             </List>
                       </EmptyState>
-                    : showAllBlogs()
+                    : showAllComments()
                 }
             </Layout>
         </Page>
