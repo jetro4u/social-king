@@ -96,9 +96,13 @@ const ManageComments = (props) => {
                           hidden={comment.hidden}
                         >
                           <p>{comment.body ? renderHTML(renderBlocks(comment)) : ''}</p>
-
+                          <br/>
                           <p className="mark">
-                              Written by {comment.postedBy.name} | Published {moment(comment.updatedAt).fromNow()}
+                              <a target='_blank' href={`https://${comment.shopifyDomain}/community/connect/blog/${comment.postSlug}`}>View Post</a> | 
+                              Written by <a target='_blank' href={`https://${comment.shopifyDomain}/community/connect/user/${comment.postedBy.username}`}>
+                                {comment.postedBy.name}
+                              </a> | 
+                              Published {moment(comment.updatedAt).fromNow()}
                           </p>
                           This comment is{' '}
                           <TextStyle variation="strong">{comment.hidden ? 'hidden': 'public'}</TextStyle>.
