@@ -66,7 +66,7 @@ exports.toggle = (req, res) => {
                         comment.save(function(err, userNotifiedComment) {
                             if (err) {
                                 console.log('error updating db that the user has been notified via email');
-                            }
+                            } 
                         })
                     })
                 }
