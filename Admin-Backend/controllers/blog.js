@@ -160,7 +160,7 @@ exports.toggle = (req, res) => {
         .select('_id postedBy slug shopifyDomain postSlug hidden userNotified createdAt updatedAt')
         .exec((err, blog) => {
         blog.hidden = !blog.hidden;
-        blog.save(function(err, updatedBook) {
+        blog.save(function(err, updatedBlog) {
             if (err) {
                 return res.json({
                     error: errorHandler(err)
@@ -181,9 +181,9 @@ exports.toggle = (req, res) => {
                     };
 
                     sgMail.send(emailData).then(sent => {
-                        console.log('email alert sent to ', oldBlog.postedBy.email)
-                        oldBlog.userNotified = true;
-                        oldBlog.save(function(err, userNotifiedComment) {
+                        console.log('email alert sent to ', blog.postedBy.email)
+                        blog.userNotified = true;
+                        blog.save(function(err, userNotifiedComment) {
                             if (err) {
                                 console.log('error updating db that the user has been notified via email');
                             }
@@ -348,7 +348,7 @@ exports.listSearch = (req, res) => {
 };
 
 exports.listByUser = (req, res) => {
-    // Shop.findOne({ username: req.params.username }).exec((err, user) => {
+   
     console.log('req.body', req.body);
     let shopName = req.params.username ? req.params.username.toLowerCase() : '';
     console.log('shopName',shopName);
@@ -358,20 +358,20 @@ exports.listByUser = (req, res) => {
                 error: errorHandler(err)
             });
         }
-        console.log('shop in mongo response', shop);
+        
         let shopId = shop._id;
         Blog.find({ shopPostedAt: shopId })
             .sort({ createdAt: -1 })
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
-            .select('_id title slug postedBy hidden createdAt updatedAt')
+            .select('_id shopifyDomain userNotified title slug postedBy hidden createdAt updatedAt')
             .exec((err, data) => {
                 if (err) {
                     return res.status(400).json({
                         error: errorHandler(err)
                     });
                 }
-                console.log('mongo response to fetching the results of the given store', data);
+                
                 res.json(data);
             });
     });
