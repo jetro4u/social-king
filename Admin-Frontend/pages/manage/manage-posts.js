@@ -77,63 +77,42 @@ const ManagePosts = (props) => {
         }
     };
 
-    const showUpdateButton = blog => {
-        if (isAuth() && isAuth().role === 0) {
-            return (
-                <Link href={`/user/crud/${blog.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
-                </Link>
-            );
-        } else if (isAuth() && isAuth().role === 1) {
-            return (
-                <Link href={`/admin/crud/${blog.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
-                </Link>
-            );
-        }
-    };
-
     const showAllBlogs = () => {
         // const contentStatus = enabled ? 'Disable' : 'Enable';
         // const textStatus = enabled ? 'enabled' : 'disabled';
 
         return loaded ? (
-            <div className="row">
                 <Layout.AnnotatedSection
                     title="Manage Posts"
                     description="Review new posts and set approved content live."
                   >
                 {blogs.map((blog, i) => {
                     return (
-                    <React.Fragment>
-                        <SettingToggle
-                            key={i}
-                            action={{
-                              content: blog.hidden ? 'Make Public': 'Make Hidden',
-                              onAction: hideShowBlog.bind(null, blog.slug)
-                              // onAction: hideShowBlog(blog.slug)
+                      <SettingToggle
+                          key={i}
+                          action={{
+                            content: blog.hidden ? 'Make Public': 'Make Hidden',
+                            onAction: hideShowBlog.bind(null, blog.slug)
+                            // onAction: hideShowBlog(blog.slug)
 
-                            }}
-                            hidden={blog.hidden}
-                          >
-                            <h3>{blog.title}</h3>
+                          }}
+                          hidden={blog.hidden}
+                        >
+                          <h3>{blog.title}</h3>
 
-                            <p className="mark">
-                                Written by {blog.postedBy.name} | Published {moment(blog.updatedAt).fromNow()}
-                            </p>
-                            {showUpdateButton(blog)}
-                            This post is{' '}
-                            <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
-                            <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
-                              <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
-                                       Review   
-                              </Button>
-                              <Button key={1} onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
-                            </ButtonGroup>
-                        </SettingToggle>
-                    </React.Fragment>) })};
+                          <p className="mark">
+                              Written by {blog.postedBy.name} | Published {moment(blog.updatedAt).fromNow()}
+                          </p>
+                          This post is{' '}
+                          <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
+                          <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
+                            <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
+                                     Review   
+                            </Button>
+                            <Button key={1} onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
+                          </ButtonGroup>
+                      </SettingToggle>) })};
                  </Layout.AnnotatedSection>
-                </div>      
            ) : ( <p>Loading...</p> )
     };
 
