@@ -52,10 +52,10 @@ exports.toggle = (req, res) => {
                         to: comment.postedBy.email,
                         from: 'help@socialking.app',
                         subject: `Your comment has been approved`,
-                        text: `Hey ${name}, \n Congrats, your post has been approved`,
+                        text: `Hey ${name}, \n Congrats, your comment has been approved`,
                         html: `
                             <h4>Hey ${name},</h4>
-                            <p>Congrats, your post has been approved and is <a href='https://${comment.shopifyDomain}/community/connect/blog/${comment.postSlug}'>available here</a></p>
+                            <p>Congrats, your comment has been approved and is <a href='https://${comment.shopifyDomain}/community/connect/blog/${comment.postSlug}'>available here</a></p>
                             <hr />
                         `
                     };
