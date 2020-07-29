@@ -33,8 +33,10 @@ const ManagePosts = (props) => {
         loadBlogs();
     }, []);
 
-    const hideShowBlog = slug => {
-        toggleBlogVisibility(slug).then(data => {
+    const hideShowBlog = blog => {
+       console.log('blog in hideShowBlog function', blog);
+
+        toggleBlogVisibility(blog.slug).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -92,16 +94,17 @@ const ManagePosts = (props) => {
                           key={i}
                           action={{
                             content: blog.hidden ? 'Make Public': 'Make Hidden',
-                            onAction: hideShowBlog.bind(null, blog.slug)
-                            // onAction: hideShowBlog(blog.slug)
-
+                            onAction: hideShowBlog.bind(null, blog)
                           }}
                           hidden={blog.hidden}
                         >
-                          <h3>{blog.title}</h3>
-
-                          <p className="mark">
-                              Written by {blog.postedBy.name} | Published {moment(blog.updatedAt).fromNow()}
+                          <h1><b>{blog.title}</b></h1>
+                          <br/>
+                          <p className="mark"> 
+                              Written by <a target='_blank' href={`https://${blog.shopifyDomain}/community/connect/user/${blog.postedBy.username}`}>
+                                {blog.postedBy.name}
+                              </a>
+                              {' '}| Published {moment(blog.updatedAt).fromNow()}
                           </p>
                           This post is{' '}
                           <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
