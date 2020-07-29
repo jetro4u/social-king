@@ -43,7 +43,9 @@ exports.list = (req, res) => {
     console.log('req.headers.host',req.headers.host);
     console.log('req.query in tags list function',req.query);
 
-    Tag.find({shop: req.query.shop}).exec((err, data) => {
+    Tag.find({shop: req.query.shop})
+        .sort({ createdAt: -1 })
+        .exec((err, data) => {
         if (err) {
             return res.status(400).json({
                 error: errorHandler(err)

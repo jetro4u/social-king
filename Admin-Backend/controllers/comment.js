@@ -30,50 +30,54 @@ exports.toggle = (req, res) => {
 
     Comment.findOne({ _id: id })
         .populate('postedBy', '_id name username email')
-        .select('_id title slug postedBy hidden createdAt updatedAt')
-        .exec((err, data) => {
+        .select('_id postedBy shopifyDomain postSlug hidden userNotified createdAt updatedAt')
+        .exec((err, comment) => {
             if (err) {
                 return res.status(400).json({
                     error: errorHandler(err)
                 });
             }
-            console.log('mongo response to toggling a given comment', data);
+            console.log('mongo response to toggling a given comment', comment);
             
+            comment.hidden = !comment.hidden;
+            comment.save(function(err, updatedComment) {
+                if (err) {
+                    return res.json({
+                        error: errorHandler(err)
+                    });
+                }
+                if(comment.userNotified!=true){
+                    let name = comment.postedBy.name ? comment.postedBy.name.split(' ')[0] : 'you';
+                    const emailData = {
+                        to: comment.postedBy.email,
+                        from: 'help@socialking.app',
+                        subject: `Your comment has been approved`,
+                        text: `Hey ${name}, \n Congrats, your post has been approved`,
+                        html: `
+                            <h4>Hey ${name},</h4>
+                            <p>Congrats, your post has been approved.</p>
+                            <p>And is <a href='https://${comment.shopifyDomain}/community/connect/blog/${comment.postSlug}'>available here</a></p>
+                            <hr />
+                        `
+                    };
 
+                    sgMail.send(emailData).then(sent => {
+                        console.log('email alert sent to ', comment.postedBy.email)
+                        comment.userNotified = true;
+                        comment.save(function(err, userNotifiedComment) {
+                            if (err) {
+                                console.log('error updating db that the user has been notified via email');
+                            }
+                        })
+                    })
+                }
+
+                res.json({
+                    message: 'Blog toggled successfully'
+                });
+            });
 
         });
-
-    // Comment.findOne({ id: id }, function(err, blog) {
-    //     blog.hidden = !blog.hidden;
-    //     blog.save(function(err, updatedBook) {
-    //         if (err) {
-    //             return res.json({
-    //                 error: errorHandler(err)
-    //             });
-    //         }
-    //         const emailData = {
-    //             to: process.env.EMAIL_TO,
-    //             from: email,
-    //             subject: `Contact form - ${process.env.APP_NAME}`,
-    //             text: `Email received from contact from \n Sender name: ${name} \n Sender email: ${email} \n Sender message: ${message}`,
-    //             html: `
-    //                 <h4>Email received from contact form:</h4>
-    //                 <p>Sender name: ${name}</p>
-    //                 <p>Sender email: ${email}</p>
-    //                 <p>Sender message: ${message}</p>
-    //                 <hr />
-    //                 <p>${process.env.CLIENT_URL}</p>
-    //             `
-    //         };
-
-    //         sgMail.send(emailData).then(sent => {
-    //             console.log('email alert sent to ', )
-    //         });
-    //         res.json({
-    //             message: 'Blog toggled successfully'
-    //         });
-    //     });
-    // });
 }
 
 exports.listByUser = (req, res) => {

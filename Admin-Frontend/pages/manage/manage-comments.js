@@ -89,7 +89,7 @@ const ManageComments = (props) => {
                           key={i}
                           action={{
                             content: comment.hidden ? 'Make Public': 'Make Hidden',
-                            onAction: hideShowComment.bind(null, comment.id)
+                            onAction: hideShowComment.bind(null, comment._id)
                           }}
                           hidden={comment.hidden}
                         >

@@ -41,6 +41,10 @@ const commentSchema = new mongoose.Schema(
         archivedByUser: {
             type: Boolean,
             default: false
+        },
+        userNotified: {
+            type: Boolean,
+            default: false
         }
     },
     { timestamps: true }
