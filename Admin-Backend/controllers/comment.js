@@ -55,8 +55,7 @@ exports.toggle = (req, res) => {
                         text: `Hey ${name}, \n Congrats, your post has been approved`,
                         html: `
                             <h4>Hey ${name},</h4>
-                            <p>Congrats, your post has been approved.</p>
-                            <p>And is <a href='https://${comment.shopifyDomain}/community/connect/blog/${comment.postSlug}'>available here</a></p>
+                            <p>Congrats, your post has been approved and is <a href='https://${comment.shopifyDomain}/community/connect/blog/${comment.postSlug}'>available here</a></p>
                             <hr />
                         `
                     };
@@ -95,7 +94,7 @@ exports.listByUser = (req, res) => {
         Comment.find({ shopPostedAt: shopId })
             .sort({ createdAt: -1 })
             .populate('postedBy', 'name username')
-            .select('_id body postedBy hidden createdAt updatedAt')
+            .select('_id shopifyDomain postSlug body postedBy hidden createdAt updatedAt')
             .exec((err, data) => {
                 if (err) {
                     return res.status(400).json({
