@@ -24,7 +24,7 @@ import {
 const ManagePosts = (props) => {
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
     const [comments, setComments] = useState([]);
-    const [loaded, setLoaded] = useState({value: false});
+    const [loaded, setLoaded] = useState(false);
     const [message, setMessage] = useState('');
     const [toggleValue, setToggleValue] = useState(true);
     const token = getCookie('token');
@@ -77,27 +77,8 @@ const ManagePosts = (props) => {
         }
     };
 
-    const showUpdateButton = blog => {
-        if (isAuth() && isAuth().role === 0) {
-            return (
-                <Link href={`/user/crud/${blog.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
-                </Link>
-            );
-        } else if (isAuth() && isAuth().role === 1) {
-            return (
-                <Link href={`/admin/crud/${blog.slug}`}>
-                    <a className="ml-2 btn btn-sm btn-warning">Update</a>
-                </Link>
-            );
-        }
-    };
-
     const showAllBlogs = () => {
-        // const contentStatus = enabled ? 'Disable' : 'Enable';
-        // const textStatus = enabled ? 'enabled' : 'disabled';
-
-        return blogs.length> 0 ? (
+        return loaded ? (
             <div className="row">
                 <Layout.AnnotatedSection
                     title="Manage Posts"
@@ -121,8 +102,7 @@ const ManagePosts = (props) => {
                             <p className="mark">
                                 Written by {blog.postedBy.name} | Published {moment(blog.updatedAt).fromNow()}
                             </p>
-                            {showUpdateButton(blog)}
-                            This post is{' '}
+                            This comment is{' '}
                             <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
                             <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
                               <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
@@ -134,8 +114,17 @@ const ManagePosts = (props) => {
                     </React.Fragment>) })};
                  </Layout.AnnotatedSection>
                 </div>      
-           ) : ( <EmptyState
-                            heading="No New Comments Quite Yet"
+           ) : ( <p>Loading...</p> )
+    };
+
+    return (
+        <Page>
+            <Layout>
+                {message && <div className="alert alert-warning">{message}</div>}
+
+                {loaded && blogs.length==0
+                    ? <EmptyState
+                            heading="No New Posts Quite Yet"
                             action={{
                               content: 'Configure Settings',
                               onAction:  () => Router.push('/settings'),
@@ -148,18 +137,9 @@ const ManagePosts = (props) => {
                               <List.Item>Add Tags</List.Item>
                               <List.Item>Configure Settings (ie Customize the Look & Feel of Your Network)</List.Item>
                               <List.Item>Create Some Posts</List.Item>
-                              <List.Item>Invite Shoppers to your Community Section (via an email blast, or each time they make a purchase)</List.Item>
+                              <List.Item>Invite Shoppers to create posts (via an email blast, or each time they make a purchase)</List.Item>
                             </List>
-                      </EmptyState> )
-    };
-
-    return (
-        <Page>
-            <Layout>
-                {message && <div className="alert alert-warning">{message}</div>}
-
-                {!loaded
-                    ? <p>Loading...</p>
+                      </EmptyState>
                     : showAllBlogs()
                 }
             </Layout>
