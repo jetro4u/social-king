@@ -180,7 +180,19 @@ exports.createComment = (req, res) => {
 // list, listAllBlogsCategoriesTags, read, remove, update
 
 exports.listForSitemap = (req, res) => {
-    Blog.find({})
+    console.log('req.query in listForSitemap', req.query);
+
+    Shop.findOne({shopify_domain: req.query.shop}).exec((err, shop) => {
+        if (err) {
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        }
+        
+        let shopId = shop._id;
+        
+        Blog.find({ shopPostedAt: shopId })
+        .sort({ createdAt: -1 })
         .select('slug updatedAt')
         .exec((err, blogs) => {
             if (err) {
@@ -189,7 +201,11 @@ exports.listForSitemap = (req, res) => {
                 });
             }
             
-            User.find({})
+            User.find({ 
+                   shops: { 
+                     $in: [[shopId]] 
+                   }
+                })
                 .select('username updatedAt')
                 .exec((err, users) => {
                     if (err) {
@@ -198,7 +214,7 @@ exports.listForSitemap = (req, res) => {
                         });
                     }
 
-                    Tag.find({})
+                    Tag.find({shop: req.query.shop})
                         .select('slug updatedAt')
                         .exec((err, tags) => {
                             if (err) {
@@ -214,8 +230,10 @@ exports.listForSitemap = (req, res) => {
 
                             res.json(data);
                     });
-            });        
+             });        
         });
+
+    });
 };
 
 
