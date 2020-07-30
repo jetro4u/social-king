@@ -245,12 +245,12 @@ exports.listForSitemap = (req, res) => {
                               latestTag = tagDate;
                             }
 
-                            const tagURL = `${DOMAIN}/tags/${tag.slug}`;
+                            const tagURL = `${DOMAIN}/community/connect/tags/${tag.slug}`;
                             tagsXML += `
                               <url>
                                 <loc>${tagURL}</loc>
                                 <lastmod>${tagDate}</lastmod>
-                                <priority>0.50</priority>
+                                <priority>0.80</priority>
                               </url>`
                           });
 
@@ -265,7 +265,7 @@ exports.listForSitemap = (req, res) => {
                               <url>
                                 <loc>${profileURL}</loc>
                                 <lastmod>${profileDate}</lastmod>
-                                <priority>0.50</priority>
+                                <priority>0.80</priority>
                               </url>`
                           });
 
@@ -275,29 +275,20 @@ exports.listForSitemap = (req, res) => {
                               latestPost = postDate;
                             }
 
-                            const projectURL = `${DOMAIN}/blogs/${post.slug}`;
+                            const projectURL = `${DOMAIN}/community/connect/blog/${post.slug}`;
                             projectsXML += `
                               <url>
                                 <loc>${projectURL}</loc>
                                 <lastmod>${postDate}</lastmod>
-                                <priority>0.50</priority>
+                                <priority>0.80</priority>
                               </url>`
                           });
 
                           let theSitemap = `<?xml version="1.0" encoding="UTF-8"?>
                             <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                               <url>
-                                <loc>${DOMAIN}</loc>
-                                <lastmod>${latestPost}</lastmod>
-                                <priority>1.00</priority>
-                              </url>
-                              <url>
-                                <loc>${DOMAIN}/getting-started</loc>
-                                <priority>0.80</priority>
-                              </url>
-                              <url>
-                                <loc>${DOMAIN}/blogs</loc>
-                                <priority>0.80</priority>
+                                <loc>${DOMAIN}/community/connect</loc>
+                                <priority>0.90</priority>
                               </url>
                               ${tagsXML}
                               ${profilesXML}
