@@ -228,7 +228,84 @@ exports.listForSitemap = (req, res) => {
                             data.users=users;
                             data.blogs=blogs;
 
-                            res.json(data);
+                            let latestPost = 0;
+                          let latestProfile = 0;
+                          let latestTag = 0;
+
+
+                          let projectsXML = "";
+                          let profilesXML = "";
+                          let tagsXML = "";
+                          let DOMAIN = req.query.shop;
+
+
+                          data.tags.map(tag => {
+                            const tagDate = tag.updatedAt;
+                            if (!latestTag || tagDate > latestTag) {
+                              latestTag = tagDate;
+                            }
+
+                            const tagURL = `${DOMAIN}/tags/${tag.slug}`;
+                            tagsXML += `
+                              <url>
+                                <loc>${tagURL}</loc>
+                                <lastmod>${tagDate}</lastmod>
+                                <priority>0.50</priority>
+                              </url>`
+                          });
+
+                          data.users.map(user => {
+                            const profileDate = user.updatedAt;
+                            if (!latestProfile || profileDate > latestProfile) {
+                              latestProfile = profileDate;
+                            }
+
+                            const profileURL = `${DOMAIN}/profile/${user.username}`;
+                            profilesXML += `
+                              <url>
+                                <loc>${profileURL}</loc>
+                                <lastmod>${profileDate}</lastmod>
+                                <priority>0.50</priority>
+                              </url>`
+                          });
+
+                          data.blogs.map(post => {
+                            const postDate = post.updatedAt;
+                            if (!latestPost || postDate > latestPost) {
+                              latestPost = postDate;
+                            }
+
+                            const projectURL = `${DOMAIN}/blogs/${post.slug}`;
+                            projectsXML += `
+                              <url>
+                                <loc>${projectURL}</loc>
+                                <lastmod>${postDate}</lastmod>
+                                <priority>0.50</priority>
+                              </url>`
+                          });
+
+                          let theSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+                            <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                              <url>
+                                <loc>${DOMAIN}</loc>
+                                <lastmod>${latestPost}</lastmod>
+                                <priority>1.00</priority>
+                              </url>
+                              <url>
+                                <loc>${DOMAIN}/getting-started</loc>
+                                <priority>0.80</priority>
+                              </url>
+                              <url>
+                                <loc>${DOMAIN}/blogs</loc>
+                                <priority>0.80</priority>
+                              </url>
+                              ${tagsXML}
+                              ${profilesXML}
+                              ${projectsXML}
+                            </urlset>`
+                            res.setHeader("Content-Type", "text/xml");
+                            res.write(theSitemap);
+                            res.end();
                     });
              });        
         });
