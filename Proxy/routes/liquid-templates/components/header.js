@@ -16,6 +16,42 @@ exports.header = ({shop, tag, user, blog}) => {
     	}
 	}
 
+    const generateSEOHeader = () => {
+        let DOMAIN = shop.shopify_domain;
+        console.log('generateSEOHeader func ran');
+        if(tag){
+            console.log('tag condition ran')
+            return `<Head>
+                <title>Posts Tagged ${tag.name}</title>
+                <meta
+                    name="description"
+                    content="Check out our Community!"
+                />
+                <link rel="canonical" href='${DOMAIN}/tags/${tag.slug}' />
+                <meta property="og:title" content='${shop.communityName} - Posts Tagged ${tag.name}' />
+                <meta
+                    property="og:description"
+                    content="Share your shopper insights!"
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content='${DOMAIN}/tags/${tag.slug}' />
+                <meta property="og:site_name" content='${shop.communityName}' />
+
+                <meta property="og:image" content='${shop.iconImageURL}' />
+                <meta property="og:image:secure_url" content='${shop.iconImageURL}' />
+                <meta property="og:image:type" content="image/jpg" />
+                <meta property="fb:app_id" content='${process.env.FB_APP_ID}' />
+            </Head>
+
+            <script>
+                document.querySelector('meta[name="title"]').setAttribute("content", 'Share your shopper insights');
+            </script>`
+
+        } else {
+            return '';
+        }
+    }
+
 	const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
 
     return `
@@ -30,6 +66,8 @@ exports.header = ({shop, tag, user, blog}) => {
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCV3ZBX"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+
+        ${generateSEOHeader()}
 
 		<header class="community-header">
             <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
