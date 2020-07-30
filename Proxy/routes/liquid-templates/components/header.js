@@ -25,7 +25,7 @@ exports.header = ({shop, tag, user, blog}) => {
                 <title>Posts Tagged ${tag.name}</title>
                 <meta
                     name="description"
-                    content="Check out our community's Favorite Products - which they actually purchased on Amazon!"
+                    content="Check out our Community!"
                 />
                 <link rel="canonical" href='${DOMAIN}/tags/${tag.slug}' />
                 <meta property="og:title" content='${shop.communityName} - Posts Tagged ${tag.name}' />
