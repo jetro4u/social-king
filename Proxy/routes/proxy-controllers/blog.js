@@ -180,7 +180,19 @@ exports.createComment = (req, res) => {
 // list, listAllBlogsCategoriesTags, read, remove, update
 
 exports.listForSitemap = (req, res) => {
-    Blog.find({})
+    console.log('req.query in listForSitemap', req.query);
+
+    Shop.findOne({shopify_domain: req.query.shop}).exec((err, shop) => {
+        if (err) {
+            return res.status(400).json({
+                error: errorHandler(err)
+            });
+        }
+        
+        let shopId = shop._id;
+        
+        Blog.find({ shopPostedAt: shopId })
+        .sort({ createdAt: -1 })
         .select('slug updatedAt')
         .exec((err, blogs) => {
             if (err) {
@@ -189,7 +201,11 @@ exports.listForSitemap = (req, res) => {
                 });
             }
             
-            User.find({})
+            User.find({ 
+                   shops: { 
+                     $in: [[shopId]] 
+                   }
+                })
                 .select('username updatedAt')
                 .exec((err, users) => {
                     if (err) {
@@ -198,7 +214,7 @@ exports.listForSitemap = (req, res) => {
                         });
                     }
 
-                    Tag.find({})
+                    Tag.find({shop: req.query.shop})
                         .select('slug updatedAt')
                         .exec((err, tags) => {
                             if (err) {
@@ -212,10 +228,80 @@ exports.listForSitemap = (req, res) => {
                             data.users=users;
                             data.blogs=blogs;
 
-                            res.json(data);
+                            let latestPost = 0;
+                          let latestProfile = 0;
+                          let latestTag = 0;
+
+
+                          let projectsXML = "";
+                          let profilesXML = "";
+                          let tagsXML = "";
+                          let DOMAIN = req.query.shop;
+
+
+                          data.tags.map(tag => {
+                            const tagDate = tag.updatedAt;
+                            if (!latestTag || tagDate > latestTag) {
+                              latestTag = tagDate;
+                            }
+
+                            const tagURL = `${DOMAIN}/community/connect/tags/${tag.slug}`;
+                            tagsXML += `
+                              <url>
+                                <loc>${tagURL}</loc>
+                                <lastmod>${tagDate}</lastmod>
+                                <priority>0.80</priority>
+                              </url>`
+                          });
+
+                          data.users.map(user => {
+                            const profileDate = user.updatedAt;
+                            if (!latestProfile || profileDate > latestProfile) {
+                              latestProfile = profileDate;
+                            }
+
+                            const profileURL = `${DOMAIN}/profile/${user.username}`;
+                            profilesXML += `
+                              <url>
+                                <loc>${profileURL}</loc>
+                                <lastmod>${profileDate}</lastmod>
+                                <priority>0.80</priority>
+                              </url>`
+                          });
+
+                          data.blogs.map(post => {
+                            const postDate = post.updatedAt;
+                            if (!latestPost || postDate > latestPost) {
+                              latestPost = postDate;
+                            }
+
+                            const projectURL = `${DOMAIN}/community/connect/blog/${post.slug}`;
+                            projectsXML += `
+                              <url>
+                                <loc>${projectURL}</loc>
+                                <lastmod>${postDate}</lastmod>
+                                <priority>0.80</priority>
+                              </url>`
+                          });
+
+                          let theSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+                            <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                              <url>
+                                <loc>${DOMAIN}/community/connect</loc>
+                                <priority>0.90</priority>
+                              </url>
+                              ${tagsXML}
+                              ${profilesXML}
+                              ${projectsXML}
+                            </urlset>`
+                            res.setHeader("Content-Type", "text/xml");
+                            res.write(theSitemap);
+                            res.end();
                     });
-            });        
+             });        
         });
+
+    });
 };
 
 
