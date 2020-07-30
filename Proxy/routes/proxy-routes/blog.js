@@ -23,7 +23,7 @@ router.get('/', listAllBlogsCategoriesTags);
 router.get('/blogs', listAllBlogsCategoriesTags);
 
 
-router.get('/urls-for-sitemap', listForSitemap);
+router.get('/sitemap', listForSitemap);
 router.post('/blog', requireSignin, adminMiddleware, create);
 router.post('/blogs-categories-tags', listAllBlogsCategoriesTags);
 router.get('/blog/:slug', read);
