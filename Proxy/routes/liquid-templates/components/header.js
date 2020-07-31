@@ -16,39 +16,58 @@ exports.header = ({shop, tag, user, blog}) => {
     	}
 	}
 
+    const SEOMarkup = (title, description, imageURL) => {
+        return `<Head>
+                <meta property="og:image" content="${imageURL}" />
+                <meta property="og:image:secure_url" content="${imageURL}" />
+                <meta property="og:image:type" content="image/jpg" />
+                <meta property="fb:app_id" content="${process.env.FB_APP_ID}" />
+            </Head>
+
+              {% capture page_title %}
+                ${title}
+              {% endcapture %}
+
+              {%- capture og_image_tags -%}
+               <meta property="og:image" content="${imageURL}">
+              {%- endcapture -%}
+
+              {%- capture og_image_secure_url_tags -%}
+                <meta property="og:image:secure_url" content="${imageURL}">
+              {%- endcapture -%}
+
+              {% capture page_description %}
+                ${description}
+              {% endcapture %}
+
+              <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:title" content="${title}">
+                <meta name="twitter:description" content="${description}">`
+    }
+
     const generateSEOHeader = () => {
         let DOMAIN = shop.shopify_domain;
         console.log('generateSEOHeader func ran');
         if(tag){
+            let title = tag.name + ' - '+ `{{shop.name}}`;
+            let description = `Check out these posts by members of our community`
             console.log('tag condition ran')
-            return `<Head>
-                <title>Posts Tagged ${tag.name}</title>
-                <meta
-                    name="description"
-                    content="Check out our Community!"
-                />
-                <link rel="canonical" href='${DOMAIN}/tags/${tag.slug}' />
-                <meta property="og:title" content='${shop.communityName} - Posts Tagged ${tag.name}' />
-                <meta
-                    property="og:description"
-                    content="Share your shopper insights!"
-                />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content='${DOMAIN}/tags/${tag.slug}' />
-                <meta property="og:site_name" content='${shop.communityName}' />
-
-                <meta property="og:image" content='${shop.iconImageURL}' />
-                <meta property="og:image:secure_url" content='${shop.iconImageURL}' />
-                <meta property="og:image:type" content="image/jpg" />
-                <meta property="fb:app_id" content='${process.env.FB_APP_ID}' />
-            </Head>
-
-            <script>
-                document.querySelector('meta[name="title"]').setAttribute("content", 'Share your shopper insights');
-            </script>`
-
+            return SEOMarkup(title, description, shop.iconImageURL)
+        } else if (user) {
+            let title = user.name + ' - '+ `{{shop.name}}`;
+            let description = `Check out these posts by ${user.name} - a valued member of our community`
+            let imageURL = user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif';
+            return SEOMarkup(title, description, imageURL);
+        } else if (blog) {
+            let title = blog.title;
+            let description = blog.mdesc;
+            let imageURL = blog.coverMedia ? blog.coverMedia : user.cover_photo;
+            return SEOMarkup(title, description, imageURL);
         } else {
-            return '';
+            let title = (shop && shop._doc.communityName ? shop._doc.communityName : 'Community') + ' - '+ `{{shop.name}}`;
+            let description = `Share your thoughts with our community.`
+            console.log('tag condition ran')
+            return SEOMarkup(title, description, shop.iconImageURL)
         }
     }
 

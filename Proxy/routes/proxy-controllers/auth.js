@@ -181,7 +181,7 @@ exports.authMiddleware = (req, res, next) => {
             let username = email.split('@')[0];
             let password = req.query.hash;
             let shop = req.query.shop;
-            let profile = `https://${req.query.shop}/apps/tribe/user/${username}`;
+            let profile = `https://${req.query.shop}/community/connect/user/${username}`;
 
             const user = new User({ name, email, password, profile, username });
             user.save((err, user) => {
