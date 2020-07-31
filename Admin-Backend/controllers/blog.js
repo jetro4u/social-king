@@ -360,7 +360,7 @@ exports.listByUser = (req, res) => {
         }
         
         let shopId = shop._id;
-        Blog.find({ shopPostedAt: shopId })
+        Blog.find({ shopPostedAt: shopId, archivedByUser: { $ne: true } })
             .sort({ createdAt: -1 })
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
