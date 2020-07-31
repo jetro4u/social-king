@@ -16,16 +16,10 @@ exports.header = ({shop, tag, user, blog}) => {
     	}
 	}
 
-    const generateSEOHeader = () => {
-        let DOMAIN = shop.shopify_domain;
-        console.log('generateSEOHeader func ran');
-        if(tag){
-            let title = tag.name + ' - '+ `{{shop.name}}`;
-            let description = `Check out these posts by members of our community`
-            console.log('tag condition ran')
-            return `<Head>
-                <meta property="og:image" content="${shop.iconImageURL}" />
-                <meta property="og:image:secure_url" content="${shop.iconImageURL}" />
+    const SEOMarkup = (title, description, imageURL) => {
+        return `<Head>
+                <meta property="og:image" content="${imageURL}" />
+                <meta property="og:image:secure_url" content="${imageURL}" />
                 <meta property="og:image:type" content="image/jpg" />
                 <meta property="fb:app_id" content="${process.env.FB_APP_ID}" />
             </Head>
@@ -35,11 +29,11 @@ exports.header = ({shop, tag, user, blog}) => {
               {% endcapture %}
 
               {%- capture og_image_tags -%}
-               <meta property="og:image" content="${shop.iconImageURL}">
+               <meta property="og:image" content="${imageURL}">
               {%- endcapture -%}
 
               {%- capture og_image_secure_url_tags -%}
-                <meta property="og:image:secure_url" content="${shop.iconImageURL}">
+                <meta property="og:image:secure_url" content="${imageURL}">
               {%- endcapture -%}
 
               {% capture page_description %}
@@ -49,6 +43,26 @@ exports.header = ({shop, tag, user, blog}) => {
               <meta name="twitter:card" content="summary_large_image">
                 <meta name="twitter:title" content="${title}">
                 <meta name="twitter:description" content="${description}">`
+    }
+
+    const generateSEOHeader = () => {
+        let DOMAIN = shop.shopify_domain;
+        console.log('generateSEOHeader func ran');
+        if(tag){
+            let title = tag.name + ' - '+ `{{shop.name}}`;
+            let description = `Check out these posts by members of our community`
+            console.log('tag condition ran')
+            return SEOMarkup(title, description, shop.iconImageURL)
+        } else if (user) {
+            let title = user.name + ' - '+ `{{shop.name}}`;
+            let description = `Check out these posts by ${user.name} - a valued member of our community`
+            let imageURL = user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif';
+            return SEOMarkup(title, description, imageURL);
+        } else if (blog) {
+            let title = blog.title;
+            let description = blog.mdesc;
+            let imageURL = blog.coverMedia ? blog.coverMedia : user.cover_photo;
+            return SEOMarkup(title, description, imageURL);
         } else {
             return '';
         }
