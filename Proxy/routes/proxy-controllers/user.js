@@ -23,7 +23,7 @@ exports.read = (req, res) => {
             });
         }
 
-        Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop })
+        Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop, archivedByUser: false })
             .sort({createdAt: -1})
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
