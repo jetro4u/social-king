@@ -72,7 +72,8 @@ const blogSchema = new mongoose.Schema(
             type: String
         },
         archivedByUser: {
-            type: Boolean
+            type: Boolean,
+            default: false
         },
         userNotified: {
             type: Boolean,
