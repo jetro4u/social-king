@@ -56,12 +56,12 @@ exports.header = ({shop, tag, user, blog}) => {
         } else if (user) {
             let title = user.name + ' - '+ `{{shop.name}}`;
             let description = `Check out these posts by ${user.name} - a valued member of our community`
-            let imageURL = user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif';
+            let imageURL = user && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif';
             return SEOMarkup(title, description, imageURL);
         } else if (blog) {
             let title = blog.title;
             let description = blog.mdesc;
-            let imageURL = blog.coverMedia ? blog.coverMedia : user.cover_photo;
+            let imageURL = blog.coverMedia ? blog.coverMedia : (user && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif');
             return SEOMarkup(title, description, imageURL);
         } else {
             let title = (shop && shop._doc.communityName ? shop._doc.communityName : 'Community') + ' - '+ `{{shop.name}}`;
