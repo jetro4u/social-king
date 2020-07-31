@@ -201,12 +201,8 @@ exports.listForSitemap = (req, res) => {
                 });
             }
             
-            User.find({ 
-                   shops: { 
-                     $in: [[shopId]] 
-                   }
-                })
-                .select('username updatedAt')
+            User.find({ "profile": { "$regex": req.query.shop, "$options": "i" }})
+                .select('username profile updatedAt')
                 .exec((err, users) => {
                     if (err) {
                         return res.json({
@@ -260,7 +256,7 @@ exports.listForSitemap = (req, res) => {
                               latestProfile = profileDate;
                             }
 
-                            const profileURL = `${DOMAIN}/profile/${user.username}`;
+                            const profileURL = `${DOMAIN}/community/connect/user/${user.username}`;
                             profilesXML += `
                               <url>
                                 <loc>${profileURL}</loc>

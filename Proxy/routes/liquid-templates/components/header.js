@@ -64,7 +64,10 @@ exports.header = ({shop, tag, user, blog}) => {
             let imageURL = blog.coverMedia ? blog.coverMedia : user.cover_photo;
             return SEOMarkup(title, description, imageURL);
         } else {
-            return '';
+            let title = (shop && shop._doc.communityName ? shop._doc.communityName : 'Community') + ' - '+ `{{shop.name}}`;
+            let description = `Share your thoughts with our community.`
+            console.log('tag condition ran')
+            return SEOMarkup(title, description, shop.iconImageURL)
         }
     }
 
