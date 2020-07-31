@@ -23,7 +23,7 @@ exports.read = (req, res) => {
             });
         }
 
-        Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop })
+        Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop, archivedByUser: { $ne: true } })
             .sort({createdAt: -1})
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
@@ -79,7 +79,7 @@ exports.publicProfile = (req, res) => {
             user = userFromDB;
 
             let userId = user._id;  
-            Blog.find({ postedBy: userId, shopPostedAt: shop._id, hidden: false })
+            Blog.find({ postedBy: userId, shopPostedAt: shop._id, hidden: false, archivedByUser: { $ne: true } })
                 .populate('tags', '_id name slug')
                 .populate('postedBy', '_id name cover_photo username popUser')
                 .limit(1000)
