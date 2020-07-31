@@ -34,12 +34,13 @@ module.exports.createNewPost = (tags) => {
                       ${displayTags(tags)}
                     </form>
                       
-                    <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
-
-                     <div class='modal-footer'>
+                    <br/>
+                    <div class='pure-u-1'>
+                     <div class='community-pad-20 modal-footer'>
                         <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
                           ng-click='submitBlogPost({title: title})'>Save Post</button>
                       </div> 
+                    </div>
                     <p id='json'></p>
                 </div>
             </div>`
