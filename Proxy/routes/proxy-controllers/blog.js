@@ -322,7 +322,7 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
         }
         
         let shopId = shop._id;
-        Blog.find({ hidden: false, shopPostedAt: shopId })
+        Blog.find({ hidden: false, shopPostedAt: shopId, archivedByUser: { $ne: true } })
         .sort({createdAt: -1})
         .populate('tags', '_id name slug')
         .populate('postedBy', '_id name username profile cover_photo')
