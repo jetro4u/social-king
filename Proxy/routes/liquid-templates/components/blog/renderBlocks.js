@@ -7,7 +7,7 @@ exports.renderBlocks = (blog) => {
                         return `<br/><p>${block.data.text}</p>`
                         break;
                     case 'image':
-                        return `<br/><img src='${block.data.file.url}'/>
+                        return `<br/><img width='100%' src='${block.data.file.url}'/>
                                 <h6>${block.data.caption}</h6>`
                         break;
                     case 'header':
