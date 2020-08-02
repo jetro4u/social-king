@@ -98,8 +98,8 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                 ${blog.selectedProducts.length>0 ? `<div class="pure-g">
                         <div class="pure-u-md-5-5 pure-u-sm-1">
                             <div class="community-pad-20">
-                                <h2>Related products</h2>
-                                <div class="pure-g">
+                                <div class="pb-5">
+                                    <h2 class="community-letter-spacing" style='margin-top:30px'>Related Products</h2>
                                     ${showSelectedProducts()}
                                 </div>
                             </div>
