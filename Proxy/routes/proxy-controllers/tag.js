@@ -79,7 +79,7 @@ exports.read = (req, res) => {
                     .sort({ createdAt: -1 })
                     .skip(skip)
                     .limit(limit)
-                    .select('_id username cover_photo coverMedia title excerpt mdesc slug categories postedBy tags createdAt updatedAt')
+                    .select('_id username cover_photo coverMedia title excerpt mdesc slug postedBy tags createdAt updatedAt')
                     .exec((err, data) => {
                         if (err) {
                             return res.status(400).json({
