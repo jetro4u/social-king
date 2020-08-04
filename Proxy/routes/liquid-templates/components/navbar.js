@@ -79,9 +79,9 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <div class="community-card-header">${`Welcome ${user.name}`}</div>
                     <div class="community-card-body">
                    
-                          <a class='tag-btn pure-button pure-button-primary' ui-sref="create-new-post">Create New Post</a>
+                          <a class='tag-btn pure-button pure-button-primary' ng-click='clickedNewPostTab()' ui-sref="create-new-post">Create New Post</a>
                             </br>
-                            <a class='tag-btn pure-button pure-button-primary' ui-sref="manage-posts">Manage Posts</a>
+                            <a class='tag-btn pure-button pure-button-primary' ng-click='clickedManagePostsTab()' ui-sref="manage-posts">Manage Posts</a>
                             </br>
                             <a class='tag-btn pure-button pure-button-primary' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
                             </br>
