@@ -53,7 +53,7 @@ module.exports.settingsJS = (user) => {
   }
 
   return `
-    tribeApp.controller('settingsController', function($scope, $http) {
+    tribeApp.controller('settingsController', function($scope, $http, $window) {
         console.log('settingsController function ran');
         
         $scope.getProfileURL = function(){        
@@ -74,9 +74,17 @@ module.exports.settingsJS = (user) => {
 
        $scope.clickedSettingsTab = function(){
          console.log('clickedSettingsTab');
+         $window.scrollTo(0, 0);
          $scope.getProfileURL();
        }
 
+       $scope.clickedNewPostTab = function(){
+         $window.scrollTo(0, 0);
+       }
+
+       $scope.clickedManagePostsTab = function(){
+         $window.scrollTo(0, 0);
+       }
 
         $scope.formData = {
           cover_photo: '${user.cover_photo}',
