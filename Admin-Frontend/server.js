@@ -57,7 +57,7 @@ app.prepare().then(() => {
       scopes: ['read_products', 'write_products'],
       async afterAuth(ctx) {
         const { shop, accessToken } = ctx.session;
-	  ctx.set('X_FRAME_OPTIONS', 'ALLOWALL');
+	      ctx.set('X_FRAME_OPTIONS', 'ALLOWALL');
         ctx.cookies.set("shopOrigin", shop, {
           httpOnly: false,
           secure: true,
