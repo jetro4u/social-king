@@ -48,8 +48,9 @@ exports.update = (req, res) => {
                 console.log('error', err);
             } else {
                 console.log('file saved successfully: ', result);
+                let API_Endpoint = process.env.NODE_ENV == 'production' ? `https://socialking.app/proxy` : `https://${shopName}/community/connect`
                 Shop.update({ shopify_domain: shopName }, {
-                    iconImageURL: `https://socialking.app/proxy/images/uploads/${iconImageName}`
+                    iconImageURL: `${API_Endpoint}/images/uploads/${iconImageName}`
                 }, function(err, affected, resp) {
                    console.log('response to saving iconImg:',resp);
                 })
@@ -68,8 +69,9 @@ exports.update = (req, res) => {
                 console.log('error', err);
             } else {
                 console.log('file saved successfully: ', result);
+                let API_Endpoint = process.env.NODE_ENV == 'production' ? `https://socialking.app/proxy` : `https://${shopName}/community/connect`
                 Shop.update({ shopify_domain: shopName }, {
-                    headerImageURL: `https://socialking.app/proxy/images/uploads/${headerImageName}`
+                    headerImageURL: `${API_Endpoint}/images/uploads/${headerImageName}`
                 }, function(err, affected, resp) {
                    console.log('response to saving iconImg:',resp);
                 })
