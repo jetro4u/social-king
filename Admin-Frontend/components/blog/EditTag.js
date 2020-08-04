@@ -1,6 +1,6 @@
 import React, {useCallback, useState, useEffect} from 'react';
 import {Button, Modal, TextContainer, Form, FormLayout, TextField} from '@shopify/polaris';
-import { updateTag } from '../../actions/tag';
+import { updateTag, removeTag } from '../../actions/tag';
 import { getCookie } from '../../actions/auth';
 
 export default function EditTag(props) {
@@ -20,8 +20,14 @@ export default function EditTag(props) {
   console.log('values in EditTag component',values);
 
   useEffect(() => {
+      console.log('ran useEffect function with', props);
       setTag(props.name);
   }, []);
+
+  const handleModalAndTagName = ()=>{
+    handleModalChange();
+    setTag(props.name);
+  }
 
   const handleModalChange = useCallback(() => setActive(!active), [active]);
 
@@ -49,9 +55,33 @@ export default function EditTag(props) {
     setActive(false);
   };
 
+   const deleteConfirm = slug => {
+        console.log('slug in deleteConfirm', slug)
+        console.log('tag in deleteConfirm', tag)
+        let answer = window.confirm('Are you sure you want to delete this tag?');
+        if (answer) {
+            deleteTag(slug);
+        }
+    };
+
+    const deleteTag = slug => {
+        // console.log('delete', slug);
+        removeTag(slug, token).then(data => {
+            if (data.error) {
+                console.log(data.error);
+            } else {
+                // setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
+                console.log('data in deleteTag');
+                props.loadTags(props.showTags);
+                handleModalAndTagName();
+            }
+        });
+    };
+
+
   return (
     <div>
-      <Button primary onClick={handleModalChange}>{name}</Button>
+      <Button primary onClick={handleModalAndTagName}>{name}</Button>
       <Modal
         open={active}
         onClose={handleModalChange}
@@ -63,7 +93,7 @@ export default function EditTag(props) {
         secondaryActions={[
           {
             content: 'Cancel',
-            onAction: handleModalChange,
+            onAction: handleModalAndTagName,
           },
         ]}
       >
@@ -85,10 +115,10 @@ export default function EditTag(props) {
                   }
                 />
               </FormLayout>
+              <Button onClick={()=>deleteConfirm(props.slug)} destructive={true}>Delete</Button>
           </TextContainer>
         </Modal.Section>
       </Modal>
     </div>
   );
 }
-
