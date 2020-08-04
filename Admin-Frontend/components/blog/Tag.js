@@ -38,13 +38,14 @@ const Tag = (props) => {
         loadTags();
     }, [reload]);
 
-    const loadTags = () => {
+    const loadTags = (callback) => {
         getTags(props).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
                 console.log('tags data in loadTags func', data);
                 setValues({ ...values, tags: data });
+                callback ? callback() : '';
             }
         });
     };
@@ -54,26 +55,8 @@ const Tag = (props) => {
         console.log('tags in showTags func', tags)
         return tags.map((t, i) => {
             return (
-                <EditTag {...t} loadTags={loadTags.bind(this)} />
+                <EditTag {...t} loadTags={loadTags.bind(this)} showTags={showTags.bind(this)} />
             );
-        });
-    };
-
-    const deleteConfirm = slug => {
-        let answer = window.confirm('Are you sure you want to delete this tag?');
-        if (answer) {
-            deleteTag(slug);
-        }
-    };
-
-    const deleteTag = slug => {
-        // console.log('delete', slug);
-        removeTag(slug, token).then(data => {
-            if (data.error) {
-                console.log(data.error);
-            } else {
-                setValues({ ...values, error: false, success: false, name: '', removed: !removed, reload: !reload });
-            }
         });
     };
 
@@ -93,28 +76,6 @@ const Tag = (props) => {
 
     const handleChange = e => {
         setValues({ ...values, name: e.target.value, error: false, success: false, removed: '' });
-    };
-
-    const showSuccess = () => {
-        if (success) {
-            return <p className="text-success">Tag is created</p>;
-        }
-    };
-
-    const showError = () => {
-        if (error) {
-            return <p className="text-danger">Tag already exist</p>;
-        }
-    };
-
-    const showRemoved = () => {
-        if (removed) {
-            return <p className="text-danger">Tag is removed</p>;
-        }
-    };
-
-    const mouseMoveHandler = e => {
-        setValues({ ...values, error: false, success: false, removed: '' });
     };
 
     const newTagFom = () => (
@@ -137,7 +98,7 @@ const Tag = (props) => {
                 title="Manage Tags"
                 description="Create new tags which will be featured in your Social Network."
               >
-                <div onMouseMove={mouseMoveHandler}>
+                <div>
                     {newTagFom()}
                     <ButtonGroup >
                         {showTags(props)}
