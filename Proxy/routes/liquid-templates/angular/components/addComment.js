@@ -24,7 +24,7 @@ module.exports.addComment = ({shop, blog}) => {
                   <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
                     ng-click='submitComment()'>Post Comment</button>
                 </div> 
-              <p id='json'></p>
+                <p id='json'></p>
               </div>
           </div>
       </div>
@@ -39,8 +39,10 @@ module.exports.addCommentJS = ({tags, blog}) => {
   console.log('tags obj: ', tagsModel);
 
   return `
-    tribeApp.controller('addCommentController', function($scope, $http) {
+    tribeApp.controller('addCommentController', function($scope, $http, $window) {
       console.log('addCommentController function ran');
+
+      $window.scrollTo(document.querySelector('#new-comment').getBoundingClientRect().left, document.querySelector('#new-comment').getBoundingClientRect().bottom);   
       
       // Checkbox logic 
        $scope.tags = {};
