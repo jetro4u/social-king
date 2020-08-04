@@ -31,7 +31,6 @@ exports.getTags = async (req, res, next) => {
             console.log('errer getting tags',err)
         }
         req.tags = data;
-        console.log('data in getTags db response:', data)
         next();
     });
 };
@@ -86,7 +85,6 @@ exports.read = (req, res) => {
                                 error: errorHandler(err)
                             });
                         }
-                        console.log('tagSlug object in view:', { shop, tags: req.tags, tag: tag, blogs: data, size: data.length });
                         res.send(tagSlug({ shop, tags: req.tags, tag: tag, blogs: data, size: data.length }));
                     });
             });
