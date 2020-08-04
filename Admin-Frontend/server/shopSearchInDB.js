@@ -12,7 +12,7 @@ function shopSearch({accessToken, shopify_domain}) {
           } else if (!shop){
               message = 'ran no shop found logic';
               console.log('message: ', message);        
-              shopifyScope = 'read_products, write_products, read_content, write_content'; 
+              shopifyScope = 'read_products, read_content, write_content'; 
               let new_shop = new Shop({ shopify_domain, accessToken, shopifyScope})
               new_shop.save((err, shopCreated) => {
                 if (err) {

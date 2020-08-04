@@ -3,7 +3,6 @@ const edjsParser = edjsHTML();
 
 const Blog = require('../../models/blog');
 const Comment = require('../../models/comment');
-const Category = require('../../models/category');
 const Tag = require('../../models/tag');
 const User = require('../../models/user');
 const Shop = require('../../models/Shop');
