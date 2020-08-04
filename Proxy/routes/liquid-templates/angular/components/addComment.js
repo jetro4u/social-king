@@ -42,7 +42,7 @@ module.exports.addCommentJS = ({tags, blog}) => {
     tribeApp.controller('addCommentController', function($scope, $http, $window) {
       console.log('addCommentController function ran');
 
-      $window.scrollTo(document.querySelector('#new-comment').getBoundingClientRect().left, document.querySelector('#new-comment').getBoundingClientRect().bottom);   
+      $window.scrollTo(document.querySelector('#new-comment').getBoundingClientRect().left, document.querySelector('#new-comment').getBoundingClientRect().top);   
       
       // Checkbox logic 
        $scope.tags = {};
