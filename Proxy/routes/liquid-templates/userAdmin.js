@@ -30,7 +30,7 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
               <div class="pure-u-md-2-3 pure-u-sm-1">
                   <ui-view></ui-view>
               </div>
-              ${navbar({shop, tags, user,adminArea:true})}
+              ${navbar({shop, tags, user, adminArea:true})}
           </div>
       </main>
     </div>
