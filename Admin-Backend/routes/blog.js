@@ -3,7 +3,6 @@ const router = express.Router();
 const {
     create,
     list,
-    listForSitemap,
     listAllBlogsCategoriesTags,
     read,
     remove,
@@ -17,14 +16,12 @@ const {
 
 const { isValidShopifyRequest, requireSignin, adminMiddleware, authMiddleware, canUpdateDeleteBlog } = require('../controllers/auth');
 
-router.get('/urls-for-sitemap', listForSitemap);
-
 //
 //Actually Being Used in Shopify Admin App
 //
 
 router.delete('/blog/:slug', remove);
-router.put('/blog/toggle/:slug', toggle);
+router.put('/blog/toggle/:domain/:slug', toggle);
 router.get('/:username/blogs', listByUser);
 
 //for BlogUpdate Component
