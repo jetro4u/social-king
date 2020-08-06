@@ -1,23 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {
-    signup,
-    signin,
-    signout,
-    requireSignin,
-    forgotPassword,
-    resetPassword,
-    preSignup,
-    googleLogin
+    showPaymentPage,
+    recordCharge
 } = require('../controllers/auth');
 
-// validators
-const { runValidation } = require('../validators');
-const {
-    userSignupValidator,
-    userSigninValidator,
-    forgotPasswordValidator,
-    resetPasswordValidator
-} = require('../validators/auth');
+router.post('/auth/record-charge', recordCharge);
 
 module.exports = router;
