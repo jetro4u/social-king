@@ -36,7 +36,7 @@ const ManagePosts = (props) => {
     const hideShowBlog = blog => {
        console.log('blog in hideShowBlog function', blog);
 
-        toggleBlogVisibility(blog.slug).then(data => {
+        toggleBlogVisibility(blog.slug, blog.shopifyDomain).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
