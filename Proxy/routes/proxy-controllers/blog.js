@@ -17,6 +17,7 @@ const { smartTrim } = require('../helpers/blog');
 // liquid-templates functions
 const { blogsList } = require('../liquid-templates/blogsList');
 const { blogSlug } = require('../liquid-templates/blogSlug');
+const { notFound } = require('../liquid-templates/components/not-found/notFound');
 
 exports.create = (req, res) => {
     res.setHeader('content-type', 'text/javascript')
@@ -367,7 +368,7 @@ exports.read = (req, res) => {
                     error: errorHandler(err)
                 });
             }
-            Comment.find({postSlug: slug, hidden: false})
+            Comment.find({postSlug: slug, shopifyDomain: req.query.shop, hidden: false})
             .populate('postedBy', '_id about storeFavorites cover_photo name username trackingID')
             .exec((err, comments) => {
                 if (err) {
@@ -375,7 +376,7 @@ exports.read = (req, res) => {
                         error: errorHandler(err)
                     });
                 }
-                 Blog.findOne({ slug })
+                 Blog.findOne({ slug, shopifyDomain: req.query.shop })
                     .populate('shop', '_id headerImageURL iconImageURL')
                     .populate('tags', '_id name slug')
                     .populate('postedBy', '_id about storeFavorites cover_photo name username trackingID')
@@ -386,16 +387,22 @@ exports.read = (req, res) => {
                                 error: errorHandler(err)
                             });
                         }
-                         User.findOne({ _id: blog.postedBy })
-                            .exec((err, user) => {
-                                if (err || !user) {
-                                    return res.status(400).json({
-                                        error: 'User not found'
-                                    });
-                                }
 
-                            res.send(blogSlug({blog, shop, user, comments}));
-                            });
+                            if(blog){
+                                User.findOne({ _id: blog.postedBy })
+                                .exec((err, user) => {
+                                    if (err || !user) {
+                                        return res.status(400).json({
+                                            error: 'User not found'
+                                        });
+                                    }
+
+                                    res.send(blogSlug({blog, shop, user, comments}));
+                                });
+                            } else {
+                                res.send(notFound())
+                            }
+                         
                     });
             })
         });

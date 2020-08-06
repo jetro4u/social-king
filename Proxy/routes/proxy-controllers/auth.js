@@ -169,7 +169,7 @@ exports.authMiddleware = (req, res, next) => {
     }
     
     const authUserId = req.user ? req.user._id : 'no user yet';
-    User.findOne({ email: email }).exec((err, user) => {
+    User.findOne({ email: email, shopDomain: req.query.shop }).exec((err, user) => {
         if (err){
             console.log('ran error logic');
             return res.status(401).json({
@@ -180,10 +180,10 @@ exports.authMiddleware = (req, res, next) => {
             let name = req.query.name;
             let username = email.split('@')[0];
             let password = req.query.hash;
-            let shop = req.query.shop;
+            let shopDomain = req.query.shop;
             let profile = `https://${req.query.shop}/community/connect/user/${username}`;
 
-            const user = new User({ name, email, password, profile, username });
+            const user = new User({ name, email, password, profile, username, shopDomain });
             user.save((err, user) => {
                 if (err) {
                     return res.status(401).json({
@@ -192,21 +192,11 @@ exports.authMiddleware = (req, res, next) => {
                 }
                 console.log('user created successfully');
                 req.profile = user;
-                //add shop to user record
-                Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
-                   User.findByIdAndUpdate(user._id, { $push: { shops: [shop._id] } }, { new: true }).exec(
-                        (err, result) => {
-                            if (err) {
-                                // return res.status(400).json({
-                                //     error: errorHandler(err)
-                            }
-                            console.log('Shop added to user record'); 
-                        }
-                    );        
-                });
+                
             });
         } else {
-            console.log('user found')
+            console.log('user found', user);
+
             req.user = user;
         }
         req.profile = user;
