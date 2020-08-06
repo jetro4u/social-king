@@ -8,9 +8,6 @@ const userSchema = new mongoose.Schema(
             type: String,
             trim: true,
             required: true,
-            max: 32,
-            unique: true,
-            index: true,
             lowercase: true
         },
         name: {
@@ -58,16 +55,14 @@ const userSchema = new mongoose.Schema(
             type: Boolean, 
             default: false 
         },
-        shops: [{ 
-            type: ObjectId, 
-            ref: 'Shop'
-        }],
-        shopDomains: {
-            type: Array
-        },
+        shopDomain: {
+            type: String
+        }
     },
     { timestamps: true }
 );
+
+userSchema.index({ username: 1, shopDomain: 1}, { unique: true });
 
 userSchema
     .virtual('password')
