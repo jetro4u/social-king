@@ -149,7 +149,7 @@ const BlogUpdate = ({ shop, router }) => {
             newlySelectedProducts.push(p[0]);
         }); 
         
-        updateBlog({title, savedData, body, selectedTags, selectedProducts: newlySelectedProducts}, token, router.query.slug).then(data => {
+        updateBlog({shopifyDomain: shop.app.shopOrigin, title, savedData, body, selectedTags, selectedProducts: newlySelectedProducts}, token, router.query.slug).then(data => {
             if(data){
                 if (data.error) {
                     setValues({ ...values, error: data.error });
