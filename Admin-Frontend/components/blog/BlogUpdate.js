@@ -56,7 +56,7 @@ const BlogUpdate = ({ shop, router }) => {
 
     const initBlog = () => {
         if (router.query.slug) {
-            singleBlog(router.query.slug).then(data => {
+            singleBlog(router.query.slug, shop.app.shopOrigin).then(data => {
                 console.log('blog data:', data);
                 if (data.error) {
                     console.log(data.error);
