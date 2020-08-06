@@ -25,7 +25,7 @@ router.put('/blog/toggle/:domain/:slug', toggle);
 router.get('/:username/blogs', listByUser);
 
 //for BlogUpdate Component
-router.get('/blog/:slug', read);
+router.get('/blog/:domain/:slug', read);
 router.put('/blog/:slug', update);
 
 

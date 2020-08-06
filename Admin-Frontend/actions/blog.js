@@ -69,9 +69,9 @@ export const listBlogsWithCategoriesAndTags = (skip, limit) => {
         .catch(err => console.log(err));
 };
 
-export const singleBlog = (slug = undefined) => {
+export const singleBlog = (slug = undefined, shopifyDomain) => {
     
-    return fetch(`${API}/blog/${slug}`, {
+    return fetch(`${API}/blog/${shopifyDomain}/${slug}`, {
         method: 'GET'
     })
         .then(response => {
