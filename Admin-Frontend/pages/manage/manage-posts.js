@@ -127,19 +127,36 @@ const ManagePosts = (props) => {
                 {loaded && blogs.length==0
                     ? <EmptyState
                             heading="No New Posts Quite Yet"
-                            action={{
-                              content: 'Configure Settings',
-                              onAction:  () => Router.push('/settings'),
-                            }}
                             image={img}
                           >
                            <p>We recommend the following checklist to help you get started:</p>
                            <br/>
                            <List type="number">
-                              <List.Item>Add Tags</List.Item>
-                              <List.Item>Configure Settings (ie Customize the Look & Feel of Your Network)</List.Item>
-                              <List.Item>Create Some Posts</List.Item>
-                              <List.Item>Invite Shoppers to create posts (via an email blast, or each time they make a purchase)</List.Item>
+                              <List.Item>
+                                Drive the conversation around specific topics by {' '}
+                                <Button primary url={`/manage/manage-tags`}>
+                                     Adding Tags   
+                                </Button>
+                              </List.Item>
+                              <List.Item>Customize the Look & Feel of Your Network with {' '}
+                                <Button primary url={`/settings`}>
+                                     Custom Images and Colors   
+                                </Button>
+                              </List.Item>
+                              <List.Item>Verify that within your {' '}
+                                <Button external={true} primary url={`https://help.shopify.com/en/manual/checkout-settings/customer-accounts`}>
+                                      Store Settings 
+                                </Button> {' '}
+                                Customer Accounts are either optional or required.
+                              </List.Item>
+
+                              <List.Item>Visit your Community Pages on {' '}
+                                <Button external={true} primary url={`https://${props.app.shopOrigin}/community/connect`}>
+                                      YourSite.com/community/connect
+                                </Button> {' '}
+                                and Create Some New Posts (you'll need a Customer Account if you don't have one yet).
+                              </List.Item>
+                              <List.Item>Invite Shoppers to read & create content (ideally, each time they make a purchase)</List.Item>
                             </List>
                       </EmptyState>
                     : showAllBlogs()
