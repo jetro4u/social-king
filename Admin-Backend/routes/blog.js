@@ -20,12 +20,12 @@ const { isValidShopifyRequest, requireSignin, adminMiddleware, authMiddleware, c
 //Actually Being Used in Shopify Admin App
 //
 
-router.delete('/blog/:slug', remove);
+router.delete('/blog/:domain/:slug', remove);
 router.put('/blog/toggle/:domain/:slug', toggle);
 router.get('/:username/blogs', listByUser);
 
 //for BlogUpdate Component
-router.get('/blog/:slug', read);
+router.get('/blog/:domain/:slug', read);
 router.put('/blog/:slug', update);
 
 
