@@ -6,13 +6,10 @@ const tagSchema = new mongoose.Schema(
         name: {
             type: String,
             trim: true,
-            required: true,
-            maxlength: 32
+            required: true
         },
         slug: {
             type: String,
-            unique: true,
-            index: true
         },
         shop: { 
             type: String,
@@ -20,5 +17,7 @@ const tagSchema = new mongoose.Schema(
     },
     { timestamps: true }
 );
+
+tagSchema.index({ slug: 1, shop: 1}, { unique: true });
 
 module.exports = mongoose.model('Tag', tagSchema);
