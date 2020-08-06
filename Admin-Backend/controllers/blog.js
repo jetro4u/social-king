@@ -12,45 +12,6 @@ const { smartTrim } = require('../helpers/blog');
 const sgMail = require('@sendgrid/mail'); // SENDGRID_API_KEY
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-exports.listForSitemap = (req, res) => {
-    Blog.find({})
-        .select('slug updatedAt')
-        .exec((err, blogs) => {
-            if (err) {
-                return res.json({
-                    error: errorHandler(err)
-                });
-            }
-            
-            User.find({})
-                .select('username updatedAt')
-                .exec((err, users) => {
-                    if (err) {
-                        return res.json({
-                            error: errorHandler(err)
-                        });
-                    }
-
-                    Tag.find({})
-                        .select('slug updatedAt')
-                        .exec((err, tags) => {
-                            if (err) {
-                                return res.json({
-                                    error: errorHandler(err)
-                                });
-                            }
-                            let data = {};
-                            
-                            data.tags=tags; 
-                            data.users=users;
-                            data.blogs=blogs;
-
-                            res.json(data);
-                    });
-            });        
-        });
-};
-
 exports.list = (req, res) => {
     console.log('req.body in list function',req.body);
     let shopName = req.params.username ? req.params.username.toLowerCase() : '';
@@ -154,8 +115,9 @@ exports.remove = (req, res) => {
 exports.toggle = (req, res) => {
     console.log('req.user: ', req.user);
     const slug = req.params.slug.toLowerCase();
+    const domain = req.params.domain.toLowerCase();
 
-    Blog.findOne({ slug })
+    Blog.findOne({ slug , shopifyDomain: domain  })
         .populate('postedBy', '_id name username email')
         .select('_id postedBy slug shopifyDomain postSlug hidden userNotified createdAt updatedAt')
         .exec((err, blog) => {

@@ -117,10 +117,11 @@ export const removeBlog = (slug, token) => {
         .catch(err => console.log(err));
 };
 
-export const toggleBlogVisibility = (slug, token) => {
+export const toggleBlogVisibility = (slug, shopifyDomain) => {
     let toggleBlogEndpoint;
+    let token = '';
 
-    toggleBlogEndpoint = `${API}/blog/toggle/${slug}`;
+    toggleBlogEndpoint = `${API}/blog/toggle/${shopifyDomain}/${slug}`;
 
         // toggleBlogEndpoint = `${API}/user/blog/toggle/${slug}`;
 
