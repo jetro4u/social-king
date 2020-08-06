@@ -6,14 +6,11 @@ const blogSchema = new mongoose.Schema(
         title: {
             type: String,
             trim: true,
-            min: 3,
             max: 160,
             required: true
         },
         slug: {
-            type: String,
-            unique: true,
-            index: true
+            type: String
         },
         body: {
             type: Array,
@@ -72,7 +69,7 @@ const blogSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-blogSchema.index({ _id: 1, asin: 1 }, { unique: true });
+blogSchema.index({ slug: 1, shopifyDomain: 1}, { unique: true });
 
 blogSchema.methods = {
     setDefaultUpgrades: function() {
