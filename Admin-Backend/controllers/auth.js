@@ -46,7 +46,17 @@ exports.adminMiddleware = (req, res, next) => {
       });  
 };
 
+exports.showPaymentPage = (req, res)=>{
+  console.log('req.body in showPaymentPage controller', req.body);
+} 
 
+exports.recordCharge = (req, res)=>{
+  console.log('req.query in recordCharge controller', req.query);
+
+
+
+
+} 
 
 exports.isValidShopifyRequest = (req, res, next) => {
   // console.log('req in isValidShopifyRequest', req);  
