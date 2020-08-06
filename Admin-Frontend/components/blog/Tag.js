@@ -98,6 +98,7 @@ const Tag = (props) => {
                 title="Manage Tags"
                 description="Create new tags which will be featured in your Social Network."
               >
+              {error && error.includes('Slug_1_shop') ? 'Tag Slug Already Exists' : ''}
                 <div>
                     {newTagFom()}
                     <ButtonGroup >
