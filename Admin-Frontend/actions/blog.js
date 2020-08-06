@@ -95,10 +95,11 @@ export const listRelated = blog => {
         .catch(err => console.log(err));
 };
 
-export const removeBlog = (slug, token) => {
+export const removeBlog = (slug, shopifyDomain) => {
     let deleteBlogEndpoint;
+    let token = '';
 
-    deleteBlogEndpoint = `${API}/blog/${slug}`;
+    deleteBlogEndpoint = `${API}/blog/${shopifyDomain}/${slug}`;
 
     // deleteBlogEndpoint = `${API}/user/blog/${slug}`;
 

@@ -47,8 +47,8 @@ const ManagePosts = (props) => {
         });
     };
 
-    const deleteBlog = slug => {
-        removeBlog(slug, token).then(data => {
+    const deleteBlog = blog => {
+        removeBlog(blog.slug, blog.shopifyDomain).then(data => {
             if (data.error) {
                 console.log(data.error);
             } else {
@@ -72,10 +72,10 @@ const ManagePosts = (props) => {
     };
 
     
-    const deleteConfirm = slug => {
+    const deleteConfirm = blog => {
         let answer = window.confirm('Are you sure you want to delete this post?');
         if (answer) {
-            deleteBlog(slug);
+            deleteBlog(blog);
         }
     };
 
@@ -112,7 +112,7 @@ const ManagePosts = (props) => {
                             <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
                                      Review   
                             </Button>
-                            <Button key={1} onClick={() => deleteConfirm(blog.slug)}>Delete</Button>
+                            <Button key={1} onClick={() => deleteConfirm(blog)}>Delete</Button>
                           </ButtonGroup>
                       </SettingToggle>) })};
                  </Layout.AnnotatedSection>

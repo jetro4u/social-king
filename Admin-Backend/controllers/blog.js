@@ -99,7 +99,9 @@ exports.read = (req, res) => {
 
 exports.remove = (req, res) => {
     const slug = req.params.slug.toLowerCase();
-    Blog.findOneAndRemove({ slug }).exec((err, data) => {
+    const domain = req.params.domain.toLowerCase();
+    
+    Blog.findOneAndRemove({ slug, shopifyDomain: domain }).exec((err, data) => {
         if (err) {
             return res.json({
                 error: errorHandler(err)
