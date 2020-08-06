@@ -3,14 +3,24 @@ import { ResourcePicker } from '@shopify/app-bridge-react';
 import store from 'store-js';
 import ResourceListWithProducts from '../components/ResourceList';
 import Router from 'next/router'
+import { withRouter } from 'next/router'
+import { useRouter } from 'next/router'
+import { checkForCharge } from '../actions/auth';
 
 const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
-class Index extends React.Component {
-  state = { open: false };
-  render() {
-  	const emptyState = !store.get('ids');
-  	console.log('store.get(ids): ',store.get('ids'))
+function Index(props) {
+	const router = useRouter()
+    console.log('router.pathname',router.pathname)
+
+	if(router && router.query && router.query.charge_id) {
+		console.log('here is the charge_id', router.query.charge_id);	
+		checkForCharge(router.query.charge_id, props.app.shopOrigin)
+		console.log('props.app.shopOrigin', props.app.shopOrigin);
+	} 
+
+	const emptyState = !store.get('ids');
+  	
     return (
 	  <Page>
 	   <Layout>
@@ -30,15 +40,6 @@ class Index extends React.Component {
 		    </Layout>
 	  </Page>
 	);
-  }
-
-  handleSelection = (resources) => {
-    const idsFromResources = resources.selection.map((product) => product.id);
-    this.setState({ open: false })
-    console.log(resources)
-    console.log(idsFromResources)
-    store.set('ids', idsFromResources);
-  };
 }
 
-export default Index;
+export default withRouter(Index);

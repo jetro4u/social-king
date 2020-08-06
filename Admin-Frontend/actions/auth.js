@@ -37,6 +37,27 @@ export const handleResponse = response => {
     }
 };
 
+// Check for a verified charge
+export const checkForCharge = (charge_id, shopifyDomain) => {
+    let token = '';
+    let recordChargeEndpoint = `${API}/auth/record-charge?charge_id=${charge_id}&shopifyDomain=${shopifyDomain}`;
+
+    return fetch(`${recordChargeEndpoint}`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: {}
+    })
+        .then(response => {
+            handleResponse(response);
+            return response.json();
+        })
+        .catch(err => console.log(err));
+
+};
+
 // set cookie
 export const setCookie = (key, value) => {
     if (process.browser) {

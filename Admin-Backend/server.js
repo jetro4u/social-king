@@ -11,6 +11,7 @@ const tagRoutes = require('./routes/tag');
 const userRoutes = require('./routes/user');
 const imageRoutes = require('./routes/image');
 const commentRoutes = require('./routes/comment');
+const authRoutes = require('./routes/auth');
 
 // app
 const app = express();
@@ -45,6 +46,8 @@ app.use('/api', tagRoutes);
 app.use('/api', userRoutes);
 app.use('/api', imageRoutes);
 app.use('/api', commentRoutes);
+app.use('/api', authRoutes);
+
 
 // port
 const port = process.env.PORT || 8000;
