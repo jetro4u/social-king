@@ -164,10 +164,11 @@ exports.toggle = (req, res) => {
 
 exports.update = (req, res) => {
     const slug = req.params.slug.toLowerCase();
-
+    let {shopifyDomain} = req.body;
+    
     console.log('req.body within update function in controller', req.body);
 
-    Blog.findOne({ slug })
+    Blog.findOne({ slug, shopifyDomain })
         .populate('postedBy', '_id name username email')
         .select('_id slug postedBy shopifyDomain postSlug hidden userNotified createdAt updatedAt')
         .exec((err, oldBlog) => {
