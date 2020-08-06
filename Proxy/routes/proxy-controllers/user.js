@@ -69,7 +69,7 @@ exports.publicProfile = (req, res) => {
             });
         }
 
-        User.findOne({ username })
+        User.findOne({ username, shopDomain: req.query.shop })
         .exec((err, userFromDB) => {
             if (err || !userFromDB) {
                 return res.status(400).json({
