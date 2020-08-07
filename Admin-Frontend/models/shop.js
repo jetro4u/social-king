@@ -34,6 +34,10 @@ const Shop = mongoose.Schema({
             type: String, 
             default: '#edeff1' 
       },
+      charge_id:  { 
+	  	  type: String, 
+	  	  default: '' 
+	  }
   },
   { timestamps: true }
 );
