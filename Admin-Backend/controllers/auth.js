@@ -1,3 +1,5 @@
+const fetch = require('isomorphic-fetch');
+
 const User = require('../models/user');
 const Blog = require('../models/blog');
 const Shop = require('../models/shop');
@@ -50,12 +52,39 @@ exports.showPaymentPage = (req, res)=>{
   console.log('req.body in showPaymentPage controller', req.body);
 } 
 
-exports.recordCharge = (req, res)=>{
+exports.recordCharge = (req, res) => {
   console.log('req.query in recordCharge controller', req.query);
+  let {shopifyDomain, charge_id} = req.query;
 
+  Shop.findOne({ shopify_domain: shopifyDomain }).exec(async (err, shop) => {
+    if (err){
+        message = 'ran error logic';
+        console.log('ran error logic. err:', err);          
+    } else {
+      const response = await fetch(`https://${shop.shopify_domain}/admin/api/2020-04/recurring_application_charges/{recurring_application_charge_id}.json`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          "X-Shopify-Access-Token": shop.accessToken,
+        }
+      })
 
+      const responseJson = await response.json();
+      console.log('response to charge-data',responseJson);
+    }
+  })
 
+  
+  // const confirmationUrl = responseJson.data.appSubscriptionCreate.confirmationUrl
+  // return ctx.redirect(confirmationUrl)
 
+  Shop.findOneAndUpdate({shopify_domain: req.query.shopifyDomain}, { charge_id }, function(err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  });
 } 
 
 exports.isValidShopifyRequest = (req, res, next) => {
@@ -82,37 +111,6 @@ exports.isValidShopifyRequest = (req, res, next) => {
   // return result;
 }
 
-exports.preSignup = (req, res) => {
-    const { name, email, password } = req.body;
-    User.findOne({ email: email.toLowerCase() }, (err, user) => {
-        if (user) {
-            return res.status(400).json({
-                error: 'Email is taken'
-            });
-        }
-        const token = jwt.sign({ name, email, password }, process.env.JWT_ACCOUNT_ACTIVATION, { expiresIn: '30d' });
-
-        const emailData = {
-            from: process.env.EMAIL_FROM,
-            to: email,
-            subject: `Account activation link`,
-            html: `
-            <p>Please use the following link to activate your acccount:</p>
-            <p>${process.env.CLIENT_URL}/auth/account/activate/${token}</p>
-            <hr />
-            <p>This email may contain sensitive information</p>
-            <p>https://myamazonhistory.com</p>
-        `
-        };
-
-        sgMail.send(emailData).then(sent => {
-            return res.json({
-                message: `Email has been sent to ${email}. Follow the instructions to activate your account.
-                            If you don't find the email in your Primary Inbox, please check your Spam Box.`
-            });
-        });
-    });
-};
 
 // automatically attaches the user field to the request object 
 // and passes req.user unto the next function in the chain
