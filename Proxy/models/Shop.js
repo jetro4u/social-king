@@ -21,6 +21,10 @@ const Shop = mongoose.Schema({
 	  communityName: String,
 	  primaryColor: String,
 	  backgroundColor: String,
+	  charge_id:  { 
+	  	  type: String, 
+	  	  default: '' 
+	  }
   },
   { timestamps: true }
 );
