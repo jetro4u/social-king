@@ -411,7 +411,7 @@ exports.read = (req, res) => {
 exports.remove = (req, res) => {
     res.setHeader('content-type', 'text/javascript');
     const slug = req.params.slug.toLowerCase();
-    Blog.update({slug}, {
+    Blog.update({slug, shopifyDomain: req.query.shop }, {
         archivedByUser: true
     }, function(err, affected, resp) {
        if (err) {
@@ -429,7 +429,7 @@ exports.remove = (req, res) => {
 exports.toggle = (req, res) => {
     const slug = req.params.slug.toLowerCase();
 
-    Blog.findOne({ slug: slug }, function(err, blog) {
+    Blog.findOne({ slug: slug, shopifyDomain: req.query.shop }, function(err, blog) {
         blog.hidden = !blog.hidden;
         blog.save(function(err, updatedBook) {
             if (err) {
@@ -448,7 +448,7 @@ exports.toggle = (req, res) => {
 exports.update = (req, res) => {
     const slug = req.params.slug.toLowerCase();
 
-    Blog.findOne({ slug }).exec((err, oldBlog) => {
+    Blog.findOne({ slug, shopifyDomain: req.query.shop }).exec((err, oldBlog) => {
         if (err) {
             return res.status(400).json({
                 error: errorHandler(err)
@@ -594,9 +594,8 @@ exports.listByUser = (req, res) => {
             });
         }
         let userId = user._id;
-        Blog.find({ postedBy: userId })
+        Blog.find({ postedBy: userId, shopifyDomain: req.query.shop })
             .sort({createdAt: -1})
-            .populate('categories', '_id name slug')
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
             .select('_id title slug postedBy hidden createdAt updatedAt')
