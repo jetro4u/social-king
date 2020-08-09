@@ -52,39 +52,48 @@ exports.showPaymentPage = (req, res)=>{
   console.log('req.body in showPaymentPage controller', req.body);
 } 
 
-exports.recordCharge = (req, res) => {
-  console.log('req.query in recordCharge controller', req.query);
-  let {shopifyDomain, charge_id} = req.query;
+exports.checkSubscription = (req, res) => {
+  console.log('req.query in checkSubscription controller', req.query);
+  let {shop, charge_id} = req.query;
+  let shopifyDomain = shop;
 
-  Shop.findOne({ shopify_domain: shopifyDomain }).exec(async (err, shop) => {
-    if (err){
-        message = 'ran error logic';
-        console.log('ran error logic. err:', err);          
-    } else {
-      const response = await fetch(`https://${shop.shopify_domain}/admin/api/2020-04/recurring_application_charges/{recurring_application_charge_id}.json`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          "X-Shopify-Access-Token": shop.accessToken,
+  if(charge_id!=''){
+      //charge_id found
+      Shop.findOneAndUpdate({shopify_domain: shopifyDomain}, { charge_id }, function(err, result) {
+        if (err) {
+          res.send(err);
+        } else {
+          // check for charge_id via shopify_api call
+          Shop.findOne({ shopify_domain: shopifyDomain }).exec(async (err, shop) => {
+            if (err){
+                message = 'ran error logic';
+                console.log('ran error logic. err:', err);          
+            } else {
+              const response = await fetch(`https://${shop.shopify_domain}/admin/api/2020-04/recurring_application_charges/{recurring_application_charge_id}.json`, {
+                method: 'GET',
+                headers: {
+                  'Content-Type': 'application/json',
+                  "X-Shopify-Access-Token": shop.accessToken,
+                }
+              })
+
+              const responseJson = await response.json();
+              console.log('response to charge-data',responseJson);
+            }
+          })
+
+          res.send(result);
         }
-      })
-
-      const responseJson = await response.json();
-      console.log('response to charge-data',responseJson);
-    }
-  })
+      }) 
+  } else{
+      console.log('no charge_id found in query');
+  }
 
   
   // const confirmationUrl = responseJson.data.appSubscriptionCreate.confirmationUrl
   // return ctx.redirect(confirmationUrl)
 
-  Shop.findOneAndUpdate({shopify_domain: req.query.shopifyDomain}, { charge_id }, function(err, result) {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send(result);
-    }
-  });
+  
 } 
 
 exports.isValidShopifyRequest = (req, res, next) => {
