@@ -62,11 +62,10 @@ class MyApp extends App {
     let { shop } = queryString.parse(router.asPath);
     let {charge_id} = router.query;
     console.log('router', router);
+    let urlParams = router.asPath.split('?')[1]
 
-    
-    
-    if(!router.asPath.includes('admin/charges') && !router.asPath.includes('charge_id')){
-        checkSubscription(charge_id, shop, router.asPath).then((response)=>{
+    if(!router.asPath.includes('admin/charges')){
+        checkSubscription(charge_id, shop, urlParams).then((response)=>{
             console.log('response in _app.js from checkSubscription action', response)
             if(response && response.redirect == true){
                  console.log('supposed to redirect in checkSubscription func to', response.confirmationUrl);
