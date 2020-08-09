@@ -53,7 +53,7 @@ exports.getSubscriptionUrl = async (req, res) => {
 
   let confirmationUrl = responseJson.data.appSubscriptionCreate.confirmationUrl;
 
-  confirmationUrl = confirmationUrl.split(shop)[1];
+  // confirmationUrl = confirmationUrl.split(shop)[1];
   res.setHeader("X-Frame-Options","ALLOWALL");
   res.send({redirect: true, confirmationUrl})
 };
