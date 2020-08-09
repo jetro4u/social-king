@@ -47,7 +47,7 @@ const {
 
 app.prepare().then(() => {
   const server = new Koa();
-  server.use(lusca.xframe({value: 'ALLOWALL'}));
+  server.use(lusca.xframe({value: '*'}));
   const router = new Router();
   server.use(session({ sameSite: 'none', secure: true }, server));
   server.keys = [SHOPIFY_API_SECRET_KEY];
