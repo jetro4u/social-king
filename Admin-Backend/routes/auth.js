@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const {
     showPaymentPage,
-    recordCharge
+    checkSubscription
 } = require('../controllers/auth');
 
-router.post('/auth/record-charge', recordCharge);
+router.post('/auth/check-subscription', checkSubscription);
 
 module.exports = router;
