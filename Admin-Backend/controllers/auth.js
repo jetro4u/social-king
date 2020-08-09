@@ -53,41 +53,67 @@ exports.showPaymentPage = (req, res)=>{
   console.log('req.body in showPaymentPage controller', req.body);
 } 
 
-exports.checkSubscription = (req, res) => {
+exports.checkSubscription = async (req, res) => {
   console.log('req.query in checkSubscription controller', req.query);
   let {shop, charge_id} = req.query;
   let shopifyDomain = shop;
 
   if(charge_id!= null && charge_id!=''){
-      //charge_id found
-      Shop.findOneAndUpdate({shopify_domain: shopifyDomain}, { charge_id }, function(err, result) {
-        if (err) {
-          res.send(err);
-        } else {
-          // check for charge_id via shopify_api call
-          Shop.findOne({ shopify_domain: shopifyDomain }).exec(async (err, shop) => {
-            if (err){
-                message = 'ran error logic';
-                console.log('ran error logic. err:', err);          
+      //charge_id  has any value within req.query
+      //step 1: get more data about the charge-id... is the subscription active? save the data in db
+
+      Shop.findOne({ shopify_domain: shopifyDomain }).exec(async (err, shop) => {
+          if (err){
+              message = 'ran error logic';
+              console.log('ran error logic. err:', err);          
+          } else {
+            const response = await fetch(`https://${shopifyDomain}/admin/api/2020-04/recurring_application_charges/${charge_id}.json`, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                "X-Shopify-Access-Token": shop.accessToken,
+              }
+            })
+
+            const responseJson = await response.json();
+            console.log('response to charge-data',responseJson);
+
+            if(responseJson.recurring_application_charge){
+                  console.log('supposed to be saving recurring_application_charge')
+                  //if you find data about the given charge_id within shopify's api call
+                  //update the db record with both the charge_id, and the shopify api data in the recurring_application_charge field
+                  Shop.findOne({shopify_domain: shopifyDomain}, function(err, oldShop) {
+                    if (err) {
+                      res.send(err);
+                    } else {
+                      // save subscription data
+                      oldShop.recurring_application_charge = [responseJson.recurring_application_charge];
+                      oldShop.save((err, result) => {
+                        if (err) {
+                            return res.status(400).json({
+                                error: errorHandler(err)
+                            });
+                        }
+
+                        res.send(result);
+                      })
+                    }
+                  }) 
+
             } else {
-              const response = await fetch(`https://${shop.shopify_domain}/admin/api/2020-04/recurring_application_charges/${charge_id}.json`, {
-                method: 'GET',
-                headers: {
-                  'Content-Type': 'application/json',
-                  "X-Shopify-Access-Token": shop.accessToken,
-                }
-              })
+              //just save the charge_id in the db for good luck
+              Shop.findOneAndUpdate({shopify_domain: shopifyDomain}, { charge_id }, function(err, result) {
+                  if (err) {
+                    res.send(err);
+                  } else {
+                    // all good
 
-              const responseJson = await response.json();
-              console.log('response to charge-data',responseJson);
-            }
-          })
-
-          res.send(result);
-        }
-      }) 
-  } else{
-      console.log('no charge_id found in query');
+                    res.send(result);
+                  }
+                })
+              }
+      }})} else{
+      console.log('no charge_id found in req.query');
 
       //step 1: check db record
       Shop.find({shopify_domain: shopifyDomain})

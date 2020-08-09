@@ -24,6 +24,9 @@ const Shop = mongoose.Schema({
 	  charge_id:  { 
 	  	  type: String, 
 	  	  default: '' 
+	  },
+	  recurring_application_charge: {
+  	      type: Array
 	  }
   },
   { timestamps: true }
