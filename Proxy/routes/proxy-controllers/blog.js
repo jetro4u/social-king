@@ -587,7 +587,7 @@ exports.listByUser = (req, res) => {
     console.log('ran list by user function on server');
     res.setHeader('content-type', 'text/javascript');
 
-    User.findOne({ username: req.params.username }).exec((err, user) => {
+    User.findOne({ username: req.params.username, shopDomain: req.query.shop }).exec((err, user) => {
         if (err) {
             return res.status(400).json({
                 error: errorHandler(err)
