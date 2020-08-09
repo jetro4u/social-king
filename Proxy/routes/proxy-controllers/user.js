@@ -35,7 +35,7 @@ exports.read = (req, res) => {
                     });
                 }
                 req.profile.hashed_password = undefined;
-                Blog.find({ slug: req.query.slug })
+                Blog.find({ slug: req.query.slug, shopifyDomain: req.query.shop })
                     .exec((err, blog) => {
                         if (err) {
                             return res.status(400).json({
@@ -125,7 +125,7 @@ exports.update = (req, res) => {
 
 exports.photo = (req, res) => {
     const username = req.params.username;
-    User.findOne({ username }).exec((err, user) => {
+    User.findOne({ username, shopDomain: req.query.shop }).exec((err, user) => {
         if (err || !user) {
             return res.status(400).json({
                 error: 'User not found'

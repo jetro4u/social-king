@@ -106,8 +106,9 @@ module.exports.createNewPostJS = (tags) => {
                 })
               .error(function(data) {
                 console.log('Error: ' + data);
+                let errorMessage = data.error && data.error.toLowerCase().includes('slug_1_shop') ? 'Post Title Already Exists' : data.error;
                 document.getElementById('error-message').innerHTML =
-                 '<h3 style="color:red;">'+data.error+'</h3>';
+                 '<h3 style="color:red;">'+errorMessage+'</h3>';
                });
             })
             .catch((err) => {
