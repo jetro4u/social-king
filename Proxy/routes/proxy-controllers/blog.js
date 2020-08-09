@@ -594,7 +594,7 @@ exports.listByUser = (req, res) => {
             });
         }
         let userId = user._id;
-        Blog.find({ postedBy: userId, shopDomain: req.query.shop })
+        Blog.find({ postedBy: userId, shopifyDomain: req.query.shop })
             .sort({createdAt: -1})
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
