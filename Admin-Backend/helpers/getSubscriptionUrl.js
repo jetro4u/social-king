@@ -8,14 +8,16 @@ exports.getSubscriptionUrl = async (req, res) => {
 
    console.log('shop in getSubscriptionUrl', shop)
    console.log('accessToken in getSubscriptionUrl', accessToken)
-    console.log('req.shop in getSubscriptionUrl', req.shop);
+   console.log('req.shop in getSubscriptionUrl', req.shop);
+
+   const APP_SLUG = process.env.NODE_ENV == 'development' ? 'community-2' : 'social-king';
 
   const query = JSON.stringify({
     query: `mutation {
       appSubscriptionCreate(
           name: "Social King: Community Engagement",
           trialDays: 30,
-          returnUrl: "https://${shop}"
+          returnUrl: "https://${shop}/admin/apps/${APP_SLUG}"
           test: true
           lineItems: [
           {

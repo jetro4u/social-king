@@ -61,9 +61,11 @@ class MyApp extends App {
     const {router} = this.props;
     let { shop } = queryString.parse(router.asPath);
     let {charge_id} = router.query;
-    console.log('router', router)
+    console.log('router', router);
+
     
-    if(!router.asPath.includes('admin/charges')){
+    
+    if(!router.asPath.includes('admin/charges') && !router.asPath.includes('charge_id')){
         checkSubscription(charge_id, shop, router.asPath).then((response)=>{
             console.log('response in _app.js from checkSubscription action', response)
             if(response && response.redirect == true){
