@@ -15,6 +15,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const crypto = require('crypto');
 const queryString = require('query-string');
+const { getSubscriptionUrl } = require('../helpers/getSubscriptionUrl');
 
 
 exports.adminMiddleware = (req, res, next) => {
@@ -57,7 +58,7 @@ exports.checkSubscription = (req, res) => {
   let {shop, charge_id} = req.query;
   let shopifyDomain = shop;
 
-  if(charge_id!=''){
+  if(charge_id!= null && charge_id!=''){
       //charge_id found
       Shop.findOneAndUpdate({shopify_domain: shopifyDomain}, { charge_id }, function(err, result) {
         if (err) {
@@ -69,7 +70,7 @@ exports.checkSubscription = (req, res) => {
                 message = 'ran error logic';
                 console.log('ran error logic. err:', err);          
             } else {
-              const response = await fetch(`https://${shop.shopify_domain}/admin/api/2020-04/recurring_application_charges/{recurring_application_charge_id}.json`, {
+              const response = await fetch(`https://${shop.shopify_domain}/admin/api/2020-04/recurring_application_charges/${charge_id}.json`, {
                 method: 'GET',
                 headers: {
                   'Content-Type': 'application/json',
@@ -87,6 +88,23 @@ exports.checkSubscription = (req, res) => {
       }) 
   } else{
       console.log('no charge_id found in query');
+
+      //step 1: check db record
+      Shop.find({shopify_domain: shopifyDomain})
+        .exec((err, shopFound) => {
+            if (err) {
+                return res.json({
+                    error: errorHandler(err)
+                });
+            }
+            req.shop = shopFound[0];
+            if(shopFound.charge_id == null || shopFound.charge_id==''){
+                getSubscriptionUrl(req,res);
+            } else {
+                res.send(shopFound);
+            }
+        });
+
   }
 
   

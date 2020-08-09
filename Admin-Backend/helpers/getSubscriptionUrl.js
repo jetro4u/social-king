@@ -1,10 +1,21 @@
-const getSubscriptionUrl = async (ctx, accessToken, shop) => {
+const fetch = require('isomorphic-fetch');
+
+exports.getSubscriptionUrl = async (req, res) => {
+   console.log('ran getSubscriptionUrl func');
+
+   let {shop} = req.query;
+   let {accessToken} = req.shop;
+
+   console.log('shop in getSubscriptionUrl', shop)
+   console.log('accessToken in getSubscriptionUrl', accessToken)
+    console.log('req.shop in getSubscriptionUrl', req.shop);
+
   const query = JSON.stringify({
     query: `mutation {
       appSubscriptionCreate(
           name: "Social King: Community Engagement",
           trialDays: 30,
-          returnUrl: "${process.env.HOST}"
+          returnUrl: "https://${shop}"
           test: true
           lineItems: [
           {
@@ -38,8 +49,12 @@ const getSubscriptionUrl = async (ctx, accessToken, shop) => {
   })
 
   const responseJson = await response.json();
-  const confirmationUrl = responseJson.data.appSubscriptionCreate.confirmationUrl
-  return ctx.redirect(confirmationUrl)
+  console.log('responseJson.data', responseJson.data)
+
+  let confirmationUrl = responseJson.data.appSubscriptionCreate.confirmationUrl;
+
+  confirmationUrl = confirmationUrl.split(shop)[1];
+  res.setHeader("X-Frame-Options","ALLOWALL");
+  res.send({redirect: true, confirmationUrl})
 };
 
-module.exports = getSubscriptionUrl;
