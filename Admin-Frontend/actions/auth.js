@@ -38,11 +38,14 @@ export const handleResponse = response => {
 };
 
 // Check for a verified charge
-export const checkForCharge = (charge_id, shopifyDomain) => {
-    let token = '';
-    let recordChargeEndpoint = `${API}/auth/record-charge?charge_id=${charge_id}&shopifyDomain=${shopifyDomain}`;
+export const checkSubscription = (charge_id, shopifyDomain, asPath) => {
+    console.log('asPath in checkSubscription func', asPath);
+    console.log('charge_id in checkSubscription func', charge_id);
 
-    return fetch(`${recordChargeEndpoint}`, {
+    let token = '';
+    let checkSubscriptionEndpoint = `${API}/auth/check-subscription${asPath}`;
+
+    return fetch(`${checkSubscriptionEndpoint}`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',

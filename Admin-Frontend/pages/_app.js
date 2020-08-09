@@ -12,39 +12,56 @@ import { createHttpLink } from 'apollo-link-http';
 import { setContext } from "apollo-link-context";
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
+import queryString from 'query-string';
+import { checkSubscription } from '../actions/auth';
+
 const authLink = setContext((_, { headers }) => {
-	  return {
-		        headers: {
-				          ...headers,
-				          authorization: Cookies.get('accessToken') ? `Bearer ${Cookies.get('accessToken')}` : "",
-				      }
-		    }
+    return {
+            headers: {
+                  ...headers,
+                  authorization: Cookies.get('accessToken') ? `Bearer ${Cookies.get('accessToken')}` : "",
+              }
+        }
 })
 
 const httpLink = new createHttpLink({
-	    credentials: 'same-origin',
-	    headers: {
-		          accept: '*/*', 
-		          'Content-Type': 'application/graphql',
-		          'Access-Control-Allow-Origin': '*',
-		          "X-Shopify-Access-Token": Cookies.get('accessToken')
-		        },
-	    fetch,
-	    ssrMode: !process.browser,
-	    uri: `https://${Cookies.get('shopOrigin')}/admin/api/2019-04/graphql.json`,
+      credentials: 'same-origin',
+      headers: {
+              accept: '*/*', 
+              'Content-Type': 'application/graphql',
+              'Access-Control-Allow-Origin': '*',
+              "X-Shopify-Access-Token": Cookies.get('accessToken')
+            },
+      fetch,
+      ssrMode: !process.browser,
+      uri: `https://${Cookies.get('shopOrigin')}/admin/api/2019-04/graphql.json`,
 })
 
 const client = new ApolloClient({
-	    link: authLink.concat(httpLink),
-	    cache: new InMemoryCache(),
+      link: authLink.concat(httpLink),
+      cache: new InMemoryCache(),
 });
 
 
 
 class MyApp extends App {
+  componentDidMount () {
+    const {router} = this.props;
+    let { shop } = queryString.parse(router.asPath);
+    let {charge_id} = router.query;
+    console.log('router', router)
+    
+    checkSubscription(charge_id, shop, router.asPath);
+  }
+
   render() {
-    const { Component, pageProps } = this.props;
-    const config = { apiKey: API_KEY, shopOrigin: Cookies.get("shopOrigin"), forceRedirect: true };
+    const { Component, pageProps, router } = this.props;
+
+    let { shop } = queryString.parse(router.asPath);
+    console.log('shop', shop);
+    let shopOrigin = Cookies.get("shopOrigin") ? Cookies.get("shopOrigin") : shop;
+
+    const config = { apiKey: API_KEY, shopOrigin, forceRedirect: true };
 
     return (
       <React.Fragment>
