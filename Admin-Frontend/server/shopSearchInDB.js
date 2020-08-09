@@ -25,7 +25,19 @@ function shopSearch({accessToken, shopify_domain}) {
           } else {
               message = 'shop found'
               console.log('shop found: ', shop);
-              resolve(message);
+              console.log('current accessToken', shop.accessToken);
+
+              shop.accessToken = accessToken;
+
+              shop.save((err, shopUpdated) => {
+                if (err) {
+                  console.log('err trying to save shop: ', err)
+                } else {
+                  console.log('shop successfully updated: ',shopUpdated);
+                  console.log('This should be the updated accessToken: ',accessToken);
+
+                  resolve(message);
+              }});
           }
       });
   });
