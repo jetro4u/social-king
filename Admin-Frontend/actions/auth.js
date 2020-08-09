@@ -48,7 +48,7 @@ export const checkSubscription = (charge_id, shopifyDomain, asPath) => {
     console.log('asPath in checkSubscription func', asPath);
 
     let token = '';
-    let checkSubscriptionEndpoint = `${API}/auth/check-subscription${asPath}`;
+    let checkSubscriptionEndpoint = `${API}/auth/check-subscription?${asPath}`;
 
     return fetch(`${checkSubscriptionEndpoint}`, {
         method: 'POST',
