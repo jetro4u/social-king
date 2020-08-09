@@ -1,3 +1,10 @@
+  static async getInitialProps (ctx) {
+    return redirect(ctx, 
+  }
+
+
+
+
 import App from 'next/app';
 import Head from 'next/head';
 import { AppProvider } from '@shopify/polaris';

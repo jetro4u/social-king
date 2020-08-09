@@ -26,13 +26,19 @@ export const verifiedShop = () => {
 
 export const handleResponse = response => {
     if (response.status === 401) {
-        signout(() => {
-            Router.push({
-                pathname: '/signin',
-                query: {
-                    message: 'Your session is expired. Please signin'
-                }
-            });
+        Router.push({
+            pathname: '/signin',
+            query: {
+                message: 'Your session is expired. Please signin'
+            }
+        });
+    } else if (response.redirect == true){
+         console.log('supposed to redirect in handleResponse func to', response.confirmationUrl);
+         Router.push({
+            pathname: response.confirmationUrl,
+            query: {
+                message: 'Your session is expired. Please signin'
+            }
         });
     }
 };
@@ -40,10 +46,9 @@ export const handleResponse = response => {
 // Check for a verified charge
 export const checkSubscription = (charge_id, shopifyDomain, asPath) => {
     console.log('asPath in checkSubscription func', asPath);
-    console.log('charge_id in checkSubscription func', charge_id);
 
     let token = '';
-    let checkSubscriptionEndpoint = `${API}/auth/check-subscription${asPath}`;
+    let checkSubscriptionEndpoint = `${API}/auth/check-subscription?${asPath}`;
 
     return fetch(`${checkSubscriptionEndpoint}`, {
         method: 'POST',
@@ -54,7 +59,6 @@ export const checkSubscription = (charge_id, shopifyDomain, asPath) => {
         body: {}
     })
         .then(response => {
-            handleResponse(response);
             return response.json();
         })
         .catch(err => console.log(err));
