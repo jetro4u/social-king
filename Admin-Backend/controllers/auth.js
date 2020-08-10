@@ -88,6 +88,7 @@ exports.checkSubscription = async (req, res) => {
                     } else {
                       // save subscription data
                       oldShop.recurring_application_charge = [responseJson.recurring_application_charge];
+		      oldShop.charge_id = charge_id;    
                       oldShop.save((err, result) => {
                         if (err) {
                             return res.status(400).json({
@@ -114,7 +115,7 @@ exports.checkSubscription = async (req, res) => {
               }
       }})} else{
       console.log('no charge_id found in req.query');
-
+	
       //step 1: check db record
       Shop.find({shopify_domain: shopifyDomain})
         .exec((err, shopFound) => {
@@ -125,7 +126,7 @@ exports.checkSubscription = async (req, res) => {
             }
             req.shop = shopFound[0];
 
-            if(req.shop.recurring_application_charge[0].status != 'active'){
+            if(req.shop.recurring_application_charge[0]==undefined || req.shop.recurring_application_charge[0].status != 'active'){
                 getSubscriptionUrl(req,res);
             } else {
                 res.send(shopFound);
