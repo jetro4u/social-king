@@ -13,8 +13,6 @@ const { receiveWebhook, registerWebhook } = require('@shopify/koa-shopify-webhoo
 const getSubscriptionUrl = require('./server/getSubscriptionUrl');
 const shopSearchInDB = require('./server/shopSearchInDB');
 const mongoose = require('mongoose');
-const lusca = require('koa-lusca');
-const xFrame = require('koa-xframe');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
