@@ -88,7 +88,7 @@ exports.checkSubscription = async (req, res) => {
                     } else {
                       // save subscription data
                       oldShop.recurring_application_charge = [responseJson.recurring_application_charge];
-		      oldShop.charge_id = charge_id;    
+		                  oldShop.charge_id = charge_id;    
                       oldShop.save((err, result) => {
                         if (err) {
                             return res.status(400).json({
@@ -102,14 +102,22 @@ exports.checkSubscription = async (req, res) => {
                   }) 
 
             } else {
-              //just save the charge_id in the db for good luck
+              //if shopify can't find a recurring application charge related to the charge_id within the url:
+              //step 1 save the charge_id in the db for good luck
               Shop.findOneAndUpdate({shopify_domain: shopifyDomain}, { charge_id }, function(err, result) {
                   if (err) {
                     res.send(err);
                   } else {
                     // all good
+                    //step 2 - if the given shop's subscription is not active redirect to subscription url
+                    req.shop = shop;
 
-                    res.send(result);
+                    if(req.shop.recurring_application_charge[0]==undefined || req.shop.recurring_application_charge[0].status != 'active'){
+                        getSubscriptionUrl(req,res);
+                    } else {
+                        res.send(shopFound);
+                    }
+                    
                   }
                 })
               }
