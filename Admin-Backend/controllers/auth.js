@@ -115,7 +115,7 @@ exports.checkSubscription = async (req, res) => {
                     if(req.shop.recurring_application_charge[0]==undefined || req.shop.recurring_application_charge[0].status != 'active'){
                         getSubscriptionUrl(req,res);
                     } else {
-                        res.send(shopFound);
+                        res.send(req.shop);
                     }
                     
                   }
