@@ -124,7 +124,8 @@ exports.checkSubscription = async (req, res) => {
                 });
             }
             req.shop = shopFound[0];
-            if(shopFound.charge_id == null || shopFound.charge_id==''){
+
+            if(req.shop.recurring_application_charge[0].status != 'active'){
                 getSubscriptionUrl(req,res);
             } else {
                 res.send(shopFound);

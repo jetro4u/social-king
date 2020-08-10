@@ -14,13 +14,13 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import queryString from 'query-string';
 import { checkSubscription } from '../actions/auth';
-import redirect from 'nextjs-redirect'
+
 import { EmptyState, Layout, Page } from '@shopify/polaris';
 import { Button } from '@shopify/polaris';
 const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
 
-// const Redirect = redirect('https://jungle-navigator.myshopify.com/admin/charges/12754321466/request_recurring_application_charge?signature=BAh7BzoHaWRsKwg6gDf4AgA6EmF1dG9fYWN0aXZhdGVU--7b819de464ba5423dce14301b5780fce30dcb628')
-
+import createApp from '@shopify/app-bridge';  
+import { Redirect } from '@shopify/app-bridge/actions';
 
 const authLink = setContext((_, { headers }) => {
     return {
@@ -84,40 +84,11 @@ class MyApp extends App {
     let shopOrigin = Cookies.get("shopOrigin") ? Cookies.get("shopOrigin") : shop;
 
     const config = { apiKey: API_KEY, shopOrigin, forceRedirect: true };
-
+    const app = createApp(config);  
+    const redirect = Redirect.create(app);
+   
     if(confirmationUrl){
-        return(
-            <React.Fragment>
-            <Head>
-                  <title>Social King</title>
-                  <meta charSet="utf-8" />
-                </Head>
-                <Provider config={config}>
-                  <AppProvider>
-                    <ApolloProvider client={client}>
-                      <Page>
-                       <Layout>
-                            <EmptyState
-                                heading="Please Subscribe"
-                                image={img}
-                              >
-                               <p>You're so close to launching your own Social Network! 
-                               All you have to do is Subscribe, or Sign Up for a Free  30-Day Trial
-                               if you haven't used it up yet.</p>
-                                <br/>
-                                  <React.Fragment>
-                                      <Button external={true} primary url={confirmationUrl}>
-                                            Subscribe Here
-                                      </Button> {' '}
-                                  </React.Fragment>
-                            </EmptyState>
-                          </Layout>
-                      </Page>
-                  </ApolloProvider>
-                  </AppProvider>
-                </Provider>
-              </React.Fragment>
-        )
+        redirect.dispatch(Redirect.Action.REMOTE, confirmationUrl);
     } else {
         return (
           <React.Fragment>
