@@ -1,0 +1,8 @@
+Request URL: http://localhost:8000/api/auth/check-subscription?charge_id=12756844602&hmac=93f1f5eeaa475c480e4720a28ae64e7d887c076742f73a638e49112d6a15729f&locale=en-IL&session=ce5a5fe3b047c4dd10e1f174c9fb840e99a06aab7a10ba86e58015f4a7ff6c5c&shop=jungle-navigator.myshopify.com&timestamp=1597036817
+Request Method: POST
+Status Code: 200 OK
+Remote Address: [::1]:8000
+Referrer Policy: no-referrer-when-downgrade
+
+
+
