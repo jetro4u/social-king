@@ -16,8 +16,14 @@ const Shop = mongoose.Schema({
 	  shopUrl: String,
 	  shopifyToken: String,
 	  shopifyScope: String,
-	  headerImageURL: String,
-	  iconImageURL: String,
+	  headerImageURL: { 
+	        type: String, 
+	        default: 'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg' 
+	    },
+	  iconImageURL: { 
+	        type: String, 
+	        default: 'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png' 
+	    },
 	  communityName: String,
 	  primaryColor: String,
 	  backgroundColor: String,
