@@ -14,6 +14,7 @@ const getSubscriptionUrl = require('./server/getSubscriptionUrl');
 const shopSearchInDB = require('./server/shopSearchInDB');
 const mongoose = require('mongoose');
 const lusca = require('koa-lusca');
+const xFrame = require('koa-xframe');
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
@@ -47,7 +48,8 @@ const {
 
 app.prepare().then(() => {
   const server = new Koa();
-  server.use(lusca.xframe({value: '*'}));
+  // server.use(lusca.xframe({value: 'ALLOWALL'}));
+  // server.use(xFrame('SAMEORIGIN'));
   const router = new Router();
   server.use(session({ sameSite: 'none', secure: true }, server));
   server.keys = [SHOPIFY_API_SECRET_KEY];
