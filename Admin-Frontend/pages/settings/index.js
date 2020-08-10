@@ -237,7 +237,7 @@ const Settings = (props) => {
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
             title="CSS Customization"
-            description="Add Your Brand Colors to your Site's Community Pages. Custom Colors can be in any of the following formats: Color Name: i.e. DeepSkyBlue, Hex: i.e. #00bfff, or RGB: i.e. rgb(0, 191, 255)"
+            description="Add Your Brand Colors to your Site's Community Pages. Custom Colors can be in any of the following formats: Color Name: DeepSkyBlue, Hex: #00bfff, or RGB: rgb(0, 191, 255)"
           >
            <TextField label="Background Color" value={backgroundColor ? backgroundColor : ''} onChange={handleBackgroundColorChange} type="text"/>
            <TextField label="Primary Color" value={primaryColor ? primaryColor : ''} onChange={handlePrimaryColorChange} type="text" />
