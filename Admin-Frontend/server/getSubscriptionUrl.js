@@ -5,7 +5,7 @@ const getSubscriptionUrl = async (ctx, accessToken, shop) => {
           name: "Social King: Community Engagement",
           trialDays: 30,
           returnUrl: "${process.env.HOST}"
-          test: true
+          test: ${process.env.NODE_ENV == 'development' ? 'true' : 'false'}
           lineItems: [
           {
             plan: {
