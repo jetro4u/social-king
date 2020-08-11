@@ -18,7 +18,7 @@ exports.getSubscriptionUrl = async (req, res) => {
           name: "Social King: Community Engagement",
           trialDays: 30,
           returnUrl: "https://${shop}/admin/apps/${APP_SLUG}"
-          test: true
+          test: ${process.env.NODE_ENV == 'development' ? 'true' : 'false'}
           lineItems: [
           {
             plan: {
