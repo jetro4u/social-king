@@ -5,11 +5,19 @@ import {
   Layout,
   Page,
 } from '@shopify/polaris';
+import { TitleBar } from '@shopify/app-bridge-react';
 
 const ManageTags = (props) => {
     return (
     <Page>
-        <Layout>    
+        <Layout> 
+            <TitleBar
+                primaryAction={{
+                  content: 'View My Network',
+                  url: 'https://'+ props.app.shopOrigin+ '/community/connect',
+                  external: true
+                }}
+              />  
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-6">
