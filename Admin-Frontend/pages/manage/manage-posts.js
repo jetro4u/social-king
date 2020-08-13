@@ -20,6 +20,7 @@ import {
   EmptyState,
   List
 } from '@shopify/polaris';
+import { TitleBar } from '@shopify/app-bridge-react';
 
 const ManagePosts = (props) => {
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
@@ -88,6 +89,13 @@ const ManagePosts = (props) => {
                     title="Manage Posts"
                     description="Review new posts and set approved content live."
                   >
+                 <TitleBar
+                    primaryAction={{
+                      content: 'View My Network',
+                      url: 'https://'+ props.app.shopOrigin+ '/community/connect',
+                      external: true
+                    }}
+                  />
                 {blogs.map((blog, i) => {
                     return (
                       <SettingToggle
@@ -122,6 +130,13 @@ const ManagePosts = (props) => {
     return (
         <Page>
             <Layout>
+              <TitleBar
+                  primaryAction={{
+                    content: 'View My Network',
+                    url: 'https://'+ props.app.shopOrigin+ '/community/connect',
+                    external: true
+                  }}
+                />
                 {message && <div className="alert alert-warning">{message}</div>}
 
                 {loaded && blogs.length==0
