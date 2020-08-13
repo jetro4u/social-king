@@ -22,6 +22,7 @@ import {
   EmptyState,
   List
 } from '@shopify/polaris';
+import { TitleBar } from '@shopify/app-bridge-react';
 
 const ManageComments = (props) => {
     const img = 'https://cdn.shopify.com/s/files/1/0757/9955/files/empty-state.svg';
@@ -85,6 +86,13 @@ const ManageComments = (props) => {
                     title="Manage Comments"
                     description="Review new Comments and set approved content live."
                   >
+                  <TitleBar
+                    primaryAction={{
+                      content: 'View My Network',
+                      url: 'https://'+ props.app.shopOrigin+ '/community/connect',
+                      external: true
+                    }}
+                  />
                 {comments.map((comment, i) => {
                     return (
                       <SettingToggle
@@ -117,6 +125,13 @@ const ManageComments = (props) => {
     return (
         <Page>
             <Layout>
+              <TitleBar
+                  primaryAction={{
+                    content: 'View My Network',
+                    url: 'https://'+ props.app.shopOrigin+ '/community/connect',
+                    external: true
+                  }}
+                />
                 {message && <div className="alert alert-warning">{message}</div>}
 
                 {loaded && comments.length==0
