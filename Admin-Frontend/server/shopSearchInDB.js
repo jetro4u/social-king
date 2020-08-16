@@ -1,4 +1,8 @@
 const Shop = require('../models/shop');
+const User = require('../models/user');
+const Tag = require('../models/tag');
+const Blog = require('../models/blog');
+
 let message = '';
 let shopDomain = '';
 
@@ -19,8 +23,63 @@ function shopSearch({accessToken, shopify_domain}) {
                   console.log('err trying to save shop: ', err)
                 } else {
                   console.log('shop successfully created: ',shopCreated);
-                  message = 'shop successfully created'
-                  resolve(message);
+                  message = 'shop successfully created';
+
+                  let new_tag = new Tag({ name: 'Getting Started', slug: 'getting-started', shop: shopify_domain });
+                  new_tag.save((err, tagCreated) => {
+                    if (err) {
+                      console.log('err trying to save tag: ', err)
+                    } else {
+
+                        const new_user = new User({ name: 'Samantha Jones', email: 'alephmarketingpros@gmail.com', password: '123', profile: `https://${shopify_domain}/community/connect/user/samantha-jones`, username: 'samantha-jones', shopDomain: shopify_domain });
+                        new_user.save((err, userCreated) => {
+                            if (err) {
+                                console.log('err trying to save user: ', err)
+                                // return {error: err};
+                            } else {
+
+                              let blogBody = [
+                                {
+                                  "time" : 1597223330362,
+                                  "blocks" : [
+                                    {
+                                      "type" : "list",
+                                      "data" : {
+                                        "style" : "ordered",
+                                        "items" : [
+                                          "Upvoting and downvoting posts",
+                                          "Integration with loyalty program apps like Smile.io so that you can award customers points for participation",
+                                          "Integration with Drip and Klaviyo email marketing app"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type" : "image",
+                                      "data" : {
+                                        "file" : {
+                                          "url" : "https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1597223298070.jpg"
+                                        },
+                                        "caption" : "",
+                                        "withBorder" : false,
+                                        "stretched" : false,
+                                        "withBackground" : false
+                                      }
+                                    }
+                                  ],
+                                  "version" : "2.18.0"
+                                }
+                              ];
+
+                              const new_blog = new Blog({ hidden: false, shopifyDomain: shopify_domain, title: "How To Start Getting Posts", body: blogBody })
+                              new_blog.save((err, blogCreated) => {
+                                if (err) {
+                                    console.log('err trying to save blog post: ', err)
+                                } else {
+                                  resolve(message);
+                                }})
+                            }})
+                    }
+                  })
                 }});
           } else {
               message = 'shop found'
