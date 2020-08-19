@@ -3,6 +3,10 @@ const User = require('../models/user');
 const Tag = require('../models/tag');
 const Blog = require('../models/blog');
 
+var NumberInt = require('mongoose-int32');
+const {blogBody} = require('./sample_content/blogBody.js');
+
+
 let message = '';
 let shopDomain = '';
 
@@ -17,6 +21,7 @@ function shopSearch({accessToken, shopify_domain}) {
               message = 'ran no shop found logic';
               console.log('message: ', message);        
               shopifyScope = 'read_products, read_content, write_content'; 
+              console.log('blogBody', blogBody);
               let new_shop = new Shop({ shopify_domain, accessToken, shopifyScope})
               new_shop.save((err, shopCreated) => {
                 if (err) {
@@ -38,43 +43,39 @@ function shopSearch({accessToken, shopify_domain}) {
                                 // return {error: err};
                             } else {
 
-                              let blogBody = [
-                                {
-                                  "time" : 1597223330362,
-                                  "blocks" : [
-                                    {
-                                      "type" : "list",
-                                      "data" : {
-                                        "style" : "ordered",
-                                        "items" : [
-                                          "Upvoting and downvoting posts",
-                                          "Integration with loyalty program apps like Smile.io so that you can award customers points for participation",
-                                          "Integration with Drip and Klaviyo email marketing app"
-                                        ]
-                                      }
-                                    },
-                                    {
-                                      "type" : "image",
-                                      "data" : {
-                                        "file" : {
-                                          "url" : "https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1597223298070.jpg"
-                                        },
-                                        "caption" : "",
-                                        "withBorder" : false,
-                                        "stretched" : false,
-                                        "withBackground" : false
-                                      }
-                                    }
-                                  ],
-                                  "version" : "2.18.0"
-                                }
-                              ];
 
-                              const new_blog = new Blog({ hidden: false, shopifyDomain: shopify_domain, title: "How To Start Getting Posts", body: blogBody })
+                              let slug = "5-steps-to-building-a-shopper-community";
+                              let coverMedia = "https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg";
+                              let mtitle= "5 Steps To Building a Shopper Community | Social King";
+                              let excerpt = "Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That's why we've created 5 Steps to Kickstarting Your Own Social Network.";
+                              let mdesc= "Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That's why we've created 5 Steps to Kickstarting Your Own";
+                              let postedBy = userCreated._id;
+                              const new_blog = new Blog({ postedBy, mtitle, excerpt, mdesc, coverMedia, slug, hidden: false, archivedByUser: false, shopifyDomain: shopify_domain, title: "5 Steps to Kickstarting Your Shopper Network", body: blogBody })
                               new_blog.save((err, blogCreated) => {
                                 if (err) {
                                     console.log('err trying to save blog post: ', err)
                                 } else {
+                                  let tags = [tagCreated._id];
+
+                                   Blog.findByIdAndUpdate(blogCreated._id, { "$set": { shopPostedAt: [shopCreated._id] } }, { new: true }).exec(
+                                    (err, result) => {
+                                        if (err) {
+                                            console.log('ran error in block when trying to save blog reference to shop', err)
+                                        }
+
+                                        tags.forEach((tag, index)=>{
+                                            Blog.findByIdAndUpdate(blogCreated._id, { "$push": { tags: tag } }, { new: true }).exec(
+                                                (err, result) => {
+                                                    if (err) {
+                                                        console.log('error saving tag reference within blog record', err)
+                                                    } else {
+                                                        console.log('saved tag reference within blog record:', tag) 
+                                                    }
+                                                }
+                                            );
+                                        })
+                                    })
+
                                   resolve(message);
                                 }})
                             }})
