@@ -14,9 +14,7 @@ const blogSchema = new mongoose.Schema(
         },
         body: {
             type: Array,
-            required: true,
-            min: 200,
-            max: 2000000
+            required: true
         },
         html: {
             type: String
@@ -31,7 +29,7 @@ const blogSchema = new mongoose.Schema(
         mdesc: {
             type: String
         },
-        cover_photo: {
+        coverMedia: {
             type: String
         },
         hidden: { 
@@ -64,6 +62,14 @@ const blogSchema = new mongoose.Schema(
         },
         shopifyDomain: { 
             type: String
+        },
+        archivedByUser: {
+            type: Boolean,
+            default: false
+        },
+        userNotified: {
+            type: Boolean,
+            default: false
         }
     },
     { timestamps: true }
