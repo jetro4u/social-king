@@ -332,11 +332,8 @@ exports.listByUser = (req, res) => {
             .select('_id shopifyDomain userNotified title slug postedBy hidden createdAt updatedAt')
             .exec((err, data) => {
                 if (err) {
-                    return res.status(400).json({
-                        error: errorHandler(err)
-                    });
+                    console.log('error in listByUser db call', err);
                 }
-                
                 res.json(data);
             });
     });
