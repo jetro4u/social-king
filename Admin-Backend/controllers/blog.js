@@ -334,7 +334,6 @@ exports.listByUser = (req, res) => {
                 if (err) {
                     console.log('error in listByUser db call', err);
                 }
-                
                 res.json(data);
             });
     });
