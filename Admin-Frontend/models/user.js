@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const crypto = require('crypto');
+const { ObjectId } = mongoose.Schema;
 
 const userSchema = new mongoose.Schema(
     {
@@ -15,14 +16,15 @@ const userSchema = new mongoose.Schema(
             required: true,
             max: 32
         },
+        storeFavorites:  {
+            type: String,
+            default: 'The Products 😌'
+        },
         email: {
             type: String,
             trim: true,
             required: true,
             lowercase: true
-        },
-        trackingID: {
-            type: String
         },
         profile: {
             type: String,
@@ -30,23 +32,20 @@ const userSchema = new mongoose.Schema(
         },
         hashed_password: {
             type: String,
-            required: true
+            required: false
         },
         salt: String,
         about: {
-            type: String
+            type: String,
+            default: ''
         },
         role: {
             type: Number,
             default: 0
         },
-        photo: {
-            data: Buffer,
-            contentType: String
-        },
         cover_photo: {
             type: String,
-            default: 'https://social-king-app.myshopify.com/community/connect/images/uploads/Samantha-Jones-1595435373516.gif'
+            default: 'https://socialking.app/proxy/images/uploads/Samantha-Jones-1595435373516.gif'
         },
         resetPasswordLink: {
             data: String,

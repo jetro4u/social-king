@@ -21,7 +21,7 @@ const { notFound } = require('../liquid-templates/components/not-found/notFound'
 
 exports.create = (req, res) => {
     res.setHeader('content-type', 'text/javascript')
-    let { title, body, categories, tags } = req.body;
+    let { title, body, tags } = req.body;
     console.log('req.body in blog create function: ',req.body);
     console.log('req.profile in blog create function: ',req.profile);
     console.log('req.query in blog create function: ',req.query);
@@ -443,84 +443,6 @@ exports.toggle = (req, res) => {
         });
     });
 }
-
-
-exports.update = (req, res) => {
-    const slug = req.params.slug.toLowerCase();
-
-    Blog.findOne({ slug, shopifyDomain: req.query.shop }).exec((err, oldBlog) => {
-        if (err) {
-            return res.status(400).json({
-                error: errorHandler(err)
-            });
-        }
-
-        let form = new formidable.IncomingForm();
-        form.keepExtensions = true;
-
-        form.parse(req, (err, fields, files) => {
-            if (err) {
-                return res.status(400).json({
-                    error: 'Image could not upload'
-                });
-            }
-
-            let slugBeforeMerge = oldBlog.slug;
-            oldBlog = _.merge(oldBlog, fields);
-            oldBlog.slug = slugBeforeMerge;
-
-            const { body, desc, categories, tags } = fields;
-
-            if (body) {
-                oldBlog.excerpt = smartTrim(body, 320, ' ', ' ...');
-                oldBlog.desc = stripHtml(body.substring(0, 160));
-            }
-
-            if (categories) {
-                oldBlog.categories = categories.split(',');
-            }
-
-            if (tags) {
-                oldBlog.tags = tags.split(',');
-            }
-
-            if (files.photo) {
-                if (files.photo.size > 1000000) {
-                    return res.status(400).json({
-                        error: 'Image should be less then 1mb in size'
-                    });
-                }
-                oldBlog.photo.data = fs.readFileSync(files.photo.path);
-                oldBlog.photo.contentType = files.photo.type;
-            }
-
-            oldBlog.save((err, result) => {
-                if (err) {
-                    return res.status(400).json({
-                        error: errorHandler(err)
-                    });
-                }
-                // result.photo = undefined;
-                res.json(result);
-            });
-        });
-    });
-};
-
-exports.photo = (req, res) => {
-    const slug = req.params.slug.toLowerCase();
-    Blog.findOne({ slug })
-        .select('photo')
-        .exec((err, blog) => {
-            if (err || !blog) {
-                return res.status(400).json({
-                    error: errorHandler(err)
-                });
-            }
-            res.set('Content-Type', blog.photo.contentType);
-            return res.send(blog.photo.data);
-        });
-};
 
 exports.listRelated = (req, res) => {
     console.log(req.body.blog);
