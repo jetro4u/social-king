@@ -35,14 +35,13 @@ function shopSearch({accessToken, shopify_domain}) {
                     if (err) {
                       console.log('err trying to save tag: ', err)
                     } else {
-
-                        const new_user = new User({ name: 'Samantha Jones', email: 'alephmarketingpros@gmail.com', password: '123', profile: `https://${shopify_domain}/community/connect/user/samantha-jones`, username: 'samantha-jones', shopDomain: shopify_domain });
+                        let cover_photo = 'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg';
+                        const new_user = new User({ cover_photo, name: 'Samantha Jones', email: 'alephmarketingpros@gmail.com', password: '123', profile: `https://${shopify_domain}/community/connect/user/samantha-jones`, username: 'samantha-jones', shopDomain: shopify_domain });
                         new_user.save((err, userCreated) => {
                             if (err) {
                                 console.log('err trying to save user: ', err)
                                 // return {error: err};
                             } else {
-
 
                               let slug = "5-steps-to-building-a-shopper-community";
                               let coverMedia = "https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg";
@@ -57,14 +56,14 @@ function shopSearch({accessToken, shopify_domain}) {
                                 } else {
                                   let tags = [tagCreated._id];
 
-                                   Blog.findByIdAndUpdate(blogCreated._id, { "$set": { shopPostedAt: [shopCreated._id] } }, { new: true }).exec(
+                                   Blog.findByIdAndUpdate(blogCreated._id, { $set: { shopPostedAt: [shopCreated._id] } }, { new: true }).exec(
                                     (err, result) => {
                                         if (err) {
                                             console.log('ran error in block when trying to save blog reference to shop', err)
                                         }
 
                                         tags.forEach((tag, index)=>{
-                                            Blog.findByIdAndUpdate(blogCreated._id, { "$push": { tags: tag } }, { new: true }).exec(
+                                            Blog.findByIdAndUpdate(blogCreated._id, { $push: { tags: tag } }, { new: true }).exec(
                                                 (err, result) => {
                                                     if (err) {
                                                         console.log('error saving tag reference within blog record', err)
