@@ -39,8 +39,7 @@ function shopSearch({accessToken, shopify_domain}) {
                         const new_user = new User({ cover_photo, name: 'Samantha Jones', email: 'alephmarketingpros@gmail.com', password: '123', profile: `https://${shopify_domain}/community/connect/user/samantha-jones`, username: 'samantha-jones', shopDomain: shopify_domain });
                         new_user.save((err, userCreated) => {
                             if (err) {
-                                console.log('err trying to save user: ', err)
-                                // return {error: err};
+                                console.log('err trying to save user: ', err);
                             } else {
 
                               let slug = "5-steps-to-building-a-shopper-community";
