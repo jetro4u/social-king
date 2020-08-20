@@ -77,7 +77,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                                 <h2>Contributed by</h2>
                             </div>
                             <div class="pure-g">
-                            ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
+                            ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img width='100%' src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
                             <div class="pure-u-3-4">
                                 <div class="community-pad-left-10">
                                     <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
