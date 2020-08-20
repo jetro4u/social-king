@@ -47,7 +47,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-header">${`About ${user.name}`}</div>
-                    <img src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
+                    <img width='100%' src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
                            alt="Profile Picture" class="img-responsive img-rounded">
                     <div class="community-card-body">
                     ${user.about ? '<b>General Bio: </b>'+ user.about : ''}
