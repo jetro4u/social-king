@@ -34,7 +34,7 @@ exports.newsFeedCSS = ({shop}) => {
             .community-author { color:#969696;font-size:12px;margin-bottom:5px }
             .community-card h3 { font-size:20px;margin-bottom:8px }
             .community-card p { margin-bottom:8px }
-            .community-card a { color:#969696; text-decoration: none;}
+            .community-card a { color:#383838; text-decoration: none;}
             .community-card-comments { font-size:12px;font-weight:bold; }
             .community-pad-left-10 { padding-left:10px }
             .community-bold { font-weight:bold }
