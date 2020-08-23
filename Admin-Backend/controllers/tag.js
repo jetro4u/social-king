@@ -24,8 +24,10 @@ exports.create = (req, res) => {
 
 exports.update = (req, res) => {
     console.log('req.body in tag update controller', req.body);
+
+    const { props:{app: {shopOrigin}}} = req.body;
     const slug = req.params.slug.toLowerCase();
-    Tag.update({slug}, {
+    Tag.update({slug, shop: shopOrigin}, {
         name: req.body.newTagName
     }, function(err, affected, resp) {
        if (err) {
