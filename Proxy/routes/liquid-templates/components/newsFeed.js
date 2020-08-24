@@ -15,7 +15,7 @@ exports.newsFeed = ({shop, blogs}) => {
                             ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
                             <p>${blog.excerpt}</p>
                         </a>
-                       <input class='text community-instant-post' />   
+                       <div class='text'><p class='community-instant-post community-reactions'>😀</p></div>
                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                             <input type="text" class="community-instant-post" placeholder="Add Comment" />
                         </a>
@@ -39,16 +39,16 @@ exports.newsFeed = ({shop, blogs}) => {
             </div>
         </div>
         <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
-        
                         
         <script>
             let input = document.querySelector('.text');
+            let communityReactions = document.querySelector('.community-reactions');
             let picker = new EmojiButton({
                 position: 'auto'
             })
 
             picker.on('emoji', function(emoji){
-                input.value += emoji
+                communityReactions.innerHTML += emoji
             })
 
             input.addEventListener('click', function(){
