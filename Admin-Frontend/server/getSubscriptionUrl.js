@@ -3,7 +3,7 @@ const getSubscriptionUrl = async (ctx, accessToken, shop) => {
     query: `mutation {
       appSubscriptionCreate(
           name: "Social King: Community Engagement",
-          trialDays: 30,
+          trialDays: 15,
           returnUrl: "${process.env.HOST}"
           test: ${process.env.NODE_ENV == 'development' ? 'true' : 'false'}
           lineItems: [
