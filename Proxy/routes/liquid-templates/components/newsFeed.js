@@ -2,6 +2,14 @@ const proxyRoute = process.env.PROXY_ROUTE;
 const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
 
 exports.newsFeed = ({shop, blogs}) => {
+    const userName = blogs ? blogs[0].postedBy.name : '';
+
+    const activeEmojis = [😀,😨,😎,🙄,😓,🤣];
+
+    const showEmojis = (blog) => {
+        return activeEmojis;
+    }
+
     const showLoadedBlogs = () => {
         return blogs.map((blog, i) => `
                 <div class="pure-u-1">
@@ -41,6 +49,7 @@ exports.newsFeed = ({shop, blogs}) => {
         <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
                         
         <script>
+
             let input = document.querySelector('.text');
             let communityReactions = document.querySelector('.community-reactions');
             let picker = new EmojiButton({
@@ -48,7 +57,7 @@ exports.newsFeed = ({shop, blogs}) => {
             })
 
             picker.on('emoji', function(emoji){
-                communityReactions.innerHTML += emoji
+                communityReactions.innerHTML += '${userName}: ' + emoji
             })
 
             input.addEventListener('click', function(){
