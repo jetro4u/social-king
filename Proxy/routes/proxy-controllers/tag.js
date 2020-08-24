@@ -65,7 +65,7 @@ exports.read = (req, res) => {
                     error: errorHandler(err)
                 });
             }
-            Tag.findOne({ slug }).exec((err, tag) => {
+            Tag.findOne({ slug, shop: req.query.shop }).exec((err, tag) => {
                 if (err) {
                     return res.status(400).json({
                         error: 'Tag not found'
