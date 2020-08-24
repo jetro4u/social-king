@@ -15,6 +15,7 @@ exports.newsFeed = ({shop, blogs}) => {
                             ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
                             <p>${blog.excerpt}</p>
                         </a>
+                       <input class='text community-instant-post' />   
                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                             <input type="text" class="community-instant-post" placeholder="Add Comment" />
                         </a>
@@ -24,24 +25,6 @@ exports.newsFeed = ({shop, blogs}) => {
     };
 
     return `
-        <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
-        <div class='container'><textarea class='text'></textarea></div>   
-                        
-        <script>
-            let input = document.querySelector('.text');
-            let picker = new EmojiButton({
-                position: 'right-start'
-            })
-
-            picker.on('emoji', function(emoji){
-                input.value += emoji
-            })
-
-            input.addEventListener('click', function(){
-                picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
-            })
-        </script>
-
         <div class="pure-u-md-2-3 pure-u-sm-1 community-newsfeed-box">
             <div class="community-pad-20">
                 <div class="community-card">
@@ -55,6 +38,23 @@ exports.newsFeed = ({shop, blogs}) => {
                 <div class="pure-g">${showLoadedBlogs()}</div>
             </div>
         </div>
+        <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
+        
+                        
+        <script>
+            let input = document.querySelector('.text');
+            let picker = new EmojiButton({
+                position: 'auto'
+            })
+
+            picker.on('emoji', function(emoji){
+                input.value += emoji
+            })
+
+            input.addEventListener('click', function(){
+                picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
+            })
+        </script>
         `
 };
 
