@@ -4,6 +4,7 @@ const {
     create,
     createComment,
     addEmoji,
+    getEmojis,
     list,
     listForSitemap,
     listAllBlogsCategoriesTags,
@@ -44,5 +45,6 @@ router.post('/user/blog/comment', requireSignin, authMiddleware, createComment);
 
 //emojis
 router.post('/user/blog/emoji', requireSignin, authMiddleware, addEmoji);
+router.post('/blog/emojis', getEmojis);
 
 module.exports = router;
