@@ -3,6 +3,8 @@ const router = express.Router();
 const {
     create,
     createComment,
+    addEmoji,
+    getEmojis,
     list,
     listForSitemap,
     listAllBlogsCategoriesTags,
@@ -40,5 +42,9 @@ router.put('/user/blog/toggle/:slug', requireSignin, authMiddleware, canUpdateDe
 
 // comments
 router.post('/user/blog/comment', requireSignin, authMiddleware, createComment);
+
+//emojis
+router.post('/user/blog/emoji', requireSignin, authMiddleware, addEmoji);
+router.post('/blog/emojis', getEmojis);
 
 module.exports = router;

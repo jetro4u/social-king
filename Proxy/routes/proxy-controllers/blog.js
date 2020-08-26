@@ -3,6 +3,8 @@ const edjsParser = edjsHTML();
 
 const Blog = require('../../models/blog');
 const Comment = require('../../models/comment');
+const Emoji = require('../../models/emoji');
+
 const Tag = require('../../models/tag');
 const User = require('../../models/user');
 const Shop = require('../../models/Shop');
@@ -176,6 +178,66 @@ exports.createComment = (req, res) => {
         });
     });
 };
+
+exports.getEmojis = (req,res) => {
+    console.log('getEmojis controller func ran')
+    res.setHeader('content-type', 'text/javascript')
+    
+    let {slug, shop} =req.query;
+
+    Emoji.find({shopifyDomain: shop})
+            .populate('postedBy', '_id about storeFavorites cover_photo name username trackingID')
+            .exec((err, emojis) => {
+                if (err) {
+                    return res.json({
+                        error: errorHandler(err)
+                    });
+                } else {
+                    console.log('emojis in getEmojis func',emojis);
+                    res.send(emojis);
+                }
+            })
+}
+
+exports.addEmoji = (req, res) => {
+    res.setHeader('content-type', 'text/javascript')
+    
+    console.log('req.body in emoji create function: ',req.body);
+    console.log('req.profile in emoji create function: ',req.profile);
+    console.log('req.query in emoji create function: ',req.query);
+
+    let emoji = {};
+
+    emoji.shopifyDomain=req.query.shop;
+    emoji.emoji = req.query.emoji;
+    
+    emoji.postSlug = req.query.slug;
+    emoji.postedBy = req.user._id;
+    
+    Emoji.findOneAndUpdate({postSlug: emoji.postSlug, postedBy: emoji.postedBy}, emoji, {upsert: true}, function(err, result) {
+        if (err) return res.send(500, {error: err});
+        console.log('emoji saved/updated successfully');
+
+        //add shop to emoji record
+        Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
+           console.log('shop in function to add Shop reference', shop)
+           Emoji.findByIdAndUpdate(result._id, { $set: { shopPostedAt: [shop._id] } }, { new: true }).exec(
+                (err, result) => {
+                    if (err) {
+                        console.log('ran error when trying to save emoji reference to shop')
+                        return res.status(400).json({
+                            error: errorHandler(err)
+                        })
+                    }
+                    console.log('Shop added to emoji record');
+                    res.send({message: 'Emoji added successfully'});
+                }
+            );        
+        });
+    });      
+};
+
+
 
 // list, listAllBlogsCategoriesTags, read, remove, update
 
