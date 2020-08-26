@@ -53,7 +53,7 @@ exports.newsFeed = ({shop, blogs}) => {
         <script>
             axios({
               method: 'post',
-              url: '${proxyRoute}/blog/emojis?slug=${blogs[0] ? blogs[0].slug : ''}'
+              url: '${proxyRoute}/blog/emojis'
             }).then((response) => {
               console.log('emoji Data:  ',response.data);
             }, (error) => {
