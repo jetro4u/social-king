@@ -93,10 +93,8 @@ exports.newsFeed = ({shop, blogs}) => {
                     });
                 })
 
-                input.addEventListener('click', function(){
-                    picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
-                })
-
+                picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
+                
               })
             })
    
