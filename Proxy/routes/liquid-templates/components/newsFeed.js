@@ -73,9 +73,10 @@ exports.newsFeed = ({shop, blogs}) => {
                 })
 
                 let blogSlug = event.target.classList[0].split('community-post-slug-')[1];
+                let userName = '{{ customer.name }}';
 
                 picker.on('emoji', function(emoji){
-                    input.innerHTML = '${userName}: ' + emoji;
+                    input.innerHTML = userName +': ' + emoji;
                     axios({
                       method: 'post',
                       url: '${proxyRoute}/user/blog/emoji?slug='+blogSlug+'&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
