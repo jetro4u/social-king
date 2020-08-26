@@ -4,7 +4,7 @@ const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.j
 exports.newsFeed = ({shop, blogs}) => {
     const userName = blogs ? blogs[0].postedBy.name : '';
 
-    const activeEmojis = [😀,😨,😎,🙄,😓,🤣];
+    // const activeEmojis = [😀,😨,😎,🙄,😓,🤣];
 
     const showEmojis = (blog) => {
         return activeEmojis;
@@ -46,8 +46,10 @@ exports.newsFeed = ({shop, blogs}) => {
                 <div class="pure-g">${showLoadedBlogs()}</div>
             </div>
         </div>
+
         <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
-                        
+        <script src='https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js'></script>
+
         <script>
 
             let input = document.querySelector('.text');
@@ -57,7 +59,15 @@ exports.newsFeed = ({shop, blogs}) => {
             })
 
             picker.on('emoji', function(emoji){
-                communityReactions.innerHTML += '${userName}: ' + emoji
+                communityReactions.innerHTML += '${userName}: ' + emoji + '😀';
+                axios({
+                  method: 'post',
+                  url: '${proxyRoute}/user/blog/emoji?slug=${blogs[0] ? blogs[0].slug : ''}&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
+                  data: {
+                    firstName: 'Finn',
+                    lastName: 'Williams'
+                  }
+                });
             })
 
             input.addEventListener('click', function(){

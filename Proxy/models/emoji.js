@@ -7,6 +7,9 @@ const emojiSchema = new mongoose.Schema(
             type: String,
             index: true
         },
+        emoji: { 
+            type: String
+        },
         hidden: { 
             type: Boolean, 
             default: true 
