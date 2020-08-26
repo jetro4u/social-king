@@ -2,7 +2,7 @@ const proxyRoute = process.env.PROXY_ROUTE;
 const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
 
 exports.newsFeed = ({shop, blogs}) => {
-    const userName = blogs ? blogs[0].postedBy.name : '';
+    const userName = blogs && blogs[0] ? blogs[0].postedBy.name : '';
 
     // const activeEmojis = [😀,😨,😎,🙄,😓,🤣];
 
@@ -51,6 +51,14 @@ exports.newsFeed = ({shop, blogs}) => {
         <script src='https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js'></script>
 
         <script>
+            axios({
+              method: 'post',
+              url: '${proxyRoute}/blog/emojis?slug=${blogs[0] ? blogs[0].slug : ''}'
+            }).then((response) => {
+              console.log('emoji Data:  ',response.data);
+            }, (error) => {
+              console.log(error);
+            });
 
             let input = document.querySelector('.text');
             let communityReactions = document.querySelector('.community-reactions');
