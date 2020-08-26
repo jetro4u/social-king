@@ -23,7 +23,7 @@ exports.newsFeed = ({shop, blogs}) => {
                             ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
                             <p>${blog.excerpt}</p>
                         </a>
-                       <div class='text'><p class='community-instant-post community-reactions'>😀</p></div>
+                       <div class='text'><p class='community-instant-post community-reactions'>Add 😀</p></div>
                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                             <input type="text" class="community-instant-post" placeholder="Add Comment" />
                         </a>
@@ -59,7 +59,7 @@ exports.newsFeed = ({shop, blogs}) => {
             })
 
             picker.on('emoji', function(emoji){
-                communityReactions.innerHTML += '${userName}: ' + emoji + '😀';
+                communityReactions.innerHTML = '${userName}: ' + emoji;
                 axios({
                   method: 'post',
                   url: '${proxyRoute}/user/blog/emoji?slug=${blogs[0] ? blogs[0].slug : ''}&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
