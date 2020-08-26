@@ -185,7 +185,7 @@ exports.getEmojis = (req,res) => {
     
     let {slug, shop} =req.query;
 
-    Emoji.find({postSlug: slug, shopifyDomain: shop})
+    Emoji.find({shopifyDomain: shop})
             .populate('postedBy', '_id about storeFavorites cover_photo name username trackingID')
             .exec((err, emojis) => {
                 if (err) {
