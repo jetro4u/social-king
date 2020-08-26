@@ -179,6 +179,25 @@ exports.createComment = (req, res) => {
     });
 };
 
+exports.getEmojis = (req,res) => {
+    console.log('getEmojis controller func ran')
+    res.setHeader('content-type', 'text/javascript')
+    
+    let {slug, shop} =req.query;
+
+    Emoji.find({postSlug: slug, shopifyDomain: shop})
+            .populate('postedBy', '_id about storeFavorites cover_photo name username trackingID')
+            .exec((err, emojis) => {
+                if (err) {
+                    return res.json({
+                        error: errorHandler(err)
+                    });
+                } else {
+                    console.log('emojis in getEmojis func',emojis);
+                    res.send(emojis);
+                }
+            })
+}
 
 exports.addEmoji = (req, res) => {
     res.setHeader('content-type', 'text/javascript')
