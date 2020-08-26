@@ -67,6 +67,13 @@ exports.newsFeed = ({shop, blogs}) => {
                     firstName: 'Finn',
                     lastName: 'Williams'
                   }
+                }).then((response) => {
+                  console.log(response);
+                  if(response.data.redirectTo!=undefined){
+                    window.location.href = response.data.redirectTo; 
+                  }
+                }, (error) => {
+                  console.log(error);
                 });
             })
 

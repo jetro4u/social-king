@@ -205,7 +205,7 @@ exports.addEmoji = (req, res) => {
            Emoji.findByIdAndUpdate(result._id, { $set: { shopPostedAt: [shop._id] } }, { new: true }).exec(
                 (err, result) => {
                     if (err) {
-                        console.log('ran error in block when trying to save emoji reference to shop')
+                        console.log('ran error when trying to save emoji reference to shop')
                         return res.status(400).json({
                             error: errorHandler(err)
                         })
