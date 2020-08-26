@@ -195,7 +195,7 @@ exports.addEmoji = (req, res) => {
     emoji.postSlug = req.query.slug;
     emoji.postedBy = req.user._id;
     
-    Emoji.findOneAndUpdate({postSlug: emoji.postSlug, postedBy: emoji.postedBy}, emoji, {upsert: true}, function(err, doc) {
+    Emoji.findOneAndUpdate({postSlug: emoji.postSlug, postedBy: emoji.postedBy}, emoji, {upsert: true}, function(err, result) {
         if (err) return res.send(500, {error: err});
         console.log('emoji saved/updated successfully');
 
