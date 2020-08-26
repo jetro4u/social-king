@@ -165,7 +165,12 @@ exports.requireSignin = (req, res, next) => {
 exports.authMiddleware = (req, res, next) => {
     let email = req.query.email.toLowerCase();
     if(email==''){
-        return res.redirect(`https://${req.query.shop}/account/login`);
+        if(req.query.emoji!=undefined){
+            res.setHeader('content-type', 'text/javascript');
+            return res.send({redirectTo: `https://${req.query.shop}/account/login`})
+        } else {
+            return res.redirect(`https://${req.query.shop}/account/login`);
+        }
     }
     
     const authUserId = req.user ? req.user._id : 'no user yet';
