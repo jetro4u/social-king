@@ -2,15 +2,14 @@ const proxyRoute = process.env.PROXY_ROUTE;
 const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
 
 exports.newsFeed = ({shop, blogs}) => {
-    const userName = blogs && blogs[0] ? blogs[0].postedBy.name : '';
-
-    // const activeEmojis = [😀,😨,😎,🙄,😓,🤣];
-
+    
     const showEmojis = (blog) => {
         return activeEmojis;
     }
 
     const showLoadedBlogs = () => {
+        console.log('blogs in showLoadedBlogs func: ', blogs)
+
         return blogs.map((blog, i) => `
                 <div class="pure-u-1">
                     <div class="l-box community-card">
@@ -50,55 +49,69 @@ exports.newsFeed = ({shop, blogs}) => {
         <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
         <script src='https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js'></script>
 
-        <script>
+        <script>                
             axios({
               method: 'post',
               url: '${proxyRoute}/blog/emojis'
             }).then((response) => {
               console.log('emoji Data:  ',response.data);
+              let emojiData = response.data;
+
+              let communityReaction = document.querySelectorAll('.community-reactions');
+
+              console.log('')
+
+              communityReaction.forEach(item => {
+                let blogSlug = item.classList[0].split('community-post-slug-')[1];
+                console.log('blogSlug', blogSlug);
+
+                let postEmojis = emojiData.filter((reaction)=>reaction.postSlug==blogSlug);
+
+                console.log('Emojis of the post ' + blogSlug + postEmojis);
+
+                let input = document.querySelector('.'+item.classList[0]);
+
+                input.innerHTML = postEmojis.map((reaction)=>{
+                  return reaction.postedBy.name + ': ' + reaction.emoji
+                }).join(', '); 
+
+                item.addEventListener('click', event => {
+                  console.log('event.target.classList[0]: ',event.target.classList[0])
+
+                  let picker = new EmojiButton({
+                      position: 'auto'
+                  })
+
+                  let userName = '{{ customer.name }}';
+
+                  picker.on('emoji', function(emoji){
+                      input.innerHTML += ', ' + userName +': ' + emoji;
+                      axios({
+                        method: 'post',
+                        url: '${proxyRoute}/user/blog/emoji?slug='+blogSlug+'&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
+                        data: {
+                          firstName: 'Finn',
+                          lastName: 'Williams'
+                        }
+                      }).then((response) => {
+                        console.log(response.data);
+                        if(response.data.redirectTo!=undefined){
+                          window.location.href = response.data.redirectTo; 
+                        }
+                      }, (error) => {
+                        console.log(error);
+                      });
+                  })
+
+                  picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
+                  
+                })
+              })
+
             }, (error) => {
               console.log(error);
             });
-            
-            let communityReaction = document.querySelectorAll('.community-reactions');
 
-            communityReaction.forEach(item => {
-              item.addEventListener('click', event => {
-                console.log('event.target.classList[0]: ',event.target.classList[0])
-
-                let input = document.querySelector('.'+event.target.classList[0]);
-
-                let picker = new EmojiButton({
-                    position: 'auto'
-                })
-
-                let blogSlug = event.target.classList[0].split('community-post-slug-')[1];
-                let userName = '{{ customer.name }}';
-
-                picker.on('emoji', function(emoji){
-                    input.innerHTML = userName +': ' + emoji;
-                    axios({
-                      method: 'post',
-                      url: '${proxyRoute}/user/blog/emoji?slug='+blogSlug+'&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
-                      data: {
-                        firstName: 'Finn',
-                        lastName: 'Williams'
-                      }
-                    }).then((response) => {
-                      console.log(response);
-                      if(response.data.redirectTo!=undefined){
-                        window.location.href = response.data.redirectTo; 
-                      }
-                    }, (error) => {
-                      console.log(error);
-                    });
-                })
-
-                picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
-                
-              })
-            })
-   
         </script>
         `
 };

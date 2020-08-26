@@ -55,6 +55,10 @@ const blogSchema = new mongoose.Schema(
             type: ObjectId, 
             ref: 'Tag'
         }],
+        emojis: [{ 
+            type: ObjectId, 
+            ref: 'Emoji'
+        }],
         postedBy: {
             type: ObjectId,
             ref: 'User'
