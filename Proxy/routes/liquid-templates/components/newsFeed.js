@@ -71,9 +71,19 @@ exports.newsFeed = ({shop, blogs}) => {
 
                 let input = document.querySelector('.'+item.classList[0]);
 
-                input.innerHTML = postEmojis.map((reaction)=>{
-                  return reaction.postedBy.name + ': ' + reaction.emoji
-                }).join(', '); 
+                let emojiSummary = [];
+
+                postEmojis.forEach((reaction)=>{
+                  emojiSummary.push({name: reaction.postedBy.name, emoji: reaction.emoji}); 
+                })
+
+                if (emojiSummary === undefined || emojiSummary.length == 0) {
+                    input.innerHTML = '😊 Add Emoji'
+                } else {
+                    input.innerHTML = emojiSummary.map((reaction)=>{
+                        return reaction.name + ': ' + reaction.emoji;
+                    }).join(', ');
+                }
 
                 item.addEventListener('click', event => {
                   console.log('event.target.classList[0]: ',event.target.classList[0])
@@ -82,10 +92,29 @@ exports.newsFeed = ({shop, blogs}) => {
                       position: 'auto'
                   })
 
-                  let userName = '{{ customer.name }}';
-
                   picker.on('emoji', function(emoji){
-                      input.innerHTML += ', ' + userName +': ' + emoji;
+                      let userName = '{{ customer.name }}';
+                      if(input.innerHTML=='😊 Add Emoji'){
+                          emojiSummary.push({name: userName, emoji: emoji})
+                      } else if(!input.innerHTML.includes('{{ customer.name }}')){
+                          emojiSummary.push({name: userName, emoji: emoji})
+                      } else {
+                        console.log('postEmojis: ',postEmojis)
+                        let reactionToReplace = emojiSummary.find((reaction)=>{
+                         return reaction.name == userName 
+                        })
+                        
+                        let index = emojiSummary.indexOf(reactionToReplace);
+
+                        emojiSummary[index] = {name: userName, emoji: emoji};
+
+                        console.log('emojiSummary array after updating: ', emojiSummary)
+                      }
+
+                      input.innerHTML = emojiSummary.map((reaction)=>{
+                          return reaction.name + ': ' + reaction.emoji;
+                      }).join(', ');
+                      
                       axios({
                         method: 'post',
                         url: '${proxyRoute}/user/blog/emoji?slug='+blogSlug+'&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
