@@ -23,7 +23,7 @@ exports.newsFeed = ({shop, blogs}) => {
                             ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
                             <p>${blog.excerpt}</p>
                         </a>
-                       <div class='text'><p class='community-instant-post community-reactions'>Add 😀</p></div>
+                       <div class='text'><p class='community-post-slug-${blog.slug} community-instant-post community-reactions'>Add 😀</p></div>
                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                             <input type="text" class="community-instant-post" placeholder="Add Comment" />
                         </a>
@@ -59,35 +59,47 @@ exports.newsFeed = ({shop, blogs}) => {
             }, (error) => {
               console.log(error);
             });
+            
+            let communityReaction = document.querySelectorAll('.community-reactions');
 
-            let input = document.querySelector('.text');
-            let communityReactions = document.querySelector('.community-reactions');
-            let picker = new EmojiButton({
-                position: 'auto'
-            })
+            communityReaction.forEach(item => {
+              item.addEventListener('click', event => {
+                console.log('event.target.classList[0]: ',event.target.classList[0])
 
-            picker.on('emoji', function(emoji){
-                communityReactions.innerHTML = '${userName}: ' + emoji;
-                axios({
-                  method: 'post',
-                  url: '${proxyRoute}/user/blog/emoji?slug=${blogs[0] ? blogs[0].slug : ''}&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
-                  data: {
-                    firstName: 'Finn',
-                    lastName: 'Williams'
-                  }
-                }).then((response) => {
-                  console.log(response);
-                  if(response.data.redirectTo!=undefined){
-                    window.location.href = response.data.redirectTo; 
-                  }
-                }, (error) => {
-                  console.log(error);
-                });
-            })
+                let input = document.querySelector('.'+event.target.classList[0]);
 
-            input.addEventListener('click', function(){
-                picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
+                let picker = new EmojiButton({
+                    position: 'auto'
+                })
+
+                let blogSlug = event.target.classList[0].split('community-post-slug-')[1];
+
+                picker.on('emoji', function(emoji){
+                    input.innerHTML = '${userName}: ' + emoji;
+                    axios({
+                      method: 'post',
+                      url: '${proxyRoute}/user/blog/emoji?slug='+blogSlug+'&emoji='+emoji+'&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}',
+                      data: {
+                        firstName: 'Finn',
+                        lastName: 'Williams'
+                      }
+                    }).then((response) => {
+                      console.log(response);
+                      if(response.data.redirectTo!=undefined){
+                        window.location.href = response.data.redirectTo; 
+                      }
+                    }, (error) => {
+                      console.log(error);
+                    });
+                })
+
+                input.addEventListener('click', function(){
+                    picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input)
+                })
+
+              })
             })
+   
         </script>
         `
 };
