@@ -47,7 +47,9 @@ exports.newsFeed = ({shop, blogs}) => {
         </div>
 
         <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
-        <script src='https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js'></script>        
+        <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+
 
         <script>                
             axios({
@@ -89,7 +91,10 @@ exports.newsFeed = ({shop, blogs}) => {
                   console.log('event.target.classList[0]: ',event.target.classList[0])
 
                   let picker = new EmojiButton({
-                      position: 'auto'
+                      position: 'auto',
+                      style: 'twemoji',
+                      rows: 8,
+                      showRecents: true
                   })
 
                   picker.on('emoji', function(emoji){
