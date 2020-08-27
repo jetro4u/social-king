@@ -6,7 +6,8 @@ const request = require("request");
         headers: { authorization: `Bearer ${SENDGRID_API_KEY}` },
         body: '{"contacts":[{"email": "kramer1346@gmail.com","unique_name":"myName"}]}' };
 
-      request(options, function () {
+      request(options, function (response) {
+      	console.log('response', response);
       });
 
       
