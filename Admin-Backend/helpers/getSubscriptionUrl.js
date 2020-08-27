@@ -16,7 +16,7 @@ exports.getSubscriptionUrl = async (req, res) => {
     query: `mutation {
       appSubscriptionCreate(
           name: "Social King: Community Engagement",
-          trialDays: 30,
+          trialDays: 7,
           returnUrl: "https://${shop}/admin/apps/${APP_SLUG}"
           test: ${process.env.NODE_ENV == 'development' ? 'true' : 'false'}
           lineItems: [
