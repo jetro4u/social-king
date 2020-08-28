@@ -47,5 +47,6 @@ exports.newsFeedCSS = ({shop}) => {
             .community-checkbox { float:left;margin-right:30px }
             .community-newsfeed-box {width:100%}
             .community-reactions:hover{ cursor: pointer; }
-        `
+       	    .emoji-picker { z-index: 100;}
+	`
 };
