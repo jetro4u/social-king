@@ -117,7 +117,7 @@ const ManageComments = (props) => {
                           <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
                             <Button key={1} onClick={() => deleteConfirm(comment._id)}>Delete</Button>
                           </ButtonGroup>
-                      </SettingToggle>) })};
+                      </SettingToggle>) })}
                  </Layout.AnnotatedSection>
            ) : ( <p>Loading...</p> )
     };
