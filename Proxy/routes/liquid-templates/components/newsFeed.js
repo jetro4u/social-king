@@ -46,7 +46,7 @@ exports.newsFeed = ({shop, blogs}) => {
             </div>
         </div>
 
-        <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script> 
         <script src='https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js'></script>        
 
         <script>                
@@ -86,18 +86,17 @@ exports.newsFeed = ({shop, blogs}) => {
                 }
 
                 item.addEventListener('click', event => {
-                  console.log('event.target.classList[0]: ',event.target.classList[0])
+                  console.log('item.classList[0]: ',item.classList[0])
 
                   let picker = new EmojiButton({
                       position: 'auto',
-                      style: 'twemoji',
                       rows: 8,
                       showRecents: true
                   })
 
                   picker.on('emoji', function(emoji){
                       let userName = '{{ customer.name }}';
-                      if(input.innerHTML=='😊 Add Emoji'){
+                      if(input.innerHTML.includes('Add Emoji')){
                           emojiSummary.push({name: userName, emoji: emoji})
                       } else if(!input.innerHTML.includes('{{ customer.name }}')){
                           emojiSummary.push({name: userName, emoji: emoji})

@@ -18,6 +18,9 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <div class="community-card-body">${shop._doc.aboutCommunity}
                     <hr class="community-hr" />
                     <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
+                    <br/>
+                    <br/>
+                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SETTINGS</button></a>
                     </div>
                 </div>
                 <div class="community-card">
@@ -79,13 +82,13 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <div class="community-card-header">${`Welcome ${user.name}`}</div>
                     <div class="community-card-body">
                    
-                          <a class='tag-btn pure-button pure-button-primary' ng-click='clickedNewPostTab()' ui-sref="create-new-post">Create New Post</a>
+                          <a class='pure-button tag-btn' ng-click='clickedNewPostTab()' ui-sref="create-new-post">Create New Post</a>
                             </br>
-                            <a class='tag-btn pure-button pure-button-primary' ng-click='clickedManagePostsTab()' ui-sref="manage-posts">Manage Posts</a>
+                            <a class='pure-button tag-btn' ng-click='clickedManagePostsTab()' ui-sref="manage-posts">Manage Posts</a>
                             </br>
-                            <a class='tag-btn pure-button pure-button-primary' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
+                            <a class='pure-button tag-btn' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
                             </br>
-                            <a class='tag-btn pure-button pure-button-primary' href="${proxyRoute}/blogs">Browse Tribe Chatter</a>
+                            <a class='pure-button tag-btn' href="${proxyRoute}/blogs">Browse Tribe Chatter</a>
                    
                      <hr class="community-hr" />
                     
