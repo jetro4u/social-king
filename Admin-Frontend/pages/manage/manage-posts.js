@@ -1,4 +1,4 @@
-// import Link from 'next/link';
+
 import { useState, useEffect } from 'react';
 import Router from 'next/router';
 import { getCookie, isAuth } from '../../actions/auth';
@@ -122,7 +122,7 @@ const ManagePosts = (props) => {
                             </Button>
                             <Button key={1} onClick={() => deleteConfirm(blog)}>Delete</Button>
                           </ButtonGroup>
-                      </SettingToggle>) })};
+                      </SettingToggle>) })}
                  </Layout.AnnotatedSection>
            ) : ( <p>Loading...</p> )
     };
