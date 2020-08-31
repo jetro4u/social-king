@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import './css/emailStyling.css';
 
 import {
   Layout,
@@ -24,17 +25,15 @@ const Email = (props) => {
   };
 
   return (
-     <Page>
-        <Layout> 
+      <Page className='emailTemplates'>
           <button onClick={exportHtml}>Export HTML</button>
-          
+               
           <EmailEditor
             ref={emailEditorRef}
             onLoad={onLoad}
+            minHeight='700px'
           />
-        
-        </Layout>  
-    </Page>
+        </Page>
   );
 };
 
