@@ -90,7 +90,6 @@ exports.newsFeed = ({shop, blogs}) => {
 
                   let picker = new EmojiButton({
                       position: 'auto',
-                      style: 'twemoji',
                       rows: 8,
                       showRecents: true
                   })
