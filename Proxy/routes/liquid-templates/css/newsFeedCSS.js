@@ -48,5 +48,6 @@ exports.newsFeedCSS = ({shop}) => {
             .community-newsfeed-box {width:100%}
             .community-reactions:hover{ cursor: pointer; }
        	    .emoji-picker { z-index: 100;}
+            .community-admin-btn {color:white;}
 	`
 };
