@@ -74,7 +74,7 @@ exports.newsFeed = ({shop, blogs}) => {
                 let emojiSummary = [];
 
                 postEmojis.forEach((reaction)=>{
-                  emojiSummary.push({name: reaction.postedBy.name, emoji: reaction.emoji}); 
+                  emojiSummary.push({name: reaction.postedBy ? reaction.postedBy.name : 'New Shopper', emoji: reaction.emoji}); 
                 })
 
                 if (emojiSummary === undefined || emojiSummary.length == 0) {
