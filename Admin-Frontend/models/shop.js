@@ -46,6 +46,9 @@ const Shop = mongoose.Schema({
 	  },
 	  recurring_application_charge: {
   	      type: Array
+	  },
+	  extraShopifyData: {
+  	      type: Array
 	  }
   },
   { timestamps: true }

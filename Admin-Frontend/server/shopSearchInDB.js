@@ -6,13 +6,28 @@ const Blog = require('../models/blog');
 var NumberInt = require('mongoose-int32');
 const {blogBody} = require('./sample_content/blogBody.js');
 
+const moreShopDetails = require('./moreShopDetails');
+
+const ActiveCampaign = require("activecampaign");
+const request = require('request');
+const ac = new ActiveCampaign(process.env.ACTIVE_CAMPAIGN_HOST, process.env.ACTIVE_CAMPAIGN_KEY);
+
+//environment variables need to be set to your API key and url root
+const requestOptions = (method) => {
+    return  { 
+        method: method,
+    headers: {
+        "Api-Token" : process.env.KEY
+    },
+    url: `${process.env.HOST}/api/3/` };
+}
 
 let message = '';
 let shopDomain = '';
 
-function shopSearch({accessToken, shopify_domain}) {
+function shopSearch({ctx, accessToken, shopify_domain}) {
   return new Promise(resolve => {
-      Shop.findOne({ shopify_domain }).exec((err, shop) => {
+      Shop.findOne({ shopify_domain }).exec(async (err, shop) => {
           if (err){
               message = 'ran error logic';
               console.log('ran error logic. err:', err);
@@ -20,13 +35,43 @@ function shopSearch({accessToken, shopify_domain}) {
           } else if (!shop){
               message = 'ran no shop found logic';
               console.log('message: ', message);        
-              shopifyScope = 'read_products, read_content, write_content'; 
-              console.log('blogBody', blogBody);
-              let new_shop = new Shop({ shopify_domain, accessToken, shopifyScope})
-              new_shop.save((err, shopCreated) => {
+              shopifyScope = 'read_products'; 
+
+              let extraShopifyData = await moreShopDetails({ctx, accessToken, shopify_domain}).then((moreData)=>{
+                let { name, description, id, contactEmail, email, features, plan, customerAccounts } = moreData;
+
+                var contact_add = ac.api("contact/add", { name, description, id, contactEmail, email, features, plan, customerAccounts, shopify_domain, accessToken, shopifyScope });
+
+                contact_add.then(function(result) {
+                    console.log('succesfully added contact',result);
+
+                    var eventdata = {
+                        tags: 'installed-social-king',
+                        email
+                    };
+
+                    ac.api('contact/tag/add', eventdata).then(function(result) {
+                        console.log('success', result);
+                        return res.json({
+                            message: `A confirmation email has been sent to ${email}. You may now login.`
+                        });
+                    }, function(err) {
+                        console.log('failure', err);
+                    });     
+                }, function(err) {
+                      console.log('failure', err);
+                });
+
+                return moreData;
+              });
+
+              let new_shop = new Shop({ shopify_domain, accessToken, shopifyScope, extraShopifyData: [extraShopifyData]})
+
+              new_shop.save(async (err, shopCreated) => {
                 if (err) {
                   console.log('err trying to save shop: ', err)
                 } else {
+                  
                   console.log('shop successfully created: ',shopCreated);
                   message = 'shop successfully created';
 
