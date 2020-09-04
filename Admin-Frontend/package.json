@@ -39,6 +39,7 @@
     "@shopify/polaris": "^4.21.0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "activecampaign": "^1.2.5",
     "apollo-boost": "^0.4.7",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-link-context": "^1.0.20",
