@@ -88,8 +88,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                             </br>
                             <a class='pure-button tag-btn' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
                             </br>
-                            <a class='pure-button tag-btn' href="${proxyRoute}/blogs">Browse Tribe Chatter</a>
-                   
+                            <a class='pure-button tag-btn' href="${proxyRoute}/blogs">Back To Newsfeed</a>
                      <hr class="community-hr" />
                     
                     <b>General Bio: </b>${user.about}
