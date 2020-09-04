@@ -6,11 +6,26 @@ const Blog = require('../models/blog');
 var NumberInt = require('mongoose-int32');
 const {blogBody} = require('./sample_content/blogBody.js');
 
+const moreShopDetails = require('./moreShopDetails');
+
+const ActiveCampaign = require("activecampaign");
+const request = require('request');
+const ac = new ActiveCampaign(process.env.ACTIVE_CAMPAIGN_HOST, process.env.ACTIVE_CAMPAIGN_KEY);
+
+//environment variables need to be set to your API key and url root
+const requestOptions = (method) => {
+    return  { 
+        method: method,
+    headers: {
+        "Api-Token" : process.env.KEY
+    },
+    url: `${process.env.HOST}/api/3/` };
+}
 
 let message = '';
 let shopDomain = '';
 
-function shopSearch({accessToken, shopify_domain}) {
+function shopSearch({ctx, accessToken, shopify_domain}) {
   return new Promise(resolve => {
       Shop.findOne({ shopify_domain }).exec((err, shop) => {
           if (err){
@@ -23,12 +38,19 @@ function shopSearch({accessToken, shopify_domain}) {
               shopifyScope = 'read_products, read_content, write_content'; 
               console.log('blogBody', blogBody);
               let new_shop = new Shop({ shopify_domain, accessToken, shopifyScope})
-              new_shop.save((err, shopCreated) => {
+              new_shop.save(async (err, shopCreated) => {
                 if (err) {
                   console.log('err trying to save shop: ', err)
                 } else {
+                  
                   console.log('shop successfully created: ',shopCreated);
                   message = 'shop successfully created';
+
+                  let moreShopData = await moreShopDetails({ctx, accessToken, shopify_domain}).then((moreData)=>{
+                    return moreData;
+                  });
+
+                  console.log('moreShopData in shopSearchinDB Page: ',moreShopData)
 
                   let new_tag = new Tag({ name: 'Getting Started', slug: 'getting-started', shop: shopify_domain });
                   new_tag.save((err, tagCreated) => {
