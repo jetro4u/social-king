@@ -1,4 +1,4 @@
-const getSubscriptionUrl = async (ctx, accessToken, shop) => {
+const getSubscriptionUrl = async ({ctx, accessToken, shop}) => {
   const query = JSON.stringify({
     query: `mutation {
       appSubscriptionCreate(
@@ -38,7 +38,10 @@ const getSubscriptionUrl = async (ctx, accessToken, shop) => {
   })
 
   const responseJson = await response.json();
-  const confirmationUrl = responseJson.data.appSubscriptionCreate.confirmationUrl
+  
+  console.log('query in getSubsriptionURL', query);
+  console.log('responseJson in getSubsriptionURL', responseJson);
+  const confirmationUrl = responseJson.data ? responseJson.data.appSubscriptionCreate.confirmationUrl : `https://${shop}/admin/apps/${process.env.APP_SLUG}?shop=${shop}`;
   return ctx.redirect(confirmationUrl)
 };
 

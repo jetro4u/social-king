@@ -85,7 +85,7 @@ app.prepare().then(() => {
               } else {
                 console.log('Failed to register webhook', registration.result);
               }
-              await getSubscriptionUrl(ctx, accessToken, shop);
+              await getSubscriptionUrl({ctx, accessToken, shop});
         } else {
             console.log('ran shop exists in db logic');
             console.log('ctx.request.url:',ctx.request.url);
