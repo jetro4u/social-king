@@ -30,7 +30,7 @@ const moreShopDetails = async ({ctx, accessToken, shopify_domain}) => {
   })
 
   const responseJson = await response.json();
-  return responseJson.data;
+  return responseJson.data.shop;
 };
 
 module.exports = moreShopDetails;

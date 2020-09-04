@@ -27,7 +27,7 @@ let shopDomain = '';
 
 function shopSearch({ctx, accessToken, shopify_domain}) {
   return new Promise(resolve => {
-      Shop.findOne({ shopify_domain }).exec((err, shop) => {
+      Shop.findOne({ shopify_domain }).exec(async (err, shop) => {
           if (err){
               message = 'ran error logic';
               console.log('ran error logic. err:', err);
@@ -35,9 +35,38 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
           } else if (!shop){
               message = 'ran no shop found logic';
               console.log('message: ', message);        
-              shopifyScope = 'read_products, read_content, write_content'; 
-              console.log('blogBody', blogBody);
-              let new_shop = new Shop({ shopify_domain, accessToken, shopifyScope})
+              shopifyScope = 'read_products'; 
+
+              let extraShopifyData = await moreShopDetails({ctx, accessToken, shopify_domain}).then((moreData)=>{
+                let { name, description, id, contactEmail, email, features, plan, customerAccounts } = moreData;
+
+                var contact_add = ac.api("contact/add", { name, description, id, contactEmail, email, features, plan, customerAccounts, shopify_domain, accessToken, shopifyScope });
+
+                contact_add.then(function(result) {
+                    console.log('succesfully added contact',result);
+
+                    var eventdata = {
+                        tags: 'installed-social-king',
+                        email
+                    };
+
+                    ac.api('contact/tag/add', eventdata).then(function(result) {
+                        console.log('success', result);
+                        return res.json({
+                            message: `A confirmation email has been sent to ${email}. You may now login.`
+                        });
+                    }, function(err) {
+                        console.log('failure', err);
+                    });     
+                }, function(err) {
+                      console.log('failure', err);
+                });
+
+                return moreData;
+              });
+
+              let new_shop = new Shop({ shopify_domain, accessToken, shopifyScope, extraShopifyData: [extraShopifyData]})
+
               new_shop.save(async (err, shopCreated) => {
                 if (err) {
                   console.log('err trying to save shop: ', err)
@@ -45,12 +74,6 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
                   
                   console.log('shop successfully created: ',shopCreated);
                   message = 'shop successfully created';
-
-                  let moreShopData = await moreShopDetails({ctx, accessToken, shopify_domain}).then((moreData)=>{
-                    return moreData;
-                  });
-
-                  console.log('moreShopData in shopSearchinDB Page: ',moreShopData)
 
                   let new_tag = new Tag({ name: 'Getting Started', slug: 'getting-started', shop: shopify_domain });
                   new_tag.save((err, tagCreated) => {
