@@ -17474,3 +17474,1606 @@ shop.communityName in showTitle function Our Community
 [0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Aleph+Tet&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600089155&signature=aacbe1599f687ff7503f3508e2116bf08563bb63ebcca476904cf004584f545c [32m200 [0m93.912 ms - 26056[0m
 image request {}
 [0mGET /proxy/images/uploads/novarian.myshopify.com-1600060353666.jpeg [36m304 [0m17.422 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600089525&signature=1ddc4b53896f12eb276bd2cdcee4f7d25f45a400309b926b6d11e76f6c77445a
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Why Not' },
+  body:
+   { time: 1600089778069, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600089525',
+  signature:
+   '1ddc4b53896f12eb276bd2cdcee4f7d25f45a400309b926b6d11e76f6c77445a' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Why Not </p>' ]
+post saved successfully { body:
+   [ { time: 1600089778069, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f6db5906696361015a143,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Why Not',
+  coverMedia: '',
+  slug: 'why-not',
+  mtitle: 'Why Not | Social King',
+  excerpt: 'Why Not',
+  mdesc: 'Why Not',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Why Not </p>',
+  createdAt: 2020-09-14T13:18:45.513Z,
+  updatedAt: 2020-09-14T13:18:45.513Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '',
+  recurring_application_charge: [],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T07:05:26.028Z,
+  __v: 0 }
+Shop added to blog record
+saved tag: 5f5225a8123a6c3f7f66d95d
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600089525&signature=1ddc4b53896f12eb276bd2cdcee4f7d25f45a400309b926b6d11e76f6c77445a [32m200 [0m198.886 ms - 119[0m
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600089713&signature=946ab666eea2695d064d4f3721404ad23a7630cf67739146eda5983945f6c551
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600089713&signature=946ab666eea2695d064d4f3721404ad23a7630cf67739146eda5983945f6c551 [32m200 [0m144.089 ms - 28840[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m28.155 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600089720&signature=5119e51e5b529fd60abddadc4d8ae4fc66c4fa7070821a04b7c0018197272be8
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 8' },
+  body:
+   { time: 1600089973352, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600089720',
+  signature:
+   '5119e51e5b529fd60abddadc4d8ae4fc66c4fa7070821a04b7c0018197272be8' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 8 </p>' ]
+post saved successfully { body:
+   [ { time: 1600089973352, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f6e78e8b9e23724ae214f,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Test 8',
+  coverMedia: '',
+  slug: 'test-8',
+  mtitle: 'Test 8 | Social King',
+  excerpt: 'Test 8',
+  mdesc: 'Test 8',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Test 8 </p>',
+  createdAt: 2020-09-14T13:22:00.445Z,
+  updatedAt: 2020-09-14T13:22:00.445Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '',
+  recurring_application_charge: [],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T07:05:26.028Z,
+  __v: 0 }
+emailData in Sendgrid Email Notification Function { to: 'kramer1346@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey you, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                  <h4>Hey you,</h4>\n                  <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/blog/test-8\'>pending review here</a></p>\n                  <hr />\n              ' }
+Shop added to blog record
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600089720&signature=5119e51e5b529fd60abddadc4d8ae4fc66c4fa7070821a04b7c0018197272be8 [32m200 [0m154.973 ms - 119[0m
+saved tag: 5f5225a8123a6c3f7f66d95d
+email alert sent to  halichot.myshopify.com
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090064&signature=c830c1671a9e8a4f08f7385d42649902c735b988069a6c7b756e9781b3ace801
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090064&signature=c830c1671a9e8a4f08f7385d42649902c735b988069a6c7b756e9781b3ace801 [32m200 [0m147.564 ms - 29349[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m29.421 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090070&signature=571e453215432dc3d10ab258a1495be6fd3f0ff37d5fce7282f3dc26d91d4e7a
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 9' },
+  body:
+   { time: 1600090323743, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090070',
+  signature:
+   '571e453215432dc3d10ab258a1495be6fd3f0ff37d5fce7282f3dc26d91d4e7a' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 9 </p>' ]
+post saved successfully { body:
+   [ { time: 1600090323743, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f6fd6f301a937d70c2fdd,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Test 9',
+  coverMedia: '',
+  slug: 'test-9',
+  mtitle: 'Test 9 | Social King',
+  excerpt: 'Test 9',
+  mdesc: 'Test 9',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Test 9 </p>',
+  createdAt: 2020-09-14T13:27:50.864Z,
+  updatedAt: 2020-09-14T13:27:50.864Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+emailData in Sendgrid Email Notification Function { to: 'kramer1346@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey you, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                  <h4>Hey you,</h4>\n                  <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/blog/test-9\'>pending review here</a></p>\n                  <hr />\n              ' }
+Shop added to blog record
+saved tag: 5f5225a8123a6c3f7f66d95d
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090070&signature=571e453215432dc3d10ab258a1495be6fd3f0ff37d5fce7282f3dc26d91d4e7a [32m200 [0m93.409 ms - 119[0m
+email alert sent to  halichot.myshopify.com
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090146&signature=601cddd5b6773792608dac5d3a6f6f29ca92f01a01bf929b633c9e134c002269
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090146&signature=601cddd5b6773792608dac5d3a6f6f29ca92f01a01bf929b633c9e134c002269 [32m200 [0m187.395 ms - 29858[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m71.449 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090157&signature=0fefc3ad28ef832487c99637e3ad3d68007ef99fe6e7bb225b43bb947d90fb1f
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 11' },
+  body:
+   { time: 1600090410519, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090157',
+  signature:
+   '0fefc3ad28ef832487c99637e3ad3d68007ef99fe6e7bb225b43bb947d90fb1f' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 11 </p>' ]
+post saved successfully { body:
+   [ { time: 1600090410519, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f702d05d7863860292707,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Test 11',
+  coverMedia: '',
+  slug: 'test-11',
+  mtitle: 'Test 11 | Social King',
+  excerpt: 'Test 11',
+  mdesc: 'Test 11',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Test 11 </p>',
+  createdAt: 2020-09-14T13:29:17.641Z,
+  updatedAt: 2020-09-14T13:29:17.641Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+Express running → PORT 7777
+DB Connected
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090275&signature=73f761576e544a89c9fca83399865983ff9a13fa1cb734b08efb52ddd9c003f6
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 11' },
+  body:
+   { time: 1600090528206, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090275',
+  signature:
+   '73f761576e544a89c9fca83399865983ff9a13fa1cb734b08efb52ddd9c003f6' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 11 </p>' ]
+error saving post { MongoError: E11000 duplicate key error collection: socialking.blogs index: slug_1_shopifyDomain_1 dup key: { slug: "test-11", shopifyDomain: "halichot.myshopify.com" }
+    at Function.create (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/error.js:51:12)
+    at toError (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/utils.js:123:22)
+    at coll.s.topology.insert (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/operations/common_functions.js:265:39)
+    at handler (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:913:24)
+    at fn (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:356:13)
+    at handleOperationResult (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/server.js:492:5)
+    at MessageStream.messageHandler (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:272:5)
+    at MessageStream.emit (events.js:198:13)
+    at processIncomingData (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:415:12)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at MessageStream.Writable.write (_stream_writable.js:299:11)
+    at TLSSocket.ondata (_stream_readable.js:710:20)
+    at TLSSocket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at TLSSocket.Readable.push (_stream_readable.js:224:10)
+    at TLSWrap.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  driver: true,
+  name: 'MongoError',
+  index: 0,
+  code: 11000,
+  keyPattern: { slug: 1, shopifyDomain: 1 },
+  keyValue: { slug: 'test-11', shopifyDomain: 'halichot.myshopify.com' } }
+fieldName.charAt(0).toUpperCase() 1
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090275&signature=73f761576e544a89c9fca83399865983ff9a13fa1cb734b08efb52ddd9c003f6 [33m400 [0m88.863 ms - 109[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090283&signature=a5d23699453b4f79c256a01df6cf15a6346983906b66a732ffd21d7b92e43150
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Post 12' },
+  body:
+   { time: 1600090536760, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090283',
+  signature:
+   'a5d23699453b4f79c256a01df6cf15a6346983906b66a732ffd21d7b92e43150' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Post 12 </p>' ]
+post saved successfully { body:
+   [ { time: 1600090536760, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f70ab04c3d7390283eaa7,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Post 12',
+  coverMedia: '',
+  slug: 'post-12',
+  mtitle: 'Post 12 | Social King',
+  excerpt: 'Post 12',
+  mdesc: 'Post 12',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Post 12 </p>',
+  createdAt: 2020-09-14T13:31:23.829Z,
+  updatedAt: 2020-09-14T13:31:23.829Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+emailData in Sendgrid Email Notification Function { to: 'kramer1346@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey you, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                  <h4>Hey you,</h4>\n                  <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/blog/post-12\'>pending review here</a></p>\n                  <hr />\n              ' }
+Shop added to blog record
+saved tag: 5f5225a8123a6c3f7f66d95d
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090283&signature=a5d23699453b4f79c256a01df6cf15a6346983906b66a732ffd21d7b92e43150 [32m200 [0m76.357 ms - 119[0m
+email alert sent to  halichot.myshopify.com
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090397&signature=e43dae71af992ea3c71a511fa8f02380fc518a584ff9e48444421e66c2224af9
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090397&signature=e43dae71af992ea3c71a511fa8f02380fc518a584ff9e48444421e66c2224af9 [32m200 [0m193.111 ms - 30884[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m20.574 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090405&signature=bbf9989cce880e5179878bbcd821782b46c908542dbdd44a137ec143ad7d2c68
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 13' },
+  body:
+   { time: 1600090658439, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090405',
+  signature:
+   'bbf9989cce880e5179878bbcd821782b46c908542dbdd44a137ec143ad7d2c68' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 13 </p>' ]
+post saved successfully { body:
+   [ { time: 1600090658439, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f71252beb88398e7bc368,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Test 13',
+  coverMedia: '',
+  slug: 'test-13',
+  mtitle: 'Test 13 | Social King',
+  excerpt: 'Test 13',
+  mdesc: 'Test 13',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Test 13 </p>',
+  createdAt: 2020-09-14T13:33:25.573Z,
+  updatedAt: 2020-09-14T13:33:25.573Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+emailData in Sendgrid Email Notification Function { to: 'kramer1346@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey halichot, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                  <h4>Hey halichot,</h4>\n                  <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/blog/test-13\'>pending review here</a></p>\n                  <hr />\n              ' }
+Shop added to blog record
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090405&signature=bbf9989cce880e5179878bbcd821782b46c908542dbdd44a137ec143ad7d2c68 [32m200 [0m93.786 ms - 119[0m
+saved tag: 5f5225a8123a6c3f7f66d95d
+email alert sent to  halichot.myshopify.com
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090536&signature=fa7a1e40f0ee42a93ea2ae7edcdbe7d75e2e357d50cc0acadc4a07807121cf55
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090536&signature=fa7a1e40f0ee42a93ea2ae7edcdbe7d75e2e357d50cc0acadc4a07807121cf55 [32m200 [0m152.674 ms - 31398[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m25.995 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090544&signature=4090585c98fcfbb95e9e9a6081c990d516b7eb38354b795d0bea8dea5e4fd60d
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 14' },
+  body:
+   { time: 1600090797880, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090544',
+  signature:
+   '4090585c98fcfbb95e9e9a6081c990d516b7eb38354b795d0bea8dea5e4fd60d' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 14 </p>' ]
+post saved successfully { body:
+   [ { time: 1600090797880, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f71b01625b13a210c4500,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Test 14',
+  coverMedia: '',
+  slug: 'test-14',
+  mtitle: 'Test 14 | Social King',
+  excerpt: 'Test 14',
+  mdesc: 'Test 14',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Test 14 </p>',
+  createdAt: 2020-09-14T13:35:44.959Z,
+  updatedAt: 2020-09-14T13:35:44.959Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+emailData in Sendgrid Email Notification Function { to: 'kramer1346@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey halichot, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                  <h4>Hey halichot,</h4>\n                  <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/blog/test-14\'>pending review here</a></p>\n                  <hr />\n              ' }
+Shop added to blog record
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090544&signature=4090585c98fcfbb95e9e9a6081c990d516b7eb38354b795d0bea8dea5e4fd60d [32m200 [0m153.549 ms - 119[0m
+saved tag: 5f5225a8123a6c3f7f66d95d
+email alert sent to  halichot.myshopify.com
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090591&signature=c9f9759ebea051f3bcfc6ecde7a7389ce968be6204367721180b30ccea5e5cc2
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090591&signature=c9f9759ebea051f3bcfc6ecde7a7389ce968be6204367721180b30ccea5e5cc2 [32m200 [0m81.046 ms - 31912[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m18.408 ms - -[0m
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090601&signature=69227cd910771d6731ff294daafad4d70ca05b9f9bbbe020bb4e74ce374f2545
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090601&signature=69227cd910771d6731ff294daafad4d70ca05b9f9bbbe020bb4e74ce374f2545 [32m200 [0m147.738 ms - 31912[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m21.161 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090616&signature=f76a0d25c0d0c8cfffd9f000941240d160cf7ace185051ef699d42ffd08369f7
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 16' },
+  body:
+   { time: 1600090869162, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090616',
+  signature:
+   'f76a0d25c0d0c8cfffd9f000941240d160cf7ace185051ef699d42ffd08369f7' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 16 </p>' ]
+post saved successfully { body:
+   [ { time: 1600090869162, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f71f80e65563a59c6f298,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Test 16',
+  coverMedia: '',
+  slug: 'test-16',
+  mtitle: 'Test 16 | Social King',
+  excerpt: 'Test 16',
+  mdesc: 'Test 16',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Test 16 </p>',
+  createdAt: 2020-09-14T13:36:56.260Z,
+  updatedAt: 2020-09-14T13:36:56.260Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+emailData in Sendgrid Email Notification Function { to: 'kramer1346@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey halichot, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                  <h4>Hey halichot,</h4>\n                  <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/blog/test-16\'>pending review here</a></p>\n                  <hr />\n              ' }
+Shop added to blog record
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090616&signature=f76a0d25c0d0c8cfffd9f000941240d160cf7ace185051ef699d42ffd08369f7 [32m200 [0m117.392 ms - 119[0m
+saved tag: 5f5225a8123a6c3f7f66d95d
+email alert sent to  halichot.myshopify.com
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090723&signature=efa8814f8ccc8ab4227128f03b681a3f2e64e74a010639bc63b642975b8d1721
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090723&signature=efa8814f8ccc8ab4227128f03b681a3f2e64e74a010639bc63b642975b8d1721 [32m200 [0m134.051 ms - 32426[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m27.517 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090730&signature=6464d057a8bf024ed26bffb4b3ca86462e9d9feb87d7f763abbe75c8974e46cc
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 16' },
+  body:
+   { time: 1600090983455, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090730',
+  signature:
+   '6464d057a8bf024ed26bffb4b3ca86462e9d9feb87d7f763abbe75c8974e46cc' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 16 </p>' ]
+error saving post { MongoError: E11000 duplicate key error collection: socialking.blogs index: slug_1_shopifyDomain_1 dup key: { slug: "test-16", shopifyDomain: "halichot.myshopify.com" }
+    at Function.create (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/error.js:51:12)
+    at toError (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/utils.js:123:22)
+    at coll.s.topology.insert (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/operations/common_functions.js:265:39)
+    at handler (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:913:24)
+    at fn (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:356:13)
+    at handleOperationResult (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/server.js:492:5)
+    at MessageStream.messageHandler (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:272:5)
+    at MessageStream.emit (events.js:198:13)
+    at processIncomingData (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:144:12)
+    at MessageStream._write (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:42:5)
+    at doWrite (_stream_writable.js:415:12)
+    at writeOrBuffer (_stream_writable.js:399:5)
+    at MessageStream.Writable.write (_stream_writable.js:299:11)
+    at TLSSocket.ondata (_stream_readable.js:710:20)
+    at TLSSocket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at TLSSocket.Readable.push (_stream_readable.js:224:10)
+    at TLSWrap.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
+  driver: true,
+  name: 'MongoError',
+  index: 0,
+  code: 11000,
+  keyPattern: { slug: 1, shopifyDomain: 1 },
+  keyValue: { slug: 'test-16', shopifyDomain: 'halichot.myshopify.com' } }
+fieldName.charAt(0).toUpperCase() 1
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090730&signature=6464d057a8bf024ed26bffb4b3ca86462e9d9feb87d7f763abbe75c8974e46cc [33m400 [0m44.491 ms - 109[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090736&signature=7f6c19d1ecd5bc386a4494b18c684c6dc18fdce332cdec939769f907086eb11b
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 17' },
+  body:
+   { time: 1600090989701, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600090736',
+  signature:
+   '7f6c19d1ecd5bc386a4494b18c684c6dc18fdce332cdec939769f907086eb11b' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Test 17 </p>' ]
+post saved successfully { body:
+   [ { time: 1600090989701, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f5f72705ce7613aea5a5e0b,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Test 17',
+  coverMedia: '',
+  slug: 'test-17',
+  mtitle: 'Test 17 | Social King',
+  excerpt: 'Test 17',
+  mdesc: 'Test 17',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Test 17 </p>',
+  createdAt: 2020-09-14T13:38:56.760Z,
+  updatedAt: 2020-09-14T13:38:56.760Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+emailData in Sendgrid Email Notification Function { to: 'alephmarketingpros@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey halichot, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                  <h4>Hey halichot,</h4>\n                  <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/blog/test-17\'>pending review here</a></p>\n                  <hr />\n              ' }
+Shop added to blog record
+saved tag: 5f5225a8123a6c3f7f66d95d
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600090736&signature=7f6c19d1ecd5bc386a4494b18c684c6dc18fdce332cdec939769f907086eb11b [32m200 [0m73.615 ms - 119[0m
+email alert sent to  halichot.myshopify.com

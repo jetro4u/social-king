@@ -5293,3 +5293,28 @@ TypeError: Cannot read property '_id' of null
 (node:13665) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:13840) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:13840) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:14116) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14116) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:14295) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14295) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:14432) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14432) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '0' of undefined
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:103:40)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:14449) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14594) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14594) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:14734) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14734) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:14881) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14881) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:14937) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:14937) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:15082) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:15082) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
