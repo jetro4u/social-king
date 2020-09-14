@@ -22,8 +22,9 @@ exports.read = (req, res) => {
                 error: errorHandler(err)
             });
         }
-
-        Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop, archivedByUser: { $ne: true } })
+        
+        if(req.profile){
+            Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop, archivedByUser: { $ne: true } })
             .sort({createdAt: -1})
             .populate('tags', '_id name slug')
             .populate('postedBy', '_id name username')
@@ -45,6 +46,7 @@ exports.read = (req, res) => {
                     return res.send(userAdmin({blog, blogs, user: req.profile, tags: req.tags, shop}));
                 });
             });
+        }
     })
 };
 
