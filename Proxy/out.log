@@ -24343,3 +24343,473 @@ Shop added to blog record
 saved tag: 5f5225a8123a6c3f7f66d95d
 [0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600168646&signature=aeefc1ab0f33c7570c5348335ed32b5ec407531fa3dbfeb3681e6da5a1c2d5b8 [32m200 [0m84.807 ms - 119[0m
 email alert sent to  halichot.myshopify.com
+req.url /user/profile?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600168864&signature=abb3b74ee49ea2feec58c5628c5f23b3d701722972e649015a1b0e74afb25611
+req.query.slug undefined
+expected_hash bfe9f188db57b16aa00bb97e1a85397a
+actual_hash bfe9f188db57b16aa00bb97e1a85397a
+user found { storeFavorites: 'The Products 😌',
+  about: 'VP Marketing at Social King',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+  popUser: false,
+  _id: 5f2be2738f38284868d61666,
+  name: 'Cynthia Lopez',
+  email: 'chayaisraeldonations@gmail.com',
+  salt: '926358519413',
+  hashed_password: 'fe508d77db4deef6bec94a9f36ade129c22d23fc',
+  profile:
+   'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+  username: 'chayaisraeldonations',
+  shopDomain: 'social-king-app.myshopify.com',
+  createdAt: 2020-08-06T10:58:59.778Z,
+  updatedAt: 2020-08-10T09:32:24.400Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f182dba769d6f3d8ae9b8e8': false,
+  '5f182d95769d6f3d8ae9b8e6': false,
+  '5f182d86769d6f3d8ae9b8e4': false,
+  '5f182d90769d6f3d8ae9b8e5': false,
+  '5f391c53d1d07c22a32f359b': false }
+tags obj:  { '5f182dba769d6f3d8ae9b8e8': false,
+  '5f182d95769d6f3d8ae9b8e6': false,
+  '5f182d86769d6f3d8ae9b8e4': false,
+  '5f182d90769d6f3d8ae9b8e5': false,
+  '5f391c53d1d07c22a32f359b': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600168864&signature=abb3b74ee49ea2feec58c5628c5f23b3d701722972e649015a1b0e74afb25611 [32m200 [0m91.970 ms - 30246[0m
+req.url /user/blog?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600168872&signature=ca80a62fa75cd5fd6253adf5fbb0067b18d232d5b046c7cf58b4aea95c50acb6
+req.query.slug undefined
+expected_hash bfe9f188db57b16aa00bb97e1a85397a
+actual_hash bfe9f188db57b16aa00bb97e1a85397a
+user found { storeFavorites: 'The Products 😌',
+  about: 'VP Marketing at Social King',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+  popUser: false,
+  _id: 5f2be2738f38284868d61666,
+  name: 'Cynthia Lopez',
+  email: 'chayaisraeldonations@gmail.com',
+  salt: '926358519413',
+  hashed_password: 'fe508d77db4deef6bec94a9f36ade129c22d23fc',
+  profile:
+   'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+  username: 'chayaisraeldonations',
+  shopDomain: 'social-king-app.myshopify.com',
+  createdAt: 2020-08-06T10:58:59.778Z,
+  updatedAt: 2020-08-10T09:32:24.400Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Test 22' },
+  body:
+   { time: 1600169126588, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f182d90769d6f3d8ae9b8e5', '5f182dba769d6f3d8ae9b8e8' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: 'VP Marketing at Social King',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+  popUser: false,
+  _id: 5f2be2738f38284868d61666,
+  name: 'Cynthia Lopez',
+  email: 'chayaisraeldonations@gmail.com',
+  salt: '926358519413',
+  hashed_password: 'fe508d77db4deef6bec94a9f36ade129c22d23fc',
+  profile:
+   'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+  username: 'chayaisraeldonations',
+  shopDomain: 'social-king-app.myshopify.com',
+  createdAt: 2020-08-06T10:58:59.778Z,
+  updatedAt: 2020-08-10T09:32:24.400Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'chayaisraeldonations@gmail.com',
+  name: 'Samantha Jones',
+  hash: 'bfe9f188db57b16aa00bb97e1a85397a',
+  shop: 'social-king-app.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600168872',
+  signature:
+   'ca80a62fa75cd5fd6253adf5fbb0067b18d232d5b046c7cf58b4aea95c50acb6' }
+tags in blog create function:  [ '5f182d90769d6f3d8ae9b8e5', '5f182dba769d6f3d8ae9b8e8' ]
+req.user._id on server when saving blogpost:  5f2be2738f38284868d61666
+html:  [ '<p> Test 22 </p>' ]
+post saved successfully { body:
+   [ { time: 1600169126588, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f60a3a89fe2651138a981d8,
+  shopifyDomain: 'social-king-app.myshopify.com',
+  title: 'Test 22',
+  coverMedia: '',
+  slug: 'test-22',
+  mtitle: 'Test 22 | Social King',
+  excerpt: 'Test 22',
+  mdesc: 'Test 22',
+  postedBy: 5f2be2738f38284868d61666,
+  html: '<p> Test 22 </p>',
+  createdAt: 2020-09-15T11:21:12.990Z,
+  updatedAt: 2020-09-15T11:21:12.990Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1596519454759.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1596519334887.png',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  _id: 5f1e6a95cae9586963ac9c24,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2020-09-14T12:28:56.116Z,
+  __v: 3,
+  backgroundColor: '',
+  primaryColor: '',
+  extraShopifyData: [] }
+emailData in Sendgrid Email Notification Function { to: 'kramer1346@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey you, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                      <h4>Hey you,</h4>\n                      <p>A New Customer Post has been Submitted and is <a href=\'https://social-king-app.myshopify.com/admin/apps/social-king/manage/blog/test-22\'>pending review here</a></p>\n                      <hr />\n                  ' }
+Shop added to blog record
+saved tag: 5f182d90769d6f3d8ae9b8e5
+[0mPOST /proxy/user/blog?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600168872&signature=ca80a62fa75cd5fd6253adf5fbb0067b18d232d5b046c7cf58b4aea95c50acb6 [32m200 [0m123.751 ms - 119[0m
+saved tag: 5f182dba769d6f3d8ae9b8e8
+email alert sent to  social-king-app.myshopify.com
+req.url /user/profile?email=kramer1346%40gmail.com&name=Elisha+Kramer&hash=b282f98fbf7433693a398a33b52bfcd0&shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169294&signature=e8957b5adc0fbad88862eb94e4a8dd848bc75d007302900644e27c0c606f5fb4
+req.query.slug undefined
+expected_hash b282f98fbf7433693a398a33b52bfcd0
+actual_hash b282f98fbf7433693a398a33b52bfcd0
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+  popUser: false,
+  _id: 5f5f6a7fdb274e3516e324b3,
+  name: 'Elisha Kramer',
+  email: 'kramer1346@gmail.com',
+  salt: '207651396342',
+  hashed_password: '9ac9a88abc1dda78fa6b7097ac50c386d154be7a',
+  profile:
+   'https://novarian.myshopify.com/community/connect/user/kramer1346',
+  username: 'kramer1346',
+  shopDomain: 'novarian.myshopify.com',
+  createdAt: 2020-09-14T13:05:03.786Z,
+  updatedAt: 2020-09-14T15:52:57.505Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5eed4b162d5e221dda44de': false }
+tags obj:  { '5f5eed4b162d5e221dda44de': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=kramer1346%40gmail.com&name=Elisha+Kramer&hash=b282f98fbf7433693a398a33b52bfcd0&shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169294&signature=e8957b5adc0fbad88862eb94e4a8dd848bc75d007302900644e27c0c606f5fb4 [32m200 [0m200.493 ms - 25945[0m
+image request {}
+[0mGET /proxy/images/uploads/novarian.myshopify.com-1600060353666.jpeg [36m304 [0m19.150 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg [36m304 [0m35.705 ms - -[0m
+getEmojis controller func ran
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f5f84d60e4b5467d75660b0,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    __v: 0,
+    createdAt: 2020-09-14T14:57:26.618Z,
+    emoji: '🤓',
+    shopifyDomain: 'novarian.myshopify.com',
+    updatedAt: 2020-09-14T14:57:26.618Z } ]
+[0mPOST /proxy/blog/emojis?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169298&signature=c636c8fb71a3e83723f3e2cc8b3d665f9fd331492ab060fab18e0d9960eba5fb [32m200 [0m22.673 ms - 478[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'novarian.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600169308',
+  signature:
+   '2cd0cf02e74493ffdeafb2cc69685b9d346c3cede0d5e508fe4876cf6f26c5f4' }
+req.body {}
+shopName novarian.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5f9259ac8aae3efbc72ee1,
+    title: 'Browsing Around',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098895050.jpg',
+    slug: 'browsing-around',
+    excerpt:
+     'Hey there,<br>I\'m new at Novarion, and am just browsing around currently...<br>Can you tell me a little bit about which products you\'re best known for?<br>Thanks',
+    mdesc:
+     'Hey there, I\'m new at Novarion, and am just browsing around currently... Can you tell me a little bit about which products you\'re best known for? Thank',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-09-14T15:55:05.874Z,
+    updatedAt: 2020-09-15T05:21:40.810Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5eed4c162d5e221dda44e0,
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f5eed4b162d5e221dda44df,
+       name: 'Samantha Jones',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/samantha-jones',
+       username: 'samantha-jones' },
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    title: '5 Steps to Kickstarting Your Shopper Network',
+    createdAt: 2020-09-14T04:10:52.016Z,
+    updatedAt: 2020-09-14T04:10:52.066Z } ]
+[0mGET /proxy/?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169308&signature=2cd0cf02e74493ffdeafb2cc69685b9d346c3cede0d5e508fe4876cf6f26c5f4 [32m200 [0m54.825 ms - 16923[0m
+image request {}
+image request {}
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Elisha-Kramer-1600098895050.jpg [36m304 [0m18.794 ms - -[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1600098777496.jpg [36m304 [0m21.726 ms - -[0m
+[0mGET /proxy/images/uploads/novarian.myshopify.com-1600060353666.jpeg [36m304 [0m31.031 ms - -[0m
+[0mGET /proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg [36m304 [0m57.679 ms - -[0m
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg [36m304 [0m48.760 ms - -[0m
+getEmojis controller func ran
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f5f84d60e4b5467d75660b0,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    __v: 0,
+    createdAt: 2020-09-14T14:57:26.618Z,
+    emoji: '🤓',
+    shopifyDomain: 'novarian.myshopify.com',
+    updatedAt: 2020-09-14T14:57:26.618Z } ]
+[0mPOST /proxy/blog/emojis?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169310&signature=5140c6f368f58352c0e23f0399c320908f51246dbdae73ad909f0be339f2df8a [32m200 [0m22.216 ms - 478[0m
+DB Connected
+Express running → PORT 7777
+DB Connected
+req.url /user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169754&signature=7414eeeb1e4d7043a3d60fdfb7b4d94c4334efa3d1870d246f3b807843146d3e
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+tags obj:  { '5f5225a8123a6c3f7f66d95d': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169754&signature=7414eeeb1e4d7043a3d60fdfb7b4d94c4334efa3d1870d246f3b807843146d3e [32m200 [0m166.761 ms - 33454[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png [36m304 [0m21.974 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg [36m304 [0m15.767 ms - -[0m
+req.url /user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169764&signature=c0ac7542b4f63f9738a852065cc711d68f18a234a599772aa995701d3c017fa3
+req.query.slug undefined
+expected_hash e712bfb2d6dd39df0b7a97f204fdbae4
+actual_hash e712bfb2d6dd39df0b7a97f204fdbae4
+user found { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.body in blog create function:  { title: { title: 'Manage Posts' },
+  body:
+   { time: 1600170018111, blocks: [ [Object] ], version: '2.18.0' },
+  tags: [ '5f5225a8123a6c3f7f66d95d' ] }
+req.profile in blog create function:  { storeFavorites: 'The Products 😌',
+  about: '',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+  popUser: false,
+  _id: 5f5225a8123a6c3f7f66d95e,
+  name: 'Samantha Jones',
+  email: 'alephmarketingpros@gmail.com',
+  salt: '595317619718',
+  hashed_password: '2c8f498801646fb9e1f5beab1c72d4b220586d89',
+  profile:
+   'https://halichot.myshopify.com/community/connect/user/samantha-jones',
+  username: 'samantha-jones',
+  shopDomain: 'halichot.myshopify.com',
+  createdAt: 2020-09-04T11:31:52.773Z,
+  updatedAt: 2020-09-04T11:31:52.773Z,
+  __v: 0 }
+req.query in blog create function:  { email: 'alephmarketingpros@gmail.com',
+  name: 'Shlomo Apfelbaum',
+  hash: 'e712bfb2d6dd39df0b7a97f204fdbae4',
+  shop: 'halichot.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600169764',
+  signature:
+   'c0ac7542b4f63f9738a852065cc711d68f18a234a599772aa995701d3c017fa3' }
+tags in blog create function:  [ '5f5225a8123a6c3f7f66d95d' ]
+req.user._id on server when saving blogpost:  5f5225a8123a6c3f7f66d95e
+html:  [ '<p> Manage Posts </p>' ]
+post saved successfully { body:
+   [ { time: 1600170018111, blocks: [Array], version: '2.18.0' } ],
+  hidden: true,
+  comments: [],
+  selectedProducts: [],
+  relatedProducts: [],
+  categories: [],
+  tags: [],
+  emojis: [],
+  archivedByUser: false,
+  userNotified: false,
+  _id: 5f60a72435977d12e344fc15,
+  shopifyDomain: 'halichot.myshopify.com',
+  title: 'Manage Posts',
+  coverMedia: '',
+  slug: 'manage-posts',
+  mtitle: 'Manage Posts | Social King',
+  excerpt: 'Manage Posts',
+  mdesc: 'Manage Posts',
+  postedBy: 5f5225a8123a6c3f7f66d95e,
+  html: '<p> Manage Posts </p>',
+  createdAt: 2020-09-15T11:36:04.790Z,
+  updatedAt: 2020-09-15T11:36:04.790Z,
+  __v: 0 }
+shop in function to send Email Alert and add Shop reference { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  charge_id: '18560057512',
+  recurring_application_charge:
+   [ { id: 18560057512,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '3.99',
+       status: 'active',
+       return_url: 'https://halichot.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-10-29',
+       created_at: '2020-09-14T09:23:56-04:00',
+       updated_at: '2020-09-14T09:24:06-04:00',
+       test: false,
+       activated_on: '2020-09-14',
+       cancelled_on: null,
+       trial_days: 45,
+       trial_ends_on: '2020-10-29',
+       decorated_return_url:
+        'https://halichot.myshopify.com/admin/apps/social-king?charge_id=18560057512' } ],
+  _id: 5f5225a8123a6c3f7f66d95c,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: 'darkblue',
+  backgroundColor: '#edeff1',
+  extraShopifyData:
+   [ { name: 'halichot',
+       description: 'Halachot for the modern man',
+       id: 'gid://shopify/Shop/46715666600',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'halichot.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2020-09-04T11:31:52.717Z,
+  updatedAt: 2020-09-14T13:24:10.876Z,
+  __v: 1 }
+emailData in Sendgrid Email Notification Function { to: 'alephmarketingpros@gmail.com',
+  from: 'help@socialking.app',
+  subject: 'Review A New Community Post!',
+  text:
+   'Hey halichot, \n Looks like a new post has been submitted via your Community Network',
+  html:
+   '\n                      <h4>Hey halichot,</h4>\n                      <p>A New Customer Post has been Submitted and is <a href=\'https://halichot.myshopify.com/admin/apps/social-king/manage/manage-posts\'>pending review here</a></p>\n                      <hr />\n                  ' }
+Shop added to blog record
+saved tag: 5f5225a8123a6c3f7f66d95d
+[0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169764&signature=c0ac7542b4f63f9738a852065cc711d68f18a234a599772aa995701d3c017fa3 [32m200 [0m102.434 ms - 119[0m
+email alert sent to  halichot.myshopify.com
