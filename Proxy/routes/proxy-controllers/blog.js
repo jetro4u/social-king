@@ -96,26 +96,28 @@ exports.create = (req, res) => {
         //add shop to blog record
         Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
            console.log('shop in function to send Email Alert and add Shop reference', shop)
-           let storeAdminName = shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0].name ? shop._doc.extraShopifyData[0].name : 'you';
+           let storeAdminName = shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].name ? shop._doc.extraShopifyData[0].name : 'you';
            let appSlug = process.env.NODE_ENV == 'development' ? 'community-2' : 'social-king';
-                      
-           const emailData = {
-              to: shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0].email ? shop._doc.extraShopifyData[0].email : 'kramer1346@gmail.com',
-              from: 'help@socialking.app',
-              subject: `Review A New Community Post!`,
-              text: `Hey ${storeAdminName}, \n Looks like a new post has been submitted via your Community Network`,
-              html: `
-                  <h4>Hey ${storeAdminName},</h4>
-                  <p>A New Customer Post has been Submitted and is <a href='https://${blog.shopifyDomain}/admin/apps/${appSlug}/manage/blog/${blog.slug}'>pending review here</a></p>
-                  <hr />
-              `
-           };
            
-           console.log('emailData in Sendgrid Email Notification Function', emailData);
-    
-           sgMail.send(emailData).then(sent => {
-                console.log('email alert sent to ', req.query.shop)
-           })
+           if(shop && shop._doc){
+               const emailData = {
+                  to: shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].email ? shop._doc.extraShopifyData[0].email : 'kramer1346@gmail.com',
+                  from: 'help@socialking.app',
+                  subject: `Review A New Community Post!`,
+                  text: `Hey ${storeAdminName}, \n Looks like a new post has been submitted via your Community Network`,
+                  html: `
+                      <h4>Hey ${storeAdminName},</h4>
+                      <p>A New Customer Post has been Submitted and is <a href='https://${blog.shopifyDomain}/admin/apps/${appSlug}/manage/blog/${blog.slug}'>pending review here</a></p>
+                      <hr />
+                  `
+               };
+               
+               console.log('emailData in Sendgrid Email Notification Function', emailData);
+        
+               sgMail.send(emailData).then(sent => {
+                    console.log('email alert sent to ', req.query.shop)
+               })
+           }           
            
            Blog.findByIdAndUpdate(result._id, { $set: { shopPostedAt: [shop._id] } }, { new: true }).exec(
                 (err, result) => {
