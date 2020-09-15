@@ -107,7 +107,7 @@ exports.create = (req, res) => {
                   text: `Hey ${storeAdminName}, \n Looks like a new post has been submitted via your Community Network`,
                   html: `
                       <h4>Hey ${storeAdminName},</h4>
-                      <p>A New Customer Post has been Submitted and is <a href='https://${blog.shopifyDomain}/admin/apps/${appSlug}/manage/blog/${blog.slug}'>pending review here</a></p>
+                      <p>A New Customer Post has been Submitted and is <a href='https://${blog.shopifyDomain}/admin/apps/${appSlug}/manage/manage-posts'>pending review here</a></p>
                       <hr />
                   `
                };
