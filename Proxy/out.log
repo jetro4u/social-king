@@ -24813,3 +24813,2578 @@ Shop added to blog record
 saved tag: 5f5225a8123a6c3f7f66d95d
 [0mPOST /proxy/user/blog?email=alephmarketingpros%40gmail.com&name=Shlomo+Apfelbaum&hash=e712bfb2d6dd39df0b7a97f204fdbae4&shop=halichot.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600169764&signature=c0ac7542b4f63f9738a852065cc711d68f18a234a599772aa995701d3c017fa3 [32m200 [0m102.434 ms - 119[0m
 email alert sent to  halichot.myshopify.com
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170106&signature=f361ef14181725a31ec45a6fe5bdc181881a95d04de202a887a32fadf0f2f023 [32m200 [0m67.218 ms - 9362[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170107&signature=4c880badd28df02a20566ccbd922e85785c855961ea6a0b0a939ead1e3cc03da [32m200 [0m58.989 ms - 9362[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170107&signature=4c880badd28df02a20566ccbd922e85785c855961ea6a0b0a939ead1e3cc03da [32m200 [0m60.237 ms - 9362[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170108&signature=b5564417dceff5b7ff8bbf0ffc25bcbc7862e11e860713bfe3c216c26123461a [32m200 [0m56.502 ms - 9362[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170110&signature=7e43194ab697bd7ed7dbef2ecb32ef8da0f1f152c67aa3a0aa5035e17dd7143f [32m200 [0m58.805 ms - 9362[0m
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/novarian.myshopify.com-1600060353666.jpeg [36m304 [0m13.570 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/Elisha-Kramer-1600098777496.jpg [36m304 [0m28.533 ms - -[0m
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg [36m304 [0m33.549 ms - -[0m
+getEmojis controller func ran
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f5f84d60e4b5467d75660b0,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    __v: 0,
+    createdAt: 2020-09-14T14:57:26.618Z,
+    emoji: '🤓',
+    shopifyDomain: 'novarian.myshopify.com',
+    updatedAt: 2020-09-14T14:57:26.618Z } ]
+[0mPOST /proxy/blog/emojis?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170119&signature=efef610fe303ee6613d074a2599a58d9a30541a144e83c832048249bd73af9bb [32m200 [0m24.380 ms - 478[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/5-steps-to-building-a-shopper-community?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170121&signature=7aff3603900613afa7236b5b0f260ae4da1f78a9428fe2ce8fa7475faaa56e96 [32m200 [0m56.697 ms - 10366[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/5-steps-to-building-a-shopper-community?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170122&signature=c7da7bfcae84943fbe9a683850efb3c21d14b6f01f4dcc9e1f5ec03251dca432 [32m200 [0m61.941 ms - 10366[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170122&signature=c7da7bfcae84943fbe9a683850efb3c21d14b6f01f4dcc9e1f5ec03251dca432 [32m200 [0m58.214 ms - 9362[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170124&signature=f6d37a657c7a5486afcbb23347d75cdb6a9092b0b81f700c91c65494b2a8cbee [32m200 [0m60.029 ms - 9362[0m
+image request {}
+[0mGET /proxy/images/uploads/novarian.myshopify.com-1600060353666.jpeg [36m304 [0m14.074 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/Elisha-Kramer-1600098777496.jpg [36m304 [0m13.452 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg [36m304 [0m19.626 ms - -[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/5-steps-to-building-a-shopper-community?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600170503&signature=7cb1bd8b3d250bf23d9c06ab4c897d04cb54341e2c5a79077d071154dc17c826 [32m200 [0m141.286 ms - 10366[0m
+ran listAllBlogsCategoriesTags function on server with req.query { _bt:
+   'eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUp6YjJOcFlXd3RhMmx1WnkxaGNIQXViWGx6YUc5d2FXWjVMbU52YlFZNkJrVlUiLCJleHAiOiIyMDIwLTA5LTE1VDEzOjIxOjM2LjA0MloiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--c4eaf07c247bea7227245f790679b4d4f625fc63',
+  shop: 'social-king-app.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600172531',
+  signature:
+   '1bcc06a75adc6179fb530764974f438ab3540a6b1a88e4a5242fa43b7c2a115b' }
+req.body {}
+shopName social-king-app.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object], [Object], [Object] ],
+    _id: 5f4f633609e3280bbf7a557d,
+    title: 'Is It Secure & Does It Match My Needs?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Samantha-Jones-1599037640623.png',
+    slug: 'does-it-match-my-needs',
+    excerpt:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do this with your program? I also need it to match the theme of my site. Oh, and can I upload videos?',
+    mdesc:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Will-Thompson-1599221419289.jpg',
+       _id: 5f522e98f0eb584685805942,
+       name: 'Will Thompson',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/help',
+       username: 'help' },
+    createdAt: 2020-09-02T09:17:43.007Z,
+    updatedAt: 2020-09-08T08:43:18.421Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f46258642c2e9357e0bb4c8,
+    title: 'How Many Is \'Too Many Emojis\'?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598431916697.png',
+    slug: 'when-does-it-become-too-many-emojis',
+    excerpt:
+     'This post is about our thoughts on Emojis:\r\n\r\n\r\nWhat does the average web surfer want to do with emojis?\r\n\r\nAre emojis important?\r\n\r\nWhen does it get to the point of \'Too Many Emojis\'?\r\n\r\nTo answer these questions, we started by looking at what the Top Social and Ecommerce Platforms are currently doing with emojis',
+    mdesc: 'At Social King, we have 1 clear goal:',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-26T09:04:06.362Z,
+    updatedAt: 2020-09-06T13:17:10.947Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f44901042c2e9357e0bb4c5,
+    title: 'How To Create a User-Generated Content Strategy',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598445709844.png',
+    slug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    excerpt:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    mdesc:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-25T04:14:08.816Z,
+    updatedAt: 2020-09-02T09:26:42.390Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f38fdbb9ddf7c6c8b74be8f,
+    title: '5 Steps To Building an Online Community',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/support',
+       username: 'support' },
+    createdAt: 2020-08-16T09:34:51.757Z,
+    updatedAt: 2020-08-28T13:32:24.399Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f3626db18967962e2c6a89a,
+    title: 'Do You Have Multi-Lingual Support?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384232463.jpg',
+    slug: 'do-you-have-multi-lingual-support',
+    excerpt:
+     'We were wondering if you plan on launching multi-lingual support any time soon? We\'d love to try out similar Social Experiments on our non-English-speaking shoppers.',
+    mdesc: 'Hi there,',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/alephmarketingpros',
+       username: 'alephmarketingpros' },
+    createdAt: 2020-08-14T05:53:31.310Z,
+    updatedAt: 2020-08-28T13:32:40.240Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f339b1a08b51e66a5223621,
+    title: 'App Features',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217355899.png',
+    slug: 'app-features',
+    excerpt:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    mdesc:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-12T07:32:42.610Z,
+    updatedAt: 2020-08-12T07:33:38.144Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f2f812284c3764a214c1aba,
+    title: 'Conversations have gone digital',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1595925749431.png',
+    slug: 'conversations-have-gone-digital',
+    excerpt:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    mdesc:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-09T04:52:50.680Z,
+    updatedAt: 2020-08-11T13:11:19.773Z } ]
+[0mGET /proxy/?_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUp6YjJOcFlXd3RhMmx1WnkxaGNIQXViWGx6YUc5d2FXWjVMbU52YlFZNkJrVlUiLCJleHAiOiIyMDIwLTA5LTE1VDEzOjIxOjM2LjA0MloiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--c4eaf07c247bea7227245f790679b4d4f625fc63&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600172531&signature=1bcc06a75adc6179fb530764974f438ab3540a6b1a88e4a5242fa43b7c2a115b [32m200 [0m190.820 ms - 25758[0m
+[0mGET /proxy/user/blog/emoji?slug=&shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600174767&signature=d6d09e26ad08b5f70aec35aa42f1aaeb76dc202b067d3276b1f0770133d9c001 [33m404 [0m2.405 ms - 218[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'novarian.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600175122',
+  signature:
+   '39c1d8376e25a4ea98c1aca8348d394769b8baaca1046ab5cce0e0cd52b62fe1' }
+req.body {}
+shopName novarian.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5f9259ac8aae3efbc72ee1,
+    title: 'Browsing Around',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098895050.jpg',
+    slug: 'browsing-around',
+    excerpt:
+     'Hey there,<br>I\'m new at Novarion, and am just browsing around currently...<br>Can you tell me a little bit about which products you\'re best known for?<br>Thanks',
+    mdesc:
+     'Hey there, I\'m new at Novarion, and am just browsing around currently... Can you tell me a little bit about which products you\'re best known for? Thank',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-09-14T15:55:05.874Z,
+    updatedAt: 2020-09-15T05:21:40.810Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5eed4c162d5e221dda44e0,
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f5eed4b162d5e221dda44df,
+       name: 'Samantha Jones',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/samantha-jones',
+       username: 'samantha-jones' },
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    title: '5 Steps to Kickstarting Your Shopper Network',
+    createdAt: 2020-09-14T04:10:52.016Z,
+    updatedAt: 2020-09-14T04:10:52.066Z } ]
+[0mGET /proxy/?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600175122&signature=39c1d8376e25a4ea98c1aca8348d394769b8baaca1046ab5cce0e0cd52b62fe1 [32m200 [0m63.025 ms - 16923[0m
+read function ran in controller
+[0mGET /proxy/blog/emojis?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600175147&signature=ed4d78319a1a220415387f5d7464c928d44271f3d8ff893e6840cdd711a596c8 [32m200 [0m34.228 ms - 69037[0m
+publicProfile function ran
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/user/audinoxd?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600175172&signature=a46c0c8fbf7bacabe73aec9268c395bc1b1a3eaba50f806cd358660ef4bf45e8 [32m200 [0m42.670 ms - 13023[0m
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/kay-s-magic.myshopify.com-1597987860013.jpeg [36m304 [0m14.690 ms - -[0m
+[0mGET /proxy/images/uploads/Erica-Reilly-1600132677052.jpg [36m304 [0m13.574 ms - -[0m
+[0mGET /proxy/images/uploads/kay-s-magic.myshopify.com-1597987859968.png [36m304 [0m15.866 ms - -[0m
+getEmojis controller func ran
+emojis in getEmojis func []
+[0mPOST /proxy/blog/emojis?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600175173&signature=25313012a4ae75d35334f6929c521402d8b3a97b55a352cdf09d77f8d0c2b444 [32m200 [0m11.181 ms - 2[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600176258&signature=1db52f7b365b18c85a6a066b0329d83cdad02e8ffe67f3d38ee33ee78644877f [32m200 [0m171.828 ms - 9362[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'social-king-app.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600177002',
+  signature:
+   'cde15b535e0d2eb418d9b82a445be2dd6fe6da51b19862918eda71677260c853' }
+req.body {}
+shopName social-king-app.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object], [Object], [Object] ],
+    _id: 5f4f633609e3280bbf7a557d,
+    title: 'Is It Secure & Does It Match My Needs?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Samantha-Jones-1599037640623.png',
+    slug: 'does-it-match-my-needs',
+    excerpt:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do this with your program? I also need it to match the theme of my site. Oh, and can I upload videos?',
+    mdesc:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Will-Thompson-1599221419289.jpg',
+       _id: 5f522e98f0eb584685805942,
+       name: 'Will Thompson',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/help',
+       username: 'help' },
+    createdAt: 2020-09-02T09:17:43.007Z,
+    updatedAt: 2020-09-08T08:43:18.421Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f46258642c2e9357e0bb4c8,
+    title: 'How Many Is \'Too Many Emojis\'?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598431916697.png',
+    slug: 'when-does-it-become-too-many-emojis',
+    excerpt:
+     'This post is about our thoughts on Emojis:\r\n\r\n\r\nWhat does the average web surfer want to do with emojis?\r\n\r\nAre emojis important?\r\n\r\nWhen does it get to the point of \'Too Many Emojis\'?\r\n\r\nTo answer these questions, we started by looking at what the Top Social and Ecommerce Platforms are currently doing with emojis',
+    mdesc: 'At Social King, we have 1 clear goal:',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-26T09:04:06.362Z,
+    updatedAt: 2020-09-06T13:17:10.947Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f44901042c2e9357e0bb4c5,
+    title: 'How To Create a User-Generated Content Strategy',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598445709844.png',
+    slug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    excerpt:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    mdesc:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-25T04:14:08.816Z,
+    updatedAt: 2020-09-02T09:26:42.390Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f38fdbb9ddf7c6c8b74be8f,
+    title: '5 Steps To Building an Online Community',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/support',
+       username: 'support' },
+    createdAt: 2020-08-16T09:34:51.757Z,
+    updatedAt: 2020-08-28T13:32:24.399Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f3626db18967962e2c6a89a,
+    title: 'Do You Have Multi-Lingual Support?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384232463.jpg',
+    slug: 'do-you-have-multi-lingual-support',
+    excerpt:
+     'We were wondering if you plan on launching multi-lingual support any time soon? We\'d love to try out similar Social Experiments on our non-English-speaking shoppers.',
+    mdesc: 'Hi there,',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/alephmarketingpros',
+       username: 'alephmarketingpros' },
+    createdAt: 2020-08-14T05:53:31.310Z,
+    updatedAt: 2020-08-28T13:32:40.240Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f339b1a08b51e66a5223621,
+    title: 'App Features',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217355899.png',
+    slug: 'app-features',
+    excerpt:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    mdesc:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-12T07:32:42.610Z,
+    updatedAt: 2020-08-12T07:33:38.144Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f2f812284c3764a214c1aba,
+    title: 'Conversations have gone digital',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1595925749431.png',
+    slug: 'conversations-have-gone-digital',
+    excerpt:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    mdesc:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-09T04:52:50.680Z,
+    updatedAt: 2020-08-11T13:11:19.773Z } ]
+[0mGET /proxy/?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600177002&signature=cde15b535e0d2eb418d9b82a445be2dd6fe6da51b19862918eda71677260c853 [32m200 [0m136.515 ms - 25758[0m
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1598431916697.png [32m200 [0m3.459 ms - 47699[0m
+[0mGET /proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg [36m304 [0m17.285 ms - -[0m
+[0mGET /proxy/images/uploads/Samantha-Jones-1597051890153.jpg [36m304 [0m15.423 ms - -[0m
+getEmojis controller func ran
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f46531ef8b328e076259aa4,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:18:38.245Z,
+    emoji: '😅',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:03:52.275Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4654adf8b328e0762e56b2,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:25:17.689Z,
+    emoji: '😛',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-26T12:25:21.632Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4656a1f8b328e07639388e,
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:33:37.455Z,
+    emoji: '😭',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:07:13.320Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735b1f8b328e07676ad1d,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:21.374Z,
+    emoji: '😷',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:24.197Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735bbf8b328e07676e596,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:31.402Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:31.402Z },
+  { hidden: true,
+    _id: 5f488bf8ec3611c40007c4cc,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-28T04:45:44.881Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:26:36.391Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4cdee0ec3611c400412b96,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-31T11:28:32.222Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:28:32.222Z },
+  { hidden: true,
+    _id: 5f4f6a95ec3611c400811f9e,
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:09.819Z,
+    emoji: '🤣',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:09.819Z },
+  { hidden: true,
+    _id: 5f4f6ac5ec3611c40082350f,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:57.602Z,
+    emoji: '😘',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:57.602Z },
+  { hidden: true,
+    _id: 5f4f6ae9ec3611c400831e9e,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:50:33.774Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:50:33.774Z },
+  { hidden: true,
+    _id: 5f4f6b0fec3611c400840184,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:51:11.606Z,
+    emoji: '🤴🏼',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:51:11.606Z },
+  { hidden: true,
+    _id: 5f54e291ec3611c400c7f9cb,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-09-06T13:22:25.486Z,
+    emoji: '😍',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-06T13:22:25.486Z },
+  { hidden: true,
+    _id: 5f5f45780e4b5467d7dfce6b,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:04.748Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:29:44.281Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f5f45a20e4b5467d7e142d5,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:46.490Z,
+    emoji: '😜',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:27:46.490Z } ]
+[0mPOST /proxy/blog/emojis?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600177003&signature=7d6740a1c64e87694d6ce275c1fd7c9afa6400ccd95724f7cfcb9ffe63b5ffa6 [32m200 [0m33.718 ms - 7595[0m
+image request {}
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1600165045373.jpg [32m200 [0m3.792 ms - 74672[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/5-steps-to-building-a-shopper-community?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600191557&signature=12db58a8cfe1ee52c351ba460df94414e92c1642c93e4b5119540581a4e07d05 [32m200 [0m191.762 ms - 10366[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/5-steps-to-building-a-shopper-community?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600195010&signature=7f88c33619f79611a38f0e04fc54fe7635e964ccd7a0a2dad271a5c4625fc0a3 [32m200 [0m202.716 ms - 10366[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/browsing-around?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600195028&signature=d07dc4018497203289811474189f362b3f365be63df837231f4c3e99e98102d3 [32m200 [0m55.495 ms - 9362[0m
+ran getTags function in tags controller
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { tags: [ [Object] ],
+    _id: 5f5f9259ac8aae3efbc72ee1,
+    title: 'Browsing Around',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098895050.jpg',
+    slug: 'browsing-around',
+    excerpt:
+     'Hey there,<br>I\'m new at Novarion, and am just browsing around currently...<br>Can you tell me a little bit about which products you\'re best known for?<br>Thanks',
+    mdesc:
+     'Hey there, I\'m new at Novarion, and am just browsing around currently... Can you tell me a little bit about which products you\'re best known for? Thank',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2020-09-14T15:55:05.874Z,
+    updatedAt: 2020-09-15T05:21:40.810Z },
+  { tags: [ [Object] ],
+    _id: 5f5eed4c162d5e221dda44e0,
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f5eed4b162d5e221dda44df,
+       name: 'Samantha Jones',
+       username: 'samantha-jones' },
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    title: '5 Steps to Kickstarting Your Shopper Network',
+    createdAt: 2020-09-14T04:10:52.016Z,
+    updatedAt: 2020-09-14T04:10:52.066Z } ]
+[0mGET /proxy/tags/getting-started?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600195045&signature=e9bab0308a235664626f4e67bbb6b432672d5081148117c15f1f78822eb3b753 [32m200 [0m63.445 ms - 17063[0m
+publicProfile function ran
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5f9259ac8aae3efbc72ee1,
+    title: 'Browsing Around',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098895050.jpg',
+    slug: 'browsing-around',
+    excerpt:
+     'Hey there,<br>I\'m new at Novarion, and am just browsing around currently...<br>Can you tell me a little bit about which products you\'re best known for?<br>Thanks',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       popUser: false,
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2020-09-14T15:55:05.874Z,
+    updatedAt: 2020-09-15T05:21:40.810Z } ]
+[0mGET /proxy/user/kramer1346?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600195061&signature=c57bee5b44ce598bb03db961035c95debc92a109fb9b477221eee8eff1174cd1 [32m200 [0m51.714 ms - 14574[0m
+publicProfile function ran
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5eed4c162d5e221dda44e0,
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       popUser: false,
+       _id: 5f5eed4b162d5e221dda44df,
+       name: 'Samantha Jones',
+       username: 'samantha-jones' },
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    title: '5 Steps to Kickstarting Your Shopper Network',
+    createdAt: 2020-09-14T04:10:52.016Z,
+    updatedAt: 2020-09-14T04:10:52.066Z } ]
+[0mGET /proxy/user/samantha-jones?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600195076&signature=b2a740d8df9030485f4bd5f93b4aa38a7f2b6edcd7f79f1947ca65573e106da5 [32m200 [0m41.492 ms - 14733[0m
+hit index page
+[0mGET / [31m500 [0m85.798 ms - 22[0m
+ran getTags function in tags controller
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Dad Bod Lovers
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/tags/baedadbod?shop=mydadbodislit.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600204042&signature=669ee10d93a51a7b29d57be1bf45af2ee68ddef138d87f2342caf38778049c23 [32m200 [0m124.133 ms - 14756[0m
+ran getTags function in tags controller
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { tags: [ [Object], [Object], [Object] ],
+    _id: 5f4f633609e3280bbf7a557d,
+    title: 'Is It Secure & Does It Match My Needs?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Samantha-Jones-1599037640623.png',
+    slug: 'does-it-match-my-needs',
+    excerpt:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do this with your program? I also need it to match the theme of my site. Oh, and can I upload videos?',
+    mdesc:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Will-Thompson-1599221419289.jpg',
+       _id: 5f522e98f0eb584685805942,
+       name: 'Will Thompson',
+       username: 'help' },
+    createdAt: 2020-09-02T09:17:43.007Z,
+    updatedAt: 2020-09-08T08:43:18.421Z },
+  { tags: [ [Object], [Object] ],
+    _id: 5f44901042c2e9357e0bb4c5,
+    title: 'How To Create a User-Generated Content Strategy',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598445709844.png',
+    slug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    excerpt:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    mdesc:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2020-08-25T04:14:08.816Z,
+    updatedAt: 2020-09-02T09:26:42.390Z },
+  { tags: [ [Object], [Object] ],
+    _id: 5f3626db18967962e2c6a89a,
+    title: 'Do You Have Multi-Lingual Support?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384232463.jpg',
+    slug: 'do-you-have-multi-lingual-support',
+    excerpt:
+     'We were wondering if you plan on launching multi-lingual support any time soon? We\'d love to try out similar Social Experiments on our non-English-speaking shoppers.',
+    mdesc: 'Hi there,',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    createdAt: 2020-08-14T05:53:31.310Z,
+    updatedAt: 2020-08-28T13:32:40.240Z } ]
+[0mGET /proxy/tags/faq?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600211467&signature=46000b8267114692f65aa37d925708ca233f94b01a8a7d661df008ce13bbe547 [32m200 [0m225.155 ms - 19515[0m
+ran listAllBlogsCategoriesTags function on server with req.query { _bt:
+   'eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUp6YjJOcFlXd3RhMmx1WnkxaGNIQXViWGx6YUc5d2FXWjVMbU52YlFZNkJrVlUiLCJleHAiOiIyMDIwLTA5LTE2VDAwOjI0OjEzLjE1N1oiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--4e4b3a07cadea22d096e64bb921a1746d9a4bf7f',
+  shop: 'social-king-app.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600212260',
+  signature:
+   '99667dcbe925d9ed69bb58e971312ef97909ee12a36938e9d890ce7e3e84317a' }
+req.body {}
+shopName social-king-app.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object], [Object], [Object] ],
+    _id: 5f4f633609e3280bbf7a557d,
+    title: 'Is It Secure & Does It Match My Needs?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Samantha-Jones-1599037640623.png',
+    slug: 'does-it-match-my-needs',
+    excerpt:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do this with your program? I also need it to match the theme of my site. Oh, and can I upload videos?',
+    mdesc:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Will-Thompson-1599221419289.jpg',
+       _id: 5f522e98f0eb584685805942,
+       name: 'Will Thompson',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/help',
+       username: 'help' },
+    createdAt: 2020-09-02T09:17:43.007Z,
+    updatedAt: 2020-09-08T08:43:18.421Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f46258642c2e9357e0bb4c8,
+    title: 'How Many Is \'Too Many Emojis\'?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598431916697.png',
+    slug: 'when-does-it-become-too-many-emojis',
+    excerpt:
+     'This post is about our thoughts on Emojis:\r\n\r\n\r\nWhat does the average web surfer want to do with emojis?\r\n\r\nAre emojis important?\r\n\r\nWhen does it get to the point of \'Too Many Emojis\'?\r\n\r\nTo answer these questions, we started by looking at what the Top Social and Ecommerce Platforms are currently doing with emojis',
+    mdesc: 'At Social King, we have 1 clear goal:',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-26T09:04:06.362Z,
+    updatedAt: 2020-09-06T13:17:10.947Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f44901042c2e9357e0bb4c5,
+    title: 'How To Create a User-Generated Content Strategy',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598445709844.png',
+    slug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    excerpt:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    mdesc:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-25T04:14:08.816Z,
+    updatedAt: 2020-09-02T09:26:42.390Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f38fdbb9ddf7c6c8b74be8f,
+    title: '5 Steps To Building an Online Community',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/support',
+       username: 'support' },
+    createdAt: 2020-08-16T09:34:51.757Z,
+    updatedAt: 2020-08-28T13:32:24.399Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f3626db18967962e2c6a89a,
+    title: 'Do You Have Multi-Lingual Support?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384232463.jpg',
+    slug: 'do-you-have-multi-lingual-support',
+    excerpt:
+     'We were wondering if you plan on launching multi-lingual support any time soon? We\'d love to try out similar Social Experiments on our non-English-speaking shoppers.',
+    mdesc: 'Hi there,',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/alephmarketingpros',
+       username: 'alephmarketingpros' },
+    createdAt: 2020-08-14T05:53:31.310Z,
+    updatedAt: 2020-08-28T13:32:40.240Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f339b1a08b51e66a5223621,
+    title: 'App Features',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217355899.png',
+    slug: 'app-features',
+    excerpt:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    mdesc:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-12T07:32:42.610Z,
+    updatedAt: 2020-08-12T07:33:38.144Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f2f812284c3764a214c1aba,
+    title: 'Conversations have gone digital',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1595925749431.png',
+    slug: 'conversations-have-gone-digital',
+    excerpt:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    mdesc:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-09T04:52:50.680Z,
+    updatedAt: 2020-08-11T13:11:19.773Z } ]
+[0mGET /proxy/?_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaUp6YjJOcFlXd3RhMmx1WnkxaGNIQXViWGx6YUc5d2FXWjVMbU52YlFZNkJrVlUiLCJleHAiOiIyMDIwLTA5LTE2VDAwOjI0OjEzLjE1N1oiLCJwdXIiOiJwZXJtYW5lbnRfcGFzc3dvcmRfYnlwYXNzIn19--4e4b3a07cadea22d096e64bb921a1746d9a4bf7f&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600212260&signature=99667dcbe925d9ed69bb58e971312ef97909ee12a36938e9d890ce7e3e84317a [32m200 [0m165.413 ms - 25758[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'kay-s-magic.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600213855',
+  signature:
+   '78858f3854177c88bf9b0903293b1a2004a55117cb24e05c31f48711340e6cd6' }
+req.body {}
+shopName kay-s-magic.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600213855&signature=78858f3854177c88bf9b0903293b1a2004a55117cb24e05c31f48711340e6cd6 [32m200 [0m128.678 ms - 16163[0m
+image request {}
+[0mGET /proxy/images/uploads/kay-s-magic.myshopify.com-1597987859968.png [32m200 [0m2.342 ms - 3066[0m
+image request {}
+[0mGET /proxy/images/uploads/kay-s-magic.myshopify.com-1597987860013.jpeg [32m200 [0m1.975 ms - 2743820[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'kay-s-magic.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600213859',
+  signature:
+   '9e134af1d867f90db59d8db0d762d1f9d9b2f4f7895c395681953c91ca96852a' }
+req.body {}
+shopName kay-s-magic.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600213859&signature=9e134af1d867f90db59d8db0d762d1f9d9b2f4f7895c395681953c91ca96852a [32m200 [0m36.760 ms - 16163[0m
+image request {}
+[0mGET /proxy/images/uploads/kay-s-magic.myshopify.com-1597987859968.png [32m200 [0m2.540 ms - 3066[0m
+image request {}
+[0mGET /proxy/images/uploads/kay-s-magic.myshopify.com-1597987860013.jpeg [32m200 [0m1.841 ms - 2743820[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'novarian.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600223533',
+  signature:
+   'a573364cb39edc9b74c3581ba9fc24c5a328b125f2baddd475b378b41ed3fc7f' }
+req.body {}
+shopName novarian.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5f9259ac8aae3efbc72ee1,
+    title: 'Browsing Around',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098895050.jpg',
+    slug: 'browsing-around',
+    excerpt:
+     'Hey there,<br>I\'m new at Novarion, and am just browsing around currently...<br>Can you tell me a little bit about which products you\'re best known for?<br>Thanks',
+    mdesc:
+     'Hey there, I\'m new at Novarion, and am just browsing around currently... Can you tell me a little bit about which products you\'re best known for? Thank',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-09-14T15:55:05.874Z,
+    updatedAt: 2020-09-15T05:21:40.810Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5eed4c162d5e221dda44e0,
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f5eed4b162d5e221dda44df,
+       name: 'Samantha Jones',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/samantha-jones',
+       username: 'samantha-jones' },
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    title: '5 Steps to Kickstarting Your Shopper Network',
+    createdAt: 2020-09-14T04:10:52.016Z,
+    updatedAt: 2020-09-14T04:10:52.066Z } ]
+[0mGET /proxy/?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600223533&signature=a573364cb39edc9b74c3581ba9fc24c5a328b125f2baddd475b378b41ed3fc7f [32m200 [0m181.929 ms - 16923[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'novarian.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600223800',
+  signature:
+   '68603224f652818848897821d54ec81e9104ac749f196a377b6d54e199798636' }
+req.body {}
+shopName novarian.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5f9259ac8aae3efbc72ee1,
+    title: 'Browsing Around',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098895050.jpg',
+    slug: 'browsing-around',
+    excerpt:
+     'Hey there,<br>I\'m new at Novarion, and am just browsing around currently...<br>Can you tell me a little bit about which products you\'re best known for?<br>Thanks',
+    mdesc:
+     'Hey there, I\'m new at Novarion, and am just browsing around currently... Can you tell me a little bit about which products you\'re best known for? Thank',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-09-14T15:55:05.874Z,
+    updatedAt: 2020-09-15T05:21:40.810Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f5eed4c162d5e221dda44e0,
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f5eed4b162d5e221dda44df,
+       name: 'Samantha Jones',
+       profile:
+        'https://novarian.myshopify.com/community/connect/user/samantha-jones',
+       username: 'samantha-jones' },
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    title: '5 Steps to Kickstarting Your Shopper Network',
+    createdAt: 2020-09-14T04:10:52.016Z,
+    updatedAt: 2020-09-14T04:10:52.066Z } ]
+[0mGET /proxy/?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600223800&signature=68603224f652818848897821d54ec81e9104ac749f196a377b6d54e199798636 [32m200 [0m56.206 ms - 16923[0m
+getEmojis controller func ran
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f5f84d60e4b5467d75660b0,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1600098777496.jpg',
+       _id: 5f5f6a7fdb274e3516e324b3,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    __v: 0,
+    createdAt: 2020-09-14T14:57:26.618Z,
+    emoji: '🤓',
+    shopifyDomain: 'novarian.myshopify.com',
+    updatedAt: 2020-09-14T14:57:26.618Z } ]
+[0mPOST /proxy/blog/emojis?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600223868&signature=89609a23e761fbc9c5dbd048c4d4aaa04c229a6e06613721d9ac176e07a9a192 [32m200 [0m24.970 ms - 478[0m
+ran getTags function in tags controller
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/tags/peacefuldreams?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600224096&signature=d9e16e0675567d5fcea31d791460f79ecb02500d94eb018c269f54c05d2491ba [32m200 [0m55.129 ms - 16303[0m
+ran getTags function in tags controller
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/tags/texaswitchapothecary?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600227122&signature=a0019774bc90c34b35c7816b8541f0d0136ce82ccabd9110d2702a1efec4cbbf [32m200 [0m132.033 ms - 16321[0m
+read function ran in controller
+this blog is public
+generateSEOHeader func ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/blog/5-steps-to-building-a-shopper-community?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600229283&signature=c75f38f7fedd0ab6539c196e18302ae3786aef589cd3a4138aa3a5d5b452c166 [32m200 [0m180.809 ms - 17827[0m
+image request {}
+[0mGET /proxy/images/uploads/Samantha-Jones-1595435373516.gif [32m200 [0m85.560 ms - 8521[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'kay-s-magic.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600236834',
+  signature:
+   'ce9ad7e9f818ff3b45b82c334bc6c70e171d0b23495ae2ac2a6d15cab907e5ea' }
+req.body {}
+shopName kay-s-magic.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600236834&signature=ce9ad7e9f818ff3b45b82c334bc6c70e171d0b23495ae2ac2a6d15cab907e5ea [32m200 [0m147.167 ms - 16163[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'kay-s-magic.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600237363',
+  signature:
+   '4224f1886716439ca043e474bff765bf24c06f1de1077b05cbdd6f4bb85e31e9' }
+req.body {}
+shopName kay-s-magic.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  []
+[0mGET /proxy/?shop=kay-s-magic.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600237363&signature=4224f1886716439ca043e474bff765bf24c06f1de1077b05cbdd6f4bb85e31e9 [32m200 [0m117.416 ms - 16163[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'social-king-app.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600237802',
+  signature:
+   '424d8cf92925e9998f98f4972d8b9534e4c82eb1e769d1cb4031ca9b28be992e' }
+req.body {}
+shopName social-king-app.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object], [Object], [Object] ],
+    _id: 5f4f633609e3280bbf7a557d,
+    title: 'Is It Secure & Does It Match My Needs?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Samantha-Jones-1599037640623.png',
+    slug: 'does-it-match-my-needs',
+    excerpt:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do this with your program? I also need it to match the theme of my site. Oh, and can I upload videos?',
+    mdesc:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Will-Thompson-1599221419289.jpg',
+       _id: 5f522e98f0eb584685805942,
+       name: 'Will Thompson',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/help',
+       username: 'help' },
+    createdAt: 2020-09-02T09:17:43.007Z,
+    updatedAt: 2020-09-08T08:43:18.421Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f46258642c2e9357e0bb4c8,
+    title: 'How Many Is \'Too Many Emojis\'?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598431916697.png',
+    slug: 'when-does-it-become-too-many-emojis',
+    excerpt:
+     'This post is about our thoughts on Emojis:\r\n\r\n\r\nWhat does the average web surfer want to do with emojis?\r\n\r\nAre emojis important?\r\n\r\nWhen does it get to the point of \'Too Many Emojis\'?\r\n\r\nTo answer these questions, we started by looking at what the Top Social and Ecommerce Platforms are currently doing with emojis',
+    mdesc: 'At Social King, we have 1 clear goal:',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-26T09:04:06.362Z,
+    updatedAt: 2020-09-06T13:17:10.947Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f44901042c2e9357e0bb4c5,
+    title: 'How To Create a User-Generated Content Strategy',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598445709844.png',
+    slug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    excerpt:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    mdesc:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-25T04:14:08.816Z,
+    updatedAt: 2020-09-02T09:26:42.390Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f38fdbb9ddf7c6c8b74be8f,
+    title: '5 Steps To Building an Online Community',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/support',
+       username: 'support' },
+    createdAt: 2020-08-16T09:34:51.757Z,
+    updatedAt: 2020-08-28T13:32:24.399Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f3626db18967962e2c6a89a,
+    title: 'Do You Have Multi-Lingual Support?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384232463.jpg',
+    slug: 'do-you-have-multi-lingual-support',
+    excerpt:
+     'We were wondering if you plan on launching multi-lingual support any time soon? We\'d love to try out similar Social Experiments on our non-English-speaking shoppers.',
+    mdesc: 'Hi there,',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/alephmarketingpros',
+       username: 'alephmarketingpros' },
+    createdAt: 2020-08-14T05:53:31.310Z,
+    updatedAt: 2020-08-28T13:32:40.240Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f339b1a08b51e66a5223621,
+    title: 'App Features',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217355899.png',
+    slug: 'app-features',
+    excerpt:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    mdesc:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-12T07:32:42.610Z,
+    updatedAt: 2020-08-12T07:33:38.144Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f2f812284c3764a214c1aba,
+    title: 'Conversations have gone digital',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1595925749431.png',
+    slug: 'conversations-have-gone-digital',
+    excerpt:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    mdesc:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-09T04:52:50.680Z,
+    updatedAt: 2020-08-11T13:11:19.773Z } ]
+[0mGET /proxy/?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600237802&signature=424d8cf92925e9998f98f4972d8b9534e4c82eb1e769d1cb4031ca9b28be992e [32m200 [0m267.021 ms - 25758[0m
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519334887.png [32m200 [0m3.128 ms - 343950[0m
+image request {}
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Will-Thompson-1599221419289.jpg [32m200 [0m54.245 ms - 56361[0m
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1598445709844.png [32m200 [0m57.109 ms - 52613[0m
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg [32m200 [0m31.681 ms - 91175[0m
+[0mGET /proxy/images/uploads/Flavio-Russo-1597384232463.jpg [32m200 [0m43.001 ms - 86946[0m
+image request {}
+getEmojis controller func ran
+image request {}
+[0mGET /proxy/images/uploads/Flavio-Russo-1597384172982.jpg [32m200 [0m69.172 ms - 84842[0m
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1598431916697.png [32m200 [0m70.651 ms - 47699[0m
+[0mGET /proxy/images/uploads/Samantha-Jones-1597051890153.jpg [32m200 [0m72.876 ms - 49027[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1595925749431.png [32m200 [0m61.544 ms - 164744[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1597217649743.jpg [32m200 [0m62.901 ms - 38084[0m
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519454759.png [32m200 [0m66.645 ms - 164744[0m
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f46531ef8b328e076259aa4,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:18:38.245Z,
+    emoji: '😅',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:03:52.275Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4654adf8b328e0762e56b2,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:25:17.689Z,
+    emoji: '😛',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-26T12:25:21.632Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4656a1f8b328e07639388e,
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:33:37.455Z,
+    emoji: '😭',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:07:13.320Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735b1f8b328e07676ad1d,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:21.374Z,
+    emoji: '😷',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:24.197Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735bbf8b328e07676e596,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:31.402Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:31.402Z },
+  { hidden: true,
+    _id: 5f488bf8ec3611c40007c4cc,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-28T04:45:44.881Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:26:36.391Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4cdee0ec3611c400412b96,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-31T11:28:32.222Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:28:32.222Z },
+  { hidden: true,
+    _id: 5f4f6a95ec3611c400811f9e,
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:09.819Z,
+    emoji: '🤣',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:09.819Z },
+  { hidden: true,
+    _id: 5f4f6ac5ec3611c40082350f,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:57.602Z,
+    emoji: '😘',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:57.602Z },
+  { hidden: true,
+    _id: 5f4f6ae9ec3611c400831e9e,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:50:33.774Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:50:33.774Z },
+  { hidden: true,
+    _id: 5f4f6b0fec3611c400840184,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:51:11.606Z,
+    emoji: '🤴🏼',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:51:11.606Z },
+  { hidden: true,
+    _id: 5f54e291ec3611c400c7f9cb,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-09-06T13:22:25.486Z,
+    emoji: '😍',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-06T13:22:25.486Z },
+  { hidden: true,
+    _id: 5f5f45780e4b5467d7dfce6b,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:04.748Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:29:44.281Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f5f45a20e4b5467d7e142d5,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:46.490Z,
+    emoji: '😜',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:27:46.490Z } ]
+[0mGET /proxy/images/uploads/Samantha-Jones-1599037640623.png [32m200 [0m69.267 ms - 851463[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1597217355899.png [32m200 [0m48.326 ms - 841476[0m
+[0mPOST /proxy/blog/emojis?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600237803&signature=1a40aa61738164e09c921e2db83c1e48b1cf4dcc515d17a786b5fed51797fde6 [32m200 [0m105.540 ms - 7595[0m
+read function ran in controller
+[0mGET /proxy/blog/emojis?shop=novarian.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238175&signature=2513e26fd3430f2c99b9c16c84b40dd02d5890651dda253c3b6310956bfe7f8f [32m200 [0m105.397 ms - 69037[0m
+DB Connected
+Express running → PORT 7777
+DB Connected
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'social-king-app.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600238227',
+  signature:
+   '3244f56ad9ed454d4b55d5261240c50fdb98835dfc4704772d37298fe4fde197' }
+req.body {}
+shopName social-king-app.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object], [Object], [Object] ],
+    _id: 5f4f633609e3280bbf7a557d,
+    title: 'Is It Secure & Does It Match My Needs?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Samantha-Jones-1599037640623.png',
+    slug: 'does-it-match-my-needs',
+    excerpt:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do this with your program? I also need it to match the theme of my site. Oh, and can I upload videos?',
+    mdesc:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Will-Thompson-1599221419289.jpg',
+       _id: 5f522e98f0eb584685805942,
+       name: 'Will Thompson',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/help',
+       username: 'help' },
+    createdAt: 2020-09-02T09:17:43.007Z,
+    updatedAt: 2020-09-08T08:43:18.421Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f46258642c2e9357e0bb4c8,
+    title: 'How Many Is \'Too Many Emojis\'?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598431916697.png',
+    slug: 'when-does-it-become-too-many-emojis',
+    excerpt:
+     'This post is about our thoughts on Emojis:\r\n\r\n\r\nWhat does the average web surfer want to do with emojis?\r\n\r\nAre emojis important?\r\n\r\nWhen does it get to the point of \'Too Many Emojis\'?\r\n\r\nTo answer these questions, we started by looking at what the Top Social and Ecommerce Platforms are currently doing with emojis',
+    mdesc: 'At Social King, we have 1 clear goal:',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-26T09:04:06.362Z,
+    updatedAt: 2020-09-06T13:17:10.947Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f44901042c2e9357e0bb4c5,
+    title: 'How To Create a User-Generated Content Strategy',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598445709844.png',
+    slug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    excerpt:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    mdesc:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-25T04:14:08.816Z,
+    updatedAt: 2020-09-02T09:26:42.390Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f38fdbb9ddf7c6c8b74be8f,
+    title: '5 Steps To Building an Online Community',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/support',
+       username: 'support' },
+    createdAt: 2020-08-16T09:34:51.757Z,
+    updatedAt: 2020-08-28T13:32:24.399Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f3626db18967962e2c6a89a,
+    title: 'Do You Have Multi-Lingual Support?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384232463.jpg',
+    slug: 'do-you-have-multi-lingual-support',
+    excerpt:
+     'We were wondering if you plan on launching multi-lingual support any time soon? We\'d love to try out similar Social Experiments on our non-English-speaking shoppers.',
+    mdesc: 'Hi there,',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/alephmarketingpros',
+       username: 'alephmarketingpros' },
+    createdAt: 2020-08-14T05:53:31.310Z,
+    updatedAt: 2020-08-28T13:32:40.240Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f339b1a08b51e66a5223621,
+    title: 'App Features',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217355899.png',
+    slug: 'app-features',
+    excerpt:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    mdesc:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-12T07:32:42.610Z,
+    updatedAt: 2020-08-12T07:33:38.144Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f2f812284c3764a214c1aba,
+    title: 'Conversations have gone digital',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1595925749431.png',
+    slug: 'conversations-have-gone-digital',
+    excerpt:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    mdesc:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-09T04:52:50.680Z,
+    updatedAt: 2020-08-11T13:11:19.773Z } ]
+[0mGET /proxy/?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238227&signature=3244f56ad9ed454d4b55d5261240c50fdb98835dfc4704772d37298fe4fde197 [32m200 [0m132.460 ms - 25758[0m
+image request {}
+image request {}
+image request {}
+image request {}
+image request {}
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1598431916697.png [36m304 [0m36.896 ms - -[0m
+[0mGET /proxy/images/uploads/Flavio-Russo-1597384232463.jpg [32m200 [0m20.138 ms - 86946[0m
+image request {}
+[0mGET /proxy/images/uploads/Flavio-Russo-1597384172982.jpg [32m200 [0m24.231 ms - 84842[0m
+image request {}
+[0mGET /proxy/images/uploads/Samantha-Jones-1597051890153.jpg [36m304 [0m43.453 ms - -[0m
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519334887.png [32m200 [0m22.009 ms - 343950[0m
+image request {}
+[0mGET /proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg [36m304 [0m44.442 ms - -[0m
+image request {}
+getEmojis controller func ran
+image request {}
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519454759.png [32m200 [0m28.309 ms - 164744[0m
+[0mGET /proxy/images/uploads/Will-Thompson-1599221419289.jpg [32m200 [0m33.948 ms - 56361[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1597217649743.jpg [32m200 [0m31.136 ms - 38084[0m
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f46531ef8b328e076259aa4,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:18:38.245Z,
+    emoji: '😅',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:03:52.275Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4654adf8b328e0762e56b2,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:25:17.689Z,
+    emoji: '😛',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-26T12:25:21.632Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4656a1f8b328e07639388e,
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:33:37.455Z,
+    emoji: '😭',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:07:13.320Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735b1f8b328e07676ad1d,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:21.374Z,
+    emoji: '😷',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:24.197Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735bbf8b328e07676e596,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:31.402Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:31.402Z },
+  { hidden: true,
+    _id: 5f488bf8ec3611c40007c4cc,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-28T04:45:44.881Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:26:36.391Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4cdee0ec3611c400412b96,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-31T11:28:32.222Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:28:32.222Z },
+  { hidden: true,
+    _id: 5f4f6a95ec3611c400811f9e,
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:09.819Z,
+    emoji: '🤣',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:09.819Z },
+  { hidden: true,
+    _id: 5f4f6ac5ec3611c40082350f,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:57.602Z,
+    emoji: '😘',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:57.602Z },
+  { hidden: true,
+    _id: 5f4f6ae9ec3611c400831e9e,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:50:33.774Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:50:33.774Z },
+  { hidden: true,
+    _id: 5f4f6b0fec3611c400840184,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:51:11.606Z,
+    emoji: '🤴🏼',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:51:11.606Z },
+  { hidden: true,
+    _id: 5f54e291ec3611c400c7f9cb,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-09-06T13:22:25.486Z,
+    emoji: '😍',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-06T13:22:25.486Z },
+  { hidden: true,
+    _id: 5f5f45780e4b5467d7dfce6b,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:04.748Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:29:44.281Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f5f45a20e4b5467d7e142d5,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:46.490Z,
+    emoji: '😜',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:27:46.490Z } ]
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1598445709844.png [32m200 [0m27.421 ms - 52613[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1595925749431.png [32m200 [0m27.242 ms - 164744[0m
+[0mGET /proxy/images/uploads/Samantha-Jones-1599037640623.png [32m200 [0m33.961 ms - 851463[0m
+[0mPOST /proxy/blog/emojis?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238228&signature=b5a0009a1014a5a5f23c5c4010c9568ae3ad5f76522d87f1764e46942d73154c [32m200 [0m43.600 ms - 7595[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1597217355899.png [32m200 [0m34.077 ms - 841476[0m
+req.url /user/profile?email=&name=&hash=cce819c60446ef50bdf4e6e9674b1b5d&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238230&signature=18eb7410fd85b2c33b25ab13cd9c95dbf267ebc77cbce973c54b45a7160ab48b
+req.query.slug undefined
+expected_hash cce819c60446ef50bdf4e6e9674b1b5d
+actual_hash cce819c60446ef50bdf4e6e9674b1b5d
+[0mGET /proxy/user/profile?email=&name=&hash=cce819c60446ef50bdf4e6e9674b1b5d&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238230&signature=18eb7410fd85b2c33b25ab13cd9c95dbf267ebc77cbce973c54b45a7160ab48b [36m302 [0m10.740 ms - 210[0m
+ran listAllBlogsCategoriesTags function on server with req.query { shop: 'social-king-app.myshopify.com',
+  path_prefix: '/community/connect',
+  timestamp: '1600238233',
+  signature:
+   'cd234a05bb48cdc3577841fa03a0151ba36bc65f4408d04b947a9997604e1893' }
+req.body {}
+shopName social-king-app.myshopify.com
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+blogs in showLoadedBlogs func:  [ { categories: [],
+    tags: [ [Object], [Object], [Object] ],
+    _id: 5f4f633609e3280bbf7a557d,
+    title: 'Is It Secure & Does It Match My Needs?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Samantha-Jones-1599037640623.png',
+    slug: 'does-it-match-my-needs',
+    excerpt:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do this with your program? I also need it to match the theme of my site. Oh, and can I upload videos?',
+    mdesc:
+     'Hey there, I\'m looking to build a private members area on my fitness site with instructional videos and a branded social area for members to interact. Can I do',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Will-Thompson-1599221419289.jpg',
+       _id: 5f522e98f0eb584685805942,
+       name: 'Will Thompson',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/help',
+       username: 'help' },
+    createdAt: 2020-09-02T09:17:43.007Z,
+    updatedAt: 2020-09-08T08:43:18.421Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f46258642c2e9357e0bb4c8,
+    title: 'How Many Is \'Too Many Emojis\'?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598431916697.png',
+    slug: 'when-does-it-become-too-many-emojis',
+    excerpt:
+     'This post is about our thoughts on Emojis:\r\n\r\n\r\nWhat does the average web surfer want to do with emojis?\r\n\r\nAre emojis important?\r\n\r\nWhen does it get to the point of \'Too Many Emojis\'?\r\n\r\nTo answer these questions, we started by looking at what the Top Social and Ecommerce Platforms are currently doing with emojis',
+    mdesc: 'At Social King, we have 1 clear goal:',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-26T09:04:06.362Z,
+    updatedAt: 2020-09-06T13:17:10.947Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f44901042c2e9357e0bb4c5,
+    title: 'How To Create a User-Generated Content Strategy',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Cynthia-Lopez-1598445709844.png',
+    slug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    excerpt:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    mdesc:
+     'To help set you up for success, we\'ve created this checklist of questions to ponder while building out your content strategy. Enjoy 😊 & Please feel free to reach out if you need help getting the snowball running with your New Social Network',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-25T04:14:08.816Z,
+    updatedAt: 2020-09-02T09:26:42.390Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f38fdbb9ddf7c6c8b74be8f,
+    title: '5 Steps To Building an Online Community',
+    coverMedia:
+     'https://socialking.app/api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg',
+    slug: '5-steps-to-building-a-shopper-community',
+    excerpt:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own Social Network.',
+    mdesc:
+     'Heyooo. We get it, Building a Shopper Community can be challenging, but we want to help you get there. That\'s why we\'ve created 5 Steps to Kickstarting Your Own',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/support',
+       username: 'support' },
+    createdAt: 2020-08-16T09:34:51.757Z,
+    updatedAt: 2020-08-28T13:32:24.399Z },
+  { categories: [],
+    tags: [ [Object], [Object] ],
+    _id: 5f3626db18967962e2c6a89a,
+    title: 'Do You Have Multi-Lingual Support?',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384232463.jpg',
+    slug: 'do-you-have-multi-lingual-support',
+    excerpt:
+     'We were wondering if you plan on launching multi-lingual support any time soon? We\'d love to try out similar Social Experiments on our non-English-speaking shoppers.',
+    mdesc: 'Hi there,',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/alephmarketingpros',
+       username: 'alephmarketingpros' },
+    createdAt: 2020-08-14T05:53:31.310Z,
+    updatedAt: 2020-08-28T13:32:40.240Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f339b1a08b51e66a5223621,
+    title: 'App Features',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217355899.png',
+    slug: 'app-features',
+    excerpt:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    mdesc:
+     'When any post or comment is approved, the shopper gets an email notification with a link to the approved content - thereby bringing them back to your site.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1597217649743.jpg',
+       _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/kramer1346',
+       username: 'kramer1346' },
+    createdAt: 2020-08-12T07:32:42.610Z,
+    updatedAt: 2020-08-12T07:33:38.144Z },
+  { categories: [],
+    tags: [ [Object] ],
+    _id: 5f2f812284c3764a214c1aba,
+    title: 'Conversations have gone digital',
+    coverMedia:
+     'https://socialking.app/proxy/images/uploads/Elisha-Kramer-1595925749431.png',
+    slug: 'conversations-have-gone-digital',
+    excerpt:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    mdesc:
+     'Hi Friends, and thanks for checking out our Demo App. Feel free to browse around, and start chatting.',
+    postedBy:
+     { cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       profile:
+        'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+       username: 'chayaisraeldonations' },
+    createdAt: 2020-08-09T04:52:50.680Z,
+    updatedAt: 2020-08-11T13:11:19.773Z } ]
+[0mGET /proxy/?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238233&signature=cd234a05bb48cdc3577841fa03a0151ba36bc65f4408d04b947a9997604e1893 [32m200 [0m71.100 ms - 25758[0m
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519334887.png [36m304 [0m18.088 ms - -[0m
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Will-Thompson-1599221419289.jpg [36m304 [0m21.922 ms - -[0m
+image request {}
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1598431916697.png [36m304 [0m24.100 ms - -[0m
+image request {}
+image request {}
+[0mGET /proxy/images/uploads/Flavio-Russo-1597384232463.jpg [36m304 [0m30.382 ms - -[0m
+[0mGET /proxy/images/uploads/Samantha-Jones-1597051890153.jpg [36m304 [0m28.031 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/Flavio-Russo-1597384172982.jpg [36m304 [0m30.953 ms - -[0m
+[0mGET /proxy/images/uploads/Cynthia-Lopez-1598445709844.png [36m304 [0m28.266 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/Elisha-Kramer-1597217355899.png [36m304 [0m29.477 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519454759.png [36m304 [0m30.908 ms - -[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1597217649743.jpg [36m304 [0m31.993 ms - -[0m
+[0mGET /proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg [36m304 [0m30.738 ms - -[0m
+[0mGET /proxy/images/uploads/Samantha-Jones-1599037640623.png [36m304 [0m35.255 ms - -[0m
+[0mGET /proxy/images/uploads/Elisha-Kramer-1595925749431.png [36m304 [0m31.108 ms - -[0m
+getEmojis controller func ran
+emojis in getEmojis func [ { hidden: true,
+    _id: 5f46531ef8b328e076259aa4,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:18:38.245Z,
+    emoji: '😅',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:03:52.275Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4654adf8b328e0762e56b2,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:25:17.689Z,
+    emoji: '😛',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-26T12:25:21.632Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4656a1f8b328e07639388e,
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-26T12:33:37.455Z,
+    emoji: '😭',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-28T05:07:13.320Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735b1f8b328e07676ad1d,
+    postSlug:
+     'how-to-build-your-own-social-network-part-i-building-a-content-strategy',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:21.374Z,
+    emoji: '😷',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:24.197Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4735bbf8b328e07676e596,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites:
+        'We love how Social King enables us to tap into the content power-house which is our shopper base.',
+       about: 'Selling Italian Cheese',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Flavio-Russo-1597384172982.jpg',
+       _id: 5f3625c908b51e66a5223623,
+       name: 'Flavio Russo',
+       username: 'alephmarketingpros' },
+    __v: 0,
+    createdAt: 2020-08-27T04:25:31.402Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-27T04:25:31.402Z },
+  { hidden: true,
+    _id: 5f488bf8ec3611c40007c4cc,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-28T04:45:44.881Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:26:36.391Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f4cdee0ec3611c400412b96,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-08-31T11:28:32.222Z,
+    emoji: '😏',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-08-31T11:28:32.222Z },
+  { hidden: true,
+    _id: 5f4f6a95ec3611c400811f9e,
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:09.819Z,
+    emoji: '🤣',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:09.819Z },
+  { hidden: true,
+    _id: 5f4f6ac5ec3611c40082350f,
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:49:57.602Z,
+    emoji: '😘',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:49:57.602Z },
+  { hidden: true,
+    _id: 5f4f6ae9ec3611c400831e9e,
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:50:33.774Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:50:33.774Z },
+  { hidden: true,
+    _id: 5f4f6b0fec3611c400840184,
+    postSlug: 'app-features',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'Customer Success Manager @ Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Support-@AmpItUp-1597570376898.jpg',
+       _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    __v: 0,
+    createdAt: 2020-09-02T09:51:11.606Z,
+    emoji: '🤴🏼',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-02T09:51:11.606Z },
+  { hidden: true,
+    _id: 5f54e291ec3611c400c7f9cb,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: 'VP Marketing at Social King',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+       _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    __v: 0,
+    createdAt: 2020-09-06T13:22:25.486Z,
+    emoji: '😍',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-06T13:22:25.486Z },
+  { hidden: true,
+    _id: 5f5f45780e4b5467d7dfce6b,
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:04.748Z,
+    emoji: '😎',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:29:44.281Z,
+    shopPostedAt: 5f1e6a95cae9586963ac9c24 },
+  { hidden: true,
+    _id: 5f5f45a20e4b5467d7e142d5,
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { storeFavorites: 'The Products 😌',
+       about: '',
+       cover_photo:
+        'https://socialking.app/proxy/images/uploads/James-McQueen-1600079167319.jpg',
+       _id: 5f5f383d5099060d34b59876,
+       name: 'Freddie Mercury',
+       username: 'Freddie Mercury' },
+    __v: 0,
+    createdAt: 2020-09-14T10:27:46.490Z,
+    emoji: '😜',
+    shopifyDomain: 'social-king-app.myshopify.com',
+    updatedAt: 2020-09-14T10:27:46.490Z } ]
+[0mPOST /proxy/blog/emojis?shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238234&signature=fb33109ac43d920498d07dd77541fe0df95c5932b06f61bf7e651d86e86f1db3 [32m200 [0m48.785 ms - 7595[0m
+req.url /user/profile?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238236&signature=a8f67d7149bb818cb255dae06b9461e909340769d45d6aafba8d7dea0ef055d7
+req.query.slug undefined
+expected_hash bfe9f188db57b16aa00bb97e1a85397a
+actual_hash bfe9f188db57b16aa00bb97e1a85397a
+user found { storeFavorites: 'The Products 😌',
+  about: 'VP Marketing at Social King',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+  popUser: false,
+  _id: 5f2be2738f38284868d61666,
+  name: 'Cynthia Lopez',
+  email: 'chayaisraeldonations@gmail.com',
+  salt: '926358519413',
+  hashed_password: 'fe508d77db4deef6bec94a9f36ade129c22d23fc',
+  profile:
+   'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+  username: 'chayaisraeldonations',
+  shopDomain: 'social-king-app.myshopify.com',
+  createdAt: 2020-08-06T10:58:59.778Z,
+  updatedAt: 2020-08-10T09:32:24.400Z,
+  __v: 0 }
+ran getTags function in tags controller
+tags obj:  { '5f182dba769d6f3d8ae9b8e8': false,
+  '5f182d95769d6f3d8ae9b8e6': false,
+  '5f182d86769d6f3d8ae9b8e4': false,
+  '5f182d90769d6f3d8ae9b8e5': false,
+  '5f391c53d1d07c22a32f359b': false }
+tags obj:  { '5f182dba769d6f3d8ae9b8e8': false,
+  '5f182d95769d6f3d8ae9b8e6': false,
+  '5f182d86769d6f3d8ae9b8e4': false,
+  '5f182d90769d6f3d8ae9b8e5': false,
+  '5f391c53d1d07c22a32f359b': false }
+blog in addComment view []
+generateSEOHeader func ran
+tag condition ran
+shop.communityName in showTitle function Our Community
+[0mGET /proxy/user/profile?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238236&signature=a8f67d7149bb818cb255dae06b9461e909340769d45d6aafba8d7dea0ef055d7 [32m200 [0m134.961 ms - 30758[0m
+image request {}
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519334887.png [36m304 [0m15.784 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/social-king-app.myshopify.com-1596519454759.png [36m304 [0m14.927 ms - -[0m
+image request {}
+[0mGET /proxy/images/uploads/Samantha-Jones-1597051890153.jpg [36m304 [0m15.700 ms - -[0m
+req.url /get-profile-photo?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238240&signature=0bbd26c2201f30c2c4c8664cf2716e66aa6b30dc2dbb8eebd011eb60e92f3995
+req.query.slug undefined
+expected_hash bfe9f188db57b16aa00bb97e1a85397a
+actual_hash bfe9f188db57b16aa00bb97e1a85397a
+user found { storeFavorites: 'The Products 😌',
+  about: 'VP Marketing at Social King',
+  role: 0,
+  cover_photo:
+   'https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg',
+  popUser: false,
+  _id: 5f2be2738f38284868d61666,
+  name: 'Cynthia Lopez',
+  email: 'chayaisraeldonations@gmail.com',
+  salt: '926358519413',
+  hashed_password: 'fe508d77db4deef6bec94a9f36ade129c22d23fc',
+  profile:
+   'https://social-king-app.myshopify.com/community/connect/user/chayaisraeldonations',
+  username: 'chayaisraeldonations',
+  shopDomain: 'social-king-app.myshopify.com',
+  createdAt: 2020-08-06T10:58:59.778Z,
+  updatedAt: 2020-08-10T09:32:24.400Z,
+  __v: 0 }
+profileImageURL:  https://socialking.app/proxy/images/uploads/Samantha-Jones-1597051890153.jpg
+[0mGET /proxy/get-profile-photo?email=chayaisraeldonations%40gmail.com&name=Samantha+Jones&hash=bfe9f188db57b16aa00bb97e1a85397a&shop=social-king-app.myshopify.com&path_prefix=%2Fcommunity%2Fconnect&timestamp=1600238240&signature=0bbd26c2201f30c2c4c8664cf2716e66aa6b30dc2dbb8eebd011eb60e92f3995 [32m200 [0m15.045 ms - 86[0m
