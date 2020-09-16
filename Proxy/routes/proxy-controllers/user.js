@@ -46,6 +46,31 @@ exports.read = (req, res) => {
                     return res.send(userAdmin({blog, blogs, user: req.profile, tags: req.tags, shop}));
                 });
             });
+        } else {
+          setTimeout(function(){
+             Blog.find({ postedBy: req.profile._id, shopifyDomain: req.query.shop, archivedByUser: { $ne: true } })
+            .sort({createdAt: -1})
+            .populate('tags', '_id name slug')
+            .populate('postedBy', '_id name username')
+            .select('_id title slug postedBy hidden createdAt updatedAt')
+            .exec((err, blogs) => {
+                if (err) {
+                    return res.status(400).json({
+                        error: errorHandler(err)
+                    });
+                }
+                req.profile.hashed_password = undefined;
+                Blog.find({ slug: req.query.slug, shopifyDomain: req.query.shop })
+                    .exec((err, blog) => {
+                        if (err) {
+                            return res.status(400).json({
+                                error: errorHandler(err)
+                            });
+                        }
+                    return res.send(userAdmin({blog, blogs, user: req.profile, tags: req.tags, shop}));
+                });
+            });   
+          }, 5000);
         }
     })
 };
