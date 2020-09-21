@@ -62,7 +62,7 @@ exports.create = (req, res) => {
     blog.coverMedia = mediaBlock ? mediaBlock.data.file.url : ''; 
 
     blog.slug = slugify(title.replace(/["']/g, "")).toLowerCase();
-    blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "");
+    blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
 
     blog.mtitle = `${title} | ${process.env.APP_NAME}`;
 
