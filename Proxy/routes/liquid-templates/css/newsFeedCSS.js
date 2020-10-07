@@ -20,7 +20,7 @@ exports.newsFeedCSS = ({shop}) => {
             .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }
             .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }
             .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : 'darkblue'};color:white;padding:10px;font-weight:bold; }
-            .community-card-body { letter-spacing: .4px; padding:10px }
+            .community-card-body { letter-spacing: .4px; padding:30px }
             .community-post-body { letter-spacing: .35px;}
             .community-letter-spacing { letter-spacing: .4px; }
             @media only screen 
