@@ -16,14 +16,14 @@ exports.getSubscriptionUrl = async (req, res) => {
     query: `mutation {
       appSubscriptionCreate(
           name: "Social King: Community Engagement",
-          trialDays: 8,
+          trialDays: 360,
           returnUrl: "https://${shop}/admin/apps/${APP_SLUG}"
           test: ${process.env.NODE_ENV == 'development' ? 'true' : 'false'}
           lineItems: [
           {
             plan: {
               appRecurringPricingDetails: {
-                  price: { amount: 19, currencyCode: USD }
+                  price: { amount: 0.01, currencyCode: USD }
               }
             }
           }
