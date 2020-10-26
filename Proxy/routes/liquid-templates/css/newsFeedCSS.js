@@ -50,5 +50,6 @@ exports.newsFeedCSS = ({shop}) => {
        	    .emoji-picker { z-index: 100;}
             .community-admin-btn {color:white;}
             .cover-img { max-width: 100%; }
+            #profile-photo img { max-width: 100%; }
 	`
 };
