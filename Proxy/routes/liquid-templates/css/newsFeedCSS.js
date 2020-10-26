@@ -22,6 +22,9 @@ exports.newsFeedCSS = ({shop}) => {
             .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : 'darkblue'};color:white;padding:10px;font-weight:bold; }
             .community-card-body { letter-spacing: .4px; padding:30px }
             .community-post-body { letter-spacing: .35px;}
+            .community-post-body h2 { color: black; font-weight: bold;}
+            .community-post-body button { white-space: normal; }
+            .community-card a { white-space: normal; }
             .community-letter-spacing { letter-spacing: .4px; }
             @media only screen 
             and (min-device-width: 600px)
