@@ -6957,3 +6957,9 @@ Error: Failed to lookup view "index" in views directory "/root/shopify-community
     at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
     at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
     at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+(node:19543) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:19543) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:19680) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:19680) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:19828) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:19828) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
