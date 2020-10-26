@@ -12,8 +12,8 @@ exports.newsFeedCSS = ({shop}) => {
             .tag-btn:hover {
               background-color: lightgreen;
             }
-            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
-            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
+            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
+            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
             .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }
             .community-header-title { background:#fff; }
             .community-header-title-box { display:flex }
