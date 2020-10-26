@@ -6963,3 +6963,9 @@ Error: Failed to lookup view "index" in views directory "/root/shopify-community
 (node:19680) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:19828) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:19828) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/undefined'
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/undefined'
+(node:21350) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:21350) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:21477) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:21477) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
