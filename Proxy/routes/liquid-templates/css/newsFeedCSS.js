@@ -54,5 +54,6 @@ exports.newsFeedCSS = ({shop}) => {
             .community-admin-btn {color:white;}
             .cover-img { max-width: 100%; }
             #profile-photo img { max-width: 100%; }
+            .community-card p,h3,h4,h5,h6,h7 { font-size: 15px; color: black; } 
 	`
 };

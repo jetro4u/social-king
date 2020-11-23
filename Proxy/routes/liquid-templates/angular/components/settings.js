@@ -18,22 +18,26 @@ module.exports.settings = (user) => {
             </div>
 
             <div class='form-group'>
-              <div id='profile-photo'>${user.cover_photo && user.cover_photo!='undefined' ? "<img id='the-profile-img' src='"+user.cover_photo+"' ng-model='formData.cover_photo'/>" : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}</div>
+              <div id='profile-photo'>${user.cover_photo && user.cover_photo!='undefined' ? "<img id='the-profile-img' src='"+user.cover_photo+"' ng-model='formData.cover_photo'/>" : 'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1603702989629.jpeg'}</div>
             </div>
 
             <div class='form-group'>
                 <label class='text-muted'>Name</label>
                 <input type='text' value='${formatQuotes(user.name)}' class='form-control' ng-model='formData.name'/>
             </div>
-            <div class='form-group'>
-                <label class='text-muted'>Favorite Things About {{shop.name}}</label>
-                <input type='text' value='${formatQuotes(user.storeFavorites)}' class='form-control' ng-model='formData.storeFavorites'/>
-            </div>
+            <br>
             <div class='form-group'>
                 <label class='text-muted'>About</label>
+                <br>
                 <textarea type='text' value='${formatQuotes(user.about)}' class='form-control' ng-model='formData.about'/></textarea>
             </div>
             <div>
+            <br>
+            <div class='form-group'>
+                <label class='text-muted'>Favorite Things About {{shop.name}}</label>
+                <br>
+                <textarea type='text' value='${formatQuotes(user.storeFavorites)}' class='form-control' ng-model='formData.storeFavorites'/></textarea>
+            </div>
               <button ng-click='updateProfileDetails(formData)' class='community-button-secondary pure-button'>
                   Update
               </button>
@@ -49,7 +53,10 @@ module.exports.settingsJS = (user) => {
 
    var reg2 = /'/g;
    newstr = "\\'"
-   return  str.replace(reg2,newstr);
+   var latest = str.replace(reg2,newstr);
+   
+   return latest.replace(/\n/g, ' ')
+   
   }
 
   return `
@@ -74,16 +81,13 @@ module.exports.settingsJS = (user) => {
 
        $scope.clickedSettingsTab = function(){
          console.log('clickedSettingsTab');
-         $window.scrollTo(0, 0);
          $scope.getProfileURL();
        }
 
        $scope.clickedNewPostTab = function(){
-         $window.scrollTo(0, 0);
        }
 
        $scope.clickedManagePostsTab = function(){
-         $window.scrollTo(0, 0);
        }
 
         $scope.formData = {
