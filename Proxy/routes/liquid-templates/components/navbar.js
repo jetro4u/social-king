@@ -11,16 +11,18 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
     };
 
     const showBlogNav = () => {
+        let baseURL = shop ? (shop.shopify_domain+proxyRoute) :'social-king-app.myshopify.com'+proxyRoute
+
         return `<div class="pure-u-md-1-3 pure-u-sm-1"> 
             <div class="community-pad-20">
                 <div class="community-card">
-                    <div class="community-card-header">${`About ${shop._doc.communityName}`}</div>
-                    <div class="community-card-body">${shop._doc.aboutCommunity}
+                    <div class="community-card-header">${`About ${shop ? shop._doc.communityName : 'Our Community'}`}</div>
+                    <div class="community-card-body">${shop ? shop._doc.aboutCommunity : 'A Space to Bond'}
                     <hr class="community-hr" />
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
+                    <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
                     <br/>
                     <br/>
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SETTINGS</button></a>
+                    <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SETTINGS</button></a>
                     </div>
                 </div>
                 <div class="community-card">

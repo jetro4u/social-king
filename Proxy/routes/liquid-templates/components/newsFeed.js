@@ -36,7 +36,7 @@ exports.newsFeed = ({shop, blogs}) => {
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-body">
-                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'>
+                        <a href='https://${shop ? shop.shopify_domain+proxyRoute : 'social-king-app.myshopify.com'+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'>
                             <input type="text" class="community-instant-post" placeholder="Create Post" />
                         </a>
                     
