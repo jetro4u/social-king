@@ -411,7 +411,7 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
             });
         }
         
-        let shopId = shop._id;
+        let shopId = shop ? shop._id : '5f1e6a95cae9586963ac9c24';
         Blog.find({ hidden: false, shopPostedAt: shopId, archivedByUser: { $ne: true } })
         .sort({createdAt: -1})
         .populate('tags', '_id name slug')
@@ -436,6 +436,10 @@ exports.listAllBlogsCategoriesTags = (req, res) => {
                     }
                     tags = t;
                     // return all blogs categories tags
+                    if(!shop){
+                        res.setHeader('content-type', 'text/html');
+                        return res.send(`<!doctype html><html lang="en">`+blogsList({ shop, blogs, tags, size: blogs.length })+`</html>`);
+                    }
                     res.send(blogsList({ shop, blogs, tags, size: blogs.length }));
                 });
         });
