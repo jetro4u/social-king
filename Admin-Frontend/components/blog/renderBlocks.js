@@ -4,10 +4,10 @@ export const renderBlocks = (blog) => {
            blog.body[0].blocks.map((block, i) => {
                 switch(block.type) {
                     case 'paragraph':
-                        return `<br/><p>${block.data.text}</p>`
+                        return `<br/><p>${block.data.text}</p>`.replace('img', "img width='100% !important'");
                         break;
                     case 'image':
-                        return `<br/><img width='100%' src='${block.data.file.url}'/>
+                        return `<br/><img width='100% !important' src='${block.data.file.url}'/>
                                 <h6>${block.data.caption}</h6>`
                         break;
                     case 'header':
