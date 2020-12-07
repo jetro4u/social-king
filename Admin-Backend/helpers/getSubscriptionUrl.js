@@ -15,15 +15,15 @@ exports.getSubscriptionUrl = async (req, res) => {
   const query = JSON.stringify({
     query: `mutation {
       appSubscriptionCreate(
-          name: "Social King: Community Engagement",
-          trialDays: 360,
+          name: "All The Features",
+          trialDays: 30,
           returnUrl: "https://${shop}/admin/apps/${APP_SLUG}"
           test: ${process.env.NODE_ENV == 'development' ? 'true' : 'false'}
           lineItems: [
           {
             plan: {
               appRecurringPricingDetails: {
-                  price: { amount: 0.01, currencyCode: USD }
+                  price: { amount: 19, currencyCode: USD }
               }
             }
           }
