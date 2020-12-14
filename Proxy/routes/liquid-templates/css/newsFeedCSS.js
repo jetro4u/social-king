@@ -5,14 +5,14 @@ exports.newsFeedCSS = ({shop}) => {
 
     if(shop.shopify_domain.includes('beforestores') || shop.shopify_domain.includes('jungle-navigator')){
         return `
-                @media screen and (min-width: 1300px) {
+                @media screen and (min-width: 1200px) {
                     .community-background {
-                        padding-left: 20%;
-                        padding-right: 20%;
+                        padding-left: 10%;
+                        padding-right: 10%;
                     }
                     .community-header-title {
-                        padding-left: 20%;
-                        padding-right: 20%;
+                        padding-left: 10%;
+                        padding-right: 10%;
                     }
                 }
                 .main-content {  background-color: #01131f; }
