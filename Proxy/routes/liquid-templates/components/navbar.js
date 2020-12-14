@@ -97,13 +97,6 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                                     Back To Newsfeed
                                 </button>
                             </a>
-                     <hr class="community-hr" />
-                    
-                    <b>General Bio: </b>
-                    <p>${user.about}</p>
-                    <hr class="community-hr" />
-                    <b>Store Favorites: </b>
-                    <p>${user.storeFavorites}</p>
                     </div>
                 </div>
             </div>
