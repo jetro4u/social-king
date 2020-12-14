@@ -19,28 +19,18 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <div class="community-card-header">${`About ${shop ? shop._doc.communityName : 'Our Community'}`}</div>
                     <div class="community-card-body">${shop ? shop._doc.aboutCommunity : 'A Space to Bond'}
                     <hr class="community-hr" />
+
                     <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
                     <br/>
                     <br/>
                     <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SETTINGS</button></a>
+
                     </div>
                 </div>
                 <div class="community-card">
                     <div class="community-card-header">Choose a Channel</div>
                     <div class="community-card-body">
                         ${showAllTags()}
-                    </div>
-                </div>
-                <div class="community-card">
-                    <div class="community-card-header">Community Rules</div>
-                    <div class="community-card-body">
-                        <ol>
-                            <li><strong>Be respectful</strong><br />Treat others how you'd like to be treated!</li>
-                            <hr class="community-hr-minimal" />
-                            <li><strong>No ads</strong><br />This is an ad-free zone</li>
-                            <hr class="community-hr-minimal" />
-                            <li><strong>Keepin it clean</strong><br />Use nice words only :)</li>
-                        </ol>
                     </div>
                 </div>
             </div>
@@ -52,7 +42,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
             <div class="community-pad-20">
                 <div class="community-card">
                     <div class="community-card-header">${`About ${user.name}`}</div>
-                    <img width='100%' src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://mysteryshopperblog.files.wordpress.com/2014/07/mystery-shopper-image.gif'}'
+                    <img width='100%' src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1603702989629.jpeg'}'
                            alt="Profile Picture" class="img-responsive img-rounded">
                     <div class="community-card-body">
                     ${user.about ? '<b>General Bio: </b>'+ user.about : ''}
@@ -61,15 +51,13 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     </div>
                 </div>
                 <div class="community-card">
-                    <div class="community-card-header">Community Rules</div>
-                    <div class="community-card-body">
-                        <ol>
-                            <li><strong>Be respectful</strong><br />Treat others how you'd like to be treated!</li>
-                            <hr class="community-hr-minimal" />
-                            <li><strong>No ads</strong><br />This is an ad-free zone</li>
-                            <hr class="community-hr-minimal" />
-                            <li><strong>Keepin it clean</strong><br />Use nice words only :)</li>
-                        </ol>
+                    <div class="community-card-header">${`About ${shop._doc.communityName}`}</div>
+                    <div class="community-card-body">${shop._doc.aboutCommunity}
+                    <hr class="community-hr" />
+                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SIGN UP</button></a>
+                    <br>
+                    <br>
+                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
                     </div>
                 </div>
             </div>
@@ -96,18 +84,6 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <b>General Bio: </b>${user.about}
                     <hr class="community-hr" />
                     <b>Store Favorites: </b>${user.storeFavorites}
-                    </div>
-                </div>
-                <div class="community-card">
-                    <div class="community-card-header">Community Rules</div>
-                    <div class="community-card-body">
-                        <ol>
-                            <li><strong>Be respectful</strong><br />Treat others how you'd like to be treated!</li>
-                            <hr class="community-hr-minimal" />
-                            <li><strong>No ads</strong><br />This is an ad-free zone</li>
-                            <hr class="community-hr-minimal" />
-                            <li><strong>Keepin it clean</strong><br />Use nice words only :)</li>
-                        </ol>
                     </div>
                 </div>
             </div>

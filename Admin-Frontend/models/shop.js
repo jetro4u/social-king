@@ -34,11 +34,11 @@ const Shop = mongoose.Schema({
       },
 	  primaryColor: { 
             type: String, 
-            default: 'darkblue' 
+            default: '#26b598' 
       },
 	  backgroundColor: { 
             type: String, 
-            default: '#edeff1' 
+            default: '#01131f' 
       },
       charge_id:  { 
 	  	  type: String, 
