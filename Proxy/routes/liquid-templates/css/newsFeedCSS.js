@@ -5,7 +5,7 @@ exports.newsFeedCSS = ({shop}) => {
 
     if(shop.shopify_domain.includes('beforestores') || shop.shopify_domain.includes('jungle-navigator')){
         return `
-                @media screen and (min-width: 800px) {
+                @media screen and (min-width: 1300px) {
                     .community-background {
                         padding-left: 20%;
                         padding-right: 20%;
