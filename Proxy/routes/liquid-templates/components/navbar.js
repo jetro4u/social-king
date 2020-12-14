@@ -4,23 +4,29 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
 
     const showAllTags = () => {
         return tags.map((t, i) => `
-            <a href="${proxyRoute}/tags/${t.slug}" key=${i}
-                class="pure-button tag-btn">${t.name}
+            <a href="${proxyRoute}/tags/${t.slug}" key=${i} >
+                    <button class="tag-btn pure-button pure-button-primary community-full-width">
+                        ${t.name}
+                    </button>
             </a>
         `).join('');
     };
 
     const showBlogNav = () => {
+        let baseURL = shop ? (shop.shopify_domain+proxyRoute) :'social-king-app.myshopify.com'+proxyRoute
+
         return `<div class="pure-u-md-1-3 pure-u-sm-1"> 
             <div class="community-pad-20">
                 <div class="community-card">
-                    <div class="community-card-header">${`About ${shop._doc.communityName}`}</div>
-                    <div class="community-card-body">${shop._doc.aboutCommunity}
+                    <div class="community-card-header">${`About ${shop ? shop._doc.communityName : 'Our Community'}`}</div>
+                    <div class="community-card-body">${shop ? shop._doc.aboutCommunity : 'A Space to Bond'}
                     <hr class="community-hr" />
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SIGN UP</button></a>
-                    <br>
-                    <br>
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
+
+                    <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
+                    <br/>
+                    <br/>
+                    <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SETTINGS</button></a>
+
                     </div>
                 </div>
                 <div class="community-card">
@@ -68,18 +74,36 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <div class="community-card-header">${`Welcome ${user.name}`}</div>
                     <div class="community-card-body">
                    
-                          <a class='pure-button tag-btn' ng-click='clickedNewPostTab()' ui-sref="create-new-post">Create New Post</a>
+                          <a ng-click='clickedNewPostTab()' ui-sref="create-new-post">
+                            <button class="tag-btn pure-button pure-button-primary community-full-width">
+                                Create New Post
+                            </button>
+                          </a>
                             </br>
-                            <a class='pure-button tag-btn' ng-click='clickedManagePostsTab()' ui-sref="manage-posts">Manage Posts</a>
+                            <a ng-click='clickedManagePostsTab()' ui-sref="manage-posts">
+                                <button class="tag-btn pure-button pure-button-primary community-full-width">
+                                    Manage Posts
+                                </button>
+                            </a>
                             </br>
-                            <a class='pure-button tag-btn' ng-click='clickedSettingsTab()' ui-sref="settings">Settings</a>
+                            <a ng-click='clickedSettingsTab()' ui-sref="settings">
+                                <button class="tag-btn pure-button pure-button-primary community-full-width">
+                                    Settings
+                                </button>
+                            </a>
                             </br>
-                            <a class='pure-button tag-btn' href="${proxyRoute}/blogs">Back To Newsfeed</a>
+                            <a href="${proxyRoute}/blogs">
+                                <button class="tag-btn pure-button pure-button-primary community-full-width">
+                                    Back To Newsfeed
+                                </button>
+                            </a>
                      <hr class="community-hr" />
                     
-                    <b>General Bio: </b>${user.about}
+                    <b>General Bio: </b>
+                    <p>${user.about}</p>
                     <hr class="community-hr" />
-                    <b>Store Favorites: </b>${user.storeFavorites}
+                    <b>Store Favorites: </b>
+                    <p>${user.storeFavorites}</p>
                     </div>
                 </div>
             </div>

@@ -3,8 +3,6 @@ const proxyRoute = process.env.PROXY_ROUTE;
 exports.header = ({shop, tag, user, blog}) => {
 
 	const showTitle = (shop)=>{
-        console.log('shop.communityName in showTitle function', shop._doc.communityName);
-
 		if(tag){
     		return "Posts Tagged '"+ tag.name+"'"
     	} else if (user) {
@@ -46,7 +44,7 @@ exports.header = ({shop, tag, user, blog}) => {
     }
 
     const generateSEOHeader = () => {
-        let DOMAIN = shop.shopify_domain;
+        let DOMAIN = shop ? shop.shopify_domain : 'social-king-app.myshopify.com';
         console.log('generateSEOHeader func ran');
         if(tag){
             let title = tag.name + ' - '+ `{{shop.name}}`;
@@ -67,7 +65,8 @@ exports.header = ({shop, tag, user, blog}) => {
             let title = (shop && shop._doc.communityName ? shop._doc.communityName : 'Community') + ' - '+ `{{shop.name}}`;
             let description = `Share your thoughts with our community.`
             console.log('tag condition ran')
-            return SEOMarkup(title, description, shop.iconImageURL)
+            let iconImageURL = shop ? shop.iconImageURL : 'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1603702989629.jpeg'
+            return SEOMarkup(title, description, iconImageURL)
         }
     }
 
