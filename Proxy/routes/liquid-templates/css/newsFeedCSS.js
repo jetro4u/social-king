@@ -2,7 +2,15 @@ exports.newsFeedCSS = ({shop}) => {
     const backupHeaderImg = "https://www.dorothylane.com/wp-content/uploads/2017/09/cheese.jpg";
 
     return `
-            .community-background { background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : '#edeff1'};padding-top:20px; }
+            .main-content {  background-color: #01131f; }
+            .community-background { 
+                background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : '#010e16' };
+                padding-top:20px;
+            }
+            .community-background h3, p {
+                color: white;
+            }
+
             .l-box { padding:1em; }
             .tag-btn { margin-top: 1em;
                       margin-bottom: 1em;
@@ -12,16 +20,32 @@ exports.newsFeedCSS = ({shop}) => {
             .tag-btn:hover {
               background-color: lightgreen;
             }
-            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
-            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px;margin-top:-10px; }
+            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
+            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
             .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }
-            .community-header-title { background:#fff; }
+            .community-header-title { background:#01131f; }
             .community-header-title-box { display:flex }
-            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }
-            .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }
-            .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : 'darkblue'};color:white;padding:10px;font-weight:bold; }
-            .community-card-body { letter-spacing: .4px; padding:10px }
+            .community-header-title .community-h2 { 
+                display:inline-block;
+                margin-left:20px;
+                font-size:30px;
+                font-weight:bold;
+                color:#000;
+                padding:10px 0; 
+            }
+            .community-card { 
+                letter-spacing: .5px; 
+                border:1px solid #ccc;
+                border-radius:4px;
+                margin-bottom:20px;
+                background:#01131f 
+            }
+            .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : '#26b598'};color:white;padding:10px;font-weight:bold; }
+            .community-card-body { letter-spacing: .4px; padding:30px }
             .community-post-body { letter-spacing: .35px;}
+            .community-post-body h2 { color: white; font-weight: bold;}
+            .community-post-body button { white-space: normal; }
+            .community-card a { white-space: normal; }
             .community-letter-spacing { letter-spacing: .4px; }
             @media only screen 
             and (min-device-width: 600px)
@@ -49,5 +73,8 @@ exports.newsFeedCSS = ({shop}) => {
             .community-reactions:hover{ cursor: pointer; }
        	    .emoji-picker { z-index: 100;}
             .community-admin-btn {color:white;}
+            .cover-img { max-width: 100%; }
+            #profile-photo img { max-width: 100%; }
+            .community-card p,h3,h4,h5,h6,h7 { font-size: 15px; color: black; } 
 	`
 };

@@ -87,6 +87,12 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                                 </div>
                             </div>
                             </div>
+                            <div style='margin-top:30px'>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">SIGN UP</button></a>
+                    <br>
+                    <br>
+                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">CREATE POST</button></a>
+                            </div>
                             <div class="pb-5">
                                 <h2 style='margin-top:30px'>Related Tags</h2>
                                 ${showAllTags()}
