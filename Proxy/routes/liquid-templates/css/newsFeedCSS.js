@@ -3,9 +3,19 @@ exports.newsFeedCSS = ({shop}) => {
 
     console.log('shop in newsFeedCSS',shop);
 
-    if(shop.shopify_domain.includes('beforestores')){
+    if(shop.shopify_domain.includes('beforestores') || shop.shopify_domain.includes('jungle-navigator')){
         return `
-            .main-content {  background-color: #01131f; }
+                @media screen and (min-width: 800px) {
+                    .community-background {
+                        padding-left: 20%;
+                        padding-right: 20%;
+                    }
+                    .community-header-title {
+                        padding-left: 20%;
+                        padding-right: 20%;
+                    }
+                }
+                .main-content {  background-color: #01131f; }
                 .community-background { 
                     background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : '#010e16' };
                     padding-top:20px;
