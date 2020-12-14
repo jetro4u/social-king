@@ -19,7 +19,7 @@ exports.newsFeed = ({shop, blogs}) => {
                          </a>
                         <a href="${proxyRoute}/blog/${blog.slug}">
                             <h3>${blog.title}</h3>
-                            ${blog.coverMedia ? "<img src='"+blog.coverMedia+"'/>" : '<br/>'}
+                            ${blog.coverMedia ? "<img class='cover-img' src='"+blog.coverMedia+"'/>" : '<br/>'}
                             <p>${blog.excerpt}</p>
                         </a>
                        <div class='text'><p class='community-post-slug-${blog.slug} community-instant-post community-reactions'>Add 😀</p></div>

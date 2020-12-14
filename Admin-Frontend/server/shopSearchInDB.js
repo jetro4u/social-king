@@ -40,7 +40,7 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
               let extraShopifyData = await moreShopDetails({ctx, accessToken, shopify_domain}).then((moreData)=>{
                 let { name, description, id, contactEmail, email, features, plan, customerAccounts } = moreData;
 
-                var contact_add = ac.api("contact/add", { name, description, id, contactEmail, email, features, plan, customerAccounts, shopify_domain, accessToken, shopifyScope });
+                var contact_add = ac.api("contact/add", { name, shopify_domain, planDisplayName: plan.displayName, description, id, contactEmail, email, features, plan, customerAccounts, shopify_domain, accessToken, shopifyScope });
 
                 contact_add.then(function(result) {
                     console.log('succesfully added contact',result);
