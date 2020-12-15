@@ -1,7 +1,9 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 
-module.exports.createNewPost = (tags) => {
+module.exports.createNewPost = ({shop, tags}) => {
   
+  console.log('shop in createNewPost template', shop)
+
   const displayTags = (data) => data.map((tag, i) => {
       return `<label class='checkbox px-2 pure-checkbox community-checkbox' >                
                   <input type='checkbox' ng-model='tags.${tag.id}'><span class='px-1'> ${tag.name}</span>
@@ -9,29 +11,37 @@ module.exports.createNewPost = (tags) => {
       `;
   }).join(' ')
 
+  const displayTitleInput = () =>{
+    return `<div class='form-group'>
+              <label for='titleip'>Title:</label>
+              <input
+                ng-model='title'
+                type='text'
+                class='form-control'
+                id='titleip'
+                name='titleip'
+                placeholder='Enter title here'
+                required
+              />
+            </div>`
+  }
+
+
+
   return `
           <div id='new-post' class='community-card'>
                 <div class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
-                      <h3>Create New Post</h3>
+                      <h3>What's on your mind?</h3>
                     </div>
-                    <div class='form-group'>
-                      <label for='titleip'>Title:</label>
-                      <input
-                        ng-model='title'
-                        type='text'
-                        class='form-control'
-                        id='titleip'
-                        name='titleip'
-                        placeholder='Enter title here'
-                        required
-                      />
-                    </div>
-                    <small>Write your awesome post below: (to embed videos, simply copy-paste any YouTube URL)</small>
+                    ${!shop.shopify_domain.includes('beforestores') && 
+                        !shop.shopify_domain.includes('jungle-navigator') ? 
+                        displayTitleInput() : ''}
+      
                     <div id='editorjs'></div>
                     
                     <form class='form-inline' id='post-tags'>
-                      ${displayTags(tags)}
+                      ${Array.isArray(tags) ? displayTags(tags) : ''}
                     </form>
                       
                     <br/>
@@ -46,12 +56,17 @@ module.exports.createNewPost = (tags) => {
             </div>`
 };
 
-module.exports.createNewPostJS = (tags) => {
+module.exports.createNewPostJS = ({shop, tags}) => {
   var tagsModel = {};
-  tags.forEach( function(item){ 
-     tagsModel[item.id] = false; 
-  });
+
   console.log('tags obj: ', tagsModel);
+  console.log('tags',tags)
+
+  if(Array.isArray(tags)){
+    tags.forEach( function(item){ 
+       tagsModel[item.id] = false; 
+    });
+  }
 
   return `
     tribeApp.controller('newPostController', function($scope, $http) {
