@@ -91,12 +91,6 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                                     Settings
                                 </button>
                             </a>
-                            </br>
-                            <a href="${proxyRoute}/blogs">
-                                <button class="tag-btn pure-button pure-button-primary community-full-width">
-                                    Back To Newsfeed
-                                </button>
-                            </a>
                     </div>
                 </div>
             </div>
