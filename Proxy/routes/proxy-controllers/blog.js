@@ -49,8 +49,13 @@ exports.create = (req, res) => {
     });
     blog.coverMedia = mediaBlock ? mediaBlock.data.file.url : ''; 
 
-    blog.slug = title!='New Post by Community Member' ? slugify(title.replace(/["']/g, "")).toLowerCase() : makeid(8);
-    blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
+    if(title!='New Post by Community Member'){
+        blog.slug = slugify(title.replace(/["']/g, "")).toLowerCase();
+        blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
+    } else {
+        blog.slug = makeid(8).toLowerCase();
+        blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
+    }
 
     blog.mtitle = `${title} | ${process.env.APP_NAME}`;
 
@@ -469,6 +474,8 @@ exports.read = (req, res) => {
                                 error: errorHandler(err)
                             });
                         }
+
+                        console.log('blog returned from query',blog);
 
                             if(blog){
                                 User.findOne({ _id: blog.postedBy })
