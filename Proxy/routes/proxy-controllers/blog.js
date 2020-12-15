@@ -49,7 +49,7 @@ exports.create = (req, res) => {
     });
     blog.coverMedia = mediaBlock ? mediaBlock.data.file.url : ''; 
 
-    blog.slug = title ? slugify(title.replace(/["']/g, "")).toLowerCase() : makeid(8);
+    blog.slug = title!='New Post by Community Member' ? slugify(title.replace(/["']/g, "")).toLowerCase() : makeid(8);
     blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
 
     blog.mtitle = `${title} | ${process.env.APP_NAME}`;
