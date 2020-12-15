@@ -117,7 +117,7 @@ exports.newsFeedCSS = ({shop}) => {
                     color: #b9bcbf; 
                 } 
         `
-    } else if (shop.shopify_domain.includes('jungle-navigator')) {
+    } else if (shop.shopify_domain.includes('social-king') || shop.shopify_domain.includes('jungle-navigator')) {
         return `
                 main{ padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
