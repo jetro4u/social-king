@@ -14,7 +14,7 @@ const stripHtml = require('string-strip-html');
 const _ = require('lodash');
 const { errorHandler } = require('../helpers/dbErrorHandler');
 const fs = require('fs');
-const { smartTrim } = require('../helpers/blog');
+const { smartTrim, makeid } = require('../helpers/blog');
 
 const sgMail = require('@sendgrid/mail'); // SENDGRID_API_KEY
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -32,23 +32,11 @@ exports.create = (req, res) => {
     console.log('req.query in blog create function: ',req.query);
     console.log('tags in blog create function: ',tags);
   
-    title = title.title;
-
-    if (!title) {
-        return res.status(400).json({
-            error: 'Title is required'
-        });
-    }
+    title = title && title.title ? title.title : 'New Post by Community Member';
 
     if (body.blocks === undefined || body.blocks.length == 0) {
         return res.status(400).json({
             error: 'Content is required'
-        });
-    }
-
-    if (!tags || tags.length === 0) {
-        return res.status(400).json({
-            error: 'At least one tag is required'
         });
     }
 
@@ -61,7 +49,7 @@ exports.create = (req, res) => {
     });
     blog.coverMedia = mediaBlock ? mediaBlock.data.file.url : ''; 
 
-    blog.slug = slugify(title.replace(/["']/g, "")).toLowerCase();
+    blog.slug = title ? slugify(title.replace(/["']/g, "")).toLowerCase() : makeid(8);
     blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
 
     blog.mtitle = `${title} | ${process.env.APP_NAME}`;
