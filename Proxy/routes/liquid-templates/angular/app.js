@@ -1,4 +1,4 @@
-module.exports.ngApp = ({user, tags, blogs, blog}) => {
+module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
   const trimHTML = (str)=>{return str.replace(/(\r\n|\n|\r|\t)/gm,"").trim()}
   const proxyRoute = process.env.PROXY_ROUTE;
   const { createNewPost, createNewPostJS } = require('./components/createNewPost.js');
@@ -9,7 +9,7 @@ module.exports.ngApp = ({user, tags, blogs, blog}) => {
   return ` 
     var tribeApp = angular.module('tribe', ['ui.router']);
 
-    ${createNewPostJS(tags)}
+    ${createNewPostJS(shop, tags)}
     ${settingsJS(user)}
     ${managePostsJS(user)}
     ${addCommentJS({tags, blog})}
@@ -19,7 +19,7 @@ module.exports.ngApp = ({user, tags, blogs, blog}) => {
       let createNewPostState = {
         name: 'create-new-post',
         url: '/create-new-post',
-        template: "${trimHTML(createNewPost(tags))}"
+        template: "${trimHTML(createNewPost({shop, tags}))}"
       }
 
       let managePostsState = {
