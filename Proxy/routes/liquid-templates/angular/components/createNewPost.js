@@ -71,12 +71,9 @@ module.exports.createNewPostJS = ({shop, tags}) => {
   return `
     tribeApp.controller('newPostController', function($scope, $http) {
       console.log('newPostController function ran');
-      
-      // Checkbox logic 
+      document.getElementById('the-community-options').innerHTML = 'Join the discussion';
        $scope.tags = {};
-
-      //Loading Editor.js with all its configuration
-      const editor = new EditorJS({
+       const editor = new EditorJS({
         autofocus: true,
         tools: {
           header: Header,
