@@ -5,6 +5,7 @@ exports.newsFeedCSS = ({shop}) => {
 
     if(shop.shopify_domain.includes('beforestores')){
         return `
+                .codex-editor__redactor { padding-bottom: 120px !important }
                 main{ padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
                     .community-background {
@@ -119,6 +120,7 @@ exports.newsFeedCSS = ({shop}) => {
         `
     } else if (shop.shopify_domain.includes('social-king') || shop.shopify_domain.includes('jungle-navigator')) {
         return `
+                .codex-editor__redactor { padding-bottom: 120px !important }
                 .site-header {background-color: #2b5777 !important;}
                 main{ padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
@@ -235,6 +237,7 @@ exports.newsFeedCSS = ({shop}) => {
     }
     else {
         return `
+            .codex-editor__redactor { padding-bottom: 120px !important }
             .community-background { 
                 background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : '#edeff1'};
                 padding-top:20px;
