@@ -46,9 +46,9 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                       
                     <br/>
                     <div class='pure-u-1'>
-                     <div class='community-pad-20 modal-footer'>
-                        <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
-                          ng-click='submitBlogPost()'>Save Post</button>
+                     <div ng-click='submitBlogPost()' class='community-pad-20'>
+                        <button class='community-button-secondary pure-button'
+                          >Save Post</button>
                       </div> 
                     </div>
                     <p id='json'></p>
