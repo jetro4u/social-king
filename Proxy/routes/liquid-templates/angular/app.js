@@ -20,7 +20,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
         let createNewPostState = {
           name: 'create-new-post',
           url: '/create-new-post',
-          template: "${trimHTML(createNewPost({shop, tags}))}"
+          template: "${trimHTML(createNewPost({shop, user, tags}))}"
         }
 
         let managePostsState = {
