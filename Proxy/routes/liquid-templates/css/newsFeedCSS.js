@@ -165,7 +165,7 @@ exports.newsFeedCSS = ({shop}) => {
 
                 .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
                 .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
-                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }
+                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }
                 .community-header-title { background:#01131f }
                 .community-header-title-box { display:flex }
                 .community-header-title .community-h2 { 
