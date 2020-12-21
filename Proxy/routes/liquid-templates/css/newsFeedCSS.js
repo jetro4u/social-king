@@ -119,6 +119,7 @@ exports.newsFeedCSS = ({shop}) => {
         `
     } else if (shop.shopify_domain.includes('social-king') || shop.shopify_domain.includes('jungle-navigator')) {
         return `
+                .site-header {background-color: #2b5777 !important;}
                 main{ padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
                     .community-background {
