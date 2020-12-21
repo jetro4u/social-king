@@ -46,7 +46,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                       
                     <br/>
                     <div class='pure-u-1'>
-                     <div ng-click='submitBlogPost()' class='community-pad-20'>
+                     <div ng-click='submitUserBlogPost()' class='community-pad-20'>
                         <button class='community-button-secondary pure-button'
                           >Save Post</button>
                       </div> 
@@ -94,7 +94,7 @@ module.exports.createNewPostJS = ({shop, tags}) => {
         },
       });
 
-      $scope.submitBlogPost = function(){
+      $scope.submitUserBlogPost = function(){
         editor
             .save()
             .then((body) => {
