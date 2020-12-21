@@ -1,4 +1,5 @@
 const proxyRoute = process.env.PROXY_ROUTE;
+const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.createNewPost = ({shop, tags}) => {
   
@@ -32,7 +33,7 @@ module.exports.createNewPost = ({shop, tags}) => {
           <div id='new-post' class='community-card'>
                 <div class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
-                      <h3>What's on your mind?</h3>
+                      <h3>What's on your mind, {{ customer.first_name }}?</h3>
                     </div>
                     ${!shop.shopify_domain.includes('beforestores') && 
                         !shop.shopify_domain.includes('jungle-navigator') ? 
