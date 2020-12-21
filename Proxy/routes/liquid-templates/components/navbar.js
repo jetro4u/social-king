@@ -1,4 +1,5 @@
 const proxyRoute = process.env.PROXY_ROUTE;
+const {formatQuotes} = require('../../helpers/formatQuotes');
 
 exports.navbar = ({shop, tags, user, adminArea}) => {
 
@@ -68,11 +69,11 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
 
     const showUserAdminNav = () => {
         return `
-        <div class="pure-u-md-1-3 pure-u-sm-1">
+        <div id="community-navbar" class="pure-u-md-1-3 pure-u-sm-1">
             <div class="community-pad-20">
                 <div class="community-card">
-                    <div class="community-card-header">${`Welcome ${user.name}`}</div>
-                    <div class="community-card-body">
+                    <div class="community-card-header">${`Welcome ${formatQuotes(user.name)}`}</div>
+                    <div id="the-community-options" class="community-card-body">
                    
                           <a ng-click='clickedNewPostTab()' ui-sref="create-new-post">
                             <button class="tag-btn pure-button pure-button-primary community-full-width">
