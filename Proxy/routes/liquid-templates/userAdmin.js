@@ -24,8 +24,8 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
         ${newsFeedCSS({shop})}
     </style>
     ${header({shop})}
-    <div class="community-background"> 
-      <main class="page-width" ng-app="tribe" ng-controller='settingsController'>
+    <div class="community-background" ng-app="tribe" ng-controller='settingsController'> 
+      <main class="page-width" >
           <div class="pure-g">               
               ${navbar({shop, tags, user, adminArea:true})}
               
