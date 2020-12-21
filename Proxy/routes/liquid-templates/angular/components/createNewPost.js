@@ -31,6 +31,9 @@ module.exports.createNewPost = ({shop, user, tags}) => {
 
   return `
           <div class='community-card'>
+            <style>
+                .community-background { padding-top: 140px !important }
+            </style>
                 <div id='new-post' class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
                       <h3>What's on your mind, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
@@ -44,9 +47,9 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                       
                     <br/>
                     <div class='pure-u-1'>
-                     <div ng-click='submitUserBlogPost()' class='community-pad-20'>
-                        <button class='community-button-secondary pure-button'
-                          >Save Post</button>
+                     <div class='community-pad-20'>
+                        <button button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true'
+                          ng-click='submitUserBlogPost()' >Save Post</button>
                       </div> 
                     </div>
                 </div>

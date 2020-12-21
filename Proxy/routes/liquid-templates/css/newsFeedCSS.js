@@ -6,6 +6,7 @@ exports.newsFeedCSS = ({shop}) => {
     if(shop.shopify_domain.includes('beforestores')){
         return `
                 .codex-editor__redactor { padding-bottom: 120px !important }
+                .community-background main { padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
                     .community-background {
                         padding-left: 10%;
@@ -20,6 +21,7 @@ exports.newsFeedCSS = ({shop}) => {
                 .main-content {  background-color: #01131f; }
                 .community-background { 
                     background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : '#010e16' };
+                    padding-top:0px;
                     color: white !important;
                 }
                 .community-background h3, p {
