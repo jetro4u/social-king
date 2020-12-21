@@ -6,7 +6,6 @@ exports.newsFeedCSS = ({shop}) => {
     if(shop.shopify_domain.includes('beforestores')){
         return `
                 .codex-editor__redactor { padding-bottom: 120px !important }
-                main{ padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
                     .community-background {
                         padding-left: 10%;
@@ -17,10 +16,10 @@ exports.newsFeedCSS = ({shop}) => {
                         padding-right: 10%;
                     }
                 }
+                
                 .main-content {  background-color: #01131f; }
                 .community-background { 
                     background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : '#010e16' };
-                    padding-top:0px;
                     color: white !important;
                 }
                 .community-background h3, p {
@@ -48,7 +47,7 @@ exports.newsFeedCSS = ({shop}) => {
 
                 .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
                 .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }
-                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }
+                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg}); background-repeat:no-repeat;background-position:center;background-size:cover }
                 .community-header-title { background:#01131f; }
                 .community-header-title-box { display:flex }
                 .community-header-title .community-h2 { 
