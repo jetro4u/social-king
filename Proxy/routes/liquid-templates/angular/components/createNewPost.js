@@ -1,5 +1,4 @@
 const proxyRoute = process.env.PROXY_ROUTE;
-const {formatQuotes} = require('../../../helpers/formatQuotes');
 
 module.exports.createNewPost = ({shop, tags}) => {
   
@@ -35,8 +34,7 @@ module.exports.createNewPost = ({shop, tags}) => {
                     <div id='error-message' class='text-center'>
                       <h3>What's on your mind, {{ customer.first_name }}?</h3>
                     </div>
-                    ${!shop.shopify_domain.includes('beforestores') && 
-                        !shop.shopify_domain.includes('jungle-navigator') ? 
+                    ${shop.shopify_domain.includes('site-that-wants-titles-option') ? 
                         displayTitleInput() : ''}
       
                     <div id='editorjs'></div>
