@@ -386,3 +386,51 @@ Error: Failed to lookup view "index" in views directory "/root/shopify-community
 (node:2547) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:2711) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:2711) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:3841) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:3841) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:4008) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:4008) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:4354) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:4354) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:4486) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:4486) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:4626) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:4626) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:4767) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:4767) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:4914) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:4914) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5084) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:5084) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5303) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:5303) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5444) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:5444) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5686) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:5686) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5820) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:5820) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:5970) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:5970) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6130) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:6130) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6277) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:6277) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6428) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:6428) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6581) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:6581) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6745) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:6745) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:6888) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:6888) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:7025) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:7025) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:7181) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:7181) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:7327) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:7327) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:7462) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:7462) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:7595) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:7595) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.

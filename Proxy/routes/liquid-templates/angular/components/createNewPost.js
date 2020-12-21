@@ -6,9 +6,9 @@ module.exports.createNewPost = ({shop, user, tags}) => {
   console.log('shop in createNewPost template', shop)
 
   const displayTags = (data) => data.map((tag, i) => {
-      return `<label class='checkbox px-2 pure-checkbox community-checkbox' >                
+      return `<form class='form-inline' id='post-tags'><label class='checkbox px-2 pure-checkbox community-checkbox' >                
                   <input type='checkbox' ng-model='tags.${tag.id}'><span class='px-1'> ${tag.name}</span>
-              </label>
+              </label></form>
       `;
   }).join(' ')
 
@@ -40,9 +40,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
       
                     <div id='editorjs'></div>
                     
-                    <form class='form-inline' id='post-tags'>
-                      ${Array.isArray(tags) ? displayTags(tags) : ''}
-                    </form>
+                    ${Array.isArray(tags) ? displayTags(tags) : ''}
                       
                     <br/>
                     <div class='pure-u-1'>
@@ -51,7 +49,6 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                           >Save Post</button>
                       </div> 
                     </div>
-                    <p id='json'></p>
                 </div>
             </div>`
 };
