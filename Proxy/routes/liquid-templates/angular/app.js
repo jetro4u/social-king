@@ -6,45 +6,48 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
   const { addComment, addCommentJS } = require('./components/addComment.js');
   const { settings, settingsJS } = require('./components/settings.js');
   
-  return ` 
-    var tribeApp = angular.module('tribe', ['ui.router']);
+  return `
+    (function() {
+      var tribeApp = angular.module('tribe', ['ui.router']);
 
-    ${createNewPostJS(shop, tags)}
-    ${settingsJS(user)}
-    ${managePostsJS(user)}
-    ${addCommentJS({tags, blog})}
+      ${createNewPostJS(shop, tags)}
+      ${settingsJS(user)}
+      ${managePostsJS(user)}
+      ${addCommentJS({tags, blog})}
 
-    tribeApp.config(function($stateProvider, $urlRouterProvider) {
-      
-      let createNewPostState = {
-        name: 'create-new-post',
-        url: '/create-new-post',
-        template: "${trimHTML(createNewPost({shop, tags}))}"
-      }
+      tribeApp.config(function($stateProvider, $urlRouterProvider) {
+        
+        let createNewPostState = {
+          name: 'create-new-post',
+          url: '/create-new-post',
+          template: "${trimHTML(createNewPost({shop, tags}))}"
+        }
 
-      let managePostsState = {
-        name: 'manage-posts',
-        url: '/manage-posts',
-        template: "${trimHTML(managePosts({user, blogs}))}"
-      }
+        let managePostsState = {
+          name: 'manage-posts',
+          url: '/manage-posts',
+          template: "${trimHTML(managePosts({user, blogs}))}"
+        }
 
-      let settingsState = {
-        name: 'settings',
-        url: '/settings',
-        template: "${trimHTML(settings(user))}"
-      }
+        let settingsState = {
+          name: 'settings',
+          url: '/settings',
+          template: "${trimHTML(settings(user))}"
+        }
 
-      let addCommentState = {
-        name: 'add-comment',
-        url: '/add-comment',
-        template: "${trimHTML(addComment({user, blog}))}"
-      }
+        let addCommentState = {
+          name: 'add-comment',
+          url: '/add-comment',
+          template: "${trimHTML(addComment({user, blog}))}"
+        }
 
-      $stateProvider.state(createNewPostState);
-      $stateProvider.state(managePostsState);
-      $stateProvider.state(addCommentState);
-      $stateProvider.state(settingsState);
+        $stateProvider.state(createNewPostState);
+        $stateProvider.state(managePostsState);
+        $stateProvider.state(addCommentState);
+        $stateProvider.state(settingsState);
 
-      $urlRouterProvider.otherwise('create-new-post')
-    });`
+        $urlRouterProvider.otherwise('create-new-post')
+      })
+    })()
+    `
 }
