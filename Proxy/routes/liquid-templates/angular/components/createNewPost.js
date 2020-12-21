@@ -27,14 +27,18 @@ module.exports.createNewPost = ({shop, user, tags}) => {
             </div>`
   }
 
+  const sendGUIDownards = () =>{
+    return `<style>
+              .community-background { padding-top: 140px !important }
+            </style>`
+  }
 
 
   return `
+          ${shop.shopify_domain.includes('beforestores') ? 
+                        sendGUIDownards() : ''}  
           <div class='community-card'>
-            <style>
-                .community-background { padding-top: 140px !important }
-            </style>
-                <div id='new-post' class='community-admin-padding' ng-controller='newPostController'>
+               <div id='new-post' class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
                       <h3>What's on your mind, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
                     </div>

@@ -466,3 +466,19 @@ Error: Failed to lookup view "index" in views directory "/root/shopify-community
 (node:10347) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:10482) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:10482) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:245:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:10671) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:10671) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:11907) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:11907) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:12085) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:12085) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:12226) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:12226) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
