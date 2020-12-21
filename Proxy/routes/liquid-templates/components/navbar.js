@@ -23,10 +23,15 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <div class="community-card-body">${shop ? shop._doc.aboutCommunity : 'A Space to Bond'}
                     <hr class="community-hr" />
 
-                    <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">Sign Up</button></a>
-                    <br/>
-                    <br/>
-                    <a href='https://${baseURL}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">Settings</button></a>
+                      {% if customer.email %} 
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="pure-button pure-button-primary community-full-width">Create Post</button></a>
+                            <br><br>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="pure-button pure-button-primary community-full-width">Settings</button></a>
+                        {% else %}
+                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="pure-button pure-button-primary community-full-width">Sign Up</button></a>
+                            <br><br>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="pure-button pure-button-primary community-full-width">Create Post</button></a>
+                        {% endif %}    
 
                     </div>
                 </div>
@@ -57,10 +62,15 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <div class="community-card-header">${`About ${shop._doc.communityName}`}</div>
                     <div class="community-card-body">${shop._doc.aboutCommunity}
                     <hr class="community-hr" />
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">Sign Up</button></a>
-                    <br>
-                    <br>
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">Create Post</button></a>
+                        {% if customer.email %} 
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="pure-button pure-button-primary community-full-width">Create Post</button></a>
+                            <br><br>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="pure-button pure-button-primary community-full-width">Settings</button></a>
+                        {% else %}
+                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="pure-button pure-button-primary community-full-width">Sign Up</button></a>
+                            <br><br>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="pure-button pure-button-primary community-full-width">Create Post</button></a>
+                        {% endif %}     
                     </div>
                 </div>
             </div>

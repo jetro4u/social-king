@@ -46,7 +46,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
         $stateProvider.state(addCommentState);
         $stateProvider.state(settingsState);
 
-        $urlRouterProvider.otherwise('create-new-post')
+        $urlRouterProvider.otherwise('settings')
       })
     })()
     `
