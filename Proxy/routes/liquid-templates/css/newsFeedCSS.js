@@ -123,12 +123,12 @@ exports.newsFeedCSS = ({shop}) => {
                 main{ padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
                     .community-background {
-                        padding-left: 10%;
-                        padding-right: 10%;
+                        padding-left: 5%;
+                        padding-right: 5%;
                     }
                     .community-header-title {
-                        padding-left: 10%;
-                        padding-right: 10%;
+                        padding-left: 5%;
+                        padding-right: 5%;
                     }
                 }
                 .main-content {  background-color: #01131f }
