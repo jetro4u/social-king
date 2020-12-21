@@ -48,7 +48,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                     <div class='pure-u-1'>
                      <div class='community-pad-20 modal-footer'>
                         <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
-                          ng-click='submitBlogPost({title: title})'>Save Post</button>
+                          ng-click='submitBlogPost()'>Save Post</button>
                       </div> 
                     </div>
                     <p id='json'></p>
@@ -94,7 +94,7 @@ module.exports.createNewPostJS = ({shop, tags}) => {
         },
       });
 
-      $scope.submitBlogPost = function(title){
+      $scope.submitBlogPost = function(){
         editor
             .save()
             .then((body) => {
@@ -108,7 +108,7 @@ module.exports.createNewPostJS = ({shop, tags}) => {
                   }
               }
               
-              const data = { title, body, tags: tagIDs };
+              const data = { title: $scope.title, body, tags: tagIDs };
 
               $http.post('${proxyRoute}/user/blog?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: 'somecrazyhash' | md5 }}', data)
                      .success(function(data) {
