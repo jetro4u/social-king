@@ -376,3 +376,13 @@ Error: Failed to lookup view "index" in views directory "/root/shopify-community
 (node:1682) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:1850) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:1850) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:2043) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:2043) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:2253) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:2253) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:2397) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:2397) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:2547) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:2547) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:2711) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:2711) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
