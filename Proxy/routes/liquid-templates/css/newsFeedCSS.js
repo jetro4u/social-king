@@ -5,8 +5,6 @@ exports.newsFeedCSS = ({shop}) => {
 
     if(shop.shopify_domain.includes('beforestores')){
         return `
-                article { padding:1em; margin-top: 5px !important; }
-
                 .codex-editor__redactor { padding-bottom: 120px !important }
                 .community-background main { padding-top: 50px !important }
                 @media screen and (min-width: 1200px) {
