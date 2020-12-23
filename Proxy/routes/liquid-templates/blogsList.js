@@ -11,9 +11,7 @@ exports.blogsList = ({ shop, blogs, tags, size }) => {
 <link rel="stylesheet" id="wp-block-library-css" href="https://avie-studio.com/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="wc-block-vendors-style-css" href="https://avie-studio.com/wp-content/plugins/woo-gutenberg-products-block/build/vendors-style.css" type="text/css" media="all">
 <link rel="stylesheet" id="wc-block-style-css" href="https://avie-studio.com/wp-content/plugins/woo-gutenberg-products-block/build/style.css" type="text/css" media="all">
-<link rel="stylesheet" id="woocommerce-layout-css" href="https://avie-studio.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css" type="text/css" media="all">
-<link rel="stylesheet" id="woocommerce-smallscreen-css" href="https://avie-studio.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)">
-<link rel="stylesheet" id="woocommerce-general-css" href="https://avie-studio.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css" type="text/css" media="all">
+
 <link rel="stylesheet" id="hello-elementor-css" href="https://avie-studio.com/wp-content/themes/hello-elementor/style.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="hello-elementor-theme-style-css" href="https://avie-studio.com/wp-content/themes/hello-elementor/theme.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-icons-css" href="https://avie-studio.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all">
