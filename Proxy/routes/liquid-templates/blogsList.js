@@ -25,11 +25,6 @@ exports.blogsList = ({ shop, blogs, tags, size }) => {
 <link rel="stylesheet" id="font-awesome-5-all-css" href="https://avie-studio.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-4-shim-css" href="https://avie-studio.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-global-css" href="https://avie-studio.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-41-css" href="https://avie-studio.com/wp-content/uploads/elementor/css/post-41.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-15598-css" href="https://avie-studio.com/wp-content/uploads/elementor/css/post-15598.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-15637-css" href="https://avie-studio.com/wp-content/uploads/elementor/css/post-15637.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-15744-css" href="https://avie-studio.com/wp-content/uploads/elementor/css/post-15744.css" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-post-15306-css" href="https://avie-studio.com/wp-content/uploads/elementor/css/post-15306.css" type="text/css" media="all">
 <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Pragati+Narrow%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.6" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://avie-studio.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="elementor-icons-fa-brands-css" href="https://avie-studio.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css" type="text/css" media="all">
