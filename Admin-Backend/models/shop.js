@@ -27,6 +27,7 @@ const Shop = mongoose.Schema({
 	  communityName: String,
 	  primaryColor: String,
 	  backgroundColor: String,
+	  CSSCode: String,
 	  charge_id:  { 
 	  	  type: String, 
 	  	  default: '' 
