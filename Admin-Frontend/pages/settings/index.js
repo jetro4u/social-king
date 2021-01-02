@@ -27,6 +27,8 @@ const Settings = (props) => {
   const [aboutCommunity, setAboutCommunity] = useState('');
   const [backgroundColor, setBackgroundColor] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
+  const [CSSCode, setCSSCode] = useState('');
+
   const [iconImageURL, setIconImageURL] = useState('');
   const [headerImageURL, setHeaderImageURL] = useState('');
 
@@ -34,6 +36,7 @@ const Settings = (props) => {
   const handleAboutCommunityChange = useCallback((newValue) => setAboutCommunity(newValue), []);
   const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
   const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
+  const handleCSSCodeChange = useCallback((newValue) => setCSSCode(newValue), []);
 
   //dropzone
   const [iconFiles, setIconFiles] = useState([]);
@@ -236,11 +239,23 @@ const Settings = (props) => {
 
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
-            title="CSS Customization"
+            title="CSS Colors"
             description="Add Your Brand Colors to your Site's Community Pages. Custom Colors can be in any of the following formats: Color Name: DeepSkyBlue, Hex: #00bfff, or RGB: rgb(0, 191, 255)"
           >
            <TextField label="Background Color" value={backgroundColor ? backgroundColor : ''} onChange={handleBackgroundColorChange} type="text"/>
            <TextField label="Primary Color" value={primaryColor ? primaryColor : ''} onChange={handlePrimaryColorChange} type="text" />
+          </Layout.AnnotatedSection>
+
+          <Layout.AnnotatedSection
+            title="CSS Code Customization"
+            description="Make the Styling Completely Your Own with Custom CSS Code which will automitacally load on every page of your Public-Facing Community Pages"
+          >
+            <TextField
+              label="CSS Code"
+              value={CSSCode}
+              onChange={handleCSSCodeChange}
+              multiline={4}
+            />
           </Layout.AnnotatedSection>
         </Layout>
       </Page>
