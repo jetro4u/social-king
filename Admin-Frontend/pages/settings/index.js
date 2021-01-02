@@ -66,7 +66,8 @@ const Settings = (props) => {
                 setBackgroundColor(data.backgroundColor)
                 setPrimaryColor(data.primaryColor)
                 setIconImageURL(data.iconImageURL)
-                setHeaderImageURL(data.headerImageURL)      
+                setHeaderImageURL(data.headerImageURL)
+                setCSSCode(data.CSSCode)      
             }
         });
     };
@@ -78,7 +79,7 @@ const Settings = (props) => {
     const updateSettings = ()=>{
       getBase64(iconFiles.slice(-1)[0], (iconImg) => {
           getBase64(headerFiles.slice(-1)[0], (headerImg) => {
-            let newSettings = {iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor}
+            let newSettings = {CSSCode, iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor}
             console.log('ran updateSettings func with this data: ',newSettings ) 
             update({props, newSettings}).then(data => {
                   if (data.error) {
@@ -239,7 +240,7 @@ const Settings = (props) => {
 
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
-            title="CSS Colors"
+            title="Community Colors"
             description="Add Your Brand Colors to your Site's Community Pages. Custom Colors can be in any of the following formats: Color Name: DeepSkyBlue, Hex: #00bfff, or RGB: rgb(0, 191, 255)"
           >
            <TextField label="Background Color" value={backgroundColor ? backgroundColor : ''} onChange={handleBackgroundColorChange} type="text"/>
@@ -248,7 +249,7 @@ const Settings = (props) => {
 
           <Layout.AnnotatedSection
             title="CSS Code Customization"
-            description="Make the Styling Completely Your Own with Custom CSS Code which will automitacally load on every page of your Public-Facing Community Pages"
+            description="Make the Styling Completely Your Own with Custom CSS Code which will automatically load on every page of your Public-Facing Community Pages"
           >
             <TextField
               label="CSS Code"
