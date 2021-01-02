@@ -423,7 +423,7 @@ exports.blogsList = ({ shop, blogs, tags, size }) => {
         </section>
 
         <style>
-            article { padding: 5px !important; }
+            article { display: inline-block !important; padding: 15px !important; }
         </style>
         `
 };
