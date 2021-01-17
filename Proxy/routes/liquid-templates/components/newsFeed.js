@@ -9,12 +9,38 @@ exports.newsFeed = ({shop, blogs}) => {
 
     const showLoadedBlogs = () => {
         console.log('blogs in showLoadedBlogs func: ', blogs)
-
-        return blogs.map((blog, i) => `
+        
+        if(shop.shopify_domain.includes('beforestores')){
+            return blogs.map((blog, i) => `
+                <div class="pure-u-1">
+                    <div class="l-box community-card">
+                        <a href="${proxyRoute}/blog/${blog.slug}">
+                          ${blog.coverMedia ? "<img class='cover-img' src='"+blog.coverMedia+"'/>" : '<br/>'}
+                        </a>
+                        
+                        <a href="${proxyRoute}/user/${blog.postedBy.username}">
+                            <img src="${blog.postedBy && blog.postedBy.cover_photo ? blog.postedBy.cover_photo : backupShopIcon}" 
+                              class="community-user-icon" />
+                            <div class="community-author">Posted by ${blog.postedBy.name}</div>
+                         </a>
+                         <a href="${proxyRoute}/blog/${blog.slug}">
+                           <h3 class="blog-title">${blog.title}</h3>
+                         </a>
+                         <p class="blog-excerpt">${blog.excerpt}</p>
+                        <a href="${proxyRoute}/blog/${blog.slug}">
+                          <p class="community-read-more">READ MORE >></p>    
+                        </a>
+                        
+                     </div>
+                </div>
+            `).join('');
+        } else {
+            return blogs.map((blog, i) => `
                 <div class="pure-u-1">
                     <div class="l-box community-card">
                         <a href="${proxyRoute}/user/${blog.postedBy.username}">
-                            <img src="${blog.postedBy && blog.postedBy.cover_photo ? blog.postedBy.cover_photo : backupShopIcon}" class="community-user-icon" />
+                            <img src="${blog.postedBy && blog.postedBy.cover_photo ? blog.postedBy.cover_photo : backupShopIcon}" 
+                              class="community-user-icon" />
                             <div class="community-author">Posted by ${blog.postedBy.name}</div>
                          </a>
                         <a href="${proxyRoute}/blog/${blog.slug}">
@@ -29,22 +55,52 @@ exports.newsFeed = ({shop, blogs}) => {
                      </div>
                 </div>
             `).join('');
+        }
+    };
+    
+    const loadHTML = () => {
+        
+        if(shop.shopify_domain.includes('beforestores')){
+          return `
+            <div class="community-pad-20">
+                          <div class="community-card say-something">
+                              <div class="community-card-body">
+                                  <a href='https://${shop ? shop.shopify_domain+proxyRoute : 'social-king-app.myshopify.com'+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'>
+                                      <input type="text" class="community-instant-post" placeholder="Say Something..." />
+                                  </a>
+                              
+                              </div>
+                          </div>
+                          <div class="pure-g">
+                            <div class="posts-container">
+                              ${showLoadedBlogs()}
+                            </div>
+                          </div>
+                      </div>
+          `
+        } else {
+          return `<div class="pure-u-md-2-3 pure-u-sm-1 community-newsfeed-box">
+                      <div class="community-pad-20">
+                          <div class="community-card">
+                              <div class="community-card-body">
+                                  <a href='https://${shop ? shop.shopify_domain+proxyRoute : 'social-king-app.myshopify.com'+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'>
+                                      <input type="text" class="community-instant-post" placeholder="Create Post" />
+                                  </a>
+                              
+                              </div>
+                          </div>
+                          <div class="pure-g">
+                            <div class="posts-container">
+                              ${showLoadedBlogs()}
+                            </div>
+                          </div>
+                      </div>
+                  </div>` 
+        }
     };
 
     return `
-        <div class="pure-u-md-2-3 pure-u-sm-1 community-newsfeed-box">
-            <div class="community-pad-20">
-                <div class="community-card">
-                    <div class="community-card-body">
-                        <a href='https://${shop ? shop.shopify_domain+proxyRoute : 'social-king-app.myshopify.com'+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'>
-                            <input type="text" class="community-instant-post" placeholder="Create Post" />
-                        </a>
-                    
-                    </div>
-                </div>
-                <div class="pure-g">${showLoadedBlogs()}</div>
-            </div>
-        </div>
+        ${loadHTML()}
 
         <script src='https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js'></script> 
         <script src='https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js'></script>        

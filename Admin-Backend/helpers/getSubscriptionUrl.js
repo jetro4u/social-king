@@ -23,7 +23,7 @@ exports.getSubscriptionUrl = async (req, res) => {
           {
             plan: {
               appRecurringPricingDetails: {
-                  price: { amount: 19, currencyCode: USD }
+                  price: { amount: 0.99, currencyCode: USD }
               }
             }
           }

@@ -113,6 +113,10 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
     } else if(user){
         return showUserNav()
     } else {
-        return showBlogNav()
+        if(!shop.shopify_domain.includes('beforestores')){
+          return showBlogNav()
+        } else {
+          return ''
+        }
     }
 };
