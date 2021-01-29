@@ -10,7 +10,7 @@ exports.getSubscriptionUrl = async (req, res) => {
    console.log('accessToken in getSubscriptionUrl', accessToken)
    console.log('req.shop in getSubscriptionUrl', req.shop);
 
-   const APP_SLUG = process.env.NODE_ENV == 'development' ? 'community-2' : 'social-king';
+   const APP_SLUG = process.env.APP_SLUG;
 
   const query = JSON.stringify({
     query: `mutation {

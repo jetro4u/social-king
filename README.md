@@ -50,7 +50,7 @@ The easiest way to get started is to clone the repository:
 
 ```bash
 # Get the latest snapshot
-git clone https://github.com/ElishaKay/tribe-squared
+git clone https://github.com/ElishaKay/social-king
 
 # Running the Admin Backend
 cd Admin-Backend
