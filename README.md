@@ -144,40 +144,6 @@ The benefit of this is that when we get to the next function in the chain, the <
 
 ```javascript
 blog.postedBy = req.user._id;
->>>>>>> 8a30ac297ff3a969b4ddfa611d4f925e20254c19
-```
-
-That means, when a Post request is made to '/proxy/blog', the Req, Res, and Next objects are passed to the <em>requireSignin, adminMiddleware, and create</em> in sequential order.
-
-<h3>The Req, Res, and Next() Conveyor belt</h3>
-
-The <em>Req</em> object contains all the functionality required for handling a request.
-The <em>Res</em> object contains all the functionality required for sending back a response.
-The <em>Next</em> function contains all the functionality required for sending <em>Req & Res</em> into the next function in the Conveyor Belt.
-
-The easiest way to think of these 3 objects is as if they are going through a Manufacturing Conveyor Belt. Each function (also called: 'middleware') has the ability to tack new fields unto these objects.
-
-For example, <a href='https://github.com/ElishaKay/tribe-squared/blob/master/Proxy/routes/proxy-controllers/auth.js'>in the authMiddleware function</a>, we grab the email from the POST query string, search the database for that user, and then tack the user object unto the Req object, like so:
-
-```javascript
-exports.authMiddleware = (req, res, next) => {
-    // grab the email from the POST query string
-    let email = req.query.email.toLowerCase();
-    ... 
-    // search the database for the user with the given email
-    User.findOne({ email: email }).exec((err, user) => {
-    ...
-    //tack the user object unto the Req object so that the user object can be accessed by the next middleware functions down the chain 
-    req.user = user;
-    ...
-    // Pass the req, res, and next() objects into the next function in the chain
-    next();
-```
-
-The benefit of this is that when we get to the next function in the chain, the <a href='https://github.com/ElishaKay/tribe-squared/blob/master/Proxy/routes/proxy-controllers/blog.js'>blog<em>Create</em> function</a>, we can use the user object we got the previous middleware function, like so:
-
-```javascript
-blog.postedBy = req.user._id;
 ```
 
 MIT License
@@ -193,7 +159,6 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
->>>>>>> 8a30ac297ff3a969b4ddfa611d4f925e20254c19
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
