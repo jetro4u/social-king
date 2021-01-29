@@ -111,8 +111,6 @@ Here's another exampe from that same route file mentioned above, <a href='https:
 
 ```javascript
 router.post('/user/blog', requireSignin, authMiddleware, create);
-<<<<<<< HEAD
-=======
 ```
 
 That means, when a Post request is made to '/proxy/blog', the Req, Res, and Next objects are passed to the <em>requireSignin, adminMiddleware, and create</em> in sequential order.
@@ -151,7 +149,6 @@ blog.postedBy = req.user._id;
 
 That means, when a Post request is made to '/proxy/blog', the Req, Res, and Next objects are passed to the <em>requireSignin, adminMiddleware, and create</em> in sequential order.
 
-<<<<<<< HEAD
 <h3>The Req, Res, and Next() Conveyor belt</h3>
 
 The <em>Req</em> object contains all the functionality required for handling a request.
@@ -182,7 +179,7 @@ The benefit of this is that when we get to the next function in the chain, the <
 ```javascript
 blog.postedBy = req.user._id;
 ```
-=======
+
 MIT License
 
 Copyright (c) 2021 Elisha Kramer
