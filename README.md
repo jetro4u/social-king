@@ -50,7 +50,11 @@ The easiest way to get started is to clone the repository:
 
 ```bash
 # Get the latest snapshot
+<<<<<<< HEAD
 git clone https://github.com/ElishaKay/tribe-squared
+=======
+git clone https://github.com/ElishaKay/social-king
+>>>>>>> 8a30ac297ff3a969b4ddfa611d4f925e20254c19
 
 # Running the Admin Backend
 cd Admin-Backend
@@ -111,6 +115,8 @@ Here's another exampe from that same route file mentioned above, <a href='https:
 
 ```javascript
 router.post('/user/blog', requireSignin, authMiddleware, create);
+<<<<<<< HEAD
+=======
 ```
 
 That means, when a Post request is made to '/proxy/blog', the Req, Res, and Next objects are passed to the <em>requireSignin, adminMiddleware, and create</em> in sequential order.
@@ -144,5 +150,62 @@ The benefit of this is that when we get to the next function in the chain, the <
 
 ```javascript
 blog.postedBy = req.user._id;
+>>>>>>> 8a30ac297ff3a969b4ddfa611d4f925e20254c19
 ```
 
+That means, when a Post request is made to '/proxy/blog', the Req, Res, and Next objects are passed to the <em>requireSignin, adminMiddleware, and create</em> in sequential order.
+
+<<<<<<< HEAD
+<h3>The Req, Res, and Next() Conveyor belt</h3>
+
+The <em>Req</em> object contains all the functionality required for handling a request.
+The <em>Res</em> object contains all the functionality required for sending back a response.
+The <em>Next</em> function contains all the functionality required for sending <em>Req & Res</em> into the next function in the Conveyor Belt.
+
+The easiest way to think of these 3 objects is as if they are going through a Manufacturing Conveyor Belt. Each function (also called: 'middleware') has the ability to tack new fields unto these objects.
+
+For example, <a href='https://github.com/ElishaKay/tribe-squared/blob/master/Proxy/routes/proxy-controllers/auth.js'>in the authMiddleware function</a>, we grab the email from the POST query string, search the database for that user, and then tack the user object unto the Req object, like so:
+
+```javascript
+exports.authMiddleware = (req, res, next) => {
+    // grab the email from the POST query string
+    let email = req.query.email.toLowerCase();
+    ... 
+    // search the database for the user with the given email
+    User.findOne({ email: email }).exec((err, user) => {
+    ...
+    //tack the user object unto the Req object so that the user object can be accessed by the next middleware functions down the chain 
+    req.user = user;
+    ...
+    // Pass the req, res, and next() objects into the next function in the chain
+    next();
+```
+
+The benefit of this is that when we get to the next function in the chain, the <a href='https://github.com/ElishaKay/tribe-squared/blob/master/Proxy/routes/proxy-controllers/blog.js'>blog<em>Create</em> function</a>, we can use the user object we got the previous middleware function, like so:
+
+```javascript
+blog.postedBy = req.user._id;
+```
+=======
+MIT License
+
+Copyright (c) 2021 Elisha Kramer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+>>>>>>> 8a30ac297ff3a969b4ddfa611d4f925e20254c19
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
