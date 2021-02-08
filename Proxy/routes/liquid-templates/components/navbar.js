@@ -24,13 +24,13 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <hr class="community-hr" />
 
                       {% if customer.email %} 
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="pure-button pure-button-primary community-full-width">Create Post</button></a>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="tag-btn pure-button pure-button-primary community-full-width">Create Post</button></a>
                             <br><br>
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="pure-button pure-button-primary community-full-width">Settings</button></a>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="tag-btn pure-button pure-button-primary community-full-width">Settings</button></a>
                         {% else %}
-                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="pure-button pure-button-primary community-full-width">Sign Up</button></a>
+                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="tag-btn pure-button pure-button-primary community-full-width">Sign Up</button></a>
                             <br><br>
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="pure-button pure-button-primary community-full-width">Create Post</button></a>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="tag-btn pure-button pure-button-primary community-full-width">Create Post</button></a>
                         {% endif %}    
 
                     </div>

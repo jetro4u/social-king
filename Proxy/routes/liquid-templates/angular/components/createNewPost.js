@@ -37,7 +37,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
   return `
           ${shop.shopify_domain.includes('beforestores') ? 
                         sendGUIDownards() : ''}  
-          <div class='community-card'>
+          <div class='community-card community-create-post-editor'>
                <div id='new-post' class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
                       <h3>What's on your mind, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>

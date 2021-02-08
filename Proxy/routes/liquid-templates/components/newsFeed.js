@@ -48,7 +48,7 @@ exports.newsFeed = ({shop, blogs}) => {
                             ${blog.coverMedia ? "<img class='cover-img' src='"+blog.coverMedia+"'/>" : '<br/>'}
                             <p>${blog.excerpt}</p>
                         </a>
-                       <div class='text'><p class='community-post-slug-${blog.slug} community-instant-post community-reactions'>Add 😀</p></div>
+                       <div class='text'><p class='community-post-slug-${blog.slug} community-instant-post community-reactions'>Add ����</p></div>
                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                             <input type="text" class="community-instant-post" placeholder="Add Comment" />
                         </a>
@@ -71,7 +71,7 @@ exports.newsFeed = ({shop, blogs}) => {
                               
                               </div>
                           </div>
-                          <div class="pure-g">
+                          <div class="community-card">
                             <div class="posts-container">
                               ${showLoadedBlogs()}
                             </div>
@@ -79,8 +79,8 @@ exports.newsFeed = ({shop, blogs}) => {
                       </div>
           `
         } else {
-          return `<div class="pure-u-md-2-3 pure-u-sm-1 community-newsfeed-box">
-                      <div class="community-pad-20">
+          return `<div class="pure-u-md-7-12 pure-u-sm-1 community-newsfeed-box">
+                      <div>
                           <div class="community-card">
                               <div class="community-card-body">
                                   <a href='https://${shop ? shop.shopify_domain+proxyRoute : 'social-king-app.myshopify.com'+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'>
@@ -89,7 +89,7 @@ exports.newsFeed = ({shop, blogs}) => {
                               
                               </div>
                           </div>
-                          <div class="pure-g">
+                          <div>
                             <div class="posts-container">
                               ${showLoadedBlogs()}
                             </div>
@@ -134,7 +134,7 @@ exports.newsFeed = ({shop, blogs}) => {
                 })
 
                 if (emojiSummary === undefined || emojiSummary.length == 0) {
-                    input.innerHTML = '😊 Add Emoji'
+                    input.innerHTML = '😌 Add Emoji'
                 } else {
                     input.innerHTML = emojiSummary.map((reaction)=>{
                         return reaction.name + ': ' + reaction.emoji;

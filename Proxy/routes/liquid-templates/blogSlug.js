@@ -64,7 +64,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                             ${renderBlocks(blog)}
                        </div>
                         ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
-                        <div class="community-pad-20 community-card">
+                        <div class="community-card">
                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                                 <input type="text" class="community-instant-post" placeholder="Add Comment" />
                             </a>
