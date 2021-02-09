@@ -3224,3 +3224,248 @@ Error: Failed to lookup view "index" in views directory "/root/shopify-community
 (node:12001) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
 (node:12088) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:12088) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+(node:18243) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:18243) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:18821) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'aboutCommunity' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:78:76)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:18838) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'aboutCommunity' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:78:76)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:18852) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:18994) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:18994) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property 'aboutCommunity' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:78:75)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:19010) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:19010) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:19270) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:19270) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:19373) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:19373) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:19497) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:19497) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of undefined
+    at exports.addEmoji (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:236:31)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/auth.js:178:9)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:245:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:29795) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:29795) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+(node:13088) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13088) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:13171) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13171) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:13277) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'shopify_domain' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:77:11)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13288) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'shopify_domain' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:77:11)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13299) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13299) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:13354) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'shopify_domain' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:77:11)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13365) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'shopify_domain' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:77:11)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13378) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13378) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:13444) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'shopify_domain' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:77:11)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13457) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'shopify_domain' of undefined
+    at module.exports.createNewPostJS (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/components/createNewPost.js:77:11)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/routes/liquid-templates/angular/app.js:13:9)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/routes/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13468) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13468) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:13529) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13529) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.

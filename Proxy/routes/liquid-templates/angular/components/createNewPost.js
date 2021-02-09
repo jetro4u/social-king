@@ -6,6 +6,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
   console.log('shop in createNewPost template', shop)
 
   const displayTags = (data) => data.map((tag, i) => {
+      return ''
       return `<form class='form-inline' id='post-tags'><label class='checkbox px-2 pure-checkbox community-checkbox' >                
                   <input type='checkbox' ng-model='tags.${tag.id}'><span class='px-1'> ${tag.name}</span>
               </label></form>
@@ -42,7 +43,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                     <div id='error-message' class='text-center'>
                       <h3>What's on your mind, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
                     </div>
-                    ${shop.shopify_domain.includes('site-that-wants-titles-option') ? 
+                    ${shop.shopify_domain.includes('globalxploration-inc') ? 
                         displayTitleInput() : ''}
       
                     <div id='editorjs'></div>
@@ -75,9 +76,20 @@ module.exports.createNewPostJS = ({shop, tags}) => {
   return `
     tribeApp.controller('newPostController', function($scope, $http) {
       console.log('newPostController function ran');
-      document.getElementById('the-community-options').innerHTML = 'Join the discussion';
-       $scope.tags = {};
+      document.getElementById('the-community-options').innerHTML = 'Always happy to hear from our community';
+      $scope.tags = {};
        const editor = new EditorJS({
+         data: {
+		    blocks: [
+		      {
+		        type: "paragraph",
+		        data: {
+		          text:
+		            "Click here to get started..."
+		        }
+		      }
+		    ]
+  	   },
         autofocus: true,
         tools: {
           header: Header,
