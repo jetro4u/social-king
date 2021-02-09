@@ -3,7 +3,8 @@ const { defaultCSS } = require('./defaultCSS');
 exports.newsFeedCSS = ({shop}) => {
     const backupHeaderImg = "https://www.dorothylane.com/wp-content/uploads/2017/09/cheese.jpg";
 
-    if(!shop){
+    if(!shop || !shop.CSSCode){
+    	console.log('ran no shop found logic')
     	return defaultCSS()
     } else {
 	    return `${shop.CSSCode}
