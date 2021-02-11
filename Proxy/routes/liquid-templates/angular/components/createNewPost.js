@@ -73,10 +73,17 @@ module.exports.createNewPostJS = ({shop, tags}) => {
     });
   }
 
+  let motivationText = ''
+  if(shop.shopify_domain.includes('globalxploration-inc')){
+    motivationText = "We love to hear what's going on in our community!  Feel free to share any tips, tricks, ideas, or ask questions of our global network of treasure hunters, finders, and collectors!"
+  } else {
+    motivationText = "Always happy to hear from our community"
+  }
+
   return `
     tribeApp.controller('newPostController', function($scope, $http) {
       console.log('newPostController function ran');
-      document.getElementById('the-community-options').innerHTML = 'Always happy to hear from our community';
+      document.getElementById('the-community-options').innerHTML = '${formatQuotes(motivationText)}';
       $scope.tags = {};
        const editor = new EditorJS({
          data: {
