@@ -10,7 +10,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
     (function() {
       var tribeApp = angular.module('tribe', ['ui.router']);
 
-      ${createNewPostJS(shop, tags)}
+      ${createNewPostJS({shop, tags})}
       ${settingsJS(user)}
       ${managePostsJS(user)}
       ${addCommentJS({tags, blog})}
