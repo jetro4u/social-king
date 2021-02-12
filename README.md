@@ -1,5 +1,4 @@
-
-<h2>Tribe Social</h2>
+<h1>Tribe Social</h1>
 
 Admin App Homepage:
 
