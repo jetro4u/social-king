@@ -144,25 +144,19 @@ The benefit of this is that when we get to the next function in the chain, the <
 ```javascript
 blog.postedBy = req.user._id;
 ```
-=======
-MIT License
 
-Copyright (c) 2021 Elisha Kramer
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+User License
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Copyright (c) 2021 King Commerce
+By using this software you agree to the following agreement:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+<h1>What can't be done with this software</h1>
+You can pretty much do anything you'd like with this software other than compete with <a href="https://apps.shopify.com/social-king">Social King</a> on the Shopify App Store. That means, no cloning the repo, hosting it on your own server and then submitting it to the Shopify App Store.
+
+<h1> What can be done </h1>
+You may use this software for creating custom apps for clients, or to learn how to build Shopify Apps.
+Also, if you make significant changes to the repository, to the point that it's no longer competing with Social King as a "Gust-Blogging App" or "Community App", then it's okay to launch the App to the Shopify App Store.
+
+<h1>Closing Words</h1>
+Happy coding, and may the Force be with you :)
