@@ -28,6 +28,7 @@ const Settings = (props) => {
   const [backgroundColor, setBackgroundColor] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
   const [CSSCode, setCSSCode] = useState('');
+  const [moderationRequired, setModerationRequired] = useState(true);
 
   const [iconImageURL, setIconImageURL] = useState('');
   const [headerImageURL, setHeaderImageURL] = useState('');
@@ -191,7 +192,8 @@ const Settings = (props) => {
     );
     
     const toggleApprovalSetting = () => {
-      console.log('ran toggleApprovalSetting fun in Settings/index.js')
+      console.log('ran toggleApprovalSetting fun in Settings/index.js');
+      setModerationRequired(false);
     }
 
   return (
@@ -248,10 +250,10 @@ const Settings = (props) => {
           >
           <SettingToggle
               action={{
-                content: true ? 'Require Approval': 'Let it Rip',
+                content: moderationRequired ? 'Require Approval': 'Let it Rip',
                 onAction: toggleApprovalSetting.bind(this)
               }}
-              hidden={true}
+              hidden={moderationRequired}
             > </SettingToggle>
           </Layout.AnnotatedSection> 
           <Layout.AnnotatedSection
