@@ -246,15 +246,19 @@ const Settings = (props) => {
           </Layout.AnnotatedSection>
           <Layout.AnnotatedSection
             title="Moderation Setting"
-            description="Enable Shoppers to Post New Content without Moderator Approval"
+            description="Would you like to enable Customers to Auto-Post, or would you like to moderate the content before it goes live?"
           >
+          
           <SettingToggle
               action={{
-                content: moderationRequired ? 'Require Approval': 'Let it Rip',
+                content: moderationRequired ? "Just Let 'em Post": 'Require Approval',
                 onAction: toggleApprovalSetting.bind(this)
               }}
               hidden={moderationRequired}
-            > </SettingToggle>
+            > 
+            <p><b>Current Setting:</b> {moderationRequired ? 'New Posts by Community Members need Moderator Approval' : 
+                 'Community Members can Post New Content without Moderator Approval'}</p>
+            </SettingToggle>
           </Layout.AnnotatedSection> 
           <Layout.AnnotatedSection
             title="Community Colors"
