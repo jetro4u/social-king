@@ -190,6 +190,9 @@ const Settings = (props) => {
       </Stack>
     );
     
+    const toggleApprovalSetting = () => {
+      console.log('ran toggleApprovalSetting fun in Settings/index.js')
+    }
 
   return (
       <Page>
@@ -239,6 +242,18 @@ const Settings = (props) => {
           </DropZone>
 
           </Layout.AnnotatedSection>
+          <Layout.AnnotatedSection
+            title="Moderation Setting"
+            description="Enable Shoppers to Post New Content without Moderator Approval"
+          >
+          <SettingToggle
+              action={{
+                content: true ? 'Require Approval': 'Let it Rip',
+                onAction: toggleApprovalSetting.bind(this)
+              }}
+              hidden={true}
+            > </SettingToggle>
+          </Layout.AnnotatedSection> 
           <Layout.AnnotatedSection
             title="Community Colors"
             description="Add Your Brand Colors to your Site's Community Pages. Custom Colors can be in any of the following formats: Color Name: DeepSkyBlue, Hex: #00bfff, or RGB: rgb(0, 191, 255)"
