@@ -77,18 +77,22 @@ exports.create = (req, res) => {
     // categories and tags
     // let arrayOfCategories = categories && categories.split(',');
     // let arrayOfTags = tags[0];
+    //add shop to blog record
+    Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
+       console.log('shop in function to send Email Alert and add Shop reference', shop)
+       if(shop && shop._doc && !shop._doc.postModeration){
+            blog.hidden = false;
+       }
 
-    blog.save((err, result) => {
-        if (err) {
-            console.log('error saving post',err)
-            return res.status(400).json({
-                error: errorHandler(err)
-            });
-        }
-        console.log('post saved successfully',result);
-        //add shop to blog record
-        Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
-           console.log('shop in function to send Email Alert and add Shop reference', shop)
+        blog.save((err, result) => {
+            if (err) {
+                console.log('error saving post',err)
+                return res.status(400).json({
+                    error: errorHandler(err)
+                });
+            }
+            console.log('post saved successfully',result);
+
            let storeAdminName = shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].name ? shop._doc.extraShopifyData[0].name : 'you';
            let appSlug = process.env.NODE_ENV == 'development' ? 'community-2' : 'social-king';
            
