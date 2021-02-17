@@ -28,7 +28,8 @@ const Settings = (props) => {
   const [backgroundColor, setBackgroundColor] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
   const [CSSCode, setCSSCode] = useState('');
-  const [moderationRequired, setModerationRequired] = useState(true);
+  const [postModeration, setPostModeration] = useState(true);
+  const [commentModeration, setCommentModeration] = useState(true);
 
   const [iconImageURL, setIconImageURL] = useState('');
   const [headerImageURL, setHeaderImageURL] = useState('');
@@ -68,7 +69,9 @@ const Settings = (props) => {
                 setPrimaryColor(data.primaryColor)
                 setIconImageURL(data.iconImageURL)
                 setHeaderImageURL(data.headerImageURL)
-                setCSSCode(data.CSSCode)      
+                setCSSCode(data.CSSCode)
+                setPostModeration(data.postModeration)
+                setCommentModeration(data.commentModeration)      
             }
         });
     };
@@ -191,9 +194,13 @@ const Settings = (props) => {
       </Stack>
     );
     
-    const toggleApprovalSetting = () => {
+    const toggleApprovalSetting = (contentType) => {
       console.log('ran toggleApprovalSetting fun in Settings/index.js');
-      setModerationRequired(false);
+      if(contentType=='comment'){
+        setCommentModeration(false);
+      } else {
+        setPostModeration(false);  
+      }
     }
 
   return (
@@ -251,14 +258,25 @@ const Settings = (props) => {
           
           <SettingToggle
               action={{
-                content: moderationRequired ? "Just Let 'em Post": 'Require Approval',
-                onAction: toggleApprovalSetting.bind(this)
+                content: postModeration ? "Just Let 'em Post": 'Require Approval',
+                onAction: toggleApprovalSetting.bind(this, 'post')
               }}
-              hidden={moderationRequired}
+              hidden={postModeration}
             > 
-            <p><b>Current Setting:</b> {moderationRequired ? 'New Posts by Community Members need Moderator Approval' : 
-                 'Community Members can Post New Content without Moderator Approval'}</p>
+            <p><b>Current Setting:</b> {postModeration ? 'New Posts by Community Members need Moderator Approval' : 
+                 'Community Members can Post without Moderator Approval'}</p>
             </SettingToggle>
+            <SettingToggle
+              action={{
+                content: commentModeration ? "Just Let 'em Post": 'Require Approval',
+                onAction: toggleApprovalSetting.bind(this, 'comment')
+              }}
+              hidden={commentModeration}
+            > 
+            <p><b>Current Setting:</b> {commentModeration ? 'New Comments by Community Members need Moderator Approval' : 
+                 'Community Members can Comment without Moderator Approval'}</p>
+            </SettingToggle>
+
           </Layout.AnnotatedSection> 
           <Layout.AnnotatedSection
             title="Community Colors"

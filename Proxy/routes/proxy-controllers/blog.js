@@ -1,4 +1,4 @@
-const edjsHTML = require('editorjs-html');
+ const edjsHTML = require('editorjs-html');
 const edjsParser = edjsHTML();
 
 const Blog = require('../../models/blog');

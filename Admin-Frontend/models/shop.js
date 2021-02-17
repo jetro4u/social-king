@@ -53,7 +53,15 @@ const Shop = mongoose.Schema({
 	  },
 	  extraShopifyData: {
   	      type: Array
-	  }
+	  },
+	  postModeration: { 
+		  type: Boolean, 
+		  default: true 
+      },
+      commentModeration: { 
+		  type: Boolean, 
+		  default: true 
+      }
   },
   { timestamps: true }
 );
