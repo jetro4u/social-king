@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { getProfile, update } from '../../actions/user';
+import { getProfile, update, updateModeration } from '../../actions/user';
 import Link from 'next/link';
 import {
   Button,
@@ -79,22 +79,6 @@ const Settings = (props) => {
     useEffect(() => {
         init();
     }, []);
-
-    const updateSettings = ()=>{
-      getBase64(iconFiles.slice(-1)[0], (iconImg) => {
-          getBase64(headerFiles.slice(-1)[0], (headerImg) => {
-            let newSettings = {CSSCode, iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor}
-            console.log('ran updateSettings func with this data: ',newSettings ) 
-            update({props, newSettings}).then(data => {
-                  if (data.error) {
-                      console.log('err data: ', data)
-                  } else {
-                      setSuccessMessage('Settings successfully saved.')
-                  }
-              });
-          });
-      });
-    }
 
     const getBase64 = (file, cb) => {
       console.log('file', file)
@@ -193,14 +177,46 @@ const Settings = (props) => {
         </div>
       </Stack>
     );
+
+    const updateSettings = ()=>{
+      getBase64(iconFiles.slice(-1)[0], (iconImg) => {
+          getBase64(headerFiles.slice(-1)[0], (headerImg) => {
+            let newSettings = {CSSCode, iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor}
+            console.log('ran updateSettings func with this data: ',newSettings ) 
+            update({props, newSettings}).then(data => {
+                  if (data.error) {
+                      console.log('err data: ', data)
+                  } else {
+                      setSuccessMessage('Settings successfully saved.')
+                  }
+              });
+          });
+      });
+    }
     
     const toggleApprovalSetting = (contentType) => {
       console.log('ran toggleApprovalSetting fun in Settings/index.js');
+      let postBoolean = postModeration;
+      let commentBoolean = commentModeration;
+
       if(contentType=='comment'){
-        setCommentModeration(false);
+          commentBoolean = !commentModeration;
       } else {
-        setPostModeration(false);  
+          postBoolean = !postModeration;  
       }
+
+      let newSettings = {postModeration: postBoolean, commentModeration: commentBoolean}
+      console.log('ran toggleApprovalSettings func with this data: ',newSettings ) 
+      updateModeration({props, newSettings}).then(data => {
+            if (data.error) {
+                console.log('err data: ', data)
+            } else {
+                console.log('shop returned in Settings component from updateModeration func', data);
+                let {postModeration, commentModeration} = data;
+                setPostModeration(postModeration);
+                setCommentModeration(commentModeration);
+            }
+        });
     }
 
   return (
