@@ -48,3 +48,21 @@ export const update = ({props, newSettings}) => {
         })
         .catch(err => console.log(err));
 };
+
+export const updateModeration = ({props, newSettings}) => {
+    let username = props ? props.app.shopOrigin : '';
+
+    return fetch(`${API}/user/${username}/update-moderation`, {
+        method: 'PUT',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newSettings)
+    })
+        .then(response => {
+            handleResponse(response);
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};
