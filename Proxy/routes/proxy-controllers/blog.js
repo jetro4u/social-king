@@ -180,18 +180,21 @@ exports.createComment = (req, res) => {
     // categories and tags
     // let arrayOfCategories = categories && categories.split(',');
     // let arrayOfTags = tags[0];
-
-    comment.save((err, result) => {
-        if (err) {
-            console.log('error saving comment',err)
-            return res.status(400).json({
-                error: errorHandler(err)
-            });
+    Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
+        console.log('shop in createComment function', shop);
+        if(shop && !shop.commentModeration){
+            comment.hidden = false;
         }
-        console.log('comment saved successfully',result);
-        //add shop to blog record
-        Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
-           console.log('shop in function to add Shop reference', shop)
+
+        comment.save((err, result) => {
+            if (err) {
+                console.log('error saving comment',err)
+                return res.status(400).json({
+                    error: errorHandler(err)
+                });
+            }
+            console.log('comment saved successfully',result);
+        
            Comment.findByIdAndUpdate(result._id, { $set: { shopPostedAt: [shop._id] } }, { new: true }).exec(
                 (err, result) => {
                     if (err) {
