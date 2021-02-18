@@ -96,7 +96,7 @@ exports.create = (req, res) => {
            let storeAdminName = shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].name ? shop._doc.extraShopifyData[0].name : 'you';
            let appSlug = process.env.NODE_ENV == 'development' ? 'community-2' : 'social-king';
            
-           if(shop && shop._doc){
+           if(shop && shop._doc && shop._doc.postModeration){
                const emailData = {
                   to: shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].email ? shop._doc.extraShopifyData[0].email : 'kramer1346@gmail.com',
                   from: 'help@socialking.app',
@@ -138,7 +138,11 @@ exports.create = (req, res) => {
                             }
                         );
                     })
-                    res.send({message: 'Thank you for submitting your new post. A moderator will review your content, and publish it if approved.'});
+                    if(shop && shop._doc && !shop._doc.postModeration){
+                        res.send({message: `Thanks for submitting your Post. It's now <a href='https://${blog.shopifyDomain}${process.env.PROXY_ROUTE}/blog/${blog.slug}'>live and available here</a>.`});
+                    } else {
+                        res.send({message: 'Thank you for submitting your new post. A moderator will review your content, and publish it if approved.'});
+                    }
                 }
             );        
         });
