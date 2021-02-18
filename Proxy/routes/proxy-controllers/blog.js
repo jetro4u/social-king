@@ -204,7 +204,11 @@ exports.createComment = (req, res) => {
                         })
                     }
                     console.log('Shop added to comment record');
-                    res.send({message: 'Thank you for submitting your comment. A moderator will review your content, and publish it if approved.'});
+                    if(shop && !shop.commentModeration){
+                        res.send({message: comment.html});
+                    } else {
+                        res.send({message: 'Thank you for submitting your comment. A moderator will review your content, and publish it if approved.'});                        
+                    }
                 }
             );        
         });
