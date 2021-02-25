@@ -73,6 +73,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
 
                     <div class="details pure-u-md-1-4 pure-u-sm-1"> 
                         <div class="community-pad-20">
+                         <div class="community-card">
                             <div class="pb-5">
                                 <h2>Contributed by</h2>
                             </div>
@@ -98,7 +99,9 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                                 ${showAllTags()}
                             </div>
                         </div>
+                        </div>
                     </div>
+                    
 
                 </div>
                 ${blog.selectedProducts.length>0 ? `<div class="pure-g">

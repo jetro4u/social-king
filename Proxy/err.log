@@ -3563,3 +3563,822 @@ Error: Failed to lookup view "index" in views directory "/root/shopify-community
     at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
     at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
     at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+(node:18021) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:18021) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:245:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13642) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13642) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/undefined'
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/undefined'
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/undefined'
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/undefined'
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/undefined'
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:245:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:15546) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:15546) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+(node:9108) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:9108) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:25383) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:25383) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:25491) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:25491) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:29656) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:29656) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:32764) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:32764) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:2098) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:2098) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+MongoServerSelectionError: connection timed out
+    at Timeout.waitQueueMember.timer.setTimeout [as _onTimeout] (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:430:30)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+MongoServerSelectionError: connection timed out
+    at Timeout.waitQueueMember.timer.setTimeout [as _onTimeout] (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:430:30)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+MongoServerSelectionError: connection <monitor> to 18.205.36.143:27017 closed
+    at Timeout.waitQueueMember.timer.setTimeout [as _onTimeout] (/root/shopify-community-app/Proxy/node_modules/mongoose/node_modules/mongodb/lib/core/sdam/topology.js:430:30)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:13391) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:13391) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:26494) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:26494) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:260:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:4680) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:4680) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: Failed to lookup view "index" in views directory "/root/shopify-community-app/Proxy/views"
+    at Function.render (/root/shopify-community-app/Proxy/node_modules/express/lib/application.js:579:17)
+    at ServerResponse.render (/root/shopify-community-app/Proxy/node_modules/express/lib/response.js:960:7)
+    at router.get (/root/shopify-community-app/Proxy/routes/index.js:26:16)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:176:3)
+    at router (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:312:13)
+    at /root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:330:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/index.js:271:10)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/serve-static/index.js:121:7)
+    at SendStream.emit (events.js:198:13)
+    at SendStream.error (/root/shopify-community-app/Proxy/node_modules/send/index.js:275:17)
+    at SendStream.onStatError (/root/shopify-community-app/Proxy/node_modules/send/index.js:392:12)
+    at next (/root/shopify-community-app/Proxy/node_modules/send/index.js:711:28)
+(node:17408) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:17408) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
