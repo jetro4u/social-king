@@ -12,6 +12,7 @@ exports.newsFeedCSS = ({shop}) => {
 	             .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg}); }
 	             .community-card-header { background:${shop && shop.primaryColor ? shop.primaryColor : '#26b598'}; }
 	             .community-instant-post { border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : '#edeff1'}; }
+	             .community-card-navbar { width: 300px; }
 	        `;
 	}
 };
