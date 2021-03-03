@@ -46,25 +46,27 @@ const Settings = (props) => {
   const [headerFiles, setHeaderFiles] = useState([]);
 
   //select language
-  const [selected, setSelected] = useState('today');
-  const handleSelectChange = useCallback((value) => setSelected(value), []);
+  const [selectedLanguage, setSelectedLanguage] = useState('English');
+  
   const options = [
-    {label: 'Today', value: 'today'},
-    {label: 'Yesterday', value: 'yesterday'},
-    {label: 'Last 7 days', value: 'lastWeek'},
+    {label: 'English', value: 'English'},
+    {label: 'Spanish', value: 'Spanish'},
+    {label: 'French', value: 'French'},
+
+    {label: 'Portuguese', value: 'English'},
+    {label: ' Italian', value: 'Spanish'},
+    {label: 'Chinese-Simplified', value: 'Chinese-Simplified'},
+
+    {label: 'Chinese-Traditional', value: 'Chinese-Traditional'},
+    {label: 'Czech', value: 'Czech'},
+    {label: 'Danish', value: 'Danish'},
+    
+    {label: 'Dutch', value: 'Dutch'},
+    {label: 'Finnish', value: 'Finnish'},
+    {label: 'German', value: 'German'},
   ];
   
-  const handleIconDropZoneDrop = useCallback(
-    (_dropFiles, acceptedFiles, _rejectedFiles) =>
-      setIconFiles((iconFiles) => [...iconFiles, ...acceptedFiles]),
-    [],
-  );
-
-  const handleHeaderDropZoneDrop = useCallback(
-    (_dropFiles, acceptedFiles, _rejectedFiles) =>
-      setHeaderFiles((headerFiles) => [...headerFiles, ...acceptedFiles]),
-    [],
-  );
+  const handleSelectChange = useCallback((value) => setSelectedLanguage(value), []);
 
   const init = () => {
         getProfile(props).then(data => {
@@ -79,7 +81,8 @@ const Settings = (props) => {
                 setHeaderImageURL(data.headerImageURL)
                 setCSSCode(data.CSSCode)
                 setPostModeration(data.postModeration)
-                setCommentModeration(data.commentModeration)      
+                setCommentModeration(data.commentModeration)
+                setSelectedLanguage(data.language)      
             }
         });
     };
@@ -87,6 +90,18 @@ const Settings = (props) => {
     useEffect(() => {
         init();
     }, []);
+
+    const handleIconDropZoneDrop = useCallback(
+      (_dropFiles, acceptedFiles, _rejectedFiles) =>
+        setIconFiles((iconFiles) => [...iconFiles, ...acceptedFiles]),
+      [],
+    );
+
+    const handleHeaderDropZoneDrop = useCallback(
+      (_dropFiles, acceptedFiles, _rejectedFiles) =>
+        setHeaderFiles((headerFiles) => [...headerFiles, ...acceptedFiles]),
+      [],
+    );
 
     const getBase64 = (file, cb) => {
       console.log('file', file)
@@ -261,7 +276,7 @@ const Settings = (props) => {
                 label="Network Language"
                 options={options}
                 onChange={handleSelectChange}
-                value={selected}
+                value={selectedLanguage}
               />
             </Card>
           </Layout.AnnotatedSection>
