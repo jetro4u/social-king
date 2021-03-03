@@ -25,19 +25,19 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
                     <hr class="community-hr" />
 
                       {% if customer.email %} 
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="tag-btn pure-button pure-button-primary community-full-width">Create Post</button></a>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="tag-btn pure-button pure-button-primary community-full-width">${translations['CreatePost'][shop ? shop.language : 'English']}</button></a>
                             <br><br>
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="tag-btn pure-button pure-button-primary community-full-width">Settings</button></a>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="tag-btn pure-button pure-button-primary community-full-width">${translations['Settings'][shop ? shop.language : 'English']}</button></a>
                         {% else %}
-                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="tag-btn pure-button pure-button-primary community-full-width">Sign Up</button></a>
+                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/settings'><button class="tag-btn pure-button pure-button-primary community-full-width">${translations['Settings'][shop ? shop.language : 'English']}</button></a>
                             <br><br>
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="tag-btn pure-button pure-button-primary community-full-width">Create Post</button></a>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'><button class="tag-btn pure-button pure-button-primary community-full-width">${translations['CreatePost'][shop ? shop.language : 'English']}</button></a>
                         {% endif %}    
 
                     </div>
                 </div>
                 <div class="community-card">
-                    <div class="community-card-header">Choose a Channel</div>
+                    <div class="community-card-header">${translations['ChooseAChannel'][shop ? shop.language : 'English']}</div>
                     <div class="community-card-body">
                         ${showAllTags()}
                     </div>
