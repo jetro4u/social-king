@@ -61,7 +61,11 @@ const Shop = mongoose.Schema({
       commentModeration: { 
 		  type: Boolean, 
 		  default: true 
-      }
+      },
+      language: { 
+        type: String, 
+        default: 'English' 
+	  }
   },
   { timestamps: true }
 );

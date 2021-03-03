@@ -15,7 +15,8 @@ import {
   Stack,
   TextField,
   SettingToggle,
-  TextStyle
+  TextStyle,
+  Select
 } from '@shopify/polaris';
 import { TitleBar } from '@shopify/app-bridge-react';
 
@@ -43,9 +44,16 @@ const Settings = (props) => {
   //dropzone
   const [iconFiles, setIconFiles] = useState([]);
   const [headerFiles, setHeaderFiles] = useState([]);
-  
-  console.log('rendered Settings component with files', iconFiles)
 
+  //select language
+  const [selected, setSelected] = useState('today');
+  const handleSelectChange = useCallback((value) => setSelected(value), []);
+  const options = [
+    {label: 'Today', value: 'today'},
+    {label: 'Yesterday', value: 'yesterday'},
+    {label: 'Last 7 days', value: 'lastWeek'},
+  ];
+  
   const handleIconDropZoneDrop = useCallback(
     (_dropFiles, acceptedFiles, _rejectedFiles) =>
       setIconFiles((iconFiles) => [...iconFiles, ...acceptedFiles]),
@@ -243,6 +251,21 @@ const Settings = (props) => {
               </FormLayout>
             </Card>
           </Layout.AnnotatedSection>
+
+          <Layout.AnnotatedSection
+              title="Network Language"
+              description="Choose the Language that your Social Network will appear in to Shoppers."
+              >            
+            <Card sectioned>
+               <Select
+                label="Network Language"
+                options={options}
+                onChange={handleSelectChange}
+                value={selected}
+              />
+            </Card>
+          </Layout.AnnotatedSection>
+
           <Layout.AnnotatedSection
             title="Set Featured Icon Image"
             description="This icon will appear within your Site's Community Pages."
