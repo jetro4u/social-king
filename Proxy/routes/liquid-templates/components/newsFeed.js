@@ -3,6 +3,8 @@ const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.j
 const { localize } = require('../../helpers/localize');
 // ${localize('title','jv')}
 
+// import translations from ('../../helpers/translations.json')
+
 
 exports.newsFeed = ({shop, blogs}) => {
     
