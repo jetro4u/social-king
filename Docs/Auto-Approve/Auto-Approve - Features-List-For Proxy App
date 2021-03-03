@@ -1,0 +1,38 @@
+
+
+New Features for Proxy App:
+
+To-Do List for Adding Auto-Approve Features on Post + Comment Levels
+
+a) When Shopper Submits Post, check the given Shop's postModeration field
+
+If moderation is required on the Post Level:
+
+===> (DONE) On the Post Record in the Database, set hidden to true
+==> (DONE) show message onSubmit: "your Post will be Reviewed"
+===> (DONE) Send Message to Store Admin - "Post is Pending Your Review Here"
+
+Else If moderation is NOT required on the POST Level:
+
+===> (DONE) On the POST Record in the Database, set hidden to FALSE
+==> (DONE) show message onSubmit: "your Post is Live & Available Here"
+===> (NOT A MUST HAVE FOR FEATURE LAUNCH) Send Message to Store Admin - "A New Post was Submitted and is Live Here"
+
+------------------------------
+
+
+b) When Shopper Submits Comment, check the given Shop's commentModeration field
+
+If moderation is required on the Comment Level:
+
+===> (DONE) On the Comment Record in the Database, set hidden to true
+==> (DONE) show message onSubmit: "your Comment will be Reviewed"
+===> (DONE) Send Message to Store Admin - "Comment is Pending Your Review Here"
+
+Else If moderation is NOT required on the Comment Level:
+
+===> (DONE) On the Comment Record in the Database, set hidden to FALSE
+==> show message onSubmit: "your Comment is Live & Available Here" or Just Show The Comment
+===> (NOT A MUST HAVE FOR FEATURE LAUNCH) Send Message to Store Admin - "A New Comment was Submitted & is Available Here"
+
+

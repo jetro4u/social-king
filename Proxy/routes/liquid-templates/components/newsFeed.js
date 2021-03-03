@@ -1,5 +1,8 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
+const { localize } = require('../../helpers/localize');
+// ${localize('title','jv')}
+
 
 exports.newsFeed = ({shop, blogs}) => {
     

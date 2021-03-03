@@ -38,7 +38,7 @@ const Shop = mongoose.Schema({
       },
 	  backgroundColor: { 
             type: String, 
-            default: '#01131f' 
+            default: '#f6f7f8' 
       },
       CSSCode: { 
 	  	type: String, 
