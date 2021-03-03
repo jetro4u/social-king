@@ -72,8 +72,7 @@ exports.updateLanguage = (req,res) => {
                 error: errorHandler(err)
             });
         } else {
-            oldShop.postModeration = postModeration;
-            oldShop.commentModeration = commentModeration;
+            oldShop.language = language;
 
             oldShop.save((err, shop) => {
                 if (err) {

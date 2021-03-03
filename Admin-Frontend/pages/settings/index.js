@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { getProfile, update, updateModeration } from '../../actions/user';
+import { getProfile, update, updateModeration, updateLanguage } from '../../actions/user';
 import Link from 'next/link';
 import {
   Button,
@@ -66,7 +66,19 @@ const Settings = (props) => {
     {label: 'German', value: 'German'},
   ];
   
-  const handleSelectChange = useCallback((value) => setSelectedLanguage(value), []);
+  const handleSelectChange = useCallback((value) => {
+      let newSettings = {language: value}
+      console.log('ran handleSelectChange func with this data: ',newSettings ) 
+      updateLanguage({props, newSettings}).then(data => {
+            if (data.error) {
+                console.log('err data: ', data)
+            } else {
+                console.log('shop returned in Settings component from updateModeration func', data);
+                let {language} = data;
+                setSelectedLanguage(language);
+            }
+        });
+  }, []);
 
   const init = () => {
         getProfile(props).then(data => {
