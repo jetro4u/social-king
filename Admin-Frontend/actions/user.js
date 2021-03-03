@@ -66,3 +66,22 @@ export const updateModeration = ({props, newSettings}) => {
         })
         .catch(err => console.log(err));
 };
+
+
+export const updateLanguage = ({props, newSettings}) => {
+    let username = props ? props.app.shopOrigin : '';
+
+    return fetch(`${API}/user/${username}/update-language`, {
+        method: 'PUT',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newSettings)
+    })
+        .then(response => {
+            handleResponse(response);
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};

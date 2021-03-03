@@ -1,5 +1,6 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const backupShopIcon = "https://www.bongiorno.eu/assets/img/facebook/bongiorno.jpg";
+const {translations} = require('../../helpers/translations')
 
 exports.newsFeed = ({shop, blogs}) => {
     
@@ -21,7 +22,7 @@ exports.newsFeed = ({shop, blogs}) => {
                         <a href="${proxyRoute}/user/${blog.postedBy.username}">
                             <img src="${blog.postedBy && blog.postedBy.cover_photo ? blog.postedBy.cover_photo : backupShopIcon}" 
                               class="community-user-icon" />
-                            <div class="community-author">Posted by ${blog.postedBy.name}</div>
+                            <div class="community-author">${translations['PostedBy'][shop ? shop.language : 'English']} ${blog.postedBy.name}</div>
                          </a>
                          <a href="${proxyRoute}/blog/${blog.slug}">
                            <h3 class="blog-title">${blog.title}</h3>
@@ -41,16 +42,16 @@ exports.newsFeed = ({shop, blogs}) => {
                         <a href="${proxyRoute}/user/${blog.postedBy.username}">
                             <img src="${blog.postedBy && blog.postedBy.cover_photo ? blog.postedBy.cover_photo : backupShopIcon}" 
                               class="community-user-icon" />
-                            <div class="community-author">Posted by ${blog.postedBy.name}</div>
+                            <div class="community-author">${translations['PostedBy'][shop ? shop.language : 'English']} ${blog.postedBy.name}</div>
                          </a>
                         <a href="${proxyRoute}/blog/${blog.slug}">
                             <h3>${blog.title}</h3>
                             ${blog.coverMedia ? "<img class='cover-img' src='"+blog.coverMedia+"'/>" : '<br/>'}
                             <p>${blog.excerpt}</p>
                         </a>
-                       <div class='text'><p class='community-post-slug-${blog.slug} community-instant-post community-reactions'>Add ����</p></div>
+                       <div class='text'><p class='community-post-slug-${blog.slug} community-instant-post community-reactions'></p></div>
                        <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
-                            <input type="text" class="community-instant-post" placeholder="Add Comment" />
+                            <input type="text" class="community-instant-post" placeholder="${translations['AddComment'][shop ? shop.language : 'English']}" />
                         </a>
                      </div>
                 </div>
@@ -84,7 +85,7 @@ exports.newsFeed = ({shop, blogs}) => {
                           <div class="community-card">
                               <div class="community-card-body">
                                   <a href='https://${shop ? shop.shopify_domain+proxyRoute : 'social-king-app.myshopify.com'+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/create-new-post'>
-                                      <input type="text" class="community-instant-post" placeholder="Create Post" />
+                                      <input type="text" class="community-instant-post" placeholder="${translations['CreatePost'][shop ? shop._doc.language : 'English']}" />
                                   </a>
                               
                               </div>
@@ -134,7 +135,7 @@ exports.newsFeed = ({shop, blogs}) => {
                 })
 
                 if (emojiSummary === undefined || emojiSummary.length == 0) {
-                    input.innerHTML = '😌 Add Emoji'
+                    input.innerHTML = '😌'
                 } else {
                     input.innerHTML = emojiSummary.map((reaction)=>{
                         return reaction.name + ': ' + reaction.emoji;

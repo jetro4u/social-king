@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { getProfile, update, updateModeration } from '../../actions/user';
+import { getProfile, update, updateModeration, updateLanguage } from '../../actions/user';
 import Link from 'next/link';
 import {
   Button,
@@ -15,7 +15,8 @@ import {
   Stack,
   TextField,
   SettingToggle,
-  TextStyle
+  TextStyle,
+  Select
 } from '@shopify/polaris';
 import { TitleBar } from '@shopify/app-bridge-react';
 
@@ -43,20 +44,41 @@ const Settings = (props) => {
   //dropzone
   const [iconFiles, setIconFiles] = useState([]);
   const [headerFiles, setHeaderFiles] = useState([]);
+
+  //select language
+  const [selectedLanguage, setSelectedLanguage] = useState('English');
   
-  console.log('rendered Settings component with files', iconFiles)
+  const options = [
+    {label: 'English', value: 'English'},
+    {label: 'Spanish', value: 'Spanish'},
+    {label: 'French', value: 'French'},
 
-  const handleIconDropZoneDrop = useCallback(
-    (_dropFiles, acceptedFiles, _rejectedFiles) =>
-      setIconFiles((iconFiles) => [...iconFiles, ...acceptedFiles]),
-    [],
-  );
+    {label: 'Portuguese', value: 'English'},
+    {label: ' Italian', value: 'Spanish'},
+    {label: 'Chinese-Simplified', value: 'Chinese-Simplified'},
 
-  const handleHeaderDropZoneDrop = useCallback(
-    (_dropFiles, acceptedFiles, _rejectedFiles) =>
-      setHeaderFiles((headerFiles) => [...headerFiles, ...acceptedFiles]),
-    [],
-  );
+    {label: 'Chinese-Traditional', value: 'Chinese-Traditional'},
+    {label: 'Czech', value: 'Czech'},
+    {label: 'Danish', value: 'Danish'},
+    
+    {label: 'Dutch', value: 'Dutch'},
+    {label: 'Finnish', value: 'Finnish'},
+    {label: 'German', value: 'German'},
+  ];
+  
+  const handleSelectChange = useCallback((value) => {
+      let newSettings = {language: value}
+      console.log('ran handleSelectChange func with this data: ',newSettings ) 
+      updateLanguage({props, newSettings}).then(data => {
+            if (data.error) {
+                console.log('err data: ', data)
+            } else {
+                console.log('shop returned in Settings component from updateModeration func', data);
+                let {language} = data;
+                setSelectedLanguage(language);
+            }
+        });
+  }, []);
 
   const init = () => {
         getProfile(props).then(data => {
@@ -71,7 +93,8 @@ const Settings = (props) => {
                 setHeaderImageURL(data.headerImageURL)
                 setCSSCode(data.CSSCode)
                 setPostModeration(data.postModeration)
-                setCommentModeration(data.commentModeration)      
+                setCommentModeration(data.commentModeration)
+                setSelectedLanguage(data.language)      
             }
         });
     };
@@ -79,6 +102,18 @@ const Settings = (props) => {
     useEffect(() => {
         init();
     }, []);
+
+    const handleIconDropZoneDrop = useCallback(
+      (_dropFiles, acceptedFiles, _rejectedFiles) =>
+        setIconFiles((iconFiles) => [...iconFiles, ...acceptedFiles]),
+      [],
+    );
+
+    const handleHeaderDropZoneDrop = useCallback(
+      (_dropFiles, acceptedFiles, _rejectedFiles) =>
+        setHeaderFiles((headerFiles) => [...headerFiles, ...acceptedFiles]),
+      [],
+    );
 
     const getBase64 = (file, cb) => {
       console.log('file', file)
@@ -243,6 +278,21 @@ const Settings = (props) => {
               </FormLayout>
             </Card>
           </Layout.AnnotatedSection>
+
+          <Layout.AnnotatedSection
+              title="Network Language"
+              description="Choose the Language that your Social Network will appear in to Shoppers."
+              >            
+            <Card sectioned>
+               <Select
+                label="Network Language"
+                options={options}
+                onChange={handleSelectChange}
+                value={selectedLanguage}
+              />
+            </Card>
+          </Layout.AnnotatedSection>
+
           <Layout.AnnotatedSection
             title="Set Featured Icon Image"
             description="This icon will appear within your Site's Community Pages."

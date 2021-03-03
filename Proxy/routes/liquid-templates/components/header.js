@@ -4,7 +4,7 @@ exports.header = ({shop, tag, user, blog}) => {
 
 	const showTitle = (shop)=>{
 		if(tag){
-    		return "Posts Tagged '"+ tag.name+"'"
+    		return tag.name
     	} else if (user) {
     		return user.name
     	} else if (blog) {
