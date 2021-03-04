@@ -14,14 +14,13 @@ module.exports.createNewPost = ({shop, user, tags}) => {
 
   const displayTitleInput = () =>{
     return `<div class='form-group'>
-              <label for='titleip'>Title:</label>
               <input
                 ng-model='title'
                 type='text'
                 class='form-control'
                 id='titleip'
                 name='titleip'
-                placeholder='Enter title here'
+                placeholder='${translations['Title'][shop ? shop.language : 'English']}'
                 required
               />
             </div>`
@@ -53,7 +52,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                     <div class='pure-u-1'>
                      <div class='community-pad-20'>
                         <button button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true'
-                          ng-click='submitUserBlogPost()' >Save Post</button>
+                          ng-click='submitUserBlogPost()' >${translations['SavePost'][shop ? shop.language : 'English']}</button>
                       </div> 
                     </div>
                 </div>
@@ -91,7 +90,7 @@ module.exports.createNewPostJS = ({shop, tags}) => {
 		        type: "paragraph",
 		        data: {
 		          text:
-		            "Click here to get started..."
+		            "${translations['ClickHere'][shop ? shop.language : 'English']}"
 		        }
 		      }
 		    ]

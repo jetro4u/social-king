@@ -11,7 +11,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
       var tribeApp = angular.module('tribe', ['ui.router']);
 
       ${createNewPostJS({shop, tags})}
-      ${settingsJS(user)}
+      ${settingsJS({user,shop})}
       ${managePostsJS(user)}
       ${addCommentJS({tags, blog})}
 
@@ -32,7 +32,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
         let settingsState = {
           name: 'settings',
           url: '/settings',
-          template: "${trimHTML(settings(user))}"
+          template: "${trimHTML(settings({user, shop}))}"
         }
 
         let addCommentState = {
