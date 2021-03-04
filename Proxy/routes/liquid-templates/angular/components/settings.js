@@ -1,7 +1,8 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const {formatQuotes} = require('../../../helpers/formatQuotes');
+const {translations} = require('../../../helpers/translations')
 
-module.exports.settings = (user) => {
+module.exports.settings = ({user, shop}) => {
   return `
         <div class='community-card community-admin-padding'>
           <div id='error-message' class='text-center'>
@@ -11,7 +12,7 @@ module.exports.settings = (user) => {
             <div class='form-group'>
                 <form action='/upload' method='POST' enctype='multipart/form-data'>
                   <label class='pure-button'>
-                      Update Photo
+                      ${translations['UpdatePhoto'][shop ? shop.language : 'English']}
                       <input type='file' name='image' accept='image/*' hidden onchange='angular.element(this).scope().uploadFile(this.files)'/>
                   </label>
                 </form>
@@ -22,30 +23,30 @@ module.exports.settings = (user) => {
             </div>
 
             <div class='form-group'>
-                <label class='text-muted'>Name</label>
+                <label class='text-muted'>${translations['Name'][shop ? shop.language : 'English']}</label>
                 <input type='text' value='${formatQuotes(user.name)}' class='form-control' ng-model='formData.name'/>
             </div>
             <br>
             <div class='form-group'>
-                <label class='text-muted'>About</label>
+                <label class='text-muted'>${translations['About'][shop ? shop.language : 'English']}</label>
                 <br>
                 <textarea type='text' value='${formatQuotes(user.about)}' class='form-control' ng-model='formData.about'/></textarea>
             </div>
             <div>
             <br>
             <div class='form-group'>
-                <label class='text-muted'>Favorite Things About {{shop.name}}</label>
+                <label class='text-muted'>${translations['FavoriteThings'][shop ? shop.language : 'English']} {{shop.name}}</label>
                 <br>
                 <textarea type='text' value='${formatQuotes(user.storeFavorites)}' class='form-control' ng-model='formData.storeFavorites'/></textarea>
             </div>
               <button ng-click='updateProfileDetails(formData)' class='community-button-secondary pure-button'>
-                  Update
+                  ${translations['Update'][shop ? shop.language : 'English']}
               </button>
             </div>
           </div>`
 };
 
-module.exports.settingsJS = (user) => {
+module.exports.settingsJS = ({user, shop}) => {
   function formatQuotes(str){
    var reg = /"/g;
    var newstr = `\\"`;

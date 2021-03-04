@@ -11,7 +11,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
       var tribeApp = angular.module('tribe', ['ui.router']);
 
       ${createNewPostJS({shop, tags})}
-      ${settingsJS(user)}
+      ${settingsJS({user,shop})}
       ${managePostsJS(user)}
       ${addCommentJS({tags, blog})}
 
@@ -26,19 +26,19 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
         let managePostsState = {
           name: 'manage-posts',
           url: '/manage-posts',
-          template: "${trimHTML(managePosts({user, blogs}))}"
+          template: "${trimHTML(managePosts({user, blogs, shop}))}"
         }
 
         let settingsState = {
           name: 'settings',
           url: '/settings',
-          template: "${trimHTML(settings(user))}"
+          template: "${trimHTML(settings({user, shop}))}"
         }
 
         let addCommentState = {
           name: 'add-comment',
           url: '/add-comment',
-          template: "${trimHTML(addComment({user, blog}))}"
+          template: "${trimHTML(addComment({user, blog, shop}))}"
         }
 
         $stateProvider.state(createNewPostState);

@@ -12,7 +12,7 @@ exports.translations = {
       "Dutch": "Post maken",
       "Finnish": "Luo viesti",
       "German": "Beitrag erstellen",
-      "Japanese": ""
+      "Japanese": "投稿を作成する"
    },
    "AddComment": {
       "English": "Add Comment",
@@ -27,7 +27,7 @@ exports.translations = {
       "Dutch": "Voeg opmerking toe",
       "Finnish": "Lisää kommentti",
       "German": "Einen Kommentar hinzufügen",
-      "Japanese": ""
+      "Japanese": "コメントを追加する"
    },
    "PostedBy": {
       "English": "Posted By",
@@ -42,7 +42,7 @@ exports.translations = {
       "Dutch": "Gepost door",
       "Finnish": "Lähettänyt",
       "German": "Geschrieben von",
-      "Japanese": ""
+      "Japanese": "投稿者"
    },
    "About": {
       "English": "About",
@@ -57,7 +57,7 @@ exports.translations = {
       "Dutch": "Over",
       "Finnish": "Noin",
       "German": "Über",
-      "Japanese": ""
+      "Japanese": "約"
    },
    "ChooseAChannel": {
       "English": "Choose a Channel",
@@ -72,7 +72,7 @@ exports.translations = {
       "Dutch": "Kies een kanaal",
       "Finnish": "Valitse kanava",
       "German": "Wähle einen Kanal",
-      "Japanese": ""
+      "Japanese": "チャネルを選択してください"
    },
    "ContributedBy": {
       "English": "Contributed By",
@@ -87,7 +87,7 @@ exports.translations = {
       "Dutch": "Mede mogelijk gemaakt door",
       "Finnish": "Lähettäjä",
       "German": "Beigesteuert von",
-      "Japanese": ""
+      "Japanese": "寄稿者"
    },
    "RelatedTags": {
       "English": "Related Tags",
@@ -102,7 +102,7 @@ exports.translations = {
       "Dutch": "Gerelateerde tags",
       "Finnish": "Liittyvät tagit",
       "German": "Verwandte Tags",
-      "Japanese": ""
+      "Japanese": "関連タグ"
    },
    "RelatedProducts": {
       "English": "Related Products",
@@ -117,7 +117,7 @@ exports.translations = {
       "Dutch": "gerelateerde producten",
       "Finnish": "Liittyvät tuotteet",
       "German": "Verwandte Produkte",
-      "Japanese": ""
+      "Japanese": "関連製品"
    },
    "GeneralBio": {
       "English": "General Bio",
@@ -132,7 +132,7 @@ exports.translations = {
       "Dutch": "Algemeen Bio",
       "Finnish": "Kenraali Bio",
       "German": "Allgemeine Bio",
-      "Japanese": ""
+      "Japanese": "一般的なバイオ"
    },
    "StoreFavorites": {
       "English": "Store Favorites",
@@ -147,7 +147,7 @@ exports.translations = {
       "Dutch": "Sla favorieten op",
       "Finnish": "Tallenna suosikit",
       "German": "Favoriten speichern",
-      "Japanese": ""
+      "Japanese": "お気に入りを保存する"
    },
    "CreateNewPost": {
       "English": "Create New Post",
@@ -162,7 +162,7 @@ exports.translations = {
       "Dutch": "Maak een nieuw bericht",
       "Finnish": "Luo uusi viesti",
       "German": "Neuen Beitrag erstellen",
-      "Japanese": ""
+      "Japanese": "新しい投稿を作成する"
    },
    "Title": {
       "English": "Title",
@@ -177,7 +177,7 @@ exports.translations = {
       "Dutch": "Titel",
       "Finnish": "Otsikko",
       "German": "Titel",
-      "Japanese": ""
+      "Japanese": "題名"
    },
    "SavePost": {
       "English": "Save Post",
@@ -192,7 +192,7 @@ exports.translations = {
       "Dutch": "Bewaar bericht",
       "Finnish": "Tallenna julkaisu",
       "German": "Beitrag speichern",
-      "Japanese": ""
+      "Japanese": "投稿を保存します"
    },
    "ManagePosts": {
       "English": "Manage Posts",
@@ -207,7 +207,7 @@ exports.translations = {
       "Dutch": "Beheer berichten",
       "Finnish": "Hallitse viestejä",
       "German": "Beiträge verwalten",
-      "Japanese": ""
+      "Japanese": "投稿を管理する"
    },
    "WrittenBy": {
       "English": "Written by",
@@ -222,7 +222,7 @@ exports.translations = {
       "Dutch": "Geschreven door",
       "Finnish": "Kirjoittanut",
       "German": "Geschrieben von",
-      "Japanese": ""
+      "Japanese": "によって書かれた"
    },
    "PublishedOn": {
       "English": "Published on",
@@ -237,7 +237,7 @@ exports.translations = {
       "Dutch": "gepubliceerd op",
       "Finnish": "Julkaistu",
       "German": "Veröffentlicht auf",
-      "Japanese": ""
+      "Japanese": "に公開"
    },
    "Delete": {
       "English": "Delete",
@@ -252,7 +252,7 @@ exports.translations = {
       "Dutch": "Verwijderen",
       "Finnish": "Poistaa",
       "German": "Löschen",
-      "Japanese": ""
+      "Japanese": "削除"
    },
    "Settings": {
       "English": "Settings",
@@ -267,7 +267,7 @@ exports.translations = {
       "Dutch": "Instellingen",
       "Finnish": "asetukset",
       "German": "die Einstellungen",
-      "Japanese": ""
+      "Japanese": "設定"
    },
    "UpdatePhoto": {
       "English": "Update Photo",
@@ -282,7 +282,7 @@ exports.translations = {
       "Dutch": "Foto-update",
       "Finnish": "Valokuvapäivitys",
       "German": "Foto-Update",
-      "Japanese": ""
+      "Japanese": "写真を更新"
    },
    "Name": {
       "English": "Name",
@@ -297,7 +297,7 @@ exports.translations = {
       "Dutch": "Naam",
       "Finnish": "Nimi",
       "German": "Name",
-      "Japanese": ""
+      "Japanese": "名前"
    },
    "FavoriteThings": {
       "English": "Favorite Things About",
@@ -312,7 +312,7 @@ exports.translations = {
       "Dutch": "Favoriete dingen over",
       "Finnish": "Suosikkiasiat aiheesta",
       "German": "Lieblingssachen über",
-      "Japanese": ""
+      "Japanese": "好きなこと"
    },
    "Update": {
       "English": "Update",
@@ -327,51 +327,141 @@ exports.translations = {
       "Dutch": "Bijwerken",
       "Finnish": "Päivittää",
       "German": "Aktualisieren",
-      "Japanese": ""
+      "Japanese": "更新"
    },
    "PostPendingReview": {
       "English": "Thank you for submitting your post. A moderator will review your content, and publish it if approved.",
-      "Spanish": "",
-      "French": "",
-      "Portuguese": "",
-      "Italian": "",
-      "Chinese-Simplified": "",
-      "Chinese-Traditional": "",
-      "Czech": "",
-      "Danish": "",
-      "Dutch": "",
-      "Finnish": "",
-      "German": "",
-      "Japanese": ""
+      "Spanish": "Gracias por enviar su publicación. Un moderador revisará su contenido y lo publicará si se aprueba.",
+      "French": "Merci d'avoir envoyé votre message. Un modérateur examinera votre contenu et le publiera s'il est approuvé.",
+      "Portuguese": "Obrigado por enviar sua postagem. Um moderador irá revisar seu conteúdo e publicá-lo se aprovado.",
+      "Italian": "Grazie per aver inviato il tuo post. Un moderatore esaminerà il tuo contenuto e lo pubblicherà se approvato.",
+      "Chinese-Simplified": "感谢您提交您的帖子。 主持人将审阅您的内容，并在批准后将其发布。",
+      "Chinese-Traditional": "感謝您提交您的帖子。 主持人將審閱您的內容，並在批准後將其發布。",
+      "Czech": "Děkujeme za odeslání příspěvku. Moderátor zkontroluje váš obsah a po schválení jej zveřejní.",
+      "Danish": "Tak fordi du sendte dit indlæg. En moderator gennemgår dit indhold og offentliggør det, hvis det er godkendt.",
+      "Dutch": "Bedankt voor het plaatsen van je bericht. Een moderator beoordeelt uw inhoud en publiceert deze indien goedgekeurd.",
+      "Finnish": "Kiitos lähettämästäsi viestiäsi. Moderaattori tarkistaa sisältösi ja julkaisee sen, jos se hyväksytään.",
+      "German": "Vielen Dank für das Absenden Ihres Beitrags. Ein Moderator überprüft Ihre Inhalte und veröffentlicht sie, wenn sie genehmigt wurden.",
+      "Japanese": "投稿していただきありがとうございます。 モデレーターがコンテンツを確認し、承認された場合は公開します。"
    },
    "PostLive": {
       "English": "Your post is now live and available here.",
-      "Spanish": "",
-      "French": "",
-      "Portuguese": "",
-      "Italian": "",
-      "Chinese-Simplified": "",
-      "Chinese-Traditional": "",
-      "Czech": "",
-      "Danish": "",
-      "Dutch": "",
-      "Finnish": "",
-      "German": "",
-      "Japanese": ""
+      "Spanish": "Tu publicación ahora está en vivo y disponible aquí.",
+      "French": "Votre message est maintenant en ligne et disponible ici.",
+      "Portuguese": "Sua postagem agora está ativa e disponível aqui.",
+      "Italian": "Il tuo post è ora attivo e disponibile qui.",
+      "Chinese-Simplified": "您的信息现已发布，可以在这里找到。",
+      "Chinese-Traditional": "您的信息現已上線，可以在這裡找到。",
+      "Czech": "Váš příspěvek je nyní aktivní a je k dispozici zde.",
+      "Danish": "Dit indlæg er nu live og tilgængeligt her.",
+      "Dutch": "Je bericht is nu live en hier beschikbaar.",
+      "Finnish": "Viestisi on nyt julkaistu ja saatavilla täältä.",
+      "German": "Ihr Beitrag ist jetzt live und hier verfügbar.",
+      "Japanese": "あなたの投稿は現在公開されており、ここから入手できます。"
    },
    "CommentPendingReview": {
       "English": "Thank you for submitting your comment. A moderator will review your content, and publish it if approved.",
-      "Spanish": "",
-      "French": "",
-      "Portuguese": "",
-      "Italian": "",
-      "Chinese-Simplified": "",
-      "Chinese-Traditional": "",
-      "Czech": "",
-      "Danish": "",
-      "Dutch": "",
-      "Finnish": "",
-      "German": "",
-      "Japanese": ""
+      "Spanish": "Gracias por enviar tu comentario. Un moderador revisará su contenido y lo publicará si se aprueba.",
+      "French": "Merci d'avoir soumis votre commentaire. Un modérateur examinera votre contenu et le publiera s'il est approuvé.",
+      "Portuguese": "Obrigado por enviar seu comentário. Um moderador irá revisar seu conteúdo e publicá-lo se aprovado.",
+      "Italian": "Grazie per aver inviato il tuo commento. Un moderatore esaminerà il tuo contenuto e lo pubblicherà se approvato.",
+      "Chinese-Simplified": "感谢您提交您的评论。 主持人将审阅您的内容，并在批准后将其发布。",
+      "Chinese-Traditional": "感謝您提交您的評論。 主持人將審閱您的內容，並在批准後將其發布。",
+      "Czech": "Děkujeme za zaslání vašeho komentáře. Moderátor zkontroluje váš obsah a po schválení jej zveřejní.",
+      "Danish": "Tak fordi du sendte din kommentar. En moderator gennemgår dit indhold og offentliggør det, hvis det er godkendt.",
+      "Dutch": "Bedankt voor het indienen van uw opmerking. Een moderator beoordeelt uw inhoud en publiceert deze indien goedgekeurd.",
+      "Finnish": "Kiitos kommenttisi lähettämisestä. Moderaattori tarkistaa sisältösi ja julkaisee sen, jos se hyväksytään.",
+      "German": "Vielen Dank für Ihren Kommentar. Ein Moderator überprüft Ihre Inhalte und veröffentlicht sie, wenn sie genehmigt wurden.",
+      "Japanese": "コメントを送信していただきありがとうございます。 モデレーターがコンテンツを確認し、承認された場合は公開します。"
+   },
+   "HappyToHear": {
+      "English": "Always happy to hear from our community",
+      "Spanish": "Siempre feliz de saber de nuestra comunidad",
+      "French": "Toujours heureux d'entendre notre communauté",
+      "Portuguese": "Sempre feliz em ouvir de nossa comunidade",
+      "Italian": "Sempre felice di ricevere notizie dalla nostra comunità",
+      "Chinese-Simplified": "总是很高兴听到我们的社区",
+      "Chinese-Traditional": "總是很高興聽到我們的社區",
+      "Czech": "Vždy rád slyším od naší komunity",
+      "Danish": "Altid glad for at høre fra vores samfund",
+      "Dutch": "Altijd blij om te horen van onze community",
+      "Finnish": "Aina iloinen kuulla yhteisömme",
+      "German": "Immer froh, von unserer Community zu hören",
+      "Japanese": "私たちのコミュニティからの連絡を常に喜んでいます"
+   },
+   "ClickHere": {
+      "English": "Click here to get started...",
+      "Spanish": "Haz clic para comenzar...",
+      "French": "Cliquez ici pour commencer...",
+      "Portuguese": "Clique aqui para começar...",
+      "Italian": "Clicca qui per iniziare...",
+      "Chinese-Simplified": "点击这里开始...",
+      "Chinese-Traditional": "點擊這裡開始...",
+      "Czech": "Začněte kliknutím sem ...",
+      "Danish": "Klik her for at komme i gang ...",
+      "Dutch": "Klik hier om te beginnen ...",
+      "Finnish": "Aloita napsauttamalla tätä ...",
+      "German": "Klicke hier, um zu starten...",
+      "Japanese": "開始するには、ここをクリックしてください..."
+   },
+   "WhatsUp": {
+      "English": "What's on your mind",
+      "Spanish": "Qué tienes en mente",
+      "French": "Qu'est-ce qui préoccupe votre esprit",
+      "Portuguese": "O que está em sua mente",
+      "Italian": "Cos'hai in mente",
+      "Chinese-Simplified": "你在想什么",
+      "Chinese-Traditional": "你在想什麼",
+      "Czech": "Na co myslíš",
+      "Danish": "Hvad tænker du på",
+      "Dutch": "Waar denk je aan",
+      "Finnish": "Mitä sinulla on mielessäsi",
+      "German": "Was haben Sie auf dem Herzen",
+      "Japanese": "何を考えているの"
+   },
+   "Welcome": {
+      "English": "Welcome",
+      "Spanish": "Bienvenida",
+      "French": "Bienvenue",
+      "Portuguese": "Receber",
+      "Italian": "benvenuto",
+      "Chinese-Simplified": "欢迎",
+      "Chinese-Traditional": "歡迎",
+      "Czech": "Vítejte",
+      "Danish": "Velkommen",
+      "Dutch": "Welkom",
+      "Finnish": "Tervetuloa",
+      "German": "Herzlich willkommen",
+      "Japanese": "ようこそ"
+   },
+   "NewPostByMember": {
+      "English": "New Post by Community Member",
+      "Spanish": "Nueva publicación por miembro de la comunidad",
+      "French": "Nouveau message d'un membre de la communauté",
+      "Portuguese": "Nova postagem de um membro da comunidade",
+      "Italian": "Nuovo messaggio da membro della comunità",
+      "Chinese-Simplified": "社区成员的新帖子",
+      "Chinese-Traditional": "社區成員的新帖子",
+      "Czech": "Nový příspěvek od člena komunity",
+      "Danish": "Nyt indlæg af fællesskabsmedlem",
+      "Dutch": "Nieuw bericht door communitylid",
+      "Finnish": "Uusi viesti yhteisön jäseneltä",
+      "German": "Neuer Beitrag von Community-Mitglied",
+      "Japanese": "コミュニティメンバーによる新しい投稿"
+   },
+   "SignUp": {
+      "English": "Sign Up",
+      "Spanish": "Inscribirse",
+      "French": "S'inscrire",
+      "Portuguese": "Inscrever-se",
+      "Italian": "Iscriviti",
+      "Chinese-Simplified": "报名",
+      "Chinese-Traditional": "報名",
+      "Czech": "Přihlásit se",
+      "Danish": "Tilmelde",
+      "Dutch": "Aanmelden",
+      "Finnish": "Kirjaudu",
+      "German": "Anmeldung",
+      "Japanese": "サインアップ"
    }
 }

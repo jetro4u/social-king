@@ -2,6 +2,7 @@ const { header } = require('./components/header');
 const { newsFeedCSS } = require('./css/newsFeedCSS');
 const {renderBlocks} = require('./components/blog/renderBlocks');
 const proxyRoute = process.env.PROXY_ROUTE;
+const {translations} = require('../helpers/translations')
 
 exports.blogSlug = ({blog, shop, user, comments}) => {
 
@@ -24,7 +25,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
             <div class="community-admin-padding community-card">
                 <a href="${proxyRoute}/user/${comment.postedBy.username}">
                     <img src="${comment.postedBy && comment.postedBy.cover_photo ? comment.postedBy.cover_photo : backupShopIcon}" class="community-user-icon" />
-                    <div class="community-author">Posted by ${comment.postedBy.name}</div>
+                    <div class="community-author">${translations['PostedBy'][shop ? shop.language : 'English']} ${comment.postedBy.name}</div>
                  </a>
 
                 ${renderBlocks(comment)}
@@ -66,7 +67,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                         ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
                         <div class="community-card">
                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
-                                <input type="text" class="community-instant-post" placeholder="Add Comment" />
+                                <input type="text" class="community-instant-post" placeholder="${translations['AddComment'][shop ? shop.language : 'English']}" />
                             </a>
                         </div>
                     </div>
@@ -75,7 +76,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                         <div class="community-pad-20">
                          <div class="community-card community-card-navbar">
                             <div class="pb-5">
-                                <h2>Contributed by</h2>
+                                <h2>${translations['ContributedBy'][shop ? shop.language : 'English']}</h2>
                             </div>
                             <div class="pure-g">
                             ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img width='100%' src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
@@ -84,18 +85,18 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                                     <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
                                     ${user.about}
                                     <br/>
-                                    <b>Store Favorites: </b>${user.storeFavorites}
+                                    <b>${translations['StoreFavorites'][shop ? shop.language : 'English']}: </b>${user.storeFavorites}
                                 </div>
                             </div>
                             </div>
                             <div style='margin-top:30px'>
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">Sign Up</button></a>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">${translations['SignUp'][shop ? shop.language : 'English']}</button></a>
                     <br>
                     <br>
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">Settings</button></a>
+                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">${translations['Settings'][shop ? shop.language : 'English']}</button></a>
                             </div>
                             <div class="pb-5">
-                                <h2 style='margin-top:30px'>Related Tags</h2>
+                                <h2 style='margin-top:30px'>${translations['RelatedTags'][shop ? shop.language : 'English']}</h2>
                                 ${showAllTags()}
                             </div>
                         </div>
@@ -108,7 +109,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                         <div class="pure-u-md-5-5 pure-u-sm-1">
                             <div class="community-pad-20">
                                 <div class="pb-5">
-                                    <h2 class="community-letter-spacing" style='margin-top:30px'>Related Products</h2>
+                                    <h2 class="community-letter-spacing" style='margin-top:30px'>${translations['RelatedProducts'][shop ? shop.language : 'English']}</h2>
                                     ${showSelectedProducts()}
                                 </div>
                             </div>
