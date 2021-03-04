@@ -75,7 +75,7 @@ module.exports.createNewPostJS = ({shop, tags}) => {
   if(shop.shopify_domain.includes('globalxploration-inc')){
     motivationText = "We love to hear what's going on in our community!  Feel free to share any tips, tricks, ideas, or ask questions of our global network of treasure hunters, finders, and collectors!"
   } else {
-    motivationText = "Always happy to hear from our community"
+    motivationText = translations['HappyToHear'][shop ? shop.language : 'English']
   }
 
   return `

@@ -26,7 +26,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
         let managePostsState = {
           name: 'manage-posts',
           url: '/manage-posts',
-          template: "${trimHTML(managePosts({user, blogs}))}"
+          template: "${trimHTML(managePosts({user, blogs, shop}))}"
         }
 
         let settingsState = {
@@ -38,7 +38,7 @@ module.exports.ngApp = ({shop, user, tags, blogs, blog}) => {
         let addCommentState = {
           name: 'add-comment',
           url: '/add-comment',
-          template: "${trimHTML(addComment({user, blog}))}"
+          template: "${trimHTML(addComment({user, blog, shop}))}"
         }
 
         $stateProvider.state(createNewPostState);

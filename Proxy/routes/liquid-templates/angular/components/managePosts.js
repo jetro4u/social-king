@@ -1,18 +1,19 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const moment = require('moment');
 const {formatQuotes} = require('../../../helpers/formatQuotes');
+const {translations} = require('../../../helpers/translations')
 
-module.exports.managePosts = ({user, blogs}) => {
+module.exports.managePosts = ({user, blogs, shop}) => {
   
   const displayPosts = (data) => blogs.map((blog, i) => {
       return `<div key=${i} class='pb-5'>
                 <div id='${blog.slug}'> 
                     <a href='${proxyRoute}/blog/${blog.slug}'><h3>${formatQuotes(blog.title)}</h3></a>
                     <p class='mark'>
-                        Written by ${blog.postedBy.name} | Published on ${moment(blog.updatedAt).format('YYYY-MM-DD')}
+                        ${translations['WrittenBy'][shop ? shop.language : 'English']} ${blog.postedBy.name} | ${translations['PublishedOn'][shop ? shop.language : 'English']} ${moment(blog.updatedAt).format('YYYY-MM-DD')}
                     </p>
                     <button ng-click='deleteConfirm(${formatQuotes(JSON.stringify(blog.slug))})' class='community-button-danger pure-button'>
-                        Delete
+                         ${translations['Delete'][shop ? shop.language : 'English']}
                     </button>
                 </div>
               </div>
@@ -24,7 +25,7 @@ module.exports.managePosts = ({user, blogs}) => {
       <div ng-controller='managePostsController'>
           <div class='community-card community-admin-padding'>
             <div id='error-message' class='text-center'>
-              <h3 >Manage Posts</h3><span ng-click='reloadPage()' class='reload'>&#x21bb;</span>
+              <h3 >${translations['ManagePosts'][shop ? shop.language : 'English']}</h3><span ng-click='reloadPage()' class='reload'>&#x21bb;</span>
             </div>
             <div>
               ${displayPosts(blogs)}

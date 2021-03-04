@@ -1,6 +1,7 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const {formatQuotes} = require('../../../helpers/formatQuotes');
 const {renderBlocks} = require('../../components/blog/renderBlocks');
+const {translations} = require('../../../helpers/translations')
 
 module.exports.addComment = ({shop, blog}) => {
   console.log('blog in addComment view', blog);
@@ -13,16 +14,12 @@ module.exports.addComment = ({shop, blog}) => {
             ${blog[0] ? formatQuotes(renderBlocks(blog[0])) : ''}
             <br/>
             <div id='new-comment'>
-              <h3>Add Comment</h3>
+              <h3>${translations['AddComment'][shop ? shop.language : 'English']}</h3>
               <div id='error-message' class='text-center'></div>
-              <small>Write your awesome comment below: (to embed videos, simply copy-paste any YouTube URL)</small>
-              <div id='editorjs'></div>
-                
-              <small>When you're all done, press 'Save'. Doesn't have to be perfect 😉</small>
-
+              <div id='editorjs'></div>  
                <div class='modal-footer'>
                   <button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true' 
-                    ng-click='submitComment()'>Post Comment</button>
+                    ng-click='submitComment()'>${translations['Update'][shop ? shop.language : 'English']}</button>
                 </div> 
                 <p id='json'></p>
               </div>
