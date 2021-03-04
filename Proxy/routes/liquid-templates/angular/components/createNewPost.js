@@ -1,9 +1,8 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const {formatQuotes} = require('../../../helpers/formatQuotes');
+const {translations} = require('../../../helpers/translations')
 
 module.exports.createNewPost = ({shop, user, tags}) => {
-  
-  console.log('shop in createNewPost template', shop)
 
   const displayTags = (data) => data.map((tag, i) => {
       return ''
@@ -41,7 +40,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
           <div class='community-card community-create-post-editor'>
                <div id='new-post' class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
-                      <h3>What's on your mind, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
+                      <h3>${translations['WhatsUp'][shop ? shop.language : 'English']}, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
                     </div>
                     ${shop.shopify_domain.includes('globalxploration-inc') ? 
                         displayTitleInput() : ''}
