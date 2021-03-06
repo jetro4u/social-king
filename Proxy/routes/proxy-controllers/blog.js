@@ -1,4 +1,4 @@
-const edjsHTML = require('editorjs-html');
+ const edjsHTML = require('editorjs-html');
 const edjsParser = edjsHTML();
 
 const Blog = require('../../models/blog');
@@ -77,22 +77,26 @@ exports.create = (req, res) => {
     // categories and tags
     // let arrayOfCategories = categories && categories.split(',');
     // let arrayOfTags = tags[0];
+    //add shop to blog record
+    Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
+       console.log('shop in function to send Email Alert and add Shop reference', shop)
+       if(shop && shop._doc && !shop._doc.postModeration){
+            blog.hidden = false;
+       }
 
-    blog.save((err, result) => {
-        if (err) {
-            console.log('error saving post',err)
-            return res.status(400).json({
-                error: errorHandler(err)
-            });
-        }
-        console.log('post saved successfully',result);
-        //add shop to blog record
-        Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
-           console.log('shop in function to send Email Alert and add Shop reference', shop)
+        blog.save((err, result) => {
+            if (err) {
+                console.log('error saving post',err)
+                return res.status(400).json({
+                    error: errorHandler(err)
+                });
+            }
+            console.log('post saved successfully',result);
+
            let storeAdminName = shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].name ? shop._doc.extraShopifyData[0].name : 'you';
            let appSlug = process.env.NODE_ENV == 'development' ? 'community-2' : 'social-king';
            
-           if(shop && shop._doc){
+           if(shop && shop._doc && shop._doc.postModeration){
                const emailData = {
                   to: shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].email ? shop._doc.extraShopifyData[0].email : 'kramer1346@gmail.com',
                   from: 'help@socialking.app',
@@ -134,7 +138,11 @@ exports.create = (req, res) => {
                             }
                         );
                     })
-                    res.send({message: 'Thank you for submitting your new post. A moderator will review your content, and publish it if approved.'});
+                    if(shop && shop._doc && !shop._doc.postModeration){
+                        res.send({message: `Thanks for submitting your Post. It's now <a href='https://${blog.shopifyDomain}${process.env.PROXY_ROUTE}/blog/${blog.slug}'>live and available here</a>.`});
+                    } else {
+                        res.send({message: 'Thank you for submitting your new post. A moderator will review your content, and publish it if approved.'});
+                    }
                 }
             );        
         });
@@ -172,18 +180,21 @@ exports.createComment = (req, res) => {
     // categories and tags
     // let arrayOfCategories = categories && categories.split(',');
     // let arrayOfTags = tags[0];
-
-    comment.save((err, result) => {
-        if (err) {
-            console.log('error saving comment',err)
-            return res.status(400).json({
-                error: errorHandler(err)
-            });
+    Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
+        console.log('shop in createComment function', shop);
+        if(shop && !shop.commentModeration){
+            comment.hidden = false;
         }
-        console.log('comment saved successfully',result);
-        //add shop to blog record
-        Shop.findOne({ shopify_domain: req.query.shop}).exec((err, shop) => {
-           console.log('shop in function to add Shop reference', shop)
+
+        comment.save((err, result) => {
+            if (err) {
+                console.log('error saving comment',err)
+                return res.status(400).json({
+                    error: errorHandler(err)
+                });
+            }
+            console.log('comment saved successfully',result);
+        
            Comment.findByIdAndUpdate(result._id, { $set: { shopPostedAt: [shop._id] } }, { new: true }).exec(
                 (err, result) => {
                     if (err) {
@@ -193,7 +204,11 @@ exports.createComment = (req, res) => {
                         })
                     }
                     console.log('Shop added to comment record');
-                    res.send({message: 'Thank you for submitting your comment. A moderator will review your content, and publish it if approved.'});
+                    if(shop && !shop.commentModeration){
+                        res.send({message: comment.html});
+                    } else {
+                        res.send({message: 'Thank you for submitting your comment. A moderator will review your content, and publish it if approved.'});                        
+                    }
                 }
             );        
         });

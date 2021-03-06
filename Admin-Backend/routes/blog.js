@@ -14,7 +14,8 @@ const {
     listByUser
 } = require('../controllers/blog');
 
-const { isValidShopifyRequest, requireSignin, adminMiddleware, authMiddleware, canUpdateDeleteBlog } = require('../controllers/auth');
+const { isValidShopifyRequest, requireSignin, adminMiddleware, 
+    authMiddleware, canUpdateDeleteBlog } = require('../controllers/auth');
 
 //
 //Actually Being Used in Shopify Admin App

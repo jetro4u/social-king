@@ -37,6 +37,18 @@ const Shop = mongoose.Schema({
 	  },
 	  recurring_application_charge: {
   	      type: Array
+	  },
+	  postModeration: { 
+		  type: Boolean, 
+		  default: true 
+      },
+      commentModeration: { 
+		  type: Boolean, 
+		  default: true 
+      },
+      language: { 
+        type: String, 
+        default: 'English' 
 	  }
   },
   { timestamps: true }

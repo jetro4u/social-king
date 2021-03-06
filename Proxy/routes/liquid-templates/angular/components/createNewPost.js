@@ -1,11 +1,11 @@
 const proxyRoute = process.env.PROXY_ROUTE;
 const {formatQuotes} = require('../../../helpers/formatQuotes');
+const {translations} = require('../../../helpers/translations')
 
 module.exports.createNewPost = ({shop, user, tags}) => {
-  
-  console.log('shop in createNewPost template', shop)
 
   const displayTags = (data) => data.map((tag, i) => {
+      return ''
       return `<form class='form-inline' id='post-tags'><label class='checkbox px-2 pure-checkbox community-checkbox' >                
                   <input type='checkbox' ng-model='tags.${tag.id}'><span class='px-1'> ${tag.name}</span>
               </label></form>
@@ -14,14 +14,13 @@ module.exports.createNewPost = ({shop, user, tags}) => {
 
   const displayTitleInput = () =>{
     return `<div class='form-group'>
-              <label for='titleip'>Title:</label>
               <input
                 ng-model='title'
                 type='text'
                 class='form-control'
                 id='titleip'
                 name='titleip'
-                placeholder='Enter title here'
+                placeholder='${translations['Title'][shop ? shop.language : 'English']}'
                 required
               />
             </div>`
@@ -37,12 +36,12 @@ module.exports.createNewPost = ({shop, user, tags}) => {
   return `
           ${shop.shopify_domain.includes('beforestores') ? 
                         sendGUIDownards() : ''}  
-          <div class='community-card'>
+          <div class='community-card community-create-post-editor'>
                <div id='new-post' class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
-                      <h3>What's on your mind, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
+                      <h3>${translations['WhatsUp'][shop ? shop.language : 'English']}, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
                     </div>
-                    ${shop.shopify_domain.includes('site-that-wants-titles-option') ? 
+                    ${shop.shopify_domain.includes('globalxploration-inc') ? 
                         displayTitleInput() : ''}
       
                     <div id='editorjs'></div>
@@ -53,7 +52,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                     <div class='pure-u-1'>
                      <div class='community-pad-20'>
                         <button button type='submit' class='community-button-secondary pure-button' data-dismiss='modal' aria-hidden='true'
-                          ng-click='submitUserBlogPost()' >Save Post</button>
+                          ng-click='submitUserBlogPost()' >${translations['SavePost'][shop ? shop.language : 'English']}</button>
                       </div> 
                     </div>
                 </div>
@@ -72,12 +71,30 @@ module.exports.createNewPostJS = ({shop, tags}) => {
     });
   }
 
+  let motivationText = ''
+  if(shop.shopify_domain.includes('globalxploration-inc')){
+    motivationText = "We love to hear what's going on in our community!  Feel free to share any tips, tricks, ideas, or ask questions of our global network of treasure hunters, finders, and collectors!"
+  } else {
+    motivationText = translations['HappyToHear'][shop ? shop.language : 'English']
+  }
+
   return `
     tribeApp.controller('newPostController', function($scope, $http) {
       console.log('newPostController function ran');
-      document.getElementById('the-community-options').innerHTML = 'Join the discussion';
-       $scope.tags = {};
+      document.getElementById('the-community-options').innerHTML = '${formatQuotes(motivationText)}';
+      $scope.tags = {};
        const editor = new EditorJS({
+         data: {
+		    blocks: [
+		      {
+		        type: "paragraph",
+		        data: {
+		          text:
+		            "${translations['ClickHere'][shop ? shop.language : 'English']}"
+		        }
+		      }
+		    ]
+  	   },
         autofocus: true,
         tools: {
           header: Header,
