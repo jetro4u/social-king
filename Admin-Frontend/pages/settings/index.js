@@ -53,8 +53,8 @@ const Settings = (props) => {
     {label: 'Spanish', value: 'Spanish'},
     {label: 'French', value: 'French'},
 
-    {label: 'Portuguese', value: 'English'},
-    {label: ' Italian', value: 'Spanish'},
+    {label: 'Portuguese', value: 'Portuguese'},
+    {label: 'Italian', value: 'Italian'},
     {label: 'Chinese-Simplified', value: 'Chinese-Simplified'},
 
     {label: 'Chinese-Traditional', value: 'Chinese-Traditional'},
