@@ -210,7 +210,8 @@ exports.createComment = (req, res) => {
                     if(shop && !shop.commentModeration){
                         res.send({message: comment.html});
                     } else {
-                        res.send({message: 'Thank you for submitting your comment. A moderator will review your content, and publish it if approved.'});                        
+                        let message = translations['CommentPendingReview'][shop ? shop.language : 'English']
+                        res.send({message});                        
                     }
                 }
             );        
