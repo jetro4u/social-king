@@ -28,13 +28,7 @@ const {translations} = require('../helpers/translations')
 exports.create = (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     let { title, body, tags } = req.body;
-    console.log('req.body in blog create function: ',req.body);
-    console.log('req.profile in blog create function: ',req.profile);
-    console.log('req.query in blog create function: ',req.query);
-    console.log('tags in blog create function: ',tags);
-  
-    title = title && title.title ? title.title : 'New Post by Community Member';
-
+    
     if (body.blocks === undefined || body.blocks.length == 0) {
         return res.status(400).json({
             error: 'Content is required'
@@ -43,22 +37,11 @@ exports.create = (req, res) => {
 
     let blog = new Blog();
     blog.shopifyDomain=req.query.shop;
-    blog.title = title;
     blog.body = body;
     let mediaBlock = body.blocks.find(function (block) {
         return block.type=='image'
     });
     blog.coverMedia = mediaBlock ? mediaBlock.data.file.url : ''; 
-
-    if(title!='New Post by Community Member'){
-        blog.slug = slugify(title.replace(/["']/g, "")).toLowerCase();
-        blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
-    } else {
-        blog.slug = makeid(8).toLowerCase();
-        blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
-    }
-
-    blog.mtitle = `${title} | ${process.env.APP_NAME}`;
 
     let searchForText = element => element.type == 'paragraph';
     let postTeaser = body.blocks.find(searchForText);
@@ -84,6 +67,17 @@ exports.create = (req, res) => {
        if(shop && shop._doc && !shop._doc.postModeration){
             blog.hidden = false;
        }
+       title = title && title.title ? title.title : translations['NewPostByMember'][shop ? shop.language : 'English'];
+       if(title && title.title){
+            blog.slug = slugify(title.replace(/["']/g, "")).toLowerCase();
+            blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
+        } else {
+            blog.slug = makeid(8).toLowerCase();
+            blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
+        }
+
+        blog.title = title;
+        blog.mtitle = `${title} | ${process.env.APP_NAME}`;
 
         blog.save((err, result) => {
             if (err) {
