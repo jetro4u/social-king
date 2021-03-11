@@ -1,4 +1,4 @@
- const edjsHTML = require('editorjs-html');
+const edjsHTML = require('editorjs-html');
 const edjsParser = edjsHTML();
 
 const Blog = require('../../models/blog');
@@ -23,6 +23,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const { blogsList } = require('../liquid-templates/blogsList');
 const { blogSlug } = require('../liquid-templates/blogSlug');
 const { notFound } = require('../liquid-templates/components/not-found/notFound');
+const {translations} = require('../helpers/translations')
 
 exports.create = (req, res) => {
     res.setHeader('content-type', 'text/javascript')
@@ -139,9 +140,11 @@ exports.create = (req, res) => {
                         );
                     })
                     if(shop && shop._doc && !shop._doc.postModeration){
-                        res.send({message: `Thanks for submitting your Post. It's now <a href='https://${blog.shopifyDomain}${process.env.PROXY_ROUTE}/blog/${blog.slug}'>live and available here</a>.`});
+                        let message = translations['PostLive'][shop ? shop.language : 'English']
+                        res.send({message: `<a href='https://${blog.shopifyDomain}${process.env.PROXY_ROUTE}/blog/${blog.slug}'>${message}</a>`});
                     } else {
-                        res.send({message: 'Thank you for submitting your new post. A moderator will review your content, and publish it if approved.'});
+                        let message = translations['PostPendingReview'][shop ? shop.language : 'English']
+                        res.send({message});
                     }
                 }
             );        
