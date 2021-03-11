@@ -145,18 +145,3 @@ The benefit of this is that when we get to the next function in the chain, the <
 blog.postedBy = req.user._id;
 ```
 
-
-User License
-
-Copyright (c) 2021 King Commerce
-By using this software you agree to the following agreement:
-
-<h1>What can't be done with this software</h1>
-You can pretty much do anything you'd like with this software other than compete with <a href="https://apps.shopify.com/social-king">Social King</a> on the Shopify App Store. That means, no cloning the repo, hosting it on your own server and then submitting it to the Shopify App Store.
-
-<h1> What can be done </h1>
-You may use this software for creating custom apps for clients, or to learn how to build Shopify Apps.
-Also, if you make significant changes to the repository, to the point that it's no longer competing with Social King as a "Gust-Blogging App" or "Community App", then it's okay to launch the App to the Shopify App Store.
-
-<h1>Closing Words</h1>
-Happy coding, and may the Force be with you :)

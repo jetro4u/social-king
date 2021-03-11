@@ -13,6 +13,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
     }
 
     const showAllTags = () => {
+<<<<<<< HEAD
         if(blog.tags.length>0){
           return blog.tags.map((t, i) => `
                     <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
@@ -21,6 +22,18 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                 `).join('');        
         } else {
            return '' 
+=======
+        if(blog.tags.length > 0){
+            return blog.tags.map((t, i) => `
+                <h2 style='margin-top:30px'>${translations['RelatedTags'][shop ? shop.language : 'English']}</h2>
+                <a href="${proxyRoute}/tags/${t.slug}" key=${i}>
+                    <button class="tag-btn pure-button">${t.name}</button>
+                </a><br />
+            `).join('');            
+        }
+        else {
+            return ''
+>>>>>>> 47297a825c1de713d2122fde27aee79e69045bf0
         }
     };
 
@@ -100,8 +113,12 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                     <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">${translations['Settings'][shop ? shop.language : 'English']}</button></a>
                             </div>
                             <div class="pb-5">
+<<<<<<< HEAD
                                 ${blog.tags.length>0? `<h2 style='margin-top:30px'>${translations['RelatedTags'][shop ? shop.language : 'English']}</h2>`:''}
                                   ${showAllTags()}
+=======
+                                ${showAllTags()}
+>>>>>>> 47297a825c1de713d2122fde27aee79e69045bf0
                             </div>
                         </div>
                         </div>
