@@ -50,17 +50,17 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
         return `<div class="pure-u-md-1-3 pure-u-sm-1">
             <div class="community-pad-20">
                 <div class="community-card">
-                    <div class="community-card-header">${`About ${user.name}`}</div>
+                    <div class="community-card-header">${`${translations['About'][shop ? shop._doc.language : 'English']} ${user.name}`}</div>
                     <img width='100%' src='${user.cover_photo && user.cover_photo!='undefined' ? user.cover_photo : 'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1603702989629.jpeg'}'
                            alt="Profile Picture" class="img-responsive img-rounded">
                     <div class="community-card-body">
-                    ${user.about ? '<b>General Bio: </b>'+ user.about : ''}
+                    ${user.about ? '<b>'+translations['GeneralBio'][shop ? shop._doc.language : 'English'] +':</b> '+ user.about : ''}
                     <hr class="community-hr" />
-                    <b>Store Favorites: </b>${user.storeFavorites}
+                    <b>${translations['StoreFavorites'][shop ? shop._doc.language : 'English']}: </b>${user.storeFavorites}
                     </div>
                 </div>
                 <div class="community-card">
-                    <div class="community-card-header">${`About ${shop._doc.communityName}`}</div>
+                    <div class="community-card-header">${`${translations['About'][shop ? shop._doc.language : 'English']} ${shop._doc.communityName}`}</div>
                     <div class="community-card-body">${shop._doc.aboutCommunity}
                     <hr class="community-hr" />
                         {% if customer.email %} 
