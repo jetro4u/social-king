@@ -6645,3 +6645,19 @@ SyntaxError: Unexpected identifier
 (node:6818) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:6872) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:6872) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:7097) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:7097) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/routes/proxy-controllers/blog.js:258:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:7419) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:7419) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:22739) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:22739) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:22879) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:22879) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.

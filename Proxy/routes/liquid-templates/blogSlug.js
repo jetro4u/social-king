@@ -68,14 +68,18 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                         <div class='community-admin-padding community-card'>
                             ${renderBlocks(blog)}
                        </div>
-                        ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''}
+                        <div class="community-card">
+                          ${comments.length>0 ? `<h3>Comments</h3>${showComments()}` : ''} 
+                        </div>
                         <div class="community-card">
                             <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?slug=${blog.slug}&email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}#/add-comment'>
                                 <input type="text" class="community-instant-post" placeholder="${translations['AddComment'][shop ? shop.language : 'English']}" />
                             </a>
                         </div>
                     </div>
-
+                    
+                   
+                    
                     <div class="details pure-u-md-1-4 pure-u-sm-1"> 
                         <div class="community-pad-20">
                          <div class="community-card community-card-navbar">
