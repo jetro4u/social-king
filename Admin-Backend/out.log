@@ -1,0 +1,2379 @@
+Server is running on port 8000
+DB connected
+Server is running on port 8000
+DB connected
+req.query in checkSubscription controller { hmac:
+   'd994e3609bd39894c8b4aa9de3f918043dbec1e1e67da50a1220b9ce4624b94b',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '425249ac7b3bb6e549f3933e7f737786b43a4dd7b32692c6c44b31a4345003ff',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616745224' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.query in checkSubscription controller { hmac:
+   '5110dd9163f252033c0f49859238ec18fcd7e2558a74ca2754672a151d1de2b6',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '425249ac7b3bb6e549f3933e7f737786b43a4dd7b32692c6c44b31a4345003ff',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616745230' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 117.914 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   'dc4afd8464d2a6f3ffdacaca01f362bbe1ad0fa3b079d41525bc63467a2fb3e0',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '425249ac7b3bb6e549f3933e7f737786b43a4dd7b32692c6c44b31a4345003ff',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616745234' }
+no charge_id found in req.query
+ran publicProfile func in controller with req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/user/social-king-app.myshopify.com [32m200[0m 15.790 ms - 7643[0m
+[0mPOST /api/auth/check-subscription?hmac=d994e3609bd39894c8b4aa9de3f918043dbec1e1e67da50a1220b9ce4624b94b&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=425249ac7b3bb6e549f3933e7f737786b43a4dd7b32692c6c44b31a4345003ff&shop=social-king-app.myshopify.com&timestamp=1616745224 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=5110dd9163f252033c0f49859238ec18fcd7e2558a74ca2754672a151d1de2b6&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=425249ac7b3bb6e549f3933e7f737786b43a4dd7b32692c6c44b31a4345003ff&shop=social-king-app.myshopify.com&timestamp=1616745230 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=dc4afd8464d2a6f3ffdacaca01f362bbe1ad0fa3b079d41525bc63467a2fb3e0&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=425249ac7b3bb6e549f3933e7f737786b43a4dd7b32692c6c44b31a4345003ff&shop=social-king-app.myshopify.com&timestamp=1616745234 [0m-[0m - ms - -[0m
+req.query in checkSubscription controller { charge_id: '21737832530' }
+req.query in checkSubscription controller { charge_id: '21737832530',
+  hmac:
+   'c4128ade2c38cb0cf687eceed6a6a8cf9c52beef4fc0ab1d91175bafa057e3bd',
+  host: 'Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263',
+  shop: 'community-dev-store.myshopify.com',
+  timestamp: '1616745583' }
+response to charge-data { recurring_application_charge:
+   { id: 21737832530,
+     name: 'All The Features',
+     api_client_id: 4136255,
+     price: '4.99',
+     status: 'active',
+     return_url: 'https://socialking.app/',
+     billing_on: '2021-04-10',
+     created_at: '2021-03-26T03:59:30-04:00',
+     updated_at: '2021-03-26T03:59:41-04:00',
+     test: true,
+     activated_on: '2021-03-26',
+     cancelled_on: null,
+     trial_days: 15,
+     trial_ends_on: '2021-04-10',
+     decorated_return_url: 'https://socialking.app/?charge_id=21737832530' } }
+supposed to be saving recurring_application_charge
+[0mPOST /api/auth/check-subscription?charge_id=21737832530&hmac=c4128ade2c38cb0cf687eceed6a6a8cf9c52beef4fc0ab1d91175bafa057e3bd&host=Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu&locale=en-IL&new_design_language=true&session=19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263&shop=community-dev-store.myshopify.com&timestamp=1616745583 [32m200[0m 226.912 ms - 5281[0m
+req.body {}
+shopName community-dev-store.myshopify.com
+req.query in checkSubscription controller { hmac:
+   '91b9d358fb299a194cdbc1391b0d3f97c152eba484552e3b7ede53563879b74d',
+  host: 'Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263',
+  shop: 'community-dev-store.myshopify.com',
+  timestamp: '1616745589' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/community-dev-store.myshopify.com/blogs [32m200[0m 37.972 ms - 498[0m
+req.query in checkSubscription controller { hmac:
+   '1d06df93935b370c41ba035f33a262109a4890c495dbd81e979b98ccc48203d1',
+  host: 'Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263',
+  shop: 'community-dev-store.myshopify.com',
+  timestamp: '1616745591' }
+no charge_id found in req.query
+req.body {}
+shopName community-dev-store.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+shop in mongo response { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  CSSCode:
+   '\r #new-post {color: black;}\n .community-card-body {color: black;}\n .codex-editor__redactor { color: black; padding-bottom: 120px !important; background: #f6f7f8; }\n            .community-background { padding-top:20px; overflow: hidden; }\n            .l-box { padding:1em; }\n            .tag-btn { margin-top: 1em;\n                      margin-bottom: 1em;\n                      background-color: rgb(66, 184, 221); }\n            .tag-btn:hover { background-color: lightgreen; }\n            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-header { padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n            .community-header-title { background:#fff; }\n            .community-header-title-box { display:flex }\n            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }\n            .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }\n            .community-card-header { letter-spacing: .5px; color:white;padding:10px;font-weight:bold; }\n            .community-card-body { letter-spacing: .4px; padding:30px }\n            .community-post-body { letter-spacing: .35px;}\n            .community-post-body h2 { color: black; font-weight: bold;}\n            .community-post-body button { white-space: normal; }\n            .community-card a { white-space: normal; }\n            .community-letter-spacing { letter-spacing: .4px; }\n            @media only screen \n            and (min-device-width: 600px)\n             { .community-pad-20 { padding:10px 20px 20px 20px } }\n            .community-hr { margin:20px 0 }\n            .community-hr-minimal { margin:8px 0 }\n            .community-full-width { width: 100% }\n            .community-instant-post { width:100%; background: #f6f7f8; padding:10px }\n            .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n            .community-author { color:#969696;font-size:12px;margin-bottom:5px }\n            .community-card h3 { font-size:20px;margin-bottom:8px }\n            .community-card p { margin-bottom:8px }\n            .community-card a { color:#383838; text-decoration: none;}\n            .community-card-comments { font-size:12px;font-weight:bold; }\n            .community-pad-left-10 { padding-left:10px }\n            .community-bold { font-weight:bold }\n            .community-admin-padding { padding:10px 20px 20px 20px }\n            .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n            .community-button-secondary { margin-top: 1em;\n                  margin-bottom: 1em;\n                  margin-right: 1em;\n                  margin-left: 1em; background: rgb(66, 184, 221); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }\n            .community-checkbox { float:left;margin-right:30px }\n            .community-newsfeed-box {width:100%}\n            .community-reactions:hover{ cursor: pointer; }\n            .emoji-picker { z-index: 100;}\n            .community-admin-btn {color:white;}\n            .cover-img { max-width: 100%; }\n            #profile-photo img { max-width: 100%; max-height: 300px; padding-bottom: 30px; }\n            .community-card p,h3,h4,h5,h6,h7 { font-size: 15px; color: black; }',
+  charge_id: '21737832530',
+  recurring_application_charge:
+   [ { id: 21737832530,
+       name: 'All The Features',
+       api_client_id: 4136255,
+       price: '4.99',
+       status: 'active',
+       return_url: 'https://socialking.app/',
+       billing_on: '2021-04-10',
+       created_at: '2021-03-26T03:59:30-04:00',
+       updated_at: '2021-03-26T03:59:41-04:00',
+       test: true,
+       activated_on: '2021-03-26',
+       cancelled_on: null,
+       trial_days: 15,
+       trial_ends_on: '2021-04-10',
+       decorated_return_url: 'https://socialking.app/?charge_id=21737832530' } ],
+  postModeration: true,
+  commentModeration: true,
+  language: 'English',
+  _id: 605d9461a5c466602a5dcbcf,
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: '#26b598',
+  backgroundColor: '#f6f7f8',
+  extraShopifyData:
+   [ { name: 'Community Dev Store',
+       description: '',
+       id: 'gid://shopify/Shop/28531490898',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  shopify_domain: 'community-dev-store.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2021-03-26T07:59:29.867Z,
+  updatedAt: 2021-03-26T07:59:45.743Z,
+  __v: 1 }
+mongo response to fetching the comments of the given store []
+[0mGET /api/community-dev-store.myshopify.com/comments [32m200[0m 25.226 ms - 2[0m
+req.query in checkSubscription controller { hmac:
+   '533c759d0eab8008ffcc392eb98a6e2f726e729c0d3419255b12662b7f9b38c5',
+  host: 'Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263',
+  shop: 'community-dev-store.myshopify.com',
+  timestamp: '1616745600' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.query in checkSubscription controller { hmac:
+   '7aec38a3ad4715d9747160796c426e3ac7fcee3d2114593cd286118f232bbd27',
+  host: 'Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263',
+  shop: 'community-dev-store.myshopify.com',
+  timestamp: '1616745605' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.query in checkSubscription controller { hmac:
+   '112c9a0be59c6387c1591b728dede1122d7450f23754087cb6a06d25e48db2cc',
+  host: 'Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263',
+  shop: 'community-dev-store.myshopify.com',
+  timestamp: '1616745623' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mPOST /api/auth/check-subscription?charge_id=21737832530 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=91b9d358fb299a194cdbc1391b0d3f97c152eba484552e3b7ede53563879b74d&host=Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu&locale=en-IL&new_design_language=true&session=19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263&shop=community-dev-store.myshopify.com&timestamp=1616745589 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=1d06df93935b370c41ba035f33a262109a4890c495dbd81e979b98ccc48203d1&host=Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu&locale=en-IL&new_design_language=true&session=19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263&shop=community-dev-store.myshopify.com&timestamp=1616745591 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=533c759d0eab8008ffcc392eb98a6e2f726e729c0d3419255b12662b7f9b38c5&host=Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu&locale=en-IL&new_design_language=true&session=19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263&shop=community-dev-store.myshopify.com&timestamp=1616745600 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=7aec38a3ad4715d9747160796c426e3ac7fcee3d2114593cd286118f232bbd27&host=Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu&locale=en-IL&new_design_language=true&session=19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263&shop=community-dev-store.myshopify.com&timestamp=1616745605 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=112c9a0be59c6387c1591b728dede1122d7450f23754087cb6a06d25e48db2cc&host=Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu&locale=en-IL&new_design_language=true&session=19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263&shop=community-dev-store.myshopify.com&timestamp=1616745623 [0m-[0m - ms - -[0m
+req.body {}
+shopName community-dev-store.myshopify.com
+req.query in checkSubscription controller { hmac:
+   '31f8b18d4368cb02e6f1329cba9e9376c7b98391a61452d7eca70af3bb057eb8',
+  host: 'Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   '19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263',
+  shop: 'community-dev-store.myshopify.com',
+  timestamp: '1616745832' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/community-dev-store.myshopify.com/blogs [36m304[0m 32.092 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   'a14019935dac519794419f3918643abe50ba73a704b2e8b070b1766f836363c3',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616745886' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.query in checkSubscription controller { hmac:
+   'c4e56bb5180196f1736489c5a75f3b3e9c1b29531b02f0f35a69d586570f215f',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616745890' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.body {}
+shopName social-king-app.myshopify.com
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 87.426 ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=31f8b18d4368cb02e6f1329cba9e9376c7b98391a61452d7eca70af3bb057eb8&host=Y29tbXVuaXR5LWRldi1zdG9yZS5teXNob3BpZnkuY29tL2FkbWlu&locale=en-IL&new_design_language=true&session=19e8e0ce99d0f764635295d0a7a577cdeab20717e029d7496124c6c68b546263&shop=community-dev-store.myshopify.com&timestamp=1616745832 [0m-[0m - ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '3e20c332a7ee271cd0a80f8f614deb326f870d1ea0052c551abdf38bc20a4578',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616745894' }
+no charge_id found in req.query
+req.headers.host socialking.app
+req.query in tags list function { shop: 'social-king-app.myshopify.com' }
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/tags?shop=social-king-app.myshopify.com [32m200[0m 16.566 ms - 1005[0m
+req.query in checkSubscription controller { hmac:
+   'ec1412708876e21eecbab0d210f67664e75a22489f26702935b2c1d8a705cf21',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616745897' }
+no charge_id found in req.query
+ran publicProfile func in controller with req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/user/social-king-app.myshopify.com [32m200[0m 11.073 ms - 7643[0m
+[0mPOST /api/auth/check-subscription?hmac=a14019935dac519794419f3918643abe50ba73a704b2e8b070b1766f836363c3&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616745886 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=c4e56bb5180196f1736489c5a75f3b3e9c1b29531b02f0f35a69d586570f215f&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616745890 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=3e20c332a7ee271cd0a80f8f614deb326f870d1ea0052c551abdf38bc20a4578&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616745894 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=ec1412708876e21eecbab0d210f67664e75a22489f26702935b2c1d8a705cf21&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616745897 [0m-[0m - ms - -[0m
+Server is running on port 8000
+DB connected
+Server is running on port 8000
+DB connected
+req.query in checkSubscription controller { hmac:
+   '2fd09b4e299125ab5dbee4b3ba2f9a55f4770a0591a966ded9e17aaf741f8060',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616748285' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+shop in mongo response { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T08:04:43.154Z,
+  __v: 3,
+  backgroundColor: '#f6f7f8',
+  primaryColor: '#3c3c3c',
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ] }
+mongo response to fetching the comments of the given store [ { body: [ [Object] ],
+    hidden: false,
+    _id: 604e09314088c31cfb52597f,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T13:01:37.327Z,
+    updatedAt: 2021-03-14T13:01:37.479Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e067d4088c31cfb52597c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:50:05.532Z,
+    updatedAt: 2021-03-14T12:50:05.629Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e06584088c31cfb52597b,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:49:28.320Z,
+    updatedAt: 2021-03-14T12:49:28.339Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e061f1fc84f1bb97b45eb,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:48:31.954Z,
+    updatedAt: 2021-03-14T12:48:31.968Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e05f01fc84f1bb97b45ea,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:47:44.778Z,
+    updatedAt: 2021-03-14T12:47:44.907Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604a31d6e81ff15f5e2c6f7c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    createdAt: 2021-03-11T15:05:58.427Z,
+    updatedAt: 2021-03-11T15:05:58.448Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f380c3786ce23d608babe,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:17:32.341Z,
+    updatedAt: 2021-03-03T07:17:32.357Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f37a93786ce23d608babd,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:15:53.949Z,
+    updatedAt: 2021-03-03T07:15:53.969Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f363a347a7d11470e4a5c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'uubafsvl',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:09:46.914Z,
+    updatedAt: 2021-03-03T07:09:46.932Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603cc588b2e8b2361e942485,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2021-03-01T10:44:24.062Z,
+    updatedAt: 2021-03-01T10:44:24.080Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603567f83fdb3e08322ce13a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 603567c43fdb3e08322ce139,
+       name: 'Kevin Kwok',
+       username: 'thekevinkwok' },
+    createdAt: 2021-02-23T20:39:20.601Z,
+    updatedAt: 2021-02-23T20:39:20.619Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fd89dfef450db535ed3f3ef,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:29:02.794Z,
+    updatedAt: 2020-12-15T11:29:02.840Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fd8993cc1e1204f952a2074,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:08:44.275Z,
+    updatedAt: 2020-12-15T11:11:50.849Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fbb7cf61938143deabf8792,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'my-new-post',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-11-23T09:12:22.241Z,
+    updatedAt: 2020-11-23T09:53:02.958Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fa9c53eff14ec33fc95bd4a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { _id: 5fa9bd42ff14ec33fc95bd49,
+       name: 'Tracy Last',
+       username: 'tlarsonlast' },
+    createdAt: 2020-11-09T22:39:58.806Z,
+    updatedAt: 2020-11-23T09:50:06.485Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f523036f0eb584685805943,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-04T12:16:54.329Z,
+    updatedAt: 2020-09-04T12:17:38.358Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f4f6a4e09e3280bbf7a5580,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-02T09:47:58.009Z,
+    updatedAt: 2020-09-02T09:48:04.733Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f3918ea9ddf7c6c8b74be90,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-08-16T11:30:50.564Z,
+    updatedAt: 2020-08-16T11:31:19.136Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1ffe978149a77cfc6dfab3,
+    updatedAt: 2020-10-25T12:42:23.328Z,
+    createdAt: 2020-07-28T10:31:51.416Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'great-stream',
+    shopifyDomain: 'social-king-app.myshopify.com' },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1e70bb98ab316b4322f9f2,
+    updatedAt: 2020-10-25T12:34:30.465Z,
+    createdAt: 2020-07-27T06:14:19.589Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'go-social',
+    shopifyDomain: 'social-king-app.myshopify.com' } ]
+[0mGET /api/social-king-app.myshopify.com/comments [32m200[0m 91.878 ms - 17982[0m
+image request {}
+[0mGET /api/images/uploads/social-king-app.myshopify.com-1599038611417.png [32m200[0m 12.501 ms - 339721[0m
+req.query in checkSubscription controller { hmac:
+   '575232c47723754e1e3a9d39df7bd657acd40bf59c2c4fff355bd811ae29f893',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616748295' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [32m200[0m 84.903 ms - 16514[0m
+req.query in checkSubscription controller { hmac:
+   '0949e2834bd093be72cf9685db9c728277888ea0603e4b25ded16008e3934cf4',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616748322' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 81.985 ms - -[0m
+req.body {}
+shopName social-king-app.myshopify.com
+req.query in checkSubscription controller { hmac:
+   '61d85f717107ad43dd45906dbb1c4afb88c90756ee3f81c30768e3b89c05a4f8',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616748327' }
+no charge_id found in req.query
+shop in mongo response { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T08:04:43.154Z,
+  __v: 3,
+  backgroundColor: '#f6f7f8',
+  primaryColor: '#3c3c3c',
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ] }
+Caught exception: TypeError: Cannot read property '0' of undefined
+mongo response to fetching the comments of the given store [ { body: [ [Object] ],
+    hidden: false,
+    _id: 604e09314088c31cfb52597f,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T13:01:37.327Z,
+    updatedAt: 2021-03-14T13:01:37.479Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e067d4088c31cfb52597c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:50:05.532Z,
+    updatedAt: 2021-03-14T12:50:05.629Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e06584088c31cfb52597b,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:49:28.320Z,
+    updatedAt: 2021-03-14T12:49:28.339Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e061f1fc84f1bb97b45eb,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:48:31.954Z,
+    updatedAt: 2021-03-14T12:48:31.968Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e05f01fc84f1bb97b45ea,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:47:44.778Z,
+    updatedAt: 2021-03-14T12:47:44.907Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604a31d6e81ff15f5e2c6f7c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    createdAt: 2021-03-11T15:05:58.427Z,
+    updatedAt: 2021-03-11T15:05:58.448Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f380c3786ce23d608babe,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:17:32.341Z,
+    updatedAt: 2021-03-03T07:17:32.357Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f37a93786ce23d608babd,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:15:53.949Z,
+    updatedAt: 2021-03-03T07:15:53.969Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f363a347a7d11470e4a5c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'uubafsvl',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:09:46.914Z,
+    updatedAt: 2021-03-03T07:09:46.932Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603cc588b2e8b2361e942485,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2021-03-01T10:44:24.062Z,
+    updatedAt: 2021-03-01T10:44:24.080Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603567f83fdb3e08322ce13a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 603567c43fdb3e08322ce139,
+       name: 'Kevin Kwok',
+       username: 'thekevinkwok' },
+    createdAt: 2021-02-23T20:39:20.601Z,
+    updatedAt: 2021-02-23T20:39:20.619Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fd89dfef450db535ed3f3ef,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:29:02.794Z,
+    updatedAt: 2020-12-15T11:29:02.840Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fd8993cc1e1204f952a2074,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:08:44.275Z,
+    updatedAt: 2020-12-15T11:11:50.849Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fbb7cf61938143deabf8792,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'my-new-post',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-11-23T09:12:22.241Z,
+    updatedAt: 2020-11-23T09:53:02.958Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fa9c53eff14ec33fc95bd4a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { _id: 5fa9bd42ff14ec33fc95bd49,
+       name: 'Tracy Last',
+       username: 'tlarsonlast' },
+    createdAt: 2020-11-09T22:39:58.806Z,
+    updatedAt: 2020-11-23T09:50:06.485Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f523036f0eb584685805943,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-04T12:16:54.329Z,
+    updatedAt: 2020-09-04T12:17:38.358Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f4f6a4e09e3280bbf7a5580,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-02T09:47:58.009Z,
+    updatedAt: 2020-09-02T09:48:04.733Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f3918ea9ddf7c6c8b74be90,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-08-16T11:30:50.564Z,
+    updatedAt: 2020-08-16T11:31:19.136Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1ffe978149a77cfc6dfab3,
+    updatedAt: 2020-10-25T12:42:23.328Z,
+    createdAt: 2020-07-28T10:31:51.416Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'great-stream',
+    shopifyDomain: 'social-king-app.myshopify.com' },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1e70bb98ab316b4322f9f2,
+    updatedAt: 2020-10-25T12:34:30.465Z,
+    createdAt: 2020-07-27T06:14:19.589Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'go-social',
+    shopifyDomain: 'social-king-app.myshopify.com' } ]
+[0mGET /api/social-king-app.myshopify.com/comments [36m304[0m 87.881 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '84e856cdf86d33084ecd4ae80acf9605d74c6ef76af2d6518b497ccd3c2f12e8',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616748331' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.headers.host socialking.app
+req.query in tags list function { shop: 'social-king-app.myshopify.com' }
+[0mGET /api/tags?shop=social-king-app.myshopify.com [32m200[0m 11.306 ms - 1005[0m
+req.query in checkSubscription controller { hmac:
+   'ea013f1d03d1822faea7a065cb739b95cc5bfad326e92c116414caccfce170a2',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616748336' }
+no charge_id found in req.query
+ran publicProfile func in controller with req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/user/social-king-app.myshopify.com [32m200[0m 12.267 ms - 7643[0m
+req.query in checkSubscription controller { hmac:
+   'fff4cc707935de304c196a091decd3e90c878e595ba2709c19ddef2baf7ddde2',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616748339' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 75.878 ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=2fd09b4e299125ab5dbee4b3ba2f9a55f4770a0591a966ded9e17aaf741f8060&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616748285 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=575232c47723754e1e3a9d39df7bd657acd40bf59c2c4fff355bd811ae29f893&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616748295 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=0949e2834bd093be72cf9685db9c728277888ea0603e4b25ded16008e3934cf4&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616748322 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=61d85f717107ad43dd45906dbb1c4afb88c90756ee3f81c30768e3b89c05a4f8&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616748327 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=84e856cdf86d33084ecd4ae80acf9605d74c6ef76af2d6518b497ccd3c2f12e8&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616748331 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=ea013f1d03d1822faea7a065cb739b95cc5bfad326e92c116414caccfce170a2&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616748336 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=fff4cc707935de304c196a091decd3e90c878e595ba2709c19ddef2baf7ddde2&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616748339 [0m-[0m - ms - -[0m
+image request {}
+[0mGET /api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg [36m304[0m 1.790 ms - -[0m
+req.body {}
+shopName social-king-app.myshopify.com
+req.query in checkSubscription controller { hmac:
+   'df401d022f89b53c78ab65b556dfafdf5dded3e3ad6cc13087d787dbb4532cde',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616750239' }
+no charge_id found in req.query
+shop in mongo response { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T09:17:17.648Z,
+  __v: 3,
+  backgroundColor: '#f6f7f8',
+  primaryColor: '#3c3c3c',
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ] }
+Caught exception: TypeError: Cannot read property '0' of undefined
+mongo response to fetching the comments of the given store [ { body: [ [Object] ],
+    hidden: false,
+    _id: 604e09314088c31cfb52597f,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T13:01:37.327Z,
+    updatedAt: 2021-03-14T13:01:37.479Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e067d4088c31cfb52597c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:50:05.532Z,
+    updatedAt: 2021-03-14T12:50:05.629Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e06584088c31cfb52597b,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:49:28.320Z,
+    updatedAt: 2021-03-14T12:49:28.339Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e061f1fc84f1bb97b45eb,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:48:31.954Z,
+    updatedAt: 2021-03-14T12:48:31.968Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e05f01fc84f1bb97b45ea,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:47:44.778Z,
+    updatedAt: 2021-03-14T12:47:44.907Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604a31d6e81ff15f5e2c6f7c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    createdAt: 2021-03-11T15:05:58.427Z,
+    updatedAt: 2021-03-11T15:05:58.448Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f380c3786ce23d608babe,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:17:32.341Z,
+    updatedAt: 2021-03-03T07:17:32.357Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f37a93786ce23d608babd,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:15:53.949Z,
+    updatedAt: 2021-03-03T07:15:53.969Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f363a347a7d11470e4a5c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'uubafsvl',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:09:46.914Z,
+    updatedAt: 2021-03-03T07:09:46.932Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603cc588b2e8b2361e942485,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2021-03-01T10:44:24.062Z,
+    updatedAt: 2021-03-01T10:44:24.080Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603567f83fdb3e08322ce13a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 603567c43fdb3e08322ce139,
+       name: 'Kevin Kwok',
+       username: 'thekevinkwok' },
+    createdAt: 2021-02-23T20:39:20.601Z,
+    updatedAt: 2021-02-23T20:39:20.619Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fd89dfef450db535ed3f3ef,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:29:02.794Z,
+    updatedAt: 2020-12-15T11:29:02.840Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fd8993cc1e1204f952a2074,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:08:44.275Z,
+    updatedAt: 2020-12-15T11:11:50.849Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fbb7cf61938143deabf8792,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'my-new-post',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-11-23T09:12:22.241Z,
+    updatedAt: 2020-11-23T09:53:02.958Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fa9c53eff14ec33fc95bd4a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { _id: 5fa9bd42ff14ec33fc95bd49,
+       name: 'Tracy Last',
+       username: 'tlarsonlast' },
+    createdAt: 2020-11-09T22:39:58.806Z,
+    updatedAt: 2020-11-23T09:50:06.485Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f523036f0eb584685805943,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-04T12:16:54.329Z,
+    updatedAt: 2020-09-04T12:17:38.358Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f4f6a4e09e3280bbf7a5580,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-02T09:47:58.009Z,
+    updatedAt: 2020-09-02T09:48:04.733Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f3918ea9ddf7c6c8b74be90,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-08-16T11:30:50.564Z,
+    updatedAt: 2020-08-16T11:31:19.136Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1ffe978149a77cfc6dfab3,
+    updatedAt: 2020-10-25T12:42:23.328Z,
+    createdAt: 2020-07-28T10:31:51.416Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'great-stream',
+    shopifyDomain: 'social-king-app.myshopify.com' },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1e70bb98ab316b4322f9f2,
+    updatedAt: 2020-10-25T12:34:30.465Z,
+    createdAt: 2020-07-27T06:14:19.589Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'go-social',
+    shopifyDomain: 'social-king-app.myshopify.com' } ]
+[0mGET /api/social-king-app.myshopify.com/comments [32m200[0m 82.652 ms - 17982[0m
+image request {}
+[0mGET /api/images/uploads/social-king-app.myshopify.com-1599038611417.png [36m304[0m 1.313 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   'c81d3f2da5675ec05e18d396bc546ce4e02ae2075a10979c084bb68d00618a0a',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616750242' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.body {}
+shopName social-king-app.myshopify.com
+[0mGET /api/social-king-app.myshopify.com/blogs [32m200[0m 117.035 ms - 16514[0m
+req.query in checkSubscription controller { hmac:
+   'fd9713b77a0043c69cf862929b5e13ed1407385b44342f93e81cc416f801151e',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616750247' }
+no charge_id found in req.query
+req.headers.host socialking.app
+req.query in tags list function { shop: 'social-king-app.myshopify.com' }
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/tags?shop=social-king-app.myshopify.com [32m200[0m 11.761 ms - 1005[0m
+req.query in checkSubscription controller { hmac:
+   'ef7b293394ae8d2f58b677f67524ca0d2b90cededc832517ef0cc6e4bd46b44f',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616750251' }
+no charge_id found in req.query
+ran publicProfile func in controller with req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/user/social-king-app.myshopify.com [32m200[0m 18.782 ms - 7643[0m
+req.query in checkSubscription controller { hmac:
+   'eb4eb14914d885cec373e11e364574c8cad4c48e21cec2815a718261bf272ce7',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616750261' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 59.787 ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=df401d022f89b53c78ab65b556dfafdf5dded3e3ad6cc13087d787dbb4532cde&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616750239 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=c81d3f2da5675ec05e18d396bc546ce4e02ae2075a10979c084bb68d00618a0a&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616750242 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=fd9713b77a0043c69cf862929b5e13ed1407385b44342f93e81cc416f801151e&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616750247 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=ef7b293394ae8d2f58b677f67524ca0d2b90cededc832517ef0cc6e4bd46b44f&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616750251 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=eb4eb14914d885cec373e11e364574c8cad4c48e21cec2815a718261bf272ce7&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616750261 [0m-[0m - ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '4265f175e4fbb8806fcc1d7dc065251d7b09c23dcdc3cb6d62cee2a53dc9f43b',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616751573' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.query in checkSubscription controller { hmac:
+   '62f1dabab6722a84014ba79c54292f10116e421e6f6ab6bb73f666a1ba26c7eb',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616751577' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.body {}
+shopName social-king-app.myshopify.com
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 81.323 ms - -[0m
+req.body {}
+shopName social-king-app.myshopify.com
+req.query in checkSubscription controller { hmac:
+   '5c8501f67363fe8054c8076c8de1d8835d5e00884994f895337ca4aaada13417',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616751580' }
+no charge_id found in req.query
+shop in mongo response { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T09:17:17.648Z,
+  __v: 3,
+  backgroundColor: '#f6f7f8',
+  primaryColor: '#3c3c3c',
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ] }
+Caught exception: TypeError: Cannot read property '0' of undefined
+mongo response to fetching the comments of the given store [ { body: [ [Object] ],
+    hidden: false,
+    _id: 604e09314088c31cfb52597f,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T13:01:37.327Z,
+    updatedAt: 2021-03-14T13:01:37.479Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e067d4088c31cfb52597c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:50:05.532Z,
+    updatedAt: 2021-03-14T12:50:05.629Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e06584088c31cfb52597b,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:49:28.320Z,
+    updatedAt: 2021-03-14T12:49:28.339Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e061f1fc84f1bb97b45eb,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:48:31.954Z,
+    updatedAt: 2021-03-14T12:48:31.968Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e05f01fc84f1bb97b45ea,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:47:44.778Z,
+    updatedAt: 2021-03-14T12:47:44.907Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604a31d6e81ff15f5e2c6f7c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    createdAt: 2021-03-11T15:05:58.427Z,
+    updatedAt: 2021-03-11T15:05:58.448Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f380c3786ce23d608babe,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:17:32.341Z,
+    updatedAt: 2021-03-03T07:17:32.357Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f37a93786ce23d608babd,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:15:53.949Z,
+    updatedAt: 2021-03-03T07:15:53.969Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f363a347a7d11470e4a5c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'uubafsvl',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:09:46.914Z,
+    updatedAt: 2021-03-03T07:09:46.932Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603cc588b2e8b2361e942485,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2021-03-01T10:44:24.062Z,
+    updatedAt: 2021-03-01T10:44:24.080Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603567f83fdb3e08322ce13a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 603567c43fdb3e08322ce139,
+       name: 'Kevin Kwok',
+       username: 'thekevinkwok' },
+    createdAt: 2021-02-23T20:39:20.601Z,
+    updatedAt: 2021-02-23T20:39:20.619Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fd89dfef450db535ed3f3ef,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:29:02.794Z,
+    updatedAt: 2020-12-15T11:29:02.840Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fd8993cc1e1204f952a2074,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:08:44.275Z,
+    updatedAt: 2020-12-15T11:11:50.849Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fbb7cf61938143deabf8792,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'my-new-post',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-11-23T09:12:22.241Z,
+    updatedAt: 2020-11-23T09:53:02.958Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fa9c53eff14ec33fc95bd4a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { _id: 5fa9bd42ff14ec33fc95bd49,
+       name: 'Tracy Last',
+       username: 'tlarsonlast' },
+    createdAt: 2020-11-09T22:39:58.806Z,
+    updatedAt: 2020-11-23T09:50:06.485Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f523036f0eb584685805943,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-04T12:16:54.329Z,
+    updatedAt: 2020-09-04T12:17:38.358Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f4f6a4e09e3280bbf7a5580,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-02T09:47:58.009Z,
+    updatedAt: 2020-09-02T09:48:04.733Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f3918ea9ddf7c6c8b74be90,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-08-16T11:30:50.564Z,
+    updatedAt: 2020-08-16T11:31:19.136Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1ffe978149a77cfc6dfab3,
+    updatedAt: 2020-10-25T12:42:23.328Z,
+    createdAt: 2020-07-28T10:31:51.416Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'great-stream',
+    shopifyDomain: 'social-king-app.myshopify.com' },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1e70bb98ab316b4322f9f2,
+    updatedAt: 2020-10-25T12:34:30.465Z,
+    createdAt: 2020-07-27T06:14:19.589Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'go-social',
+    shopifyDomain: 'social-king-app.myshopify.com' } ]
+[0mGET /api/social-king-app.myshopify.com/comments [36m304[0m 64.507 ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=4265f175e4fbb8806fcc1d7dc065251d7b09c23dcdc3cb6d62cee2a53dc9f43b&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616751573 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=62f1dabab6722a84014ba79c54292f10116e421e6f6ab6bb73f666a1ba26c7eb&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616751577 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=5c8501f67363fe8054c8076c8de1d8835d5e00884994f895337ca4aaada13417&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616751580 [0m-[0m - ms - -[0m
+[0mGET /script [33m404[0m 2.133 ms - 145[0m
+[0mGET /jenkins/script [33m404[0m 0.721 ms - 153[0m
+[0mGET /jenkins [33m404[0m 0.436 ms - 146[0m
+[0mGET /hudson/script [33m404[0m 0.476 ms - 152[0m
+[0mGET /login [33m404[0m 0.349 ms - 144[0m
+[0mGET /jenkins/login [33m404[0m 0.261 ms - 152[0m
+[0mGET /hudson/login [33m404[0m 0.376 ms - 151[0m
+[0mGET /manager/html/ [33m404[0m 0.337 ms - 152[0m
+[0mGET /jmx-console/ [33m404[0m 0.313 ms - 151[0m
+[0mGET /web-console/ [33m404[0m 0.274 ms - 151[0m
+[0mGET /invoker/JMXInvokerServlet [33m404[0m 0.350 ms - 164[0m
+[0mGET /admin-console/login.seam [33m404[0m 0.343 ms - 163[0m
+[0mGET / [33m404[0m 0.391 ms - 139[0m
+[0mGET /Dumper [33m404[0m 0.404 ms - 145[0m
+[0mGET /MSD [33m404[0m 0.540 ms - 142[0m
+[0mGET /MySQL [33m404[0m 0.360 ms - 144[0m
+[0mGET /MySQLDumper [33m404[0m 0.383 ms - 150[0m
+[0mGET /dumper [33m404[0m 0.338 ms - 145[0m
+[0mGET /msd [33m404[0m 0.352 ms - 142[0m
+[0mGET /msd1.24.4 [33m404[0m 0.347 ms - 148[0m
+[0mGET /msd1.24stable [33m404[0m 0.312 ms - 152[0m
+[0mGET /mySQLDumper [33m404[0m 0.238 ms - 150[0m
+[0mGET /mySQLmanager [33m404[0m 0.282 ms - 151[0m
+[0mGET /mySqlDumper [33m404[0m 1.008 ms - 150[0m
+[0mGET /mysql [33m404[0m 0.277 ms - 144[0m
+[0mGET /mysqldumper [33m404[0m 0.281 ms - 150[0m
+[0mGET /sql [33m404[0m 0.372 ms - 142[0m
+[0mGET /sqladmin [33m404[0m 0.338 ms - 147[0m
+[0mGET /sqlmanager [33m404[0m 0.291 ms - 149[0m
+[0mGET /sqlweb [33m404[0m 0.276 ms - 145[0m
+[0mGET /websql [33m404[0m 0.344 ms - 145[0m
+[0mGET /mysqldump [33m404[0m 0.340 ms - 148[0m
+[0mGET /dump [33m404[0m 0.319 ms - 143[0m
+[0mGET /msd1.21 [33m404[0m 0.254 ms - 146[0m
+[0mGET /msddump [33m404[0m 0.384 ms - 146[0m
+[0mGET /msddumper [33m404[0m 0.246 ms - 148[0m
+[0mGET /msdump [33m404[0m 0.304 ms - 145[0m
+[0mGET //main.php [33m404[0m 1.130 ms - 148[0m
+[0mGET /sqlite/main.php [33m404[0m 0.258 ms - 154[0m
+[0mGET /SQlite/main.php [33m404[0m 0.306 ms - 154[0m
+[0mGET /sqlite/SQLiteManager-1.2.4/main.php [33m404[0m 0.338 ms - 174[0m
+[0mGET /sqlite/sqlitemanager/main.php [33m404[0m 0.280 ms - 168[0m
+[0mGET /sqlite/sqlite-manager/main.php [33m404[0m 0.401 ms - 169[0m
+[0mGET /sqlite/SQLitemanager/main.php [33m404[0m 0.239 ms - 168[0m
+[0mGET /sqlite/SQLite-manager/main.php [33m404[0m 0.287 ms - 169[0m
+[0mGET /sqlite/SQLite-Manager/main.php [33m404[0m 0.237 ms - 169[0m
+[0mGET /SQLite/SQLiteManager-1.2.4/main.php [33m404[0m 0.296 ms - 174[0m
+[0mGET /SQLite/sqlitemanager/main.php [33m404[0m 0.310 ms - 168[0m
+[0mGET /SQLite/sqlite-manager/main.php [33m404[0m 0.247 ms - 169[0m
+[0mGET /SQLite/SQLitemanager/main.php [33m404[0m 0.244 ms - 168[0m
+[0mGET /SQLite/SQLite-manager/main.php [33m404[0m 0.351 ms - 169[0m
+[0mGET /SQLite/SQLite-Manager/main.php [33m404[0m 0.322 ms - 169[0m
+[0mGET /sqlitemanager-1.2.4/main.php [33m404[0m 0.332 ms - 167[0m
+[0mGET /SQLiteManager-1.2.4/main.php [33m404[0m 0.242 ms - 167[0m
+[0mGET /sqlitemanager/main.php [33m404[0m 0.288 ms - 161[0m
+[0mGET /sqlite-manager/main.php [33m404[0m 0.239 ms - 162[0m
+[0mGET /SQLiteManager/main.php [33m404[0m 0.244 ms - 161[0m
+[0mGET /SQLite-Manager/main.php [33m404[0m 0.236 ms - 162[0m
+[0mGET /sqlite/SQLiteManager-1.2.3/main.php [33m404[0m 0.316 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.2.3/main.php [33m404[0m 0.347 ms - 174[0m
+[0mGET /sqlitemanager-1.2.3/main.php [33m404[0m 0.238 ms - 167[0m
+[0mGET /SQLiteManager-1.2.3/main.php [33m404[0m 0.347 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.2.2/main.php [33m404[0m 0.316 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.2.2/main.php [33m404[0m 0.258 ms - 174[0m
+[0mGET /sqlitemanager-1.2.2/main.php [33m404[0m 0.236 ms - 167[0m
+[0mGET /SQLiteManager-1.2.2/main.php [33m404[0m 0.328 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.2.0/main.php [33m404[0m 0.254 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.2.0/main.php [33m404[0m 0.236 ms - 174[0m
+[0mGET /sqlitemanager-1.2.0/main.php [33m404[0m 0.291 ms - 167[0m
+[0mGET /SQLiteManager-1.2.0/main.php [33m404[0m 0.254 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.1.3/main.php [33m404[0m 0.243 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.1.3/main.php [33m404[0m 0.245 ms - 174[0m
+[0mGET /sqlitemanager-1.1.3/main.php [33m404[0m 0.402 ms - 167[0m
+[0mGET /SQLiteManager-1.1.3/main.php [33m404[0m 0.232 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.1.2/main.php [33m404[0m 0.234 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.1.2/main.php [33m404[0m 0.287 ms - 174[0m
+[0mGET /sqlitemanager-1.1.2/main.php [33m404[0m 0.331 ms - 167[0m
+[0mGET /SQLiteManager-1.1.2/main.php [33m404[0m 0.279 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.1.1/main.php [33m404[0m 0.257 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.1.1/main.php [33m404[0m 0.286 ms - 174[0m
+[0mGET /sqlitemanager-1.1.1/main.php [33m404[0m 0.356 ms - 167[0m
+[0mGET /SQLiteManager-1.1.1/main.php [33m404[0m 0.329 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.1.0/main.php [33m404[0m 0.246 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.1.0/main.php [33m404[0m 0.312 ms - 174[0m
+[0mGET /sqlitemanager-1.1.0/main.php [33m404[0m 0.399 ms - 167[0m
+[0mGET /SQLiteManager-1.1.0/main.php [33m404[0m 0.267 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.0.6/main.php [33m404[0m 0.321 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.0.6/main.php [33m404[0m 0.223 ms - 174[0m
+[0mGET /sqlitemanager-1.0.6/main.php [33m404[0m 0.296 ms - 167[0m
+[0mGET /SQLiteManager-1.0.6/main.php [33m404[0m 0.283 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.0.5/main.php [33m404[0m 0.327 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.0.5/main.php [33m404[0m 0.254 ms - 174[0m
+[0mGET /sqlitemanager-1.0.5/main.php [33m404[0m 0.300 ms - 167[0m
+[0mGET /SQLiteManager-1.0.5/main.php [33m404[0m 0.270 ms - 167[0m
+[0mGET /sqlite/SQLiteManager-1.0.4/main.php [33m404[0m 0.247 ms - 174[0m
+[0mGET /SQLite/SQLiteManager-1.0.4/main.php [33m404[0m 0.282 ms - 174[0m
+[0mGET /sqlitemanager-1.0.4/main.php [33m404[0m 0.268 ms - 167[0m
+[0mGET /SQLiteManager-1.0.4/main.php [33m404[0m 0.243 ms - 167[0m
+[0mGET /sqlitemanager/main.php [33m404[0m 0.237 ms - 161[0m
+[0mGET /SQLiteManager/main.php [33m404[0m 0.324 ms - 161[0m
+[0mGET /manager/main.php [33m404[0m 0.215 ms - 155[0m
+[0mGET /sql/main.php [33m404[0m 0.303 ms - 151[0m
+[0mGET /dbmanager/main.php [33m404[0m 0.307 ms - 157[0m
+[0mGET /db/main.php [33m404[0m 0.542 ms - 150[0m
+[0mGET /sqlmanager/main.php [33m404[0m 0.227 ms - 158[0m
+req.query in checkSubscription controller { hmac:
+   '77736c6e8a7f49e56b40349a7b2d89c3198b5d95a4cb4d36741233d4840f93bd',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616757091' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.query in checkSubscription controller { hmac:
+   'd14dad5b87343700e11abc92dd32920f93424ea636468551da069caf5501cbf2',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616757099' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 86.384 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   'c33fa7a4ab127161d8355961b0c1a3e0f0e52989a92998641db8920af82d23b9',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616757102' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+shop in mongo response { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T11:11:30.134Z,
+  __v: 3,
+  backgroundColor: '#f6f7f8',
+  primaryColor: '#3c3c3c',
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ] }
+mongo response to fetching the comments of the given store [ { body: [ [Object] ],
+    hidden: false,
+    _id: 604e09314088c31cfb52597f,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T13:01:37.327Z,
+    updatedAt: 2021-03-14T13:01:37.479Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e067d4088c31cfb52597c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:50:05.532Z,
+    updatedAt: 2021-03-14T12:50:05.629Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e06584088c31cfb52597b,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:49:28.320Z,
+    updatedAt: 2021-03-14T12:49:28.339Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e061f1fc84f1bb97b45eb,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:48:31.954Z,
+    updatedAt: 2021-03-14T12:48:31.968Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e05f01fc84f1bb97b45ea,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:47:44.778Z,
+    updatedAt: 2021-03-14T12:47:44.907Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604a31d6e81ff15f5e2c6f7c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    createdAt: 2021-03-11T15:05:58.427Z,
+    updatedAt: 2021-03-11T15:05:58.448Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f380c3786ce23d608babe,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:17:32.341Z,
+    updatedAt: 2021-03-03T07:17:32.357Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f37a93786ce23d608babd,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:15:53.949Z,
+    updatedAt: 2021-03-03T07:15:53.969Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f363a347a7d11470e4a5c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'uubafsvl',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:09:46.914Z,
+    updatedAt: 2021-03-03T07:09:46.932Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603cc588b2e8b2361e942485,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2021-03-01T10:44:24.062Z,
+    updatedAt: 2021-03-01T10:44:24.080Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603567f83fdb3e08322ce13a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 603567c43fdb3e08322ce139,
+       name: 'Kevin Kwok',
+       username: 'thekevinkwok' },
+    createdAt: 2021-02-23T20:39:20.601Z,
+    updatedAt: 2021-02-23T20:39:20.619Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fd89dfef450db535ed3f3ef,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:29:02.794Z,
+    updatedAt: 2020-12-15T11:29:02.840Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fd8993cc1e1204f952a2074,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:08:44.275Z,
+    updatedAt: 2020-12-15T11:11:50.849Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fbb7cf61938143deabf8792,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'my-new-post',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-11-23T09:12:22.241Z,
+    updatedAt: 2020-11-23T09:53:02.958Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fa9c53eff14ec33fc95bd4a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { _id: 5fa9bd42ff14ec33fc95bd49,
+       name: 'Tracy Last',
+       username: 'tlarsonlast' },
+    createdAt: 2020-11-09T22:39:58.806Z,
+    updatedAt: 2020-11-23T09:50:06.485Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f523036f0eb584685805943,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-04T12:16:54.329Z,
+    updatedAt: 2020-09-04T12:17:38.358Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f4f6a4e09e3280bbf7a5580,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-02T09:47:58.009Z,
+    updatedAt: 2020-09-02T09:48:04.733Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f3918ea9ddf7c6c8b74be90,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-08-16T11:30:50.564Z,
+    updatedAt: 2020-08-16T11:31:19.136Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1ffe978149a77cfc6dfab3,
+    updatedAt: 2020-10-25T12:42:23.328Z,
+    createdAt: 2020-07-28T10:31:51.416Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'great-stream',
+    shopifyDomain: 'social-king-app.myshopify.com' },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1e70bb98ab316b4322f9f2,
+    updatedAt: 2020-10-25T12:34:30.465Z,
+    createdAt: 2020-07-27T06:14:19.589Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'go-social',
+    shopifyDomain: 'social-king-app.myshopify.com' } ]
+[0mGET /api/social-king-app.myshopify.com/comments [36m304[0m 72.684 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '65ba2dd2ce20a83bfd80da9bbe7b4e76e2ae1e29f7bd20ca4370159f1e03974a',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616757106' }
+no charge_id found in req.query
+req.headers.host socialking.app
+req.query in tags list function { shop: 'social-king-app.myshopify.com' }
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/tags?shop=social-king-app.myshopify.com [36m304[0m 9.805 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '4daaebb1f211c6a37ea46bed3ef98484499ca4cbb453dfa63f7668f5f23b375f',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616757111' }
+no charge_id found in req.query
+ran publicProfile func in controller with req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/user/social-king-app.myshopify.com [32m200[0m 9.857 ms - 7643[0m
+[0mPOST /api/auth/check-subscription?hmac=77736c6e8a7f49e56b40349a7b2d89c3198b5d95a4cb4d36741233d4840f93bd&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616757091 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=d14dad5b87343700e11abc92dd32920f93424ea636468551da069caf5501cbf2&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616757099 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=c33fa7a4ab127161d8355961b0c1a3e0f0e52989a92998641db8920af82d23b9&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616757102 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=65ba2dd2ce20a83bfd80da9bbe7b4e76e2ae1e29f7bd20ca4370159f1e03974a&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616757106 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=4daaebb1f211c6a37ea46bed3ef98484499ca4cbb453dfa63f7668f5f23b375f&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616757111 [0m-[0m - ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '998a4b92a8779b23d895d6a0e176fdaaa3ab4dd582aeed17b1e97e27341220df',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616757205' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 57.281 ms - -[0m
+req.body {}
+shopName social-king-app.myshopify.com
+req.query in checkSubscription controller { hmac:
+   'c61c9e7abe80f7f8ded173ebdf7900164d1b9085e4f34e6b6184c3ad839904d5',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616757259' }
+no charge_id found in req.query
+shop in mongo response { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T11:11:30.134Z,
+  __v: 3,
+  backgroundColor: '#f6f7f8',
+  primaryColor: '#3c3c3c',
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ] }
+Caught exception: TypeError: Cannot read property '0' of undefined
+mongo response to fetching the comments of the given store [ { body: [ [Object] ],
+    hidden: false,
+    _id: 604e09314088c31cfb52597f,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T13:01:37.327Z,
+    updatedAt: 2021-03-14T13:01:37.479Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e067d4088c31cfb52597c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:50:05.532Z,
+    updatedAt: 2021-03-14T12:50:05.629Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e06584088c31cfb52597b,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '31lwzhii',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:49:28.320Z,
+    updatedAt: 2021-03-14T12:49:28.339Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e061f1fc84f1bb97b45eb,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:48:31.954Z,
+    updatedAt: 2021-03-14T12:48:31.968Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604e05f01fc84f1bb97b45ea,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 604e05a51fc84f1bb97b45e8, name: 'n k', username: 'off' },
+    createdAt: 2021-03-14T12:47:44.778Z,
+    updatedAt: 2021-03-14T12:47:44.907Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 604a31d6e81ff15f5e2c6f7c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'e60dmwzn',
+    postedBy:
+     { _id: 5f2be2738f38284868d61666,
+       name: 'Cynthia Lopez',
+       username: 'chayaisraeldonations' },
+    createdAt: 2021-03-11T15:05:58.427Z,
+    updatedAt: 2021-03-11T15:05:58.448Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f380c3786ce23d608babe,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:17:32.341Z,
+    updatedAt: 2021-03-03T07:17:32.357Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f37a93786ce23d608babd,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'btcbdbbi',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:15:53.949Z,
+    updatedAt: 2021-03-03T07:15:53.969Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603f363a347a7d11470e4a5c,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'uubafsvl',
+    postedBy:
+     { _id: 603f35c1347a7d11470e4a5a,
+       name: 'Paul Panfili',
+       username: '3341059569' },
+    createdAt: 2021-03-03T07:09:46.914Z,
+    updatedAt: 2021-03-03T07:09:46.932Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603cc588b2e8b2361e942485,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'ofibka7n',
+    postedBy:
+     { _id: 5f339a2e08b51e66a5223620,
+       name: 'Elisha Kramer',
+       username: 'kramer1346' },
+    createdAt: 2021-03-01T10:44:24.062Z,
+    updatedAt: 2021-03-01T10:44:24.080Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 603567f83fdb3e08322ce13a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'lcki63ro',
+    postedBy:
+     { _id: 603567c43fdb3e08322ce139,
+       name: 'Kevin Kwok',
+       username: 'thekevinkwok' },
+    createdAt: 2021-02-23T20:39:20.601Z,
+    updatedAt: 2021-02-23T20:39:20.619Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fd89dfef450db535ed3f3ef,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'conversations-have-gone-digital',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:29:02.794Z,
+    updatedAt: 2020-12-15T11:29:02.840Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fd8993cc1e1204f952a2074,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'when-does-it-become-too-many-emojis',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-12-15T11:08:44.275Z,
+    updatedAt: 2020-12-15T11:11:50.849Z },
+  { body: [ [Object] ],
+    hidden: true,
+    _id: 5fbb7cf61938143deabf8792,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'my-new-post',
+    postedBy:
+     { _id: 5f5f383d5099060d34b59876,
+       name: 'Leesh Kay',
+       username: 'freddie-mercury' },
+    createdAt: 2020-11-23T09:12:22.241Z,
+    updatedAt: 2020-11-23T09:53:02.958Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5fa9c53eff14ec33fc95bd4a,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: '5-steps-to-building-a-shopper-community',
+    postedBy:
+     { _id: 5fa9bd42ff14ec33fc95bd49,
+       name: 'Tracy Last',
+       username: 'tlarsonlast' },
+    createdAt: 2020-11-09T22:39:58.806Z,
+    updatedAt: 2020-11-23T09:50:06.485Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f523036f0eb584685805943,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-04T12:16:54.329Z,
+    updatedAt: 2020-09-04T12:17:38.358Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f4f6a4e09e3280bbf7a5580,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'is-it-secure-and-does-it-match-my-needs',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-09-02T09:47:58.009Z,
+    updatedAt: 2020-09-02T09:48:04.733Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f3918ea9ddf7c6c8b74be90,
+    shopifyDomain: 'social-king-app.myshopify.com',
+    postSlug: 'do-you-have-multi-lingual-support',
+    postedBy:
+     { _id: 5f38fd0218967962e2c6a89b,
+       name: 'Samantha Jones',
+       username: 'support' },
+    createdAt: 2020-08-16T11:30:50.564Z,
+    updatedAt: 2020-08-16T11:31:19.136Z },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1ffe978149a77cfc6dfab3,
+    updatedAt: 2020-10-25T12:42:23.328Z,
+    createdAt: 2020-07-28T10:31:51.416Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'great-stream',
+    shopifyDomain: 'social-king-app.myshopify.com' },
+  { body: [ [Object] ],
+    hidden: false,
+    _id: 5f1e70bb98ab316b4322f9f2,
+    updatedAt: 2020-10-25T12:34:30.465Z,
+    createdAt: 2020-07-27T06:14:19.589Z,
+    postedBy:
+     { _id: 5f181707cbcf4a3e99ade61f,
+       name: 'Samantha Jones',
+       username: 'chayaisraeldonations' },
+    postSlug: 'go-social',
+    shopifyDomain: 'social-king-app.myshopify.com' } ]
+[0mGET /api/social-king-app.myshopify.com/comments [36m304[0m 80.776 ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=998a4b92a8779b23d895d6a0e176fdaaa3ab4dd582aeed17b1e97e27341220df&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616757205 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=c61c9e7abe80f7f8ded173ebdf7900164d1b9085e4f34e6b6184c3ad839904d5&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=c4b3917dff758a859d477177a3c4257265cb71918c7c45fc652ac06951856b34&shop=social-king-app.myshopify.com&timestamp=1616757259 [0m-[0m - ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '1ab13c7f634af619723fbc190cb74367e3434cf75e20bddbb0a833a36f5fd260',
+  host: 'ZGtzdHJlbmRzLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-US',
+  new_design_language: 'true',
+  session:
+   'b462a980e41d53027ba7ab18cbb350d4394dfc9959729b79358f0cfd40636190',
+  shop: 'dkstrends.myshopify.com',
+  timestamp: '1616757593' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mPOST /api/auth/check-subscription?hmac=1ab13c7f634af619723fbc190cb74367e3434cf75e20bddbb0a833a36f5fd260&host=ZGtzdHJlbmRzLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-US&new_design_language=true&session=b462a980e41d53027ba7ab18cbb350d4394dfc9959729b79358f0cfd40636190&shop=dkstrends.myshopify.com&timestamp=1616757593 [0m-[0m - ms - -[0m
+[0mGET / [33m404[0m 0.649 ms - 139[0m
+[0mPOST /api/jsonws/invoke [33m404[0m 35.692 ms - 157[0m
+[0mGET / [33m404[0m 0.550 ms - 139[0m
+Server is running on port 8000
+DB connected
+req.query in checkSubscription controller { hmac:
+   'dbaeba9bc0a47c46ae4b18285aae9019bef72e1b1c1c6e35ed96eebb444f15ba',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616765662' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.query in checkSubscription controller { hmac:
+   '1192e77102c733b81f804e7b5145891442b4da7e9f6ccc04475f44cc3d08a89d',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616765671' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.body {}
+shopName social-king-app.myshopify.com
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 105.198 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   'd25190df170cbec80e8cd91f1b85ef16e48f895b9203436e2d69c1ad07e548f7',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616765679' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.headers.host socialking.app
+req.query in tags list function { shop: 'social-king-app.myshopify.com' }
+[0mGET /api/tags?shop=social-king-app.myshopify.com [36m304[0m 12.556 ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=dbaeba9bc0a47c46ae4b18285aae9019bef72e1b1c1c6e35ed96eebb444f15ba&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616765662 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=1192e77102c733b81f804e7b5145891442b4da7e9f6ccc04475f44cc3d08a89d&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616765671 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=d25190df170cbec80e8cd91f1b85ef16e48f895b9203436e2d69c1ad07e548f7&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616765679 [0m-[0m - ms - -[0m
+Server is running on port 8000
+DB connected
+req.query in checkSubscription controller { hmac:
+   '0294ae9199fcf53af98eba6e8f0b461ee2c7dc9ead48cf1b1573302f2c1ccfb3',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616765846' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 95.398 ms - -[0m
+req.body {}
+shopName social-king-app.myshopify.com
+req.query in checkSubscription controller { hmac:
+   'a4a8b82ee91b327c522c1c5cbccd138292420f13352a42cb27b323b7453a5f29',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616765852' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 89.064 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   'dc572f7b195903ee59da79381a7173df9fa5a949c4b70e2f08b0f660788ec02d',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616765875' }
+no charge_id found in req.query
+req.body {}
+shopName social-king-app.myshopify.com
+Caught exception: TypeError: Cannot read property '0' of undefined
+[0mGET /api/social-king-app.myshopify.com/blogs [36m304[0m 69.398 ms - -[0m
+req.query in checkSubscription controller { hmac:
+   '391a46e9b30643d19cfe869abf8f224a1abb13525bd4f086eabb19015c43f63c',
+  host: 'c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4',
+  locale: 'en-IL',
+  new_design_language: 'true',
+  session:
+   'aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50',
+  shop: 'social-king-app.myshopify.com',
+  timestamp: '1616765881' }
+no charge_id found in req.query
+Caught exception: TypeError: Cannot read property '0' of undefined
+req.headers.host socialking.app
+req.query in tags list function { shop: 'social-king-app.myshopify.com' }
+[0mGET /api/tags?shop=social-king-app.myshopify.com [36m304[0m 13.727 ms - -[0m
+image request {}
+[0mGET /api/images/uploads/social-king-app.myshopify.com-1597571628547.jpg [32m200[0m 10.366 ms - 268543[0m
+[0mPOST /api/auth/check-subscription?hmac=0294ae9199fcf53af98eba6e8f0b461ee2c7dc9ead48cf1b1573302f2c1ccfb3&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616765846 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=a4a8b82ee91b327c522c1c5cbccd138292420f13352a42cb27b323b7453a5f29&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616765852 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=dc572f7b195903ee59da79381a7173df9fa5a949c4b70e2f08b0f660788ec02d&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616765875 [0m-[0m - ms - -[0m
+[0mPOST /api/auth/check-subscription?hmac=391a46e9b30643d19cfe869abf8f224a1abb13525bd4f086eabb19015c43f63c&host=c29jaWFsLWtpbmctYXBwLm15c2hvcGlmeS5jb20vYWRtaW4&locale=en-IL&new_design_language=true&session=aed765802f7126dadb917463e97ea2c5a0ee18252bca9256addf9a46770eba50&shop=social-king-app.myshopify.com&timestamp=1616765881 [0m-[0m - ms - -[0m

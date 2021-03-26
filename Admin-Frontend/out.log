@@ -1,0 +1,655 @@
+info  - Loaded env from /root/shopify-community-app/Admin-Frontend/.env
+> Ready on http://localhost:3000
+DB Connected
+info  - Loaded env from /root/shopify-community-app/Admin-Frontend/.env
+> Ready on http://localhost:3000
+DB Connected
+shopify_domain in shopSearchInDB func social-king-app.myshopify.com
+shop found:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-25T08:07:51.072Z,
+  __v: 3 }
+current accessToken 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
+shop successfully updated:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T07:53:43.494Z,
+  __v: 3 }
+This should be the updated accessToken:  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
+message at end of shopSearchInDB shop found
+response at end of shopSearchInDB { message: 'shop found', devStore: false }
+response to shopSearchInDB { message: 'shop found', devStore: false }
+message in afterAuth function:  shop found
+ran shop exists in db logic
+ctx.request.url: /auth/callback?code=e447046123023c391f6c79b88bca82bf&hmac=384e494f2e4a3caba08d5d10f841861ab618c3e4042e46a88fdaf7cd7be33417&shop=social-king-app.myshopify.com&state=161674522215600&timestamp=1616745222
+shopify_domain in shopSearchInDB func community-dev-store.myshopify.com
+message:  ran no shop found logic
+shop successfully created:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539511.jpeg',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/community-dev-store.myshopify.com-1597050539510.png',
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: '#26b598',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '\r #new-post {color: black;}\n .community-card-body {color: black;}\n .codex-editor__redactor { color: black; padding-bottom: 120px !important; background: #f6f7f8; }\n            .community-background { padding-top:20px; overflow: hidden; }\n            .l-box { padding:1em; }\n            .tag-btn { margin-top: 1em;\n                      margin-bottom: 1em;\n                      background-color: rgb(66, 184, 221); }\n            .tag-btn:hover { background-color: lightgreen; }\n            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-header { padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n            .community-header-title { background:#fff; }\n            .community-header-title-box { display:flex }\n            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }\n            .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }\n            .community-card-header { letter-spacing: .5px; color:white;padding:10px;font-weight:bold; }\n            .community-card-body { letter-spacing: .4px; padding:30px }\n            .community-post-body { letter-spacing: .35px;}\n            .community-post-body h2 { color: black; font-weight: bold;}\n            .community-post-body button { white-space: normal; }\n            .community-card a { white-space: normal; }\n            .community-letter-spacing { letter-spacing: .4px; }\n            @media only screen \n            and (min-device-width: 600px)\n             { .community-pad-20 { padding:10px 20px 20px 20px } }\n            .community-hr { margin:20px 0 }\n            .community-hr-minimal { margin:8px 0 }\n            .community-full-width { width: 100% }\n            .community-instant-post { width:100%; background: #f6f7f8; padding:10px }\n            .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n            .community-author { color:#969696;font-size:12px;margin-bottom:5px }\n            .community-card h3 { font-size:20px;margin-bottom:8px }\n            .community-card p { margin-bottom:8px }\n            .community-card a { color:#383838; text-decoration: none;}\n            .community-card-comments { font-size:12px;font-weight:bold; }\n            .community-pad-left-10 { padding-left:10px }\n            .community-bold { font-weight:bold }\n            .community-admin-padding { padding:10px 20px 20px 20px }\n            .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n            .community-button-secondary { margin-top: 1em;\n                  margin-bottom: 1em;\n                  margin-right: 1em;\n                  margin-left: 1em; background: rgb(66, 184, 221); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }\n            .community-checkbox { float:left;margin-right:30px }\n            .community-newsfeed-box {width:100%}\n            .community-reactions:hover{ cursor: pointer; }\n            .emoji-picker { z-index: 100;}\n            .community-admin-btn {color:white;}\n            .cover-img { max-width: 100%; }\n            #profile-photo img { max-width: 100%; max-height: 300px; padding-bottom: 30px; }\n            .community-card p,h3,h4,h5,h6,h7 { font-size: 15px; color: black; }',
+  charge_id: '',
+  recurring_application_charge: [],
+  extraShopifyData:
+   [ { name: 'Community Dev Store',
+       description: '',
+       id: 'gid://shopify/Shop/28531490898',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  postModeration: true,
+  commentModeration: true,
+  language: 'English',
+  _id: 605d9461a5c466602a5dcbcf,
+  shopify_domain: 'community-dev-store.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2021-03-26T07:59:29.867Z,
+  updatedAt: 2021-03-26T07:59:29.867Z,
+  __v: 0 }
+message at end of shopSearchInDB shop successfully created
+response at end of shopSearchInDB { message: 'shop successfully created', devStore: true }
+response to shopSearchInDB { message: 'shop successfully created', devStore: true }
+message in afterAuth function:  shop successfully created
+ran newshop logic in afterAuth func
+saved tag reference within blog record: 605d9461a5c466602a5dcbd0
+succesfully added contact { '0':
+   { cdate: '2020-09-04 06:31:53',
+     email: 'alephmarketingpros@gmail.com',
+     phone: '',
+     first_name: 'halichot',
+     last_name: '',
+     customer_acct_id: '0',
+     customer_acct_name: '',
+     segmentio_id: '',
+     bounced_hard: '0',
+     bounced_soft: '0',
+     bounced_date: '0000-00-00',
+     ip: 2130706433,
+     ua: '',
+     hash: '3c9b677cd88da70ccab07e01280ec1f9',
+     socialdata_lastcheck: '0000-00-00 00:00:00',
+     email_local: '',
+     email_domain: '',
+     sentcnt: '13',
+     rating: '128',
+     rating_tstamp: '2020-11-25',
+     gravatar: '1',
+     deleted: '0',
+     anonymized: '0',
+     adate: '2020-09-04 07:20:59',
+     udate: '2020-11-01 06:20:41',
+     edate: '0000-00-00 00:00:00',
+     deleted_at: '0000-00-00 00:00:00',
+     created_utc_timestamp: '2020-09-04 06:31:53',
+     updated_utc_timestamp: '2020-12-30 07:24:55',
+     created_timestamp: '2020-09-04 06:31:53',
+     updated_timestamp: '2020-12-30 07:24:55',
+     created_by: '0',
+     updated_by: '0',
+     email_empty: false,
+     id: '17' },
+  result_code: 0,
+  result_message:
+   'The email alephmarketingpros@gmail.com is in the system already, please edit that contact instead.',
+  result_output: 'json',
+  success: 0,
+  error:
+   'The email alephmarketingpros@gmail.com is in the system already, please edit that contact instead.' }
+Successfully registered webhook!
+success { result_code: 1,
+  result_message: 'Contact tags added',
+  result_output: 'json',
+  success: 1 }
+Successfully registered webhook!
+query in getSubsriptionURL {"query":"mutation {\n      appSubscriptionCreate(\n          name: \"All The Features\",\n          trialDays: 15,\n          returnUrl: \"https://socialking.app\"\n          test: true\n          lineItems: [\n          {\n            plan: {\n              appRecurringPricingDetails: {\n\t\t      price: { amount: 4.99, currencyCode: USD }\n              }\n            }\n          }\n          ]\n        ) {\n            userErrors {\n              field\n              message\n            }\n            confirmationUrl\n            appSubscription {\n              id\n            }\n        }\n    }"}
+responseJson in getSubsriptionURL { data:
+   { appSubscriptionCreate:
+      { userErrors: [],
+        confirmationUrl:
+         'https://community-dev-store.myshopify.com/admin/charges/21737832530/confirm_recurring_application_charge?signature=BAh7BzoHaWRsKwhSAK0PBQA6EmF1dG9fYWN0aXZhdGVU--1fa4fd58969d0f87696c0309ec13911e0a7fd7f1',
+        appSubscription: [Object] } },
+  extensions:
+   { cost:
+      { requestedQueryCost: 10,
+        actualQueryCost: 10,
+        throttleStatus: [Object] } } }
+shopify_domain in shopSearchInDB func social-king-app.myshopify.com
+shop found:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T07:53:43.494Z,
+  __v: 3 }
+current accessToken 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
+shop successfully updated:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T08:04:43.154Z,
+  __v: 3 }
+This should be the updated accessToken:  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
+message at end of shopSearchInDB shop found
+response at end of shopSearchInDB { message: 'shop found', devStore: true }
+response to shopSearchInDB { message: 'shop found', devStore: true }
+message in afterAuth function:  shop found
+ran shop exists in db logic
+ctx.request.url: /auth/callback?code=de937dfcf260ba60f1d18806a3d5864e&hmac=4a1f8b0b08245067bb3192016b55e024354f4b3d2c28cb66a69d9cd5b9ce286a&shop=social-king-app.myshopify.com&state=161674588195300&timestamp=1616745882
+info  - Loaded env from /root/shopify-community-app/Admin-Frontend/.env
+> Ready on http://localhost:3000
+DB Connected
+info  - Loaded env from /root/shopify-community-app/Admin-Frontend/.env
+> Ready on http://localhost:3000
+DB Connected
+shopify_domain in shopSearchInDB func social-king-app.myshopify.com
+shop found:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T08:04:43.154Z,
+  __v: 3 }
+current accessToken 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
+shop successfully updated:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T09:17:17.648Z,
+  __v: 3 }
+This should be the updated accessToken:  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
+message at end of shopSearchInDB shop found
+response at end of shopSearchInDB { message: 'shop found', devStore: false }
+response to shopSearchInDB { message: 'shop found', devStore: false }
+message in afterAuth function:  shop found
+ran shop exists in db logic
+ctx.request.url: /auth/callback?code=6d56982d29dfb9fb7aee7784e2ab507c&hmac=d697f2989da435431a460b8f022c8b7bf6710e376dd7555f21e7a4f98af1e15b&shop=social-king-app.myshopify.com&state=161675023653900&timestamp=1616750237
+shopify_domain in shopSearchInDB func social-king-app.myshopify.com
+shop found:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T09:17:17.648Z,
+  __v: 3 }
+current accessToken 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
+shop successfully updated:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1607946898877.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/social-king-app.myshopify.com-1608033418599.png',
+  aboutCommunity: 'Social King adds Social Experiences To Your Site',
+  communityName: 'Our Community',
+  primaryColor: '#3c3c3c',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '                body {background-color: #f6f7f8}\n \n                .community-background p {color: black}\n                .codex-editor__redactor { padding-bottom: 120px !important }\n                main{ padding-top: 50px !important }\n                @media screen and (min-width: 1200px) {\n                    .community-background {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                    .community-header-title {\n                        padding-left: 5%;\n                        padding-right: 5%;\n                    }\n                }\n                .main-content {  background-color:  #f6f7f8 }\n                .community-background {\n                    float: left;\n                    background-color: ${shop && shop.backgroundColor ? shop.backgroundColor : \'#543434\' };\n                    padding-top:0px;\n                    color: black !important;\n                }\n                .community-background h3, p {\n                    color: black;\n                }\n\n                .l-box { padding:1em; }\n                .tag-btn { margin-top: 1em;\n                          margin-bottom: 1em;\n                          background-color: #a48c4c !important;\n                          font-color: white !important;\n                          text-align: center !important;\n                }\n                .tag-btn:hover {\n                  background-color: #a48c4c;\n                }\n                .tag-btn a {\n                    color: white !important;\n                }\n                .pure-button {\n                    background-color: #a48c4c;\n                }\n                .community-pad-20 { font-color: black; }\n\n\n                .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n                .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg});padding-top:30px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n                .community-header-title { background:#bfb1b1 }\n                .community-header-title-box { display:flex }\n                .community-header-title .community-h2 {\n                    display:inline-block;\n                    margin-left:20px;\n                    font-size:30px;\n                    font-weight:bold;\n                    color: black;\n                    padding:10px 0;\n                }\n                .community-card {\n                    letter-spacing: .5px;\n                    border:1px solid #ccc;\n                    border-radius:4px;\n                    margin-bottom:20px;\n                    background:#bfb1b1;\n                }\n                .community-card a {\n                    font-color: white;\n                }\n                .community-card-header { letter-spacing: .5px; background:${shop && shop.primaryColor ? shop.primaryColor : \'#26b598\'};color:white;padding:10px;font-weight:bold; }\n                .community-card-body { letter-spacing: .4px; padding:30px }\n                .community-post-body { letter-spacing: .35px;}\n                .community-post-body h2 { color: white; font-weight: bold;}\n                .community-post-body button { white-space: normal; }\n                .community-card a { white-space: normal; }\n                .community-letter-spacing { letter-spacing: .4px; }\n                @media only screen\n                and (min-device-width: 600px)\n                 { .community-pad-20 { padding:10px 20px 20px 20px } }\n                .community-hr { margin:20px 0 }\n                .community-hr-minimal { margin:8px 0 }\n                .community-full-width { width: 100% }\n                .community-instant-post { width:100%;border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : \'#edeff1\'}; background: #f6f7f8;padding:10px }\n                .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n                .community-author { color:black;font-size:12px;margin-bottom:5px }\n                .community-card h3 { font-size:20px;margin-bottom:8px }\n                .community-card p { margin-bottom:8px }\n                .community-card a { color:black; text-decoration: none;}\n                .community-card-comments { font-size:12px;font-weight:bold; }\n                .community-pad-left-10 { padding-left:10px }\n                .community-bold { font-weight:bold }\n                .community-admin-padding { padding:10px 20px 20px 20px }\n                .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n                .community-button-secondary {\n                      margin-top: 1em;\n                      margin-bottom: 1em;\n                      background: #a48c4c;\n                      color: white;\n                      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);\n                  }\n                .community-checkbox { float:left;margin-right:30px }\n                .community-newsfeed-box {width:100%}\n                .community-reactions {\n                    background-color: #8d7244\n                }\n                .community-reactions:hover{\n                    cursor: pointer;\n                    background-color: #a48c4c;\n\n\n                }\n                .emoji-picker { z-index: 100;}\n                .community-admin-btn {color:white;}\n                .cover-img { max-width: 100%; }\n                #profile-photo img { max-width: 100%; }\n                .community-card p,h3,h4,h5,h6,h7 {\n                    font-size: 15px;\n                    color: black;\n                }',
+  charge_id: '123',
+  recurring_application_charge:
+   [ { id: 17716478107,
+       name: 'Social King: Community Engagement',
+       api_client_id: 4136255,
+       price: '29.00',
+       status: 'active',
+       return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king',
+       billing_on: '2020-09-09',
+       created_at: '2020-08-10T02:46:57-04:00',
+       updated_at: '2020-08-10T02:47:44-04:00',
+       test: true,
+       activated_on: '2020-08-10',
+       cancelled_on: null,
+       trial_days: 30,
+       trial_ends_on: '2020-09-09',
+       decorated_return_url:
+        'https://social-king-app.myshopify.com/admin/apps/social-king?charge_id=17716478107' } ],
+  extraShopifyData:
+   [ { name: 'Leesh',
+       description: '',
+       id: 'gid://shopify/Shop/49977196699',
+       contactEmail: 'alephmarketingpros@gmail.com',
+       email: 'alephmarketingpros@gmail.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'ENABLED' } ],
+  postModeration: false,
+  commentModeration: false,
+  language: 'English',
+  _id: 5f1e6a95cae9586963ac9c24,
+  shopify_domain: 'social-king-app.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products, write_products, read_content, write_content',
+  createdAt: 2020-07-27T05:48:05.558Z,
+  updatedAt: 2021-03-26T11:11:30.134Z,
+  __v: 3 }
+This should be the updated accessToken:  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
+message at end of shopSearchInDB shop found
+response at end of shopSearchInDB { message: 'shop found', devStore: false }
+response to shopSearchInDB { message: 'shop found', devStore: false }
+message in afterAuth function:  shop found
+ran shop exists in db logic
+ctx.request.url: /auth/callback?code=31f16bf27f7f65f165270b1053f789b2&hmac=45b81d65c9c60c66308b69a2364c95f38b08ec10298e318233f08bb97295e8a9&shop=social-king-app.myshopify.com&state=161675708879500&timestamp=1616757089
+shopify_domain in shopSearchInDB func dkstrends.myshopify.com
+shop found:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/dkstrends.myshopify.com-1616521425258.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/dkstrends.myshopify.com-1616521425247.png',
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: '#26b598',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '\r #new-post {color: black;}\n .community-card-body {color: black;}\n .codex-editor__redactor { color: black; padding-bottom: 120px !important; background: #f6f7f8; }\n            .community-background { padding-top:20px; overflow: hidden; }\n            .l-box { padding:1em; }\n            .tag-btn { margin-top: 1em;\n                      margin-bottom: 1em;\n                      background-color: rgb(66, 184, 221); }\n            .tag-btn:hover { background-color: lightgreen; }\n            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-header { padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n            .community-header-title { background:#fff; }\n            .community-header-title-box { display:flex }\n            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }\n            .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }\n            .community-card-header { letter-spacing: .5px; color:white;padding:10px;font-weight:bold; }\n            .community-card-body { letter-spacing: .4px; padding:30px }\n            .community-post-body { letter-spacing: .35px;}\n            .community-post-body h2 { color: black; font-weight: bold;}\n            .community-post-body button { white-space: normal; }\n            .community-card a { white-space: normal; }\n            .community-letter-spacing { letter-spacing: .4px; }\n            @media only screen \n            and (min-device-width: 600px)\n             { .community-pad-20 { padding:10px 20px 20px 20px } }\n            .community-hr { margin:20px 0 }\n            .community-hr-minimal { margin:8px 0 }\n            .community-full-width { width: 100% }\n            .community-instant-post { width:100%; background: #f6f7f8; padding:10px }\n            .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n            .community-author { color:#969696;font-size:12px;margin-bottom:5px }\n            .community-card h3 { font-size:20px;margin-bottom:8px }\n            .community-card p { margin-bottom:8px }\n            .community-card a { color:#383838; text-decoration: none;}\n            .community-card-comments { font-size:12px;font-weight:bold; }\n            .community-pad-left-10 { padding-left:10px }\n            .community-bold { font-weight:bold }\n            .community-admin-padding { padding:10px 20px 20px 20px }\n            .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n            .community-button-secondary { margin-top: 1em;\n                  margin-bottom: 1em;\n                  margin-right: 1em;\n                  margin-left: 1em; background: rgb(66, 184, 221); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }\n            .community-checkbox { float:left;margin-right:30px }\n            .community-newsfeed-box {width:100%}\n            .community-reactions:hover{ cursor: pointer; }\n            .emoji-picker { z-index: 100;}\n            .community-admin-btn {color:white;}\n            .cover-img { max-width: 100%; }\n            #profile-photo img { max-width: 100%; max-height: 300px; padding-bottom: 30px; }\n            .community-card p,h3,h4,h5,h6,h7 { font-size: 15px; color: black; }',
+  charge_id: '21752414289',
+  recurring_application_charge:
+   [ { id: 21752414289,
+       name: 'All The Features',
+       api_client_id: 4136255,
+       price: '4.99',
+       status: 'active',
+       return_url: 'https://socialking.app/',
+       billing_on: '2021-04-07',
+       created_at: '2021-03-23T13:38:00-04:00',
+       updated_at: '2021-03-23T13:38:07-04:00',
+       test: false,
+       activated_on: '2021-03-23',
+       cancelled_on: null,
+       trial_days: 15,
+       trial_ends_on: '2021-04-07',
+       decorated_return_url: 'https://socialking.app/?charge_id=21752414289' } ],
+  extraShopifyData:
+   [ { name: 'DAE K. SHIN & CO.',
+       description:
+        '#JapaneseDenim # Selvedgedenim #DKShin #Daekshin&Co #daekshinco #fashion #couture #luxurydenim #denim #jeans #richandfamous #ootd #fashioista #love #luxurydenim #luxury #luxuryliving',
+       id: 'gid://shopify/Shop/17529659',
+       contactEmail: 'info@daekshinco.com',
+       email: 'dae.shin@daekshinco.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  postModeration: true,
+  commentModeration: true,
+  language: 'English',
+  _id: 605a2777d054a96e7375663f,
+  shopify_domain: 'dkstrends.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2021-03-23T17:37:59.882Z,
+  updatedAt: 2021-03-25T13:42:42.578Z,
+  __v: 1 }
+current accessToken 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
+shop successfully updated:  { isActive: false,
+  headerImageURL:
+   'https://socialking.app/proxy/images/uploads/dkstrends.myshopify.com-1616521425258.png',
+  iconImageURL:
+   'https://socialking.app/proxy/images/uploads/dkstrends.myshopify.com-1616521425247.png',
+  aboutCommunity:
+   'Welcome to Our Community - a place for shoppers to share their voices.',
+  communityName: 'Our Community',
+  primaryColor: '#26b598',
+  backgroundColor: '#f6f7f8',
+  CSSCode:
+   '\r #new-post {color: black;}\n .community-card-body {color: black;}\n .codex-editor__redactor { color: black; padding-bottom: 120px !important; background: #f6f7f8; }\n            .community-background { padding-top:20px; overflow: hidden; }\n            .l-box { padding:1em; }\n            .tag-btn { margin-top: 1em;\n                      margin-bottom: 1em;\n                      background-color: rgb(66, 184, 221); }\n            .tag-btn:hover { background-color: lightgreen; }\n            .community-user-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-icon { border:4px solid #fff;border-radius:100%;max-width:75px !important;margin-top:-10px; }\n            .community-header { padding-top:120px;margin-top:-55px;background-repeat:no-repeat;background-position:center;background-size:cover }\n            .community-header-title { background:#fff; }\n            .community-header-title-box { display:flex }\n            .community-header-title .community-h2 { display:inline-block;margin-left:20px;font-size:30px;font-weight:bold;color:#000;padding:10px 0; }\n            .community-card { letter-spacing: .5px; border:1px solid #ccc;border-radius:4px;margin-bottom:20px;background:#fff }\n            .community-card-header { letter-spacing: .5px; color:white;padding:10px;font-weight:bold; }\n            .community-card-body { letter-spacing: .4px; padding:30px }\n            .community-post-body { letter-spacing: .35px;}\n            .community-post-body h2 { color: black; font-weight: bold;}\n            .community-post-body button { white-space: normal; }\n            .community-card a { white-space: normal; }\n            .community-letter-spacing { letter-spacing: .4px; }\n            @media only screen \n            and (min-device-width: 600px)\n             { .community-pad-20 { padding:10px 20px 20px 20px } }\n            .community-hr { margin:20px 0 }\n            .community-hr-minimal { margin:8px 0 }\n            .community-full-width { width: 100% }\n            .community-instant-post { width:100%; background: #f6f7f8; padding:10px }\n            .community-instant-post:hover, .community-instant-post:focus { background:#fff }\n            .community-author { color:#969696;font-size:12px;margin-bottom:5px }\n            .community-card h3 { font-size:20px;margin-bottom:8px }\n            .community-card p { margin-bottom:8px }\n            .community-card a { color:#383838; text-decoration: none;}\n            .community-card-comments { font-size:12px;font-weight:bold; }\n            .community-pad-left-10 { padding-left:10px }\n            .community-bold { font-weight:bold }\n            .community-admin-padding { padding:10px 20px 20px 20px }\n            .community-button-danger {  background: rgb(202, 60, 60); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);}\n            .community-button-secondary { margin-top: 1em;\n                  margin-bottom: 1em;\n                  margin-right: 1em;\n                  margin-left: 1em; background: rgb(66, 184, 221); color: white; border-radius: 4px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }\n            .community-checkbox { float:left;margin-right:30px }\n            .community-newsfeed-box {width:100%}\n            .community-reactions:hover{ cursor: pointer; }\n            .emoji-picker { z-index: 100;}\n            .community-admin-btn {color:white;}\n            .cover-img { max-width: 100%; }\n            #profile-photo img { max-width: 100%; max-height: 300px; padding-bottom: 30px; }\n            .community-card p,h3,h4,h5,h6,h7 { font-size: 15px; color: black; }',
+  charge_id: '21752414289',
+  recurring_application_charge:
+   [ { id: 21752414289,
+       name: 'All The Features',
+       api_client_id: 4136255,
+       price: '4.99',
+       status: 'active',
+       return_url: 'https://socialking.app/',
+       billing_on: '2021-04-07',
+       created_at: '2021-03-23T13:38:00-04:00',
+       updated_at: '2021-03-23T13:38:07-04:00',
+       test: false,
+       activated_on: '2021-03-23',
+       cancelled_on: null,
+       trial_days: 15,
+       trial_ends_on: '2021-04-07',
+       decorated_return_url: 'https://socialking.app/?charge_id=21752414289' } ],
+  extraShopifyData:
+   [ { name: 'DAE K. SHIN & CO.',
+       description:
+        '#JapaneseDenim # Selvedgedenim #DKShin #Daekshin&Co #daekshinco #fashion #couture #luxurydenim #denim #jeans #richandfamous #ootd #fashioista #love #luxurydenim #luxury #luxuryliving',
+       id: 'gid://shopify/Shop/17529659',
+       contactEmail: 'info@daekshinco.com',
+       email: 'dae.shin@daekshinco.com',
+       features: [Object],
+       plan: [Object],
+       customerAccounts: 'OPTIONAL' } ],
+  postModeration: true,
+  commentModeration: true,
+  language: 'English',
+  _id: 605a2777d054a96e7375663f,
+  shopify_domain: 'dkstrends.myshopify.com',
+  accessToken: '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',
+  shopifyScope: 'read_products',
+  createdAt: 2021-03-23T17:37:59.882Z,
+  updatedAt: 2021-03-26T11:19:53.037Z,
+  __v: 1 }
+This should be the updated accessToken:  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
+message at end of shopSearchInDB shop found
+response at end of shopSearchInDB { message: 'shop found', devStore: false }
+response to shopSearchInDB { message: 'shop found', devStore: false }
+message in afterAuth function:  shop found
+ran shop exists in db logic
+ctx.request.url: /auth/callback?code=dd3d1f5ec3472ffe4b9b43a1731668d7&hmac=d851de42c37470ed9bb492e283741ee4c256dc12182559da7b8f457703d90a8d&shop=dkstrends.myshopify.com&state=161675759239900&timestamp=1616757592
+info  - Loaded env from /root/shopify-community-app/Admin-Frontend/.env
+> Ready on http://localhost:3000
+DB Connected
+info  - Loaded env from /root/shopify-community-app/Admin-Frontend/.env
+> Ready on http://localhost:3000
+DB Connected
