@@ -40,7 +40,7 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
 
               let extraShopifyData = await moreShopDetails({ctx, accessToken, shopify_domain}).then((moreData)=>{
                 let { name, description, id, contactEmail, email, features, plan, customerAccounts } = moreData;
-                if(plan.displayName =='Development'){
+                if(plan.displayName.includes('Develop')){
                   devStore = true;
                 }
                 var contact_add = ac.api("contact/add", { name, shopify_domain, planDisplayName: plan.displayName, description, id, contactEmail, email, features, plan, customerAccounts, shopify_domain, accessToken, shopifyScope });
@@ -131,7 +131,7 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
           } else {
               message = 'shop found'
               console.log('shop found: ', shop);
-              if(shop.extraShopifyData[0].plan.displayName =='Development'){
+              if(shop.extraShopifyData[0].plan.displayName.includes('Develop')){
                   devStore = true;
               }
 
