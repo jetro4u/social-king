@@ -1,11 +1,11 @@
-const getSubscriptionUrl = async ({ctx, accessToken, shop}) => {
+const getSubscriptionUrl = async ({ctx, accessToken, shop, devStore}) => {
   const query = JSON.stringify({
     query: `mutation {
       appSubscriptionCreate(
           name: "All The Features",
           trialDays: 15,
           returnUrl: "${process.env.HOST}"
-          test: ${process.env.NODE_ENV == 'development' ? 'true' : 'false'}
+          test: ${process.env.NODE_ENV == 'development' || devStore ? 'true' : 'false'}
           lineItems: [
           {
             plan: {
