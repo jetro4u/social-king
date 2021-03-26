@@ -24,6 +24,7 @@ const requestOptions = (method) => {
 
 let message = '';
 let shopDomain = '';
+let devStore = false;
 
 function shopSearch({ctx, accessToken, shopify_domain}) {
   return new Promise(resolve => {
@@ -31,7 +32,7 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
           if (err){
               message = 'ran error logic';
               console.log('ran error logic. err:', err);
-              resolve(message);          
+              resolve({message, devStore});          
           } else if (!shop){
               message = 'ran no shop found logic';
               console.log('message: ', message);        
@@ -39,7 +40,9 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
 
               let extraShopifyData = await moreShopDetails({ctx, accessToken, shopify_domain}).then((moreData)=>{
                 let { name, description, id, contactEmail, email, features, plan, customerAccounts } = moreData;
-
+                if(plan.displayName.includes('Develop')){
+                  devStore = true;
+                }
                 var contact_add = ac.api("contact/add", { name, shopify_domain, planDisplayName: plan.displayName, description, id, contactEmail, email, features, plan, customerAccounts, shopify_domain, accessToken, shopifyScope });
 
                 contact_add.then(function(result) {
@@ -119,7 +122,7 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
                                         })
                                     })
 
-                                  resolve(message);
+                                  resolve({message, devStore});
                                 }})
                             }})
                     }
@@ -128,10 +131,12 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
           } else {
               message = 'shop found'
               console.log('shop found: ', shop);
+              if(shop.extraShopifyData[0].plan.displayName.includes('Develop')){
+                  devStore = true;
+              }
+
               console.log('current accessToken', shop.accessToken);
-
               shop.accessToken = accessToken;
-
               shop.save((err, shopUpdated) => {
                 if (err) {
                   console.log('err trying to save shop: ', err)
@@ -139,7 +144,7 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
                   console.log('shop successfully updated: ',shopUpdated);
                   console.log('This should be the updated accessToken: ',accessToken);
 
-                  resolve(message);
+                  resolve({message, devStore});
               }});
           }
       });

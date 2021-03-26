@@ -41,7 +41,7 @@ module.exports.createNewPost = ({shop, user, tags}) => {
                     <div id='error-message' class='text-center'>
                       <h3>${translations['WhatsUp'][shop ? shop.language : 'English']}, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
                     </div>
-                    ${shop.shopify_domain.includes('globalxploration-inc') ? 
+                    ${shop.shopify_domain.includes('globalxploration-inc') || shop.shopify_domain.includes('jungle-navigator') ? 
                         displayTitleInput() : ''}
       
                     <div id='editorjs'></div>

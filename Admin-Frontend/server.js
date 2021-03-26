@@ -46,8 +46,6 @@ const {
 
 app.prepare().then(() => {
   const server = new Koa();
-  // server.use(lusca.xframe({value: 'ALLOWALL'}));
-  // server.use(xFrame('SAMEORIGIN'));
   const router = new Router();
   server.use(session({ sameSite: 'none', secure: true }, server));
   server.keys = [SHOPIFY_API_SECRET_KEY];
@@ -64,7 +62,7 @@ app.prepare().then(() => {
           secure: true,
           sameSite: 'none'
         });
-        let message = await shopSearchInDB({ctx, accessToken, shopify_domain: shop}).then((response)=>{
+        let {message, devStore} = await shopSearchInDB({ctx, accessToken, shopify_domain: shop}).then((response)=>{
           console.log('response to shopSearchInDB', response);
           return response;
         });
@@ -72,20 +70,38 @@ app.prepare().then(() => {
 
         if(message=='shop successfully created'){
             console.log('ran newshop logic in afterAuth func')
-            const registration = await registerWebhook({
-                address: `${HOST}/webhooks/products/create`,
-                topic: 'PRODUCTS_CREATE',
-                accessToken,
-                shop,
-                apiVersion: ApiVersion.July20
-              });
+            
+            //listen for shop update - like store frozen or upgrade
+            const shopUpdate = await registerWebhook({
+              address: `${HOST}/webhooks/shop/update`,
+              topic: 'SHOP_UPDATE',
+              accessToken,
+              shop,
+              apiVersion: ApiVersion.July20
+            });
 
-              if (registration.success) {
-                console.log('Successfully registered webhook!');
-              } else {
-                console.log('Failed to register webhook', registration.result);
-              }
-              await getSubscriptionUrl({ctx, accessToken, shop});
+            if (shopUpdate.success) {
+              console.log('Successfully registered webhook!');
+            } else {
+              console.log('Failed to register webhook', shopUpdate.result);
+            }
+
+            //listen or app uninstall
+            const appUninstalled = await registerWebhook({
+              address: `${HOST}/webhooks/app/uninstalled`,
+              topic: 'APP_UNINSTALLED',
+              accessToken,
+              shop,
+              apiVersion: ApiVersion.July20
+            });
+
+            if (appUninstalled.success) {
+              console.log('Successfully registered webhook!');
+            } else {
+              console.log('Failed to register webhook', appUninstalled.result);
+            }
+
+            await getSubscriptionUrl({ctx, accessToken, shop, devStore});
         } else {
             console.log('ran shop exists in db logic');
             console.log('ctx.request.url:',ctx.request.url);
@@ -97,7 +113,11 @@ app.prepare().then(() => {
 
   const webhook = receiveWebhook({ secret: SHOPIFY_API_SECRET_KEY });
 
-  router.post('/webhooks/products/create', webhook, (ctx) => {
+  router.post('/webhooks/shop/update', webhook, (ctx) => {
+    console.log('received webhook: ', ctx.state.webhook);
+  });
+
+  router.post('/webhooks/app/uninstalled', webhook, (ctx) => {
     console.log('received webhook: ', ctx.state.webhook);
   });
 
