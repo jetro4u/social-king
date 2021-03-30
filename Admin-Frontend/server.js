@@ -120,7 +120,11 @@ app.prepare().then(() => {
   router.post('/webhooks/app/uninstalled', webhook, (ctx) => {
     console.log('received webhook: ', ctx.state.webhook);
   });
-
+  
+  router.post('/webhooks/products/create', webhook, (ctx) => {
+    console.log('received webhook: ', ctx.state.webhook);
+  });
+  
   server.use(graphQLProxy({ version: ApiVersion.July20 }));
 
   router.get('*', verifyRequest(), async (ctx) => {
