@@ -29,7 +29,7 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
           <div class="pure-g">               
               ${navbar({shop, tags, user, adminArea:true})}
               
-              <div class="pure-u-md-2-3 pure-u-sm-1">
+              <div class="community-settings-view pure-u-md-2-3 pure-u-sm-1">
                   <ui-view></ui-view>
               </div>
              
