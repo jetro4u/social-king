@@ -9,11 +9,8 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 
 // Routes
-const index = require('./routes/index');
-const install = require('./routes/install');
-const webhook = require('./routes/webhook');
-const proxy = require('./routes/proxy');
-const api = require('./routes/api');
+const index = require('./server/index');
+const proxy = require('./server/proxy');
 require('dotenv').config();
 
 const app = express();
@@ -50,10 +47,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/', index);
-app.use('/install', install);
-app.use('/webhook', webhook);
 app.use('/proxy', proxy);
-app.use('/api', api);
 
 
 // catch 404 and forward to error handler
