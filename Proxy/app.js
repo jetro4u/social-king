@@ -15,9 +15,6 @@ require('dotenv').config();
 
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
 app.use(bodyParser.json({
         type:'application/json',
         limit: '50mb',
@@ -33,7 +30,6 @@ app.use(bodyParser.json({
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 app.set('trust proxy', 1);
 app.use(session({
   name: 'ShopifyNodeApp',
