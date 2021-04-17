@@ -2,7 +2,7 @@
 
 Admin App Homepage:
 
-<img src="homepage.JPG"/>
+<img src="Docs/homepage.JPG"/>
 
 Table of Contents for this Repo:
 
@@ -21,11 +21,11 @@ We empower shopify store owners to promote whatever products they like alongside
 
 <em>Admin App Blog Update Page:</em>
 <br>
-<img src="BlogUpdatePage.png"/>
+<img src="Docs/BlogUpdatePage.png"/>
 <br>
 <em>Proxy (Shopper-Facing) App NewsFeed:</em>
 <br>
-<img src="theNewsFeed.JPG"/>
+<img src="Docs/theNewsFeed.JPG"/>
 
 
 Technologies
@@ -66,17 +66,17 @@ npm start
 
 <h2>Proxy App Structure</h2>
 
-<img src="proxy-structure.png">
+<img src="Docs/proxy-structure.png">
 
 
 <h2>Proxy Views</h2>
 
-<img src="proxy-views.png">
+<img src="Docs/proxy-views.png">
 
 
 <h2>Proxy Routes and Controllers</h2>
 
-<img src="routes-and-controllers-naming-convention.png">
+<img src="Docs/routes-and-controllers-naming-convention.png">
 
 <br/>
 
