@@ -112,7 +112,7 @@ exports.checkSubscription = async (req, res) => {
                     //step 2 - if the given shop's subscription is not active redirect to subscription url
                     req.shop = shop;
 
-                    if(!shop.extraShopifyData[0].plan.displayName.includes('Develop') && (req.shop.recurring_application_charge[0]==undefined || req.shop.recurring_application_charge[0].status != 'active')){
+                    if(!shop.extraShopifyData[0].plan.partnerDevelopment && (req.shop.recurring_application_charge[0]==undefined || req.shop.recurring_application_charge[0].status != 'active')){
                         getSubscriptionUrl(req,res);
                     } else {
                         res.send(req.shop);
