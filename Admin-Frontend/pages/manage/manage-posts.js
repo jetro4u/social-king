@@ -118,7 +118,7 @@ const ManagePosts = (props) => {
                           <TextStyle variation="strong">{blog.hidden ? 'hidden': 'public'}</TextStyle>.
                           <ButtonGroup segmented={true} fullWidth={false} connectedTop={true}>
                             <Button key={0} primary url={`/manage/blog/${blog.slug}`}>
-                                     Review   
+                                     Edit   
                             </Button>
                             <Button key={1} onClick={() => deleteConfirm(blog)}>Delete</Button>
                           </ButtonGroup>
