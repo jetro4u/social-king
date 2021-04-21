@@ -26,8 +26,11 @@ const Settings = (props) => {
   const [successMessage, setSuccessMessage] = useState('');
   const [communityName, setCommunityName] = useState('');
   const [aboutCommunity, setAboutCommunity] = useState('');
+  
   const [backgroundColor, setBackgroundColor] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
+  const [buttonsColor, setButtonsColor] = useState('');
+
   const [CSSCode, setCSSCode] = useState('');
   const [postModeration, setPostModeration] = useState(true);
   const [commentModeration, setCommentModeration] = useState(true);
