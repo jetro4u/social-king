@@ -28,6 +28,7 @@ const {translations} = require('../helpers/translations')
 exports.create = (req, res) => {
     res.setHeader('content-type', 'text/javascript')
     let { title, body, tags } = req.body;
+    console.log('req.body in createPost function',req.body);
     
     if (body.blocks === undefined || body.blocks.length == 0) {
         return res.status(400).json({
@@ -67,14 +68,16 @@ exports.create = (req, res) => {
        if(shop && shop._doc && !shop._doc.postModeration){
             blog.hidden = false;
        }
-       title = title && title.title ? title.title : translations['NewPostByMember'][shop ? shop.language : 'English'];
-       if(title && title.title){
-            blog.slug = slugify(title.replace(/["']/g, "")).toLowerCase();
-            blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
-        } else {
+       
+       if(!title){
+            // title = translations['NewPostByMember'][shop ? shop.language : 'English'];
+            title = '';
             blog.slug = makeid(8).toLowerCase();
             blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
-        }
+       } else {
+            blog.slug = slugify(title.replace(/["']/g, "")).toLowerCase();
+            blog.slug = blog.slug.replace(/\./g,' ').replace(/;/g, "").replace(/:/g, "").replace(/!/g, "");
+       }
 
         blog.title = title;
         blog.mtitle = `${title} | ${process.env.APP_NAME}`;
