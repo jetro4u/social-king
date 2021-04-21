@@ -16949,3 +16949,566 @@ TypeError: Cannot read property '0' of undefined
     at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
     at process._tickCallback (internal/process/next_tick.js:61:11)
 (node:8204) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8572) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8679) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8717) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8747) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8781) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8815) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8845) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8887) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8917) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:8949) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9117) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9228) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9274) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9304) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9426) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(node:9464) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9527) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9568) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9598) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9640) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9670) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9700) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9730) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9760) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9790) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9822) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9858) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9890) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9926) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9958) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:9988) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:10018) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:10048) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:10080) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(node:10212) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
