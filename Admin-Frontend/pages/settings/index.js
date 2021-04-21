@@ -221,7 +221,7 @@ const Settings = (props) => {
     const updateSettings = ()=>{
       getBase64(iconFiles.slice(-1)[0], (iconImg) => {
           getBase64(headerFiles.slice(-1)[0], (headerImg) => {
-            let newSettings = {CSSCode, iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor}
+            let newSettings = {CSSCode, iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor, buttonsColor}
             console.log('ran updateSettings func with this data: ',newSettings ) 
             update({props, newSettings}).then(data => {
                   if (data.error) {

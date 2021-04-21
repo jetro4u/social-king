@@ -12,7 +12,7 @@ exports.newsFeedCSS = ({shop}) => {
 	             .community-header { background-image: url(${shop && shop.headerImageURL ? shop.headerImageURL : backupHeaderImg}); }
 	             .community-card-header { background:${shop && shop.primaryColor ? shop.primaryColor : '#26b598'}; }
 	             .community-instant-post { border:1px solid ${shop && shop.backgroundColor ? shop.backgroundColor : '#f6f7f8'}; }
-	             .tag-btn { color: ${shop && shop.buttonsColor ? shop.buttonsColor : '#26b598'}; }
+	             .tag-btn, .community-button-secondary, .pure-button { color: white; background-color: ${shop && shop.buttonsColor ? shop.buttonsColor : '#26b598'} !important; }
 	        `;
 	}
 };
