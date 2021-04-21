@@ -24,9 +24,10 @@ const requestOptions = (method) => {
 
 let message = '';
 let shopDomain = '';
-let devStore = false;
 
 function shopSearch({ctx, accessToken, shopify_domain}) {
+  let devStore = false;
+  
   return new Promise(resolve => {
       Shop.findOne({ shopify_domain }).exec(async (err, shop) => {
           if (err){
@@ -42,7 +43,10 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
                 let { name, description, id, contactEmail, email, features, plan, customerAccounts } = moreData;
                 if(plan.partnerDevelopment){
                   devStore = true;
+                } else {
+                  devStore = false;
                 }
+                
                 var contact_add = ac.api("contact/add", { name, shopify_domain, planDisplayName: plan.displayName, description, id, contactEmail, email, features, plan, customerAccounts, shopify_domain, accessToken, shopifyScope });
 
                 contact_add.then(function(result) {
@@ -133,6 +137,8 @@ function shopSearch({ctx, accessToken, shopify_domain}) {
               console.log('shop found: ', shop);
               if(shop.extraShopifyData[0].plan.partnerDevelopment){
                   devStore = true;
+              } else {
+                  devStore = false;
               }
 
               console.log('current accessToken', shop.accessToken);
