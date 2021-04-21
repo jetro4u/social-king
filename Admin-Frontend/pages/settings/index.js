@@ -39,6 +39,7 @@ const Settings = (props) => {
   const handleAboutCommunityChange = useCallback((newValue) => setAboutCommunity(newValue), []);
   const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
   const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
+  const handleButtonsColorChange = useCallback((newValue) => setButtonsColor(newValue), []);
   const handleCSSCodeChange = useCallback((newValue) => setCSSCode(newValue), []);
 
   //dropzone
@@ -89,6 +90,7 @@ const Settings = (props) => {
                 setCommunityName(data.communityName);
                 setBackgroundColor(data.backgroundColor)
                 setPrimaryColor(data.primaryColor)
+                setButtonsColor(data.buttonsColor)
                 setIconImageURL(data.iconImageURL)
                 setHeaderImageURL(data.headerImageURL)
                 setCSSCode(data.CSSCode)
@@ -350,6 +352,8 @@ const Settings = (props) => {
           >
            <TextField label="Background Color" value={backgroundColor ? backgroundColor : ''} onChange={handleBackgroundColorChange} type="text"/>
            <TextField label="Primary Color" value={primaryColor ? primaryColor : ''} onChange={handlePrimaryColorChange} type="text" />
+           <TextField label="Buttons Color" value={buttonsColor ? buttonsColor : ''} onChange={handleButtonsColorChange} type="text" />
+         
           </Layout.AnnotatedSection>
 
           <Layout.AnnotatedSection
