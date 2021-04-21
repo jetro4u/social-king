@@ -14,6 +14,9 @@ const getSubscriptionUrl = require('./server/getSubscriptionUrl');
 const shopSearchInDB = require('./server/shopSearchInDB');
 const mongoose = require('mongoose');
 
+const Raven = require("raven");
+Raven.config("https://857ac98ea79e4f7ba26c306a706e8480@o575752.ingest.sentry.io/5728460").install();
+
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev, xPoweredBy: false });

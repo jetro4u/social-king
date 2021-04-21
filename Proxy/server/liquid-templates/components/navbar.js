@@ -83,7 +83,7 @@ exports.navbar = ({shop, tags, user, adminArea}) => {
         <div id="community-navbar" class="pure-u-md-1-3 pure-u-sm-1">
             <div class="community-pad-20">
                 <div class="community-card">
-                    <div class="community-card-header">${`${translations['Welcome'][shop ? shop.language : 'English']} ${formatQuotes(user.name)}`}</div>
+                    <div class="community-card-header">${shop.shopify_domain.includes('polka-dots') ? 'Hello lovely!' : `${translations['Welcome'][shop ? shop.language : 'English']} ${formatQuotes(user.name)}`}</div>
                     <div id="the-community-options" class="community-card-body">
                    
                           <a ng-click='clickedNewPostTab()' ui-sref="create-new-post">

@@ -26,8 +26,11 @@ const Settings = (props) => {
   const [successMessage, setSuccessMessage] = useState('');
   const [communityName, setCommunityName] = useState('');
   const [aboutCommunity, setAboutCommunity] = useState('');
+  
   const [backgroundColor, setBackgroundColor] = useState('');
   const [primaryColor, setPrimaryColor] = useState('');
+  const [buttonsColor, setButtonsColor] = useState('');
+
   const [CSSCode, setCSSCode] = useState('');
   const [postModeration, setPostModeration] = useState(true);
   const [commentModeration, setCommentModeration] = useState(true);
@@ -39,6 +42,7 @@ const Settings = (props) => {
   const handleAboutCommunityChange = useCallback((newValue) => setAboutCommunity(newValue), []);
   const handleBackgroundColorChange = useCallback((newValue) => setBackgroundColor(newValue), []);
   const handlePrimaryColorChange = useCallback((newValue) => setPrimaryColor(newValue), []);
+  const handleButtonsColorChange = useCallback((newValue) => setButtonsColor(newValue), []);
   const handleCSSCodeChange = useCallback((newValue) => setCSSCode(newValue), []);
 
   //dropzone
@@ -89,6 +93,7 @@ const Settings = (props) => {
                 setCommunityName(data.communityName);
                 setBackgroundColor(data.backgroundColor)
                 setPrimaryColor(data.primaryColor)
+                setButtonsColor(data.buttonsColor)
                 setIconImageURL(data.iconImageURL)
                 setHeaderImageURL(data.headerImageURL)
                 setCSSCode(data.CSSCode)
@@ -216,7 +221,7 @@ const Settings = (props) => {
     const updateSettings = ()=>{
       getBase64(iconFiles.slice(-1)[0], (iconImg) => {
           getBase64(headerFiles.slice(-1)[0], (headerImg) => {
-            let newSettings = {CSSCode, iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor}
+            let newSettings = {CSSCode, iconImg, headerImg, communityName, aboutCommunity, backgroundColor, primaryColor, buttonsColor}
             console.log('ran updateSettings func with this data: ',newSettings ) 
             update({props, newSettings}).then(data => {
                   if (data.error) {
@@ -350,6 +355,8 @@ const Settings = (props) => {
           >
            <TextField label="Background Color" value={backgroundColor ? backgroundColor : ''} onChange={handleBackgroundColorChange} type="text"/>
            <TextField label="Primary Color" value={primaryColor ? primaryColor : ''} onChange={handlePrimaryColorChange} type="text" />
+           <TextField label="Buttons Color" value={buttonsColor ? buttonsColor : ''} onChange={handleButtonsColorChange} type="text" />
+         
           </Layout.AnnotatedSection>
 
           <Layout.AnnotatedSection

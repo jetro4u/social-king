@@ -8,6 +8,6 @@ exports.formatQuotes = (str) => {
 	   newstr = "\\'"
 	   return  str.replace(reg2,newstr);	
    } else {
-   	 return undefined;
+   	 return '';
    }
 }

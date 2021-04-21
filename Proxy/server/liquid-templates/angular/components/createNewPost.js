@@ -39,9 +39,10 @@ module.exports.createNewPost = ({shop, user, tags}) => {
           <div class='community-card community-create-post-editor'>
                <div id='new-post' class='community-admin-padding' ng-controller='newPostController'>
                     <div id='error-message' class='text-center'>
-                      <h3>${translations['WhatsUp'][shop ? shop.language : 'English']}, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }?</h3>
+                      <h3>${shop.shopify_domain.includes('polka-dots') ? 'Create your post below' : translations['WhatsUp'][shop ? shop.language : 'English']}, ${formatQuotes(user.name) ? formatQuotes(user.name).split(' ')[0] : '' }${shop.shopify_domain.includes('polka-dots') ? '' : '?'}</h3>
                     </div>
-                    ${shop.shopify_domain.includes('globalxploration-inc') || shop.shopify_domain.includes('jungle-navigator') ? 
+                    ${shop.shopify_domain.includes('globalxploration-inc') || shop.shopify_domain.includes('jungle-navigator') ||
+                         shop.shopify_domain.includes('polka-dots') ? 
                         displayTitleInput() : ''}
       
                     <div id='editorjs'></div>
@@ -71,17 +72,10 @@ module.exports.createNewPostJS = ({shop, tags}) => {
     });
   }
 
-  let motivationText = ''
-  if(shop.shopify_domain.includes('globalxploration-inc')){
-    motivationText = "We love to hear what's going on in our community!  Feel free to share any tips, tricks, ideas, or ask questions of our global network of treasure hunters, finders, and collectors!"
-  } else {
-    motivationText = translations['HappyToHear'][shop ? shop.language : 'English']
-  }
-
   return `
     tribeApp.controller('newPostController', function($scope, $http) {
       console.log('newPostController function ran');
-      document.getElementById('the-community-options').innerHTML = '${formatQuotes(motivationText)}';
+      
       $scope.tags = {};
        const editor = new EditorJS({
          data: {

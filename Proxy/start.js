@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const throng = require('throng');
 require('dotenv').config({ path: '.env' });
 
+const Raven = require("raven");
+Raven.config("https://857ac98ea79e4f7ba26c306a706e8480@o575752.ingest.sentry.io/5728460").install();
+
 mongoose
   .connect(process.env.DATABASE_LOCAL, {useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false, useUnifiedTopology: true})
   .then(()=> console.log('DB Connected'))
