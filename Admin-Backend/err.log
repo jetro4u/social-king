@@ -13722,3 +13722,1867 @@ TypeError: Cannot read property '0' of undefined
     at process._tickCallback (internal/process/next_tick.js:61:11)
 (node:27667) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
 (node:27792) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:27792) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(node:27792) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'accessToken' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:74:48)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'accessToken' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:74:48)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:17810) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+(node:18301) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+TypeError: Cannot read property 'accessToken' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:74:48)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:18301) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(node:18301) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'accessToken' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:74:48)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot destructure property `shopOrigin` of 'undefined' or 'null'.
+    at exports.update (/root/shopify-community-app/Admin-Backend/controllers/tag.js:28:20)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:281:22
+    at param (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:354:14)
+    at param (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:410:3)
+    at next (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:174:3)
+    at router (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:317:13)
+    at /root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:335:12)
+TypeError: Cannot destructure property `shopOrigin` of 'undefined' or 'null'.
+    at exports.update (/root/shopify-community-app/Admin-Backend/controllers/tag.js:28:20)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/layer.js:95:5)
+    at /root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:281:22
+    at param (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:354:14)
+    at param (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:410:3)
+    at next (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:174:3)
+    at router (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:317:13)
+    at /root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/root/shopify-community-app/Admin-Backend/node_modules/express/lib/router/index.js:335:12)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'extraShopifyData' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:22)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '0' of undefined
+    at Shop.find.exec (/root/shopify-community-app/Admin-Backend/controllers/auth.js:137:38)
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Backend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Backend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
