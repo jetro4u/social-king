@@ -40,15 +40,13 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
     const showSelectedProducts = () => {
         return blog.selectedProducts.map((p, i) => `
             <div class="pure-u-1-4">
-                <div class="community-pad-20">
                 <a href="https://${shop.shopify_domain}/products/${p[0].handle}?utm_source=social-king&utm_medium=${blog.slug}" key=${i} style="height:200px;display:block;text-align:center">
                     <img src="${p[0].images[0].originalSrc}" style="object-fit: cover;height:100%;" />
                 </a>
                 <div style="text-align:center;margin-top:15px;">
-                    <a href="https://${shop.shopify_domain}/products/${p[0].handle}?utm_source=social-king&utm_medium=${blog.slug}" key=${i} style="height:200px;display:block">
+                    <a href="https://${shop.shopify_domain}/products/${p[0].handle}?utm_source=social-king&utm_medium=${blog.slug}" key=${i} style="display:block">
                         ${p[0].title}
                     </a>
-                </div>
                 </div>
             </div>
         `).join('');
@@ -64,7 +62,7 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
             <main class="page-width">
                 <div class="community-pad-20 community-post-body pure-g">
                     <div class="details pure-u-md-1-4 pure-u-sm-1"> 
-                        <div class="community-pad-20">
+                        <div class="">
                          <div class="community-card community-card-navbar">
                             <div class="pb-5">
                                 <h2>${translations['ContributedBy'][shop ? shop.language : 'English']}</h2>
@@ -102,10 +100,8 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                 ${blog.selectedProducts.length>0 ? `<div class="pure-g">
                         <div class="pure-u-md-5-5 pure-u-sm-1">
                             <div class="community-pad-20">
-                                <div class="pb-5">
-                                    <h2 class="community-letter-spacing" style='margin-top:30px'>${translations['RelatedProducts'][shop ? shop.language : 'English']}</h2>
-                                    ${showSelectedProducts()}
-                                </div>
+                                  <h2 class="community-letter-spacing" style='margin-top:30px'>${translations['RelatedProducts'][shop ? shop.language : 'English']}</h2>
+                                  ${showSelectedProducts()}
                             </div>
                         </div>
                     </div>` : ''}

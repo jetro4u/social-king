@@ -10309,3 +10309,18 @@ TypeError: Cannot read property '_id' of null
     at process._tickCallback (internal/process/next_tick.js:61:11)
 (node:15134) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:15134) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:25260) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:25260) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/Elisha-Kramer-1619591475957.png'
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/Elisha-Kramer-1619589314869.png'
+Error: ENOENT: no such file or directory, stat '/root/shopify-community-app/Proxy/public/uploads/Elisha-Kramer-1619591475957.png'
+(node:25661) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:25661) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:25807) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:25807) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:25933) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:25933) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:26511) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:26511) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+(node:26750) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:26750) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
