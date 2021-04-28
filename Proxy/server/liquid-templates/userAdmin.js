@@ -36,25 +36,5 @@ exports.userAdmin = ({user, tags, shop, blogs, blog}) => {
           </div>
       </main>
     </div>
-    <style>
-        .tag-btn { margin-top: 1em;
-                  margin-bottom: 1em;
-                  margin-right: 1em;
-                  margin-left: 1em;
-                  background-color: lightblue; }
-        .tag-btn:hover {
-          background-color: lightgreen;
-        }
-        .btn-default{
-            color: #fff !important;
-            text-transform: uppercase;
-            text-decoration: none;
-            background: #60a3bc;
-            padding: 20px;
-            border-radius: 50px;
-            display: inline-block;
-            border: none;
-            transition: all 0.4s ease 0s;
-        }
-    </style>`
+    `
 };

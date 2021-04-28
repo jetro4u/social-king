@@ -63,6 +63,26 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
         <div class="community-background">
             <main class="page-width">
                 <div class="community-pad-20 community-post-body pure-g">
+                    <div class="details pure-u-md-1-4 pure-u-sm-1"> 
+                        <div class="community-pad-20">
+                         <div class="community-card community-card-navbar">
+                            <div class="pb-5">
+                                <h2>${translations['ContributedBy'][shop ? shop.language : 'English']}</h2>
+                            </div>
+                            <div class="pure-g">
+                            ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img width='100%' src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
+                                <div class="pure-u-3-4">
+                                    <div class="community-pad-left-10">
+                                        <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
+                                        ${user.about}
+                                        <br/>
+                                        <b>${translations['StoreFavorites'][shop ? shop.language : 'English']}: </b>${user.storeFavorites}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
 
                     <div class="pure-u-md-3-4 pure-u-sm-1"> 
                         <div class='community-admin-padding community-card'>
@@ -76,44 +96,9 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                                 <input type="text" class="community-instant-post" placeholder="${translations['AddComment'][shop ? shop.language : 'English']}" />
                             </a>
                         </div>
-                    </div>
-                    
-                   
-                    
-                    <div class="details pure-u-md-1-4 pure-u-sm-1"> 
-                        <div class="community-pad-20">
-                         <div class="community-card community-card-navbar">
-                            <div class="pb-5">
-                                <h2>${translations['ContributedBy'][shop ? shop.language : 'English']}</h2>
-                            </div>
-                            <div class="pure-g">
-                            ${blog.postedBy.cover_photo ? "<div class='pure-u-1-4'><img width='100%' src='"+blog.postedBy.cover_photo+"'/></div>" : ''}
-                            <div class="pure-u-3-4">
-                                <div class="community-pad-left-10">
-                                    <a href="${proxyRoute}/user/${blog.postedBy.username}" class='community-bold'>${blog.postedBy.name}</a><br />
-                                    ${user.about}
-                                    <br/>
-                                    <b>${translations['StoreFavorites'][shop ? shop.language : 'English']}: </b>${user.storeFavorites}
-                                </div>
-                            </div>
-                            </div>
-                            <div style='margin-top:30px'>
-                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">${translations['SignUp'][shop ? shop.language : 'English']}</button></a>
-                    <br>
-                    <br>
-                    <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">${translations['Settings'][shop ? shop.language : 'English']}</button></a>
-                            </div>
-                            <div class="pb-5">
-                                ${blog.tags.length>0? `<h2 style='margin-top:30px'>${translations['RelatedTags'][shop ? shop.language : 'English']}</h2>`:''}
-                                  ${showAllTags()}
-
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    
-
+                    </div>                
                 </div>
+                    
                 ${blog.selectedProducts.length>0 ? `<div class="pure-g">
                         <div class="pure-u-md-5-5 pure-u-sm-1">
                             <div class="community-pad-20">
@@ -124,6 +109,20 @@ exports.blogSlug = ({blog, shop, user, comments}) => {
                             </div>
                         </div>
                     </div>` : ''}
+
+                
+                    <div class='community-admin-padding community-card'>
+                        <div style='margin-top:30px'>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}&#/settings'><button class="pure-button pure-button-primary community-full-width">${translations['SignUp'][shop ? shop.language : 'English']}</button></a>
+                            <br>
+                            <br>
+                            <a href='https://${shop.shopify_domain+proxyRoute}/user/profile?email={{ customer.email }}&name={{ customer.name }}&hash={{ customer.email | append: "somecrazyhash" | md5 }}'><button class="pure-button pure-button-primary community-full-width">${translations['Settings'][shop ? shop.language : 'English']}</button></a>
+                        </div>
+                        <div class="pb-5">
+                            ${blog.tags.length>0? `<h2 style='margin-top:30px'>${translations['RelatedTags'][shop ? shop.language : 'English']}</h2>`:''}
+                              ${showAllTags()}
+                        </div>
+                    </div>
             </main>
         </div>`
 };
