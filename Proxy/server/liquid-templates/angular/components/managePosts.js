@@ -8,7 +8,7 @@ module.exports.managePosts = ({user, blogs, shop}) => {
   const displayPosts = (data) => blogs.map((blog, i) => {
       return `<div key=${i} class='pb-5'>
                 <div id='${blog.slug}'> 
-                    <a href='${proxyRoute}/blog/${blog.slug}'><h3>${formatQuotes(blog.title)}</h3></a>
+                    <a href='${proxyRoute}/blog/${blog.slug}'><h3>${blog.title ? formatQuotes(blog.title) : 'View Post'}</h3></a>
                     <p class='mark'>
                         ${translations['WrittenBy'][shop ? shop.language : 'English']} ${blog.postedBy.name} | ${translations['PublishedOn'][shop ? shop.language : 'English']} ${moment(blog.updatedAt).format('YYYY-MM-DD')}
                     </p>
