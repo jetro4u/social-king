@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const config = require('../config');
 
-const Shop = mongoose.model('Shop');
+// const Shop = mongoose.model('../models/Shop');
 
 const router = express.Router();
 
