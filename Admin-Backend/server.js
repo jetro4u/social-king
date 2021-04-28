@@ -13,8 +13,8 @@ const imageRoutes = require('./routes/image');
 const commentRoutes = require('./routes/comment');
 const authRoutes = require('./routes/auth');
 
-const Raven = require("raven");
-Raven.config("https://857ac98ea79e4f7ba26c306a706e8480@o575752.ingest.sentry.io/5728460").install();
+//const Raven = require("raven");
+//Raven.config("https://857ac98ea79e4f7ba26c306a706e8480@o575752.ingest.sentry.io/5728460").install();
 
 // app
 const app = express();
