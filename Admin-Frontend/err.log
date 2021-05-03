@@ -42,3 +42,11 @@
       at connectionCorkNT (_http_outgoing.js:641:8)
       at process._tickCallback (internal/process/next_tick.js:63:19)
 
+TypeError: Cannot read property 'plan' of undefined
+    at Shop.findOne.exec (/root/shopify-community-app/Admin-Frontend/server/shopSearchInDB.js:138:43)
+    at /root/shopify-community-app/Admin-Frontend/node_modules/mongoose/lib/model.js:4834:16
+    at /root/shopify-community-app/Admin-Frontend/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Admin-Frontend/node_modules/mongoose/lib/model.js:4857:21
+    at _hooks.execPost (/root/shopify-community-app/Admin-Frontend/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Admin-Frontend/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
