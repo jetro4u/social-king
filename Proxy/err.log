@@ -10368,3 +10368,298 @@ TypeError: Cannot read property 'originalSrc' of undefined
     at process._tickCallback (internal/process/next_tick.js:61:11)
 (node:16764) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
 (node:16764) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:23981) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:23981) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:24631) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:24631) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at exports.blogSlug (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:87:31)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:505:46)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at exports.blogSlug (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:87:31)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:505:46)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:24675) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:24675) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:26147) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:26162) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:26177) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:26177) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of undefined
+    at exports.addEmoji (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:252:31)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/auth.js:178:9)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of undefined
+    at exports.addEmoji (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:252:31)
+    at Layer.handle [as handle_request] (/root/shopify-community-app/Proxy/node_modules/express/lib/router/layer.js:95:5)
+    at next (/root/shopify-community-app/Proxy/node_modules/express/lib/router/route.js:131:13)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/auth.js:178:9)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'originalSrc' of undefined
+    at blog.selectedProducts.map (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:44:48)
+    at CoreMongooseArray.map (<anonymous>)
+    at showSelectedProducts (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:41:38)
+    at exports.blogSlug (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:104:37)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:505:46)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'originalSrc' of undefined
+    at blog.selectedProducts.map (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:44:48)
+    at CoreMongooseArray.map (<anonymous>)
+    at showSelectedProducts (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:41:38)
+    at exports.blogSlug (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:104:37)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:505:46)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:18284) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:18284) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property '_id' of null
+    at Shop.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:261:43)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:31694) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:31694) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at exports.blogSlug (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:87:31)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:505:46)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at exports.blogSlug (/root/shopify-community-app/Proxy/server/liquid-templates/blogSlug.js:87:31)
+    at User.findOne.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/blog.js:505:46)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:32146) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:32146) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at module.exports.addComment (/root/shopify-community-app/Proxy/server/liquid-templates/angular/components/addComment.js:14:38)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/server/liquid-templates/angular/app.js:41:33)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/server/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at module.exports.addComment (/root/shopify-community-app/Proxy/server/liquid-templates/angular/components/addComment.js:14:38)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/server/liquid-templates/angular/app.js:41:33)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/server/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:32160) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at module.exports.addComment (/root/shopify-community-app/Proxy/server/liquid-templates/angular/components/addComment.js:14:38)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/server/liquid-templates/angular/app.js:41:33)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/server/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at module.exports.addComment (/root/shopify-community-app/Proxy/server/liquid-templates/angular/components/addComment.js:14:38)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/server/liquid-templates/angular/app.js:41:33)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/server/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:32173) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:32173) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at module.exports.addComment (/root/shopify-community-app/Proxy/server/liquid-templates/angular/components/addComment.js:14:38)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/server/liquid-templates/angular/app.js:41:33)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/server/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+TypeError: Cannot read property 'url' of undefined
+    at blog.body.(anonymous function).blocks.blog.body.(anonymous function).blocks.map (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:10:79)
+    at Array.map (<anonymous>)
+    at exports.renderBlocks (/root/shopify-community-app/Proxy/server/liquid-templates/components/blog/renderBlocks.js:4:32)
+    at module.exports.addComment (/root/shopify-community-app/Proxy/server/liquid-templates/angular/components/addComment.js:14:38)
+    at module.exports.ngApp (/root/shopify-community-app/Proxy/server/liquid-templates/angular/app.js:41:33)
+    at exports.userAdmin (/root/shopify-community-app/Proxy/server/liquid-templates/userAdmin.js:21:15)
+    at Blog.find.exec (/root/shopify-community-app/Proxy/server/proxy-controllers/user.js:46:37)
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4824:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/helpers/promiseOrCallback.js:24:16
+    at /root/shopify-community-app/Proxy/node_modules/mongoose/lib/model.js:4847:21
+    at _hooks.execPost (/root/shopify-community-app/Proxy/node_modules/mongoose/lib/query.js:4390:11)
+    at /root/shopify-community-app/Proxy/node_modules/kareem/index.js:135:16
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+(node:32186) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+(node:32186) DeprecationWarning: collection.update is deprecated. Use updateOne, updateMany, or bulkWrite instead.
