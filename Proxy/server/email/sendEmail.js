@@ -1,3 +1,8 @@
+const { newPost } = require('./templates/newEmail')
+const { newComment } = require('./templates/newComment')
+const { commentedOnYourPost } = require('./templates/commentedOnYourPost')
+const { alsoCommented } = require('./templates/commentedOnYourPost')
+
 exports.sendEmail = (str) => {
   const emailData = {
     to: shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].email ? shop._doc.extraShopifyData[0].email : 'kramer1346@gmail.com',
