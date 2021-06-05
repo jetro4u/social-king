@@ -95,6 +95,8 @@ exports.create = (req, res) => {
            let appSlug = process.env.NODE_ENV == 'development' ? 'community-2' : 'social-king';
            
            if(shop && shop._doc && shop._doc.postModeration){
+               // sendMail() - to do - abstract this away to another function/email folder
+
                const emailData = {
                   to: shop && shop._doc && shop._doc.extraShopifyData && shop._doc.extraShopifyData[0] && shop._doc.extraShopifyData[0].email ? shop._doc.extraShopifyData[0].email : 'kramer1346@gmail.com',
                   from: 'help@socialking.app',
@@ -106,12 +108,13 @@ exports.create = (req, res) => {
                       <hr />
                   `
                };
-               
+
                console.log('emailData in Sendgrid Email Notification Function', emailData);
-        
+
                sgMail.send(emailData).then(sent => {
                     console.log('email alert sent to ', req.query.shop)
                })
+
            }           
            
            Blog.findByIdAndUpdate(result._id, { $set: { shopPostedAt: [shop._id] } }, { new: true }).exec(
